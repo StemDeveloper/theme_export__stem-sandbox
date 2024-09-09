@@ -450,6 +450,9 @@
     "announcement-bar": {
       "name": "Announcement bar",
       "settings": {
+        "sticky_announcement_type": {
+          "label": "Sticky announcement"
+        },
         "auto_rotate": {
           "label": "Auto-rotate announcements"
         },

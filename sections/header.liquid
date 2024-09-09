@@ -298,7 +298,7 @@
       window.matchMedia('(max-width: 990px)').addEventListener('change', this.setHeaderHeight.bind(this));
 
       if (this.headerIsAlwaysSticky) {
-        this.header.classList.add('shopify-section-header-sticky');
+        this.header.classList.add('shopify-section-header-sticky', 'animate');
       };
 
       this.currentScrollTop = 0;
