@@ -2340,7 +2340,7 @@ input[type='checkbox'] {
   top: var(--announcement-height, 0);
 }
 
-.scrolled-past-announcement.shopify-section-announcement-hidden + .shopify-section-header-sticky:not(.shopify-section-header-hidden) {
+.scrolled-past-announcement.shopify-section-announcement-hidden ~ .shopify-section-header-sticky:not(.shopify-section-header-hidden) {
   top: 0;
 }
 
