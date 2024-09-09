@@ -93,6 +93,11 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+    {% if section.settings.logo_position == 'middle-left' and section.settings.menu_type_desktop == 'dropdown' %}
+      .header--middle-left {
+        grid-template-columns: auto 1fr auto;
+      }
+    {% endif %}
   }
 {%- endstyle -%}
 
@@ -163,7 +168,11 @@
     {%- liquid
       if section.settings.menu != blank
         if section.settings.menu_type_desktop == 'dropdown'
-          render 'header-dropdown-menu'
+          if section.settings.logo_position == 'middle-left'
+            render 'header-dropdown-menu', nav_position_desktop: section.settings.nav_position_desktop
+          else 
+            render 'header-dropdown-menu'
+          endif
         elsif section.settings.menu_type_desktop != 'drawer'
           render 'header-mega-menu'
         endif
@@ -494,6 +503,27 @@
       "default": "dropdown",
       "label": "t:sections.header.settings.menu_type_desktop.label",
       "info": "t:sections.header.settings.menu_type_desktop.info"
+    },
+    {
+      "type": "select",
+      "id": "nav_position_desktop",
+      "label": "t:sections.header.settings.nav_position_desktop.label",
+      "info": "t:sections.header.settings.nav_position_desktop.info",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "left"
     },
     {
       "type": "select",

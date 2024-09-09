@@ -1125,6 +1125,10 @@
             "label": "Drawer"
           }
         },
+        "nav_position_desktop": {
+          "label": "Desktop nav posistion",
+          "info": "Only applies if Logo choice is \"Middle Left\" and Desktop Menu type is \"Dropdown\""
+        },
         "show_line_separator": {
           "label": "Show separator line"
         },
