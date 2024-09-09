@@ -376,7 +376,7 @@
     }
 
     reset() {
-      if (this.headerIsAlwaysSticky) return;
+      if (this.headerIsAlwaysSticky || document.querySelector('sticky-announcement') != null) return;
       this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
     }
 
