@@ -98,6 +98,19 @@
         grid-template-columns: auto 1fr auto;
       }
     {% endif %}
+    {% if section.settings.color_background_logo_nav != blank or section.settings.color_background_logo_nav != 'transparent' %}
+      .header.header--middle-left .header__heading-link, 
+      .header.header--top-left .header__heading-link {
+        margin-left: 0;
+      }
+      .header .header__inline-menu .list-menu {
+        column-gap: 0.5rem;
+      }
+      .header .header__heading,
+      .header .header__menu-parent {
+        background: {{ section.settings.color_background_logo_nav }};
+      }
+    {% endif %}
   }
 {%- endstyle -%}
 
@@ -564,6 +577,13 @@
     {
       "type": "header",
       "content": "t:sections.header.settings.header__1.content"
+    },
+    {
+      "type": "color_background",
+      "id": "color_background_logo_nav",
+      "label": "t:sections.header.settings.color_background_logo_nav.label",
+      "info": "t:sections.header.settings.color_background_logo_nav.info",
+      "default": "transparent"
     },
     {
       "type": "color_scheme",

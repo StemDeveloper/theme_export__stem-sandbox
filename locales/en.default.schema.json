@@ -1138,6 +1138,10 @@
         "header__1": {
           "content": "Color"
         },
+        "color_background_logo_nav": {
+          "label": "Logo + Menu Links background",
+          "info": "Available only on Desktop"
+        },
         "menu_color_scheme": {
           "label": "Menu color scheme"
         },
