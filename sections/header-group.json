@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -12,10 +21,19 @@
             "link": "",
             "remove_icon": false
           }
+        },
+        "announcement_yWWR4Y": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": "",
+            "remove_icon": false
+          }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_yWWR4Y"
       ],
       "settings": {
         "color_scheme": "scheme-1",
@@ -34,8 +52,11 @@
         "logo_position": "middle-left",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
+        "nav_position_desktop": "left",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
+        "enable_search": true,
+        "color_background_logo_nav": "transparent",
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
         "enable_country_selector": true,
