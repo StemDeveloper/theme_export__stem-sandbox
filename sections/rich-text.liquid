@@ -29,7 +29,7 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                {{ block.settings.heading }}
+                {{ block.settings.heading | newline_to_br }}
               </h2>
             {%- when 'caption' -%}
               <p
@@ -188,7 +188,7 @@
       "limit": 3,
       "settings": [
         {
-          "type": "inline_richtext",
+          "type": "textarea",
           "id": "heading",
           "default": "t:sections.rich-text.blocks.heading.settings.heading.default",
           "label": "t:sections.rich-text.blocks.heading.settings.heading.label"
