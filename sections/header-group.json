@@ -17,23 +17,14 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
-            "link": "",
-            "remove_icon": false
-          }
-        },
-        "announcement_yWWR4Y": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome customer",
-            "link": "",
-            "remove_icon": false
+            "text": "Book a Consultation with our Team today!",
+            "link": "#",
+            "remove_icon": true
           }
         }
       },
       "block_order": [
-        "announcement-bar-0",
-        "announcement_yWWR4Y"
+        "announcement-bar-0"
       ],
       "settings": {
         "color_scheme": "scheme-1",
