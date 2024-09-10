@@ -23,6 +23,35 @@
   margin-top: 3rem;
 }
 
+.newsletter__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter__blocks {
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .newsletter__wrapper--left {
+    justify-content: flex-start;
+  }
+
+  .newsletter__wrapper--right {
+    justify-content: flex-end;
+  }
+
+  .newsletter__blocks {
+    max-width: 50rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .newsletter__blocks {
+    max-width: 78rem;
+  }
+}
+
 .newsletter__subheading {
   max-width: 70rem;
   margin-left: auto;
