@@ -533,6 +533,9 @@
       "settings": {
         "title": {
           "default": "Carousel"
+        },
+        "full_width": {
+          "label": "Make section full width"
         }
       },
       "blocks": {
