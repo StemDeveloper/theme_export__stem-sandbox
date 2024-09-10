@@ -528,6 +528,27 @@
         "name": "Apps"
       }
     },
+    "carousel": {
+      "name": "Carousel",
+      "settings": {
+        "title": {
+          "default": "Carousel"
+        }
+      },
+      "blocks": {
+        "column": {
+          "name": "Card",
+          "settings": {
+            "title": {
+              "default": "Card"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Carousel"
+      }
+    },
     "collage": {
       "name": "Collage",
       "settings": {
