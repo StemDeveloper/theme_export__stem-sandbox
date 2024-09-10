@@ -37,7 +37,7 @@
         "text_Fj6TtJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>Fast and Fail-Proof Execution.<\/p><p>We thread the needle of good design, purposeful content and performance focus through all touchpoints of digital marketing.<\/p>"
           }
         }
       },
@@ -46,12 +46,12 @@
         "text_Fj6TtJ"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
