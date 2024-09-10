@@ -3110,6 +3110,9 @@
         },
         "slider_visual": {
           "label": "Pagination style",
+          "none": {
+            "label": "None"
+          },
           "options__1": {
             "label": "Counter"
           },
