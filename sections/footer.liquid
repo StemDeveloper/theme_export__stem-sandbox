@@ -302,7 +302,11 @@
         <small class="copyright__content"
           >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
         </small>
-        <small class="copyright__content">{{ powered_by_link }}</small>
+        {% if section.settings.footer_credits != blank %}
+          <small class="copyright__content">{{ section.settings.footer_credits }}</small>
+        {% else %}
+          <small class="copyright__content">{{ powered_by_link }}</small>
+        {% endif %}
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
@@ -505,6 +509,11 @@
       "id": "payment_enable",
       "default": true,
       "label": "t:sections.footer.settings.payment_enable.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "footer_credits",
+      "label": "t:sections.footer.settings.footer_credits.label"
     },
     {
       "type": "header",
