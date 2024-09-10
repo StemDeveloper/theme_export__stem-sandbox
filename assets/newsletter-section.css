@@ -1,12 +1,12 @@
 .newsletter__wrapper {
-  padding-right: calc(4rem / var(--font-body-scale));
-  padding-left: calc(4rem / var(--font-body-scale));
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 @media screen and (min-width: 750px) {
   .newsletter__wrapper {
-    padding-right: 9rem;
-    padding-left: 9rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
   }
 }
 
