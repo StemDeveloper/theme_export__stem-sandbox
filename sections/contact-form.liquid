@@ -22,6 +22,22 @@
 <div class="contact color-{{ section.settings.color_scheme }} gradient">
   <div class="contact__wrapper contact__wrapper-{{ section.settings.desktop_content_position }} page-width section-{{ section.id }}-padding">
   <div class="page-width--narrow {{ section.settings.content_alignment }}">
+    {% if section.blocks.size > 0 %}
+      <div class="contact__blocks">
+        {% for block in section.blocks %}
+          <div
+            class="contact__block-text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ block.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+            {{ block.settings.text }}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
     {%- if section.settings.heading != blank -%}
       <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         {{ section.settings.heading }}
@@ -261,6 +277,21 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "t:sections.rich-text.blocks.text.name",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "t:sections.rich-text.blocks.text.settings.text.default",
+          "label": "t:sections.rich-text.blocks.text.settings.text.label"
+        }
+      ]
     }
   ],
   "presets": [
