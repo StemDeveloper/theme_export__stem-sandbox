@@ -51,8 +51,9 @@
         "image_77Mymy": {
           "type": "image",
           "settings": {
-            "image_width": 100,
-            "alignment": "center"
+            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "image_width": 110,
+            "alignment": ""
           }
         },
         "link_list_7TcLkQ": {
