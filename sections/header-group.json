@@ -28,11 +28,11 @@
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "show_line_separator": true,
-        "sticky_announcement_type": "on-scroll-up",
+        "show_line_separator": false,
+        "sticky_announcement_type": "always",
         "show_social": false,
         "auto_rotate": false,
-        "change_slides_speed": 5,
+        "change_slides_speed": 3,
         "enable_country_selector": false,
         "enable_language_selector": false
       }
