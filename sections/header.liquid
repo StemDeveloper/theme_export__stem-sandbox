@@ -99,25 +99,28 @@
       }
     {% endif %}
     {% if section.settings.desktop_background_logo_nav %}
-      .header-wrapper {
+      .scrolled-past-header .header-wrapper {
         background: transparent;
       }
-      .header-wrapper .header--middle-left .header__heading-link,
-      .header-wrapper .header--top-left .header__heading-link {
+      .scrolled-past-header .header-wrapper .header--middle-left .header__heading-link,
+      .scrolled-past-header .header-wrapper .header--top-left .header__heading-link {
         margin-left: 0;
       }
-      .header-wrapper .header__heading,
-      .header-wrapper .header__inline-menu .list-menu--inline {
+      .scrolled-past-header .header-wrapper .header__heading,
+      .scrolled-past-header .header-wrapper .header__inline-menu .list-menu--inline {
         background: rgb(var(--color-background));
         background: var(--gradient-background);
         background-attachment: fixed;
         border-radius: 50px;
       }
-      .header-wrapper .header__heading {
+      .scrolled-past-header .header-wrapper .header__heading {
         padding: 0.5rem 1.5rem;
       }
-      .header-wrapper .header__inline-menu .list-menu--inline {
+      .scrolled-past-header .header-wrapper .header__inline-menu .list-menu--inline {
         padding: 0.2rem 1.5rem;
+      }
+      .scrolled-past-header .header-wrapper .header__icons {
+        display: none;
       }
     {% endif %}
   }
