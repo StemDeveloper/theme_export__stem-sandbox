@@ -169,35 +169,35 @@
       },
       "scheme-3": {
         "settings": {
-          "background": "#242833",
+          "background": "#333333",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#000000",
+          "button_label": "#333333",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#575757"
         }
       },
       "scheme-4": {
         "settings": {
-          "background": "#121212",
+          "background": "#333333",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#121212",
+          "button_label": "#333333",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#575757"
         }
       },
       "scheme-5": {
         "settings": {
-          "background": "#334fb4",
+          "background": "#009b72",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#334fb4",
-          "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "button_label": "#009b72",
+          "secondary_button_label": "#009b72",
+          "shadow": "#575757"
         }
       }
     }
