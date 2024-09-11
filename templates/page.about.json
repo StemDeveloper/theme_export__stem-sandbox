@@ -74,7 +74,7 @@
         "text_t6JRjL": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<ul><li>Test 1<\/li><li>Test 2<\/li><li>Test 3<\/li><li>Test 4<\/li><li>Test 5<\/li><\/ul>"
           }
         }
       },
