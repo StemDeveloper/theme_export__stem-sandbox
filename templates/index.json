@@ -11,6 +11,17 @@
   "sections": {
     "image_banner": {
       "type": "image-banner",
+      "blocks": {
+        "image_WDMBe3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stem-Commerce-Logo-2021.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_WDMBe3"
+      ],
       "settings": {
         "image_overlay_opacity": 100,
         "image_height": "large",
@@ -37,7 +48,8 @@
         "text_Fj6TtJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Fast and Fail-Proof Execution.<\/p><p>We thread the needle of good design, purposeful content and performance focus through all touchpoints of digital marketing.<\/p>"
+            "text": "<p>Fast and Fail-Proof Execution.<\/p><p>We thread the needle of good design, purposeful content and performance focus through all touchpoints of digital marketing.<\/p>",
+            "color_scheme": ""
           }
         }
       },
