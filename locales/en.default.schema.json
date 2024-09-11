@@ -1361,6 +1361,14 @@
             }
           }
         },
+        "image": {
+          "name": "Image",
+          "settings": {
+            "image": {
+              "label": "Image"
+            }
+          }
+        },
         "buttons": {
           "name": "Buttons",
           "settings": {
