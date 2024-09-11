@@ -267,13 +267,13 @@ h5,
   word-break: break-word;
 }
 
-.hxxl {
-  font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem));
+.hxxxl {
+  font-size: clamp(calc(var(--font-heading-scale) * 6.2rem), 14vw, calc(var(--font-heading-scale) * 8.2rem));
   line-height: 1.1;
 }
 
-.hxxxl {
-  font-size: clamp(calc(var(--font-heading-scale) * 6.2rem), 14vw, calc(var(--font-heading-scale) * 8.2rem));
+.hxxl {
+  font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem));
   line-height: 1.1;
 }
 
