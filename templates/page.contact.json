@@ -30,12 +30,12 @@
         "text_DmppYF"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "desktop_content_position": "left",
+        "content_alignment": "left",
         "heading": "",
         "heading_size": "h1",
         "color_scheme": "scheme-1",
-        "full_width": false,
+        "full_width": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
