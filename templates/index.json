@@ -60,6 +60,7 @@
         "column_FF7KA4": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
             "title": "Card",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
@@ -69,6 +70,7 @@
         "column_xUxynb": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
             "title": "Card",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
@@ -78,6 +80,7 @@
         "column_gwREW7": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
             "title": "Card",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
@@ -87,6 +90,7 @@
         "column_PPGp7b": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
             "title": "Card",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
@@ -96,6 +100,7 @@
         "column_HqfH79": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
             "title": "Card",
             "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "link_label": "",
@@ -103,6 +108,61 @@
           }
         },
         "column_pG9dNH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_MJ6kLE": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_FAYKrP": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jrBhg8": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_wFxhBh": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_BFLqMw": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_AqXpkx": {
           "type": "column",
           "settings": {
             "title": "Card",
@@ -118,7 +178,13 @@
         "column_gwREW7",
         "column_PPGp7b",
         "column_HqfH79",
-        "column_pG9dNH"
+        "column_pG9dNH",
+        "column_MJ6kLE",
+        "column_FAYKrP",
+        "column_jrBhg8",
+        "column_wFxhBh",
+        "column_BFLqMw",
+        "column_AqXpkx"
       ],
       "settings": {
         "title": "<strong>Some of the great brands we have worked with<\/strong>",
