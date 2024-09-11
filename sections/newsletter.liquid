@@ -17,7 +17,7 @@
 {%- endstyle -%}
 
 <div class="newsletter{% unless section.settings.full_width %} page-width{% endunless %}">
-  <div class="newsletter__container color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+  <div class="rich-text color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
       <div class="newsletter__wrapper rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
