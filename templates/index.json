@@ -53,10 +53,97 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "carousel_wV3JFV": {
+      "type": "carousel",
+      "blocks": {
+        "column_FF7KA4": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xUxynb": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gwREW7": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_PPGp7b": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HqfH79": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_pG9dNH": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_FF7KA4",
+        "column_xUxynb",
+        "column_gwREW7",
+        "column_PPGp7b",
+        "column_HqfH79",
+        "column_pG9dNH"
+      ],
+      "settings": {
+        "title": "<strong>Some of the great brands we have worked with<\/strong>",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "full_width": true,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "slider_visual": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
     "image_banner",
-    "rich_text_9BnG6a"
+    "rich_text_9BnG6a",
+    "carousel_wV3JFV"
   ]
 }
