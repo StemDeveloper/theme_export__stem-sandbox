@@ -23,14 +23,14 @@
         "heading_ttpz3f": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "heading": "<strong>Stem Commerce is a full-service Shopify agency, with the vision to transform the way people do business online. A leading expert and preferred partner, we’ve been at the top of our game since Shopify’s inception and continue to expand our capabilities to better serve our clients. <\/strong>",
+            "heading_size": "h0"
           }
         },
         "text_nmGfTz": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>Why?<\/p><p>Born in 2013, Stem Commerce emerged to fill a gap in the digital market for high end design and web development.<\/p><p>As the industry evolved, our team grew into a comprehensive agency that empowers serious entrepreneurs who want to grow their online businesses with the help of our agile development, proven expertise and trusted content. We are a tight-knit team that pride ourselves on fostering a stress-free, collaborative, fun, results-driven and impactful environment.<\/p>"
           }
         }
       },
