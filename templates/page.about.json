@@ -67,8 +67,8 @@
         "heading_UQBcbR": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "heading": "<strong>We bring the right people together, building robust, responsive teams to design high-growth eCommerce stores. To us, every project is a partnership and we are committed to doing everything necessary to drive real results for your business in record-fast time.<\/strong>",
+            "heading_size": "h0"
           }
         },
         "text_t6JRjL": {
@@ -76,23 +76,11 @@
           "settings": {
             "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
           }
-        },
-        "button_h778Dr": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "heading_UQBcbR",
-        "text_t6JRjL",
-        "button_h778Dr"
+        "text_t6JRjL"
       ],
       "settings": {
         "desktop_content_position": "left",
