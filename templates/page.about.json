@@ -30,19 +30,22 @@
         "text_nmGfTz": {
           "type": "text",
           "settings": {
-            "text": "<p>Why?<\/p><p>Born in 2013, Stem Commerce emerged to fill a gap in the digital market for high end design and web development.<\/p><p>As the industry evolved, our team grew into a comprehensive agency that empowers serious entrepreneurs who want to grow their online businesses with the help of our agile development, proven expertise and trusted content. We are a tight-knit team that pride ourselves on fostering a stress-free, collaborative, fun, results-driven and impactful environment.<\/p>"
+            "text": "<p>Why?<\/p><p>Born in 2013, Stem Commerce emerged to fill a gap in the digital market for high end design and web development.<\/p><p>As the industry evolved, our team grew into a comprehensive agency that empowers serious entrepreneurs who want to grow their online businesses with the help of our agile development, proven expertise and trusted content. We are a tight-knit team that pride ourselves on fostering a stress-free, collaborative, fun, results-driven and impactful environment.<\/p>",
+            "color_scheme": "scheme-3"
           }
         },
         "text_wmxfA4": {
           "type": "text",
           "settings": {
-            "text": "<p>Who?<\/p><p>When you work with Stem, everything will always be alright.<\/p><p>Under the direction and leadership of founder Stefano Mastrocola, we’ve achieved colossal milestones over the last decade for leading online stores like Endy Mattress, Amazon’s Ring and more. Constantly adapting to the growth and evolution of Shopify itself, we continue to channel our success formula onto every client that steps through our door.<\/p>"
+            "text": "<p>Who?<\/p><p>When you work with Stem, everything will always be alright.<\/p><p>Under the direction and leadership of founder Stefano Mastrocola, we’ve achieved colossal milestones over the last decade for leading online stores like Endy Mattress, Amazon’s Ring and more. Constantly adapting to the growth and evolution of Shopify itself, we continue to channel our success formula onto every client that steps through our door.<\/p>",
+            "color_scheme": ""
           }
         },
         "text_WUyEha": {
           "type": "text",
           "settings": {
-            "text": "<p>How?<\/p><p>High quality execution and an agile team philosophy, no matter the work, sets us apart.<\/p><p>We understand that as a business owner, time is the most valuable currency you own. Our global team has the privilege of working in different time zones, which allows us to execute strategies in record time – what Stem can do in twenty-four hours might take others an entire week. Those saved minutes can mean the difference in millions of dollars for your business.<\/p>"
+            "text": "<p>How?<\/p><p>High quality execution and an agile team philosophy, no matter the work, sets us apart.<\/p><p>We understand that as a business owner, time is the most valuable currency you own. Our global team has the privilege of working in different time zones, which allows us to execute strategies in record time – what Stem can do in twenty-four hours might take others an entire week. Those saved minutes can mean the difference in millions of dollars for your business.<\/p>",
+            "color_scheme": ""
           }
         }
       },
@@ -74,7 +77,8 @@
         "text_t6JRjL": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>Test 1<\/li><li>Test 2<\/li><li>Test 3<\/li><li>Test 4<\/li><li>Test 5<\/li><\/ul>"
+            "text": "<ul><li>Test 1<\/li><li>Test 2<\/li><li>Test 3<\/li><li>Test 4<\/li><li>Test 5<\/li><\/ul>",
+            "color_scheme": "scheme-3"
           }
         }
       },
