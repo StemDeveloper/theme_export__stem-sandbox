@@ -27,16 +27,17 @@
             "heading_size": "hxxl"
           }
         },
-        "text_GhEaX6": {
-          "type": "text",
+        "heading_chyCeT": {
+          "type": "heading",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "heading": "<strong>Supercharge your online growth.  We work with clients all over the world. \u2028Get in touch with us via the form below to discuss a potential project or partnership.<\/strong>",
+            "heading_size": "hxxl"
           }
         }
       },
       "block_order": [
         "heading_da3wU3",
-        "text_GhEaX6"
+        "heading_chyCeT"
       ],
       "settings": {
         "desktop_content_position": "left",
