@@ -1,6 +1,18 @@
 {{ 'section-rich-text.css' | asset_url | stylesheet_tag }}
 
+<script src="{{ 'richtext-animation.js' | asset_url }}" defer="defer"></script>
+{% liquid
+  assign animate_blocks = 0
+  for block in section.blocks
+    if block.type == 'text'
+      assign animate_blocks = animate_blocks | plus: 1
+    endif
+  endfor
+%}
 {%- style -%}
+  #shopify-section-{{ section.id }} {
+    --richtext-animation-blocks: {{ animate_blocks }};
+  }
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -14,6 +26,9 @@
   }
 {%- endstyle -%}
 
+<richtext-animation 
+  class="richtext--container"
+>
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
@@ -51,7 +66,9 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                {{ block.settings.text }}
+                <div class="rich-text__text-inner">
+                  {{ block.settings.text }}
+                </div>
               </div>
             {%- when 'button' -%}
               <div
@@ -93,12 +110,13 @@
     </div>
   </div>
 </div>
+</richtext-animation>
 
 {% schema %}
 {
   "name": "t:sections.rich-text.name",
   "tag": "section",
-  "class": "section",
+  "class": "section section--richtext",
   "disabled_on": {
     "groups": ["header", "footer"]
   },

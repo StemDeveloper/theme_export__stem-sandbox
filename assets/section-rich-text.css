@@ -84,3 +84,57 @@
 .rich-text__blocks.right .rich-text__buttons {
   justify-content: flex-end;
 }
+/* custom codes */
+.section--richtext {
+  min-height: calc(var(--richtext-animation-height, 100vh) * (var(--richtext-animation-blocks, 0) + 1));
+}
+
+.richtext--container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: var(--richtext-animation-height, 100vh);
+}
+
+.richtext--container {
+  position: sticky;
+  top: 0;
+}
+
+.richtext--container > * {
+  flex-grow: 1;
+}
+
+.richtext--container .isolate {
+  position: static;
+}
+
+.richtext--container .rich-text__text {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 60vw;
+  height: 100vh;
+  margin-top: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.richtext--container .rich-text__text-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40rem;
+  height: auto;
+  padding: 1rem;
+  overflow-x: auto;
+  max-height: 45rem;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
