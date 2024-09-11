@@ -39,6 +39,8 @@
         "email_form_8dfceK"
       ],
       "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
         "padding_top": 40,
@@ -77,6 +79,7 @@
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": false,
+        "footer_credits": "",
         "show_policy": false,
         "margin_top": 100,
         "padding_top": 100,
