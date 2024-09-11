@@ -54,7 +54,9 @@
         "text_DmppYF": {
           "type": "text",
           "settings": {
-            "text": "<p>Montreal | Toronto | Vancouver<br\/><a href=\"tel:+18666447836\" target=\"_blank\" title=\"Call Us\">1.866.844.STEM<\/a><br\/><a href=\"mailto:info@stemcommerce.com\" target=\"_blank\" title=\"Email Us\">info@stemcommerce.com<\/a><br\/><br\/><\/p>"
+            "text": "<p>Montreal | Toronto | Vancouver<br\/><a href=\"tel:+18666447836\" target=\"_blank\" title=\"Call Us\">1.866.844.STEM<\/a><br\/><a href=\"mailto:info@stemcommerce.com\" target=\"_blank\" title=\"Email Us\">info@stemcommerce.com<\/a><br\/><br\/><\/p>",
+            "content_alignment": "left",
+            "color_scheme": "scheme-1"
           }
         }
       },
