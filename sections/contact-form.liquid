@@ -23,7 +23,7 @@
           <div class="contact__blocks">
             {% for block in section.blocks %}
               <div
-                class="contact__block-text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="contact__block-text {{ block.settings.content_alignment }} rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -288,6 +288,26 @@
           "id": "text",
           "default": "t:sections.rich-text.blocks.text.settings.text.default",
           "label": "t:sections.rich-text.blocks.text.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "content_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.rich-text.settings.content_alignment.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.rich-text.settings.content_alignment.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.rich-text.settings.content_alignment.options__3.label"
+            }
+          ],
+          "default": "center",
+          "label": "t:sections.rich-text.settings.content_alignment.label"
         }
       ]
     }
