@@ -113,7 +113,7 @@
   position: absolute;
   top: 50%;
   right: 0;
-  width: 60vw;
+  width: 100vh;
   height: 100vh;
   margin-top: 0;
   transform: translateY(-50%);
@@ -137,4 +137,8 @@
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+}
+
+.richtext--container div[data-animation="PopInCircle"] {
+  clip-path: circle(0 at center);
 }
