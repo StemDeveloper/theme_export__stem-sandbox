@@ -5,55 +5,41 @@ if (!customElements.get('animate-input-underline')) {
       constructor() {
         super();
         this.inputFields = this.querySelectorAll('.field');
-        this.observer = new IntersectionObserver(this.handleIntersection.bind(this), {
-          root: null,
-          threshold: [0, 0.01, 0.5, 1]
-        });
-        this.scrollHandler = this.updateVisibility.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
       }
 
-      connectedCallback() {
-        this.observer.observe(this);
+      connectedCallback() {        
+        window.addEventListener('scroll', this.handleScroll);
+        this.handleScroll();
       }
 
       disconnectedCallback() {
-        this.observer.disconnect();
-        window.removeEventListener('scroll', this.scrollHandler);
+        window.removeEventListener('scroll', this.handleScroll);
       }
 
-      handleIntersection(entries) {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            window.addEventListener('scroll', this.scrollHandler);
-            this.updateVisibility();
-          } else {
-            window.removeEventListener('scroll', this.scrollHandler);
+      handleScroll() {
+        const viewportHeight = window.innerHeight;
+        const scrollY = window.scrollY;
+        const viewportCenter = scrollY + viewportHeight / 2;
+
+        this.inputFields.forEach(field => {
+          const rect = field.getBoundingClientRect();
+          const fieldTop = rect.top + scrollY;
+          const fieldBottom = rect.bottom + scrollY;
+          const fieldCenter = (fieldTop + fieldBottom) / 2;
+          
+          const distanceFromCenter = Math.abs(fieldCenter - viewportCenter);
+          
+          const maxDistance = viewportHeight / 2 + fieldBottom - fieldTop;
+          const percentageVisible = Math.max(0, Math.min(100, (1 - distanceFromCenter / maxDistance) * 100));
+          
+          if(rect.top < viewportHeight / 2) {
+            field.style.setProperty('--input-underline-percentage', `100%`);
+            return;
           }
+          field.style.setProperty('--input-underline-percentage', `${percentageVisible.toFixed(2)}%`);
         });
       }
-
-      updateVisibility() {
-        const rect = this.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
-        
-        const elementHeight = rect.height;
-        const elementTop = rect.top;
-        const elementBottom = rect.bottom;
-      
-        const visibleTop = Math.max(elementTop, 0);
-        const visibleBottom = Math.min(elementBottom, viewportHeight);
-      
-        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
-        const percentageVisible = (visibleHeight / elementHeight) * 100;
-      
-        if (elementTop < 0) return;
-        this.style.setProperty('--input-underline-percentage', `${percentageVisible.toFixed(2)}%`);
-      
-        if (percentageVisible >= 100) {
-          window.removeEventListener('scroll', this.scrollHandler);
-        }
-      }
-      
     }
   );
 }
