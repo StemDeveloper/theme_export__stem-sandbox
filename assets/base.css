@@ -2495,10 +2495,13 @@ input[type='checkbox'] {
   max-width: 100%;
 }
 
-.header__heading-logo-wrapper {
+.header__heading-link {
   width: 100%;
-  display: inline-block;
-  transition: width 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+  transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+  -webkit-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+  -moz-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+  -ms-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+  -o-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
 }
 
 @media screen and (max-width: 989px) {
@@ -2634,6 +2637,14 @@ account-icon {
 /* Search */
 menu-drawer + .header__search {
   display: none;
+}
+
+.header {
+  transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+  -webkit-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+  -moz-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+  -ms-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+  -o-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
 }
 
 .header > .header__search {
@@ -2835,6 +2846,11 @@ details[open] > .header__submenu {
   padding: 1.2rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 0.75);
+  transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+  -webkit-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+  -moz-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+  -ms-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+  -o-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
 }
 
 .header__menu-item:hover {
