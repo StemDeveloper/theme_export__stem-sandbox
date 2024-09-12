@@ -42,6 +42,20 @@
   }
 }
 
+.rich-text__blocks.right .field__label {
+  left: auto;
+  right: calc(var(--inputs-border-width) + 2rem);
+}
+
+.rich-text__blocks.center .field__label {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
 /* custom styles */
 .animate-input-underline .field {
   position: relative;
