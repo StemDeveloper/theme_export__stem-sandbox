@@ -1766,6 +1766,34 @@ details[open] > .share-button__fallback {
   letter-spacing: 0.04rem;
 }
 
+.right .field__input,
+.customer .right .field input {
+  text-align: right;
+}
+
+.center .field__input,
+.customer .center .field input {
+  text-align: center;
+}
+
+.right .field__label,
+.customer .right .field label,
+.right .field__input:focus ~ .field__label {
+  left: auto;
+  right: calc(var(--inputs-border-width) + 2rem);
+}
+
+.center .field__label,
+.customer .center .field label,
+.center .field__input:focus ~ .field__label {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
 .field__input:focus,
 .field__input:not(:placeholder-shown),
 .field__input:-webkit-autofill,
