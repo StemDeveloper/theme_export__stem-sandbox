@@ -12,11 +12,11 @@
 }
 
 @media screen and (min-width: 750px) {
-  .form__wrapper--left .newsletter-form {
+  .left .newsletter-form {
     margin-left: 0;
   }
 
-  .form__wrapper--right .newsletter-form {
+  .right .newsletter-form {
     margin-right: 0;
   }
 }
