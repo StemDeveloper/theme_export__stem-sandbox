@@ -3706,3 +3706,19 @@ details-disclosure > details {
 .animate-input-underline .field__input:focus-visible {
   box-shadow: none;
 }
+
+/* infinite loop */
+.carousel-component[data-infinite-loop="true"] .horizontal-scrolling-banner {
+  display: block;
+  overflow: hidden;
+}
+
+.carousel-component[data-infinite-loop="true"] .horizontal-scrolling-banner__helper-wrapper {
+  position: relative;
+  align-items: center;
+  display: flex;
+  left: 0;
+  transform: translateZ(0);
+  transition-property: left;
+  transition-timing-function: linear;
+}
