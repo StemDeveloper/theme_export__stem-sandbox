@@ -333,6 +333,9 @@
       "settings": {
         "cart_type": {
           "label": "Cart type",
+          "none": {
+            "label": "None"
+          },
           "drawer": {
             "label": "Drawer"
           },
