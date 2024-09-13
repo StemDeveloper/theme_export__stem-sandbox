@@ -129,7 +129,7 @@
   left: 50%;
   width: 40rem;
   height: auto;
-  padding: 1rem;
+  padding: 1.5rem;
   overflow-x: auto;
   max-height: 45rem;
   transform: translate(-50%, -50%);
@@ -141,4 +141,16 @@
 
 .richtext--container div[data-animation="PopInCircle"] {
   clip-path: circle(0 at center);
+}
+
+@media (orientation: portrait) {
+  .richtext--container .rich-text__text {
+    top: 0;
+    width: 100vw;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
 }

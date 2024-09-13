@@ -7,6 +7,8 @@ if(!customElements.get('richtext-animation')) {
         this.richtextParent = this.parentElement;
         this.animateBlocks = this.querySelectorAll('[data-animation="PopInCircle"]');
         this.scrollHandler = this.updateVisibility.bind(this);
+        this.startTime = null;
+        this.isAnimating = false;
       }
 
       connectedCallback() {
@@ -18,45 +20,60 @@ if(!customElements.get('richtext-animation')) {
       }
 
       updateVisibility() {
-        const rect = this.getBoundingClientRect();
-        const rectParent = this.parentElement.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
-        
-        const elementHeight = rect.height;
-        const elementTop = rect.top;
-        const elementBottom = rect.bottom;
-        
-        const elementParentHeight = rectParent.height;
-        const elementParentTop = rectParent.top;
-        const elementParentBottom = rectParent.bottom;
-      
-        const visibleTop = Math.max(elementTop, 0);
-        const visibleBottom = Math.min(elementBottom, viewportHeight);
-      
-        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
-        const percentageVisible = (visibleHeight / elementHeight) * 100;
+        const parentRect = this.richtextParent.getBoundingClientRect();
+        if (parentRect.top <= 0 && !this.isAnimating) {
+          this.startAnimation();
+        }
+      }
 
-        const elementParentTopAbs = Math.abs(rectParent.top);
-        this.animateBlocks.forEach((block, index) => {
-          const rectBlock = block.getBoundingClientRect();
-          const rectBlockHeight = rectBlock.height;
-          const rectBlockHeightRadius = rectBlock.height / 2;
-          if(elementParentTop < 0 && elementParentTopAbs <= rectBlockHeightRadius) {
-            requestAnimationFrame(animateBlock)
-            function animateBlock() {
-              console.log(elementParentTopAbs);
-              if(percentageVisible < 100) {
-                block.style.clipPath = `circle(${0}px at center)`;
-              } else {
-                block.style.clipPath = `circle(${elementParentTopAbs}px at center)`;
-              };
+      startAnimation() {
+        this.isAnimating = true;
+        this.startTime = performance.now();
+      
+        const runAnimation = (timestamp) => {
+          const elapsedTime = timestamp - this.startTime;
+          const viewportHeight = window.innerHeight;
+          const scrollY = window.scrollY;
+          const viewportCenter = scrollY + viewportHeight / 2;
+      
+          this.animateBlocks.forEach((block, index) => {
+            const rect = block.getBoundingClientRect();
+            const parentTopPosition = this.richtextParent.getBoundingClientRect().top;
+            const blockHeight = rect.height;
+            const blockHeightRadius = 0.5 * blockHeight;
+            const blockAnimateStart = index * blockHeight;
+            const blockAnimateEnd = (index + 1) * blockHeight;
+            const blockAnimateMiddle = blockAnimateEnd - blockHeightRadius;
+      
+            if (parentTopPosition < 0) {
+              const windowMedia = window.matchMedia('(min-width: 990px)');
+              const parentTopPositionValue = Math.abs(parentTopPosition);
+              let visibilityPercent = 0;
+              
+              if (parentTopPositionValue >= blockAnimateStart && parentTopPositionValue < blockAnimateMiddle) {
+                visibilityPercent = ((parentTopPositionValue - blockAnimateStart) / (blockAnimateMiddle - blockAnimateStart)) * 100;
+              } else if (parentTopPositionValue >= blockAnimateMiddle && parentTopPositionValue < blockAnimateEnd) {
+                visibilityPercent = ((blockAnimateEnd - parentTopPositionValue) / (blockAnimateEnd - blockAnimateMiddle)) * 100;
+              }
 
-              if(elementParentTop < 0) return;
-              requestAnimationFrame(animateBlock);
+              const animateCircle = (visibilityPercent / 100) * blockHeightRadius;
+              block.style.clipPath = `circle(${visibilityPercent.toFixed(2)}% at center)`;
+              // block.style.clipPath = windowMedia.matches ? `circle(${animateCircle.toFixed(2)}px at center)` : `circle(${visibilityPercent.toFixed(2)}% at center)`;
+            } else {
+              block.style.clipPath = `circle(0 at center)`;
             }
+          });
+          
+          if (elapsedTime < 1000) {
+            requestAnimationFrame(runAnimation);
+          } else {
+            this.isAnimating = false;
+            this.startTime = null;
           }
-        });
+        };
+      
+        requestAnimationFrame(runAnimation);
       }
     }
-  )
+  );
 }
