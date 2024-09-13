@@ -44,7 +44,7 @@
         "menu": "menu-working",
         "menu_type_desktop": "dropdown",
         "nav_position_desktop": "right",
-        "sticky_header_type": "always",
+        "sticky_header_type": "reduce-logo-size",
         "show_line_separator": false,
         "enable_search": false,
         "desktop_background_logo_nav": true,
