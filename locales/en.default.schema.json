@@ -1255,6 +1255,9 @@
             "label": "Left"
           }
         },
+        "mobile_menu_right": {
+          "label": "Mobile Menu to Right Side, Opening Right"
+        },
         "header__7": {
           "content": "Customer accounts log in",
           "info": "To manage customer accounts, go to your [customer accounts settings](\/admin\/settings\/customer_accounts)."

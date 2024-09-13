@@ -13,7 +13,7 @@
 
 
 <style>
-  header-drawer {
+  .header:not(.header--menu-right) header-drawer {
     justify-self: start;
     margin-left: -1.2rem;
   }
@@ -142,6 +142,18 @@
       }
     {% endif %}
   }
+  @media screen and (max-width: 989px) {
+    {% if section.settings.mobile_menu_right %}
+      .section-header .header--menu-right {
+        grid-template-areas: "icons heading menu";
+      }
+      .section-header .header--menu-right header-drawer {
+        grid-area: menu;
+        justify-self: end;
+        margin-right: -1.2rem;
+      }
+    {% endif %}
+  }
 {%- endstyle -%}
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
@@ -167,7 +179,7 @@
       assign localization_forms = true
     endif
   -%}
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }}{% if section.settings.mobile_menu_right %} header--menu-right{% endif %} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
     {%- liquid
       if section.settings.menu != blank
         render 'header-drawer'
@@ -681,6 +693,12 @@
       ],
       "default": "center",
       "label": "t:sections.header.settings.mobile_logo_position.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_menu_right",
+      "label": "t:sections.header.settings.mobile_menu_right.label",
+      "default": true
     },
     {
       "type": "header",
