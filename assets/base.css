@@ -3685,7 +3685,12 @@ details-disclosure > details {
   position: relative;
 }
 
-.animate-input-underline .field::after {
+.animate-input-underline .field__animate-underline::after {
+  opacity: 0;
+}
+
+.animate-input-underline .field .animate__field-line {
+  position: absolute;
   left: 0;
   bottom: 0;
   top: auto;
@@ -3695,11 +3700,7 @@ details-disclosure > details {
   box-shadow: none;
   background-color: rgb(var(--color-foreground));
   width: var(--input-underline-percentage, 0);
-  transition: width var(--duration-medium) ease;
-  -webkit-transition: width var(--duration-medium) ease;
-  -moz-transition: width var(--duration-medium) ease;
-  -ms-transition: width var(--duration-medium) ease;
-  -o-transition: width var(--duration-medium) ease;
+  z-index: 3;
 }
 
 .animate-input-underline .field:hover.field::after,

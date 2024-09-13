@@ -4,11 +4,19 @@ if (!customElements.get('animate-input-underline')) {
     class AnimateInputUnderline extends HTMLElement {
       constructor() {
         super();
+        this.startTime = null;
+        this.isAnimating = false;
         this.inputFields = this.querySelectorAll('.field');
-        this.handleScroll = this.handleScroll.bind(this);
+        this.inputFields.forEach((input) => {
+          const inputLine = document.createElement('span');
+          inputLine.classList.add('animate__field-line');
+          input.classList.add('field__animate-underline');
+          input.appendChild(inputLine);
+        });      
+        this.handleScroll = this.startAnimation.bind(this);
       }
 
-      connectedCallback() {        
+      connectedCallback() {
         window.addEventListener('scroll', this.handleScroll);
         this.handleScroll();
       }
@@ -17,28 +25,44 @@ if (!customElements.get('animate-input-underline')) {
         window.removeEventListener('scroll', this.handleScroll);
       }
 
-      handleScroll() {
-        const viewportHeight = window.innerHeight;
-        const scrollY = window.scrollY;
-        const viewportCenter = scrollY + viewportHeight / 2;
-
-        this.inputFields.forEach(field => {
-          const rect = field.getBoundingClientRect();
-          const fieldTop = rect.top + scrollY;
-          const fieldBottom = rect.bottom + scrollY;
-          const fieldCenter = (fieldTop + fieldBottom) / 2;
+      startAnimation() {
+        this.isAnimating = true;
+        this.startTime = performance.now();
+      
+        const runAnimation = (timestamp) => {
+          const elapsedTime = timestamp - this.startTime;
+          const viewportHeight = window.innerHeight;
+          const scrollY = window.scrollY;
+          const viewportCenter = scrollY + viewportHeight / 2;
           
-          const distanceFromCenter = Math.abs(fieldCenter - viewportCenter);
+          this.inputFields.forEach(field => {
+            const inputLine = field.querySelector('.animate__field-line');
+            const rect = field.getBoundingClientRect();
+            const fieldTop = rect.top + scrollY;
+            const fieldBottom = rect.bottom + scrollY;
+            const fieldCenter = (fieldTop + fieldBottom) / 2;
+            
+            const distanceFromCenter = Math.abs(fieldCenter - viewportCenter);
+            
+            const maxDistance = viewportHeight / 2 + fieldBottom - fieldTop;
+            const percentageVisible = Math.max(0, Math.min(100, (1 - distanceFromCenter / maxDistance) * 100));
+            
+            if(rect.top < viewportHeight / 2) {
+              inputLine.style.setProperty('width', `100%`);
+              return;
+            }
+            inputLine.style.setProperty('width', `${percentageVisible.toFixed(2)}%`);
+          });
           
-          const maxDistance = viewportHeight / 2 + fieldBottom - fieldTop;
-          const percentageVisible = Math.max(0, Math.min(100, (1 - distanceFromCenter / maxDistance) * 100));
-          
-          if(rect.top < viewportHeight / 2) {
-            field.style.setProperty('--input-underline-percentage', `100%`);
-            return;
+          if (elapsedTime < 1000) {
+            requestAnimationFrame(runAnimation);
+          } else {
+            this.isAnimating = false;
+            this.startTime = null;
           }
-          field.style.setProperty('--input-underline-percentage', `${percentageVisible.toFixed(2)}%`);
-        });
+        };
+      
+        requestAnimationFrame(runAnimation);
       }
     }
   );
