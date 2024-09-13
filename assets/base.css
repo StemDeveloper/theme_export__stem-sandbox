@@ -3722,3 +3722,17 @@ details-disclosure > details {
   transition-property: left;
   transition-timing-function: linear;
 }
+
+@media screen and (max-width: 989px) {
+  .carousel-component[data-infinite-loop="true"] .grid__item {
+    width: calc(25% - var(--grid-mobile-horizontal-spacing)* 3 / 4);
+    max-width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .carousel-component[data-infinite-loop="true"] .multicolumn-card__image-wrapper {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
