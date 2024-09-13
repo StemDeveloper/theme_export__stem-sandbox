@@ -12,13 +12,14 @@ if(!customElements.get('carousel-component')) {
         if (!banners || banners.length === 0) {
           return;
         }
-        var pxPerSecond = 50;
+        var pxPerSecond = parseInt(this.dataset.loopSpeed) ? parseInt(this.dataset.loopSpeed) : 50;
         setUpElements();
         scrollTheBanners();
         window.addEventListener('resize', setUpElements);
       
         function setUpElements() {
           for (var i = 0; i < banners.length; i++) {
+            banners[i].classList.add('infinite-loop-initialized');
             var currentBanner = banners[i];
             var helperWrapperClass = 'horizontal-scrolling-banner__helper-wrapper';
             var currentHelperWrapper = currentBanner.querySelector('.' + helperWrapperClass);

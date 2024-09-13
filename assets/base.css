@@ -3708,7 +3708,7 @@ details-disclosure > details {
 }
 
 /* infinite loop */
-.carousel-component[data-infinite-loop="true"] .horizontal-scrolling-banner {
+.carousel-component[data-infinite-loop="true"] .infinite-loop-initialized {
   display: block;
   overflow: hidden;
 }

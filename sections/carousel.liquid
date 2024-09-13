@@ -51,6 +51,7 @@
     <carousel-component 
       class="carousel-component"
       data-infinite-loop="{{ section.settings.infinite_loop }}"
+      data-loop-speed="{{ section.settings.auto_looping_speed }}"
     >
     <slider-component class="slider-mobile-gutter">
       <ul
@@ -326,8 +327,28 @@
     {
       "type": "checkbox",
       "id": "infinite_loop",
-      "label": "Infinite loop",
+      "label": "t:sections.carousel.settings.infinite_loop.label",
       "default": false
+    },
+    {
+      "type": "select",
+      "id": "auto_looping_speed",
+      "label": "t:sections.carousel.settings.auto_looping_speed.label",
+      "default": "50",
+      "options": [
+        {
+          "value": "50",
+          "label": "t:sections.carousel.settings.auto_looping_speed.options__1.label"
+        },
+        {
+          "value": "100",
+          "label": "t:sections.carousel.settings.auto_looping_speed.options__2.label"
+        },
+        {
+          "value": "150",
+          "label": "t:sections.carousel.settings.auto_looping_speed.options__3.label"
+        }
+      ]
     },
     {
       "type": "select",

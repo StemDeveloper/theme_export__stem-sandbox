@@ -551,6 +551,21 @@
         },
         "full_width": {
           "label": "Make section full width"
+        },
+        "infinite_loop": {
+          "label": "Infinite loop"
+        },
+        "auto_looping_speed": {
+          "label": "Auto-Scrolling Speed",
+          "options__1": {
+            "label": "Slow"
+          },
+          "options__2": {
+            "label": "Medium"
+          },
+          "options__3": {
+            "label": "Fast"
+          }
         }
       },
       "blocks": {
