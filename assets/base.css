@@ -3693,14 +3693,26 @@ details-disclosure > details {
   position: absolute;
   left: 0;
   bottom: 0;
-  top: auto;
-  right: auto;
   border: none;
   height: 0.2rem;
   box-shadow: none;
   background-color: rgb(var(--color-foreground));
   width: var(--input-underline-percentage, 0);
   z-index: 3;
+}
+
+.animate-input-underline .center .field .animate__field-line {
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.animate-input-underline .right .field .animate__field-line {
+  right: 0;
+  left: auto;
 }
 
 .animate-input-underline .field:hover.field::after,
