@@ -47,7 +47,7 @@
         "sticky_header_type": "reduce-logo-size",
         "show_line_separator": false,
         "enable_search": false,
-        "desktop_background_logo_nav": false,
+        "desktop_background_logo_nav": true,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
         "enable_country_selector": false,
