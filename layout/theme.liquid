@@ -7,9 +7,52 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
-    {%- if settings.favicon != blank -%}
-      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
-    {%- endif -%}
+    {% assign active_dark_mode = false %}
+    {% if cart.attributes.active_dark_mode %}
+      {% assign active_dark_mode = true %}
+    {% endif %}
+
+    {% if active_dark_mode %}
+      {%- if settings.favicon_dark != blank -%}
+        <link id="DarkModeIcon" rel="icon" type="image/png" href="{{ settings.favicon_dark | image_url: width: 32, height: 32 }}" {% if settings.favicon != blank %}data-mode-src="{{ settings.favicon_dark | image_url: width: 32, height: 32 }}"{% endif %}>
+      {% else %}
+        <link id="GeneralkModeIcon" rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      {%- endif -%}
+    {% else %}
+      {%- if settings.favicon != blank -%}
+      <link id="GeneralkModeIcon" rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}" {% if settings.favicon_dark != blank %}data-mode-src="{{ settings.favicon_dark | image_url: width: 32, height: 32 }}"{% endif %}>
+      {%- endif -%}
+    {% endif %}
+
+    <script>
+      const updateBrowserMode = () => {
+        const isDarkMode = () =>  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        fetch('/cart/update.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            updates: {},
+            attributes: {
+              active_dark_mode: isDarkMode()
+            }
+          })
+        })
+          .then(response => response.json())
+          .then(data => {})
+          .catch(error => {
+            console.error('Error updating collection view:', error);
+          })
+          .finally(() => {
+            const modeIcon = document.getElementById('GeneralkModeIcon') || document.getElementById('GeneralkModeIcon');
+            if(modeIcon && modeIcon.dataset.modeSrc)
+              modeIcon.setAttribute('href', modeIcon.dataset.modeSrc);
+          });
+      }
+
+      updateBrowserMode();
+    </script>
 
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>

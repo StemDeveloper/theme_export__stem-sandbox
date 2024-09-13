@@ -160,6 +160,9 @@
         "favicon": {
           "label": "Favicon image",
           "info": "Will be scaled down to 32 x 32px"
+        },
+        "favicon_dark": {
+          "label": "Favicon 'Dark Mode'"
         }
       }
     },
