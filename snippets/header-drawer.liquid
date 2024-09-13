@@ -12,7 +12,8 @@
       aria-label="{{ 'sections.header.menu' | t }}"
     >
       <span>
-        {{- 'icon-hamburger.svg' | inline_asset_content -}}
+        {% comment %} {{- 'icon-hamburger.svg' | inline_asset_content -}} {% endcomment %}
+        <span class="icon-hamburger">{{ 'sections.header.menu' | t }}</span>
         {{- 'icon-close.svg' | inline_asset_content -}}
       </span>
     </summary>

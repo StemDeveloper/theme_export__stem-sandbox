@@ -1,5 +1,7 @@
 .header__icon--menu {
   position: initial;
+  text-decoration: none;
+  font-weight: var(--font-body-weight-bold);
 }
 
 .js menu-drawer > details > summary::before,
@@ -68,6 +70,10 @@ menu-drawer > details[open] > summary::before {
 details[open].menu-opening > .menu-drawer__submenu {
   transform: translateX(0);
   visibility: visible;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
 }
 
 .js .menu-drawer__navigation .submenu-open {
