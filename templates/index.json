@@ -232,6 +232,7 @@
         "column_UnVaap": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -241,6 +242,7 @@
         "column_Xb3R3E": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -250,6 +252,7 @@
         "column_Q4wbJB": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -259,6 +262,7 @@
         "column_WFCMni": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -268,6 +272,7 @@
         "column_wM87zE": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -277,6 +282,7 @@
         "column_eeQXft": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -286,6 +292,7 @@
         "column_mRRmrt": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -295,6 +302,7 @@
         "column_9xEiqb": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -313,18 +321,18 @@
         "column_9xEiqb"
       ],
       "settings": {
-        "title": "Carousel",
-        "heading_size": "h1",
+        "title": "Client Success Spotlights",
+        "heading_size": "h2",
         "heading_alignment": "center",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "full_width": false,
-        "infinite_loop": false,
+        "columns_desktop": 6,
+        "full_width": true,
+        "infinite_loop": true,
         "auto_looping_speed": "50",
         "column_alignment": "left",
         "background_style": "primary",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "slider_visual": "counter",
         "color_scheme": "",
