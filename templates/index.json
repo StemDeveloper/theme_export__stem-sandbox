@@ -226,6 +226,62 @@
         "padding_bottom": 100
       }
     },
+    "multicolumn_NktPLq": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_c4NjMq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_wDHCdQ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cRkzcY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_c4NjMq",
+        "column_wDHCdQ",
+        "column_cRkzcY"
+      ],
+      "settings": {
+        "title": "<strong>Our clients are forward-thinking and content focused. They are design-driven. Disruptive within their spaces. They are rebels. Risk-takers. Purposeful, timeless, thoughtful. Our clients are ready to do what it takes to grow their businesses.<\/strong>",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "carousel_Qd8zph": {
       "type": "carousel",
       "blocks": {
@@ -347,6 +403,7 @@
     "image_banner",
     "rich_text_9BnG6a",
     "carousel_wV3JFV",
+    "multicolumn_NktPLq",
     "carousel_Qd8zph"
   ]
 }
