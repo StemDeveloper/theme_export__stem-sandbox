@@ -225,11 +225,120 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "carousel_Qd8zph": {
+      "type": "carousel",
+      "blocks": {
+        "column_UnVaap": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Xb3R3E": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Q4wbJB": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WFCMni": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_wM87zE": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_eeQXft": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mRRmrt": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9xEiqb": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_UnVaap",
+        "column_Xb3R3E",
+        "column_Q4wbJB",
+        "column_WFCMni",
+        "column_wM87zE",
+        "column_eeQXft",
+        "column_mRRmrt",
+        "column_9xEiqb"
+      ],
+      "settings": {
+        "title": "Carousel",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "full_width": false,
+        "infinite_loop": false,
+        "auto_looping_speed": "50",
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "slider_visual": "counter",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
     "rich_text_9BnG6a",
-    "carousel_wV3JFV"
+    "carousel_wV3JFV",
+    "carousel_Qd8zph"
   ]
 }
