@@ -58,13 +58,56 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_LHXHiH": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_YT7VcY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NE9xQT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_aH46Wa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "column_H8Mzp7",
         "column_RLLVPM",
         "column_K88yh7",
-        "column_7brRWE"
+        "column_7brRWE",
+        "column_LHXHiH",
+        "column_YT7VcY",
+        "column_NE9xQT",
+        "column_aH46Wa"
       ],
       "settings": {
         "title": "<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odi.<\/strong>",
