@@ -23,8 +23,8 @@
         "column_H8Mzp7": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -32,8 +32,9 @@
         "column_RLLVPM": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -41,8 +42,19 @@
         "column_K88yh7": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7brRWE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -51,10 +63,11 @@
       "block_order": [
         "column_H8Mzp7",
         "column_RLLVPM",
-        "column_K88yh7"
+        "column_K88yh7",
+        "column_7brRWE"
       ],
       "settings": {
-        "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odi.",
+        "title": "<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odi.<\/strong>",
         "heading_size": "hxxl",
         "image_width": "full",
         "image_ratio": "adapt",
