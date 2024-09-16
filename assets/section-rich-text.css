@@ -87,6 +87,7 @@
 /* custom codes */
 .section--richtext {
   min-height: calc(var(--richtext-animation-height, 100vh) * (var(--richtext-animation-blocks, 0) + 1));
+  overflow: clip;
 }
 
 .richtext--container {
@@ -103,10 +104,6 @@
 
 .richtext--container > * {
   flex-grow: 1;
-}
-
-.richtext--container .isolate {
-  position: static;
 }
 
 .richtext--container .rich-text__text {
@@ -145,12 +142,6 @@
 
 @media (orientation: portrait) {
   .richtext--container .rich-text__text {
-    top: 0;
     width: 100vw;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
   }
 }
