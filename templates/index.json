@@ -24,7 +24,7 @@
       ],
       "settings": {
         "image_overlay_opacity": 100,
-        "image_height": "large",
+        "image_height": "extra-large",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
