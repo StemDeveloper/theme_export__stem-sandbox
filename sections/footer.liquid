@@ -25,6 +25,25 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  {% if settings.enable_footer_mask %}
+    .section-footer {
+      position: sticky;
+      bottom: 0;
+      z-index: -1;
+    }
+    .section-footer .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(var(--color-background));
+      background: var(--gradient-background);
+      background-attachment: fixed;
+      z-index: -1;
+    }
+  {% endif %}
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
@@ -328,6 +347,7 @@
 {% schema %}
 {
   "name": "t:sections.footer.name",
+  "class": "section-footer",
   "blocks": [
     {
       "type": "@app"

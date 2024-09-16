@@ -236,6 +236,13 @@
         "default": "default",
         "label": "t:settings_schema.animations.settings.animations_hover_elements.label",
         "info": "t:settings_schema.animations.settings.animations_hover_elements.info"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_footer_mask",
+        "label": "t:settings_schema.animations.settings.enable_footer_mask.label",
+        "info": "t:settings_schema.animations.settings.enable_footer_mask.info",
+        "default": false
       }
     ]
   },
