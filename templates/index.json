@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "image_banner": {
@@ -33,7 +42,7 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>Your Expert<br>Shopify Partner.<\/strong>",
-            "heading_size": "hxxxxl"
+            "heading_size": "h7xl"
           }
         },
         "text_Fj6TtJ": {
@@ -202,7 +211,7 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 6,
-        "full_width": true,
+        "full_width": "true",
         "infinite_loop": true,
         "auto_looping_speed": "100",
         "column_alignment": "left",
@@ -374,7 +383,7 @@
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 6,
-        "full_width": true,
+        "full_width": "true",
         "infinite_loop": true,
         "auto_looping_speed": "50",
         "column_alignment": "left",
