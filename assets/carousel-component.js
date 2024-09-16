@@ -8,7 +8,7 @@ if(!customElements.get('carousel-component')) {
       }
 
       infiniteLoop() {
-        var banners = document.getElementsByClassName('horizontal-scrolling-banner');
+        var banners = this.querySelectorAll('.horizontal-scrolling-banner');
         if (!banners || banners.length === 0) {
           return;
         }
