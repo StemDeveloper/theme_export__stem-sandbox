@@ -12,7 +12,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
-    <link rel="canonical" href="{{ canonical_url }}">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ canonical.url }}">
+    <!-- Hreflang Tags for English Canada -->
+    <link rel="alternate" hreflang="en-CA" href="{{ canonical.url }}">
+    <!-- Hreflang Tags for French Canada -->
+    <link rel="alternate" hreflang="fr-CA" href="{{ canonical.url | append: '/fr' }}">
+    <!-- Hreflang Tags for English UK -->
+    <link rel="alternate" hreflang="en-GB" href="{{ canonical.url | append: '/en-gb' }}">
+    <!-- Hreflang Tags for English Denmark -->
+    <link rel="alternate" hreflang="en-DK" href="{{ canonical.url | append: '/en-dk' }}">
+    <!-- Hreflang Tag for X-Default -->
+    <link rel="alternate" hreflang="x-default" href="{{ canonical.url }}">
+    <!-- nofollow,noindex robots including Product Tag logic for "noindex" -->
+    {% assign pt = product.tags | join:',' %}
+    {% if pt contains 'noindex' or template contains "cart" or template contains 'account' or template contains 'customer' %}\
+      <meta name="robots" content="noindex,nofollow" />
+    {% else %}
+      <meta name="robots" content="index,follow" />
+    {% endif %}
 
     {% assign active_dark_mode = false %}
     {% if cart.attributes.active_dark_mode %}
