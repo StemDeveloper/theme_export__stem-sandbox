@@ -57,7 +57,7 @@ if(!customElements.get('richtext-animation')) {
               }
 
               const animateCircle = (visibilityPercent / 100) * blockHeightRadius;
-              block.style.clipPath = `circle(${visibilityPercent.toFixed(2)}% at center)`;
+              block.style.clipPath = windowMedia.matches ? `circle(${animateCircle.toFixed(2)}px at center)` : `circle(${animateCircle.toFixed(2)}px at 75% 50%)`;
               // block.style.clipPath = windowMedia.matches ? `circle(${animateCircle.toFixed(2)}px at center)` : `circle(${visibilityPercent.toFixed(2)}% at center)`;
               this.richtextParent.classList.add('animate-richtext');
             } else {
