@@ -17,6 +17,11 @@
 {%- endstyle -%}
 
 {%- liquid
+  assign page_width_class = 'page-width'
+  case section.settings.full_width
+    when 'device'
+      assign page_width_class = 'page-width--full'
+  endcase
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
   assign show_mobile_slider = false
   if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
@@ -26,12 +31,12 @@
 
 <div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div
-    class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    class="{{ page_width_class }} section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
   >
-    <div class="{% unless section.settings.full_width %} rich-text__blocks{% endunless %}">
+    <div class="{% if section.settings.full_width == 'none' %} rich-text__blocks{% endif %}">
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
         <h2 class="title inline-richtext {{ section.settings.heading_size }} {{ section.settings.heading_alignment }}">
@@ -316,10 +321,24 @@
       "label": "t:sections.multicolumn.settings.columns_desktop.label"
     },
     {
-      "type": "checkbox",
+      "type": "select",
       "id": "full_width",
       "label": "t:sections.carousel.settings.full_width.label",
-      "default": false
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.carousel.settings.full_width.options__1.label"
+        },
+        {
+          "value": "container",
+          "label": "t:sections.carousel.settings.full_width.options__2.label"
+        },
+        {
+          "value": "device",
+          "label": "t:sections.carousel.settings.full_width.options__3.label"
+        }
+      ],
+      "default": "none"
     },
     {
       "type": "checkbox",

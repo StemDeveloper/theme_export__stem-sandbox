@@ -547,7 +547,16 @@
           "default": "Carousel"
         },
         "full_width": {
-          "label": "Make section full width"
+          "label": "Make section full width",
+          "options__1": {
+            "label": "None"
+          },
+          "options__2": {
+            "label": "Full-width"
+          },
+          "options__3": {
+            "label": "True Full-width"
+          }
         },
         "infinite_loop": {
           "label": "Infinite loop"
