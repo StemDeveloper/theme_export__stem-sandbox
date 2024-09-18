@@ -528,13 +528,17 @@
 }
 
 .animate-hero .section--hero-banner + .section--richtext {
-  --animation-extra: calc(100vh - var(--announcement-height, 0));
+  --animation-extra: 1;
   margin-top: calc(var(--header-height) * -1);
 }
 
 .animate-hero .section--hero-banner ~ .shopify-section {
   position: relative;
   z-index: 2;
+}
+
+.animate-hero .shopify-section-announcement-sticky ~ .content-for-layout .section--richtext {
+  --richtext-animation-height: calc(100vh - var(--announcement-height, 0));
 }
 
 .animate-hero .section--hero-banner ~ .shopify-section:not(.section--richtext),
