@@ -44,8 +44,6 @@ function HomeHeroTransition() {
         sectionRichtextBox.style.clipPath = `circle(0 at 50% 100%)`;
         document.documentElement.classList.remove('animating-hero');
       }
-
-      console.log(document.documentElement)
       
       if (elapsedTime < 1000) {
         requestAnimationFrame(runAnimation);
@@ -59,6 +57,7 @@ function HomeHeroTransition() {
   };
   
   window.addEventListener('scroll', updateVisibility);
+  document.addEventListener('load', updateVisibility);
 }
 
 HomeHeroTransition();
