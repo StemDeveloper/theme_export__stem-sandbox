@@ -58,6 +58,7 @@ function HomeHeroTransition() {
   
   window.addEventListener('scroll', updateVisibility);
   document.addEventListener('load', updateVisibility);
+  document.documentElement.classList.add('animate-hero-richtext');
 }
 
 HomeHeroTransition();
