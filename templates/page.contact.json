@@ -23,7 +23,7 @@
         "heading_da3wU3": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>What is your goal? Let us be your guide.<\/strong>",
+            "heading": "<strong>What is your goal? <span>Let us be your guide.<\/span><\/strong>",
             "heading_size": "hxxl"
           }
         },
