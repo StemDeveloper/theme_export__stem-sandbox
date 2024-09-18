@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -20,7 +29,8 @@
         },
         "email_form_8dfceK": {
           "type": "email_form",
-          "settings": {}
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -48,6 +58,13 @@
             "alignment": ""
           }
         },
+        "text_PXCTt9": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+          }
+        },
         "link_list_7TcLkQ": {
           "type": "link_list",
           "settings": {
@@ -58,6 +75,7 @@
       },
       "block_order": [
         "image_77Mymy",
+        "text_PXCTt9",
         "link_list_7TcLkQ"
       ],
       "settings": {
