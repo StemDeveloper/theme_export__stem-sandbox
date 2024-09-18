@@ -253,6 +253,9 @@
           "label": "Hover effect",
           "info": "Affects cards and buttons."
         },
+        "enable_hero_transition": {
+          "label": "Home hero transition"
+        },
         "enable_footer_mask": {
           "label": "Footer Mask",
           "info": "Makes footer Sticky at bottom."

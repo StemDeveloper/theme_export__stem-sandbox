@@ -239,6 +239,12 @@
       },
       {
         "type": "checkbox",
+        "id": "enable_hero_transition",
+        "label": "t:settings_schema.animations.settings.enable_hero_transition.label",
+        "default": false
+      },
+      {
+        "type": "checkbox",
         "id": "enable_footer_mask",
         "label": "t:settings_schema.animations.settings.enable_footer_mask.label",
         "info": "t:settings_schema.animations.settings.enable_footer_mask.info",

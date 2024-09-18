@@ -85,8 +85,12 @@
   justify-content: flex-end;
 }
 /* custom codes */
+.shopify-section-announcement-sticky ~ .content-for-layout .section--richtext {
+  --richtext-animation-height: calc(100vh - var(--announcement-height, 0));
+}
+
 .section--richtext {
-  min-height: calc(var(--richtext-animation-height, 100vh) * (var(--richtext-animation-blocks, 0) + 1));
+  min-height: calc(var(--richtext-animation-height, 100vh) * (var(--richtext-animation-blocks, 0) + 1) + var(--animation-extra, 0));
   overflow: clip;
 }
 
@@ -111,7 +115,7 @@
   top: 50%;
   right: 0;
   width: 100vh;
-  height: 100vh;
+  height: var(--richtext-animation-height);
   margin-top: 0;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);

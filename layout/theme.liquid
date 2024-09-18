@@ -106,6 +106,9 @@
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    {% if settings.enable_hero_transition and template.name == 'index' %}
+      <script src="{{ 'animate-hero-home.js' | asset_url }}" defer="defer"></script>
+    {% endif %}
 
     {{ content_for_header }}
 
@@ -366,7 +369,7 @@
     </script>
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="gradient{% if settings.enable_hero_transition and template.name == 'index' %} isolate animate-hero{% endif %}{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
