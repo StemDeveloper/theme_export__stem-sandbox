@@ -41,7 +41,7 @@
         "heading_RrGAzx": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Your Expert<br>Shopify Partner.<\/strong>",
+            "heading": "<strong>Your Expert<br><span>Shopify<\/span> Partner.<\/strong>",
             "heading_size": "h7xl"
           }
         },
