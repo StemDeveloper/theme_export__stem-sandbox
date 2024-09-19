@@ -148,11 +148,11 @@
 
 .rich-text__heading,
 .rich-text__heading span {
-  transition: all var(--duration-medium) var(--ease-out-slow);
-  -webkit-transition: all var(--duration-medium) var(--ease-out-slow);
-  -moz-transition: all var(--duration-medium) var(--ease-out-slow);
-  -ms-transition: all var(--duration-medium) var(--ease-out-slow);
-  -o-transition: all var(--duration-medium) var(--ease-out-slow);
+  transition: all var(--duration-long) var(--ease-out-slow);
+  -webkit-transition: all var(--duration-long) var(--ease-out-slow);
+  -moz-transition: all var(--duration-long) var(--ease-out-slow);
+  -ms-transition: all var(--duration-long) var(--ease-out-slow);
+  -o-transition: all var(--duration-long) var(--ease-out-slow);
 }
 
 .section--richtext:not(.animate-richtext) .rich-text__heading span {
