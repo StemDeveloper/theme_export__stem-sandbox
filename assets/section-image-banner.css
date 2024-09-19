@@ -519,24 +519,6 @@
   --color-foreground-animate: var(--color-foreground);
 }
 
-.animate-hero-richtext .shopify-section-announcement-sticky .utility-bar {
-  transition: all var(--duration-medium) var(--ease-out-slow);
-  -webkit-transition: all var(--duration-medium) var(--ease-out-slow);
-  -moz-transition: all var(--duration-medium) var(--ease-out-slow);
-  -ms-transition: all var(--duration-medium) var(--ease-out-slow);
-  -o-transition: all var(--duration-medium) var(--ease-out-slow);
-}
-
-.animate-hero-richtext:not(.animate-hero-end) .shopify-section-announcement-sticky .utility-bar {
-  background: rgb(var(--color-background-animate));
-  background-attachment: fixed;
-}
-
-.animate-hero-richtext:not(.animate-hero-end) .shopify-section-announcement-sticky .utility-bar,
-.animate-hero-richtext:not(.animate-hero-end) .shopify-section-announcement-sticky .utility-bar * {
-  color: rgb(var(--color-foreground-animate));
-}
-
 .animate-hero .section--hero-banner {
   position: fixed;
   top: var(--announcement-height, 0);

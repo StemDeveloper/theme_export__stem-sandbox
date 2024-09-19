@@ -1,4 +1,5 @@
 function HomeHeroTransition() {
+  var sectionAnnouncement = document.querySelector('.section-announcement');
   var sectionHero = document.querySelector('.section--hero-banner');
   var sectionRichtext = document.querySelector('.section--richtext');
   var sectionRichtextBox = sectionRichtext.querySelector('.richtext--container');
@@ -21,7 +22,9 @@ function HomeHeroTransition() {
     animationStartTime = performance.now();
   
     const runAnimation = (timestamp) => {
-      const elapsedTime = timestamp - animationStartTime;
+      const elapsedTime = timestamp - animationStartTime;      
+      const rectAnnouncement = sectionAnnouncement.getBoundingClientRect();
+      const rectHero = sectionHero.getBoundingClientRect();
       const rect = sectionRichtextBox.getBoundingClientRect();
       const parentTopPosition = sectionRichtext.getBoundingClientRect().top;
       const blockAnimateStart = 0;
@@ -29,9 +32,16 @@ function HomeHeroTransition() {
 
       if(parentTopPosition < 0) {
         const parentTopPositionValue = Math.abs(parentTopPosition);
+        let visibilityPx = 0;
+        let horizontalPenetration = 0;
+        if(parentTopPositionValue > rectHero.height) {
+          visibilityPx = parentTopPositionValue - rectHero.height;
+        }
+        sectionAnnouncement.style.clipPath = `ellipse(${visibilityPx.toFixed(2) * 3}px ${visibilityPx.toFixed(2)}px at 50% 100%)`;
         sectionRichtextBox.style.clipPath = `circle(${parentTopPositionValue.toFixed(2)}px at 50% 100%)`;
         document.documentElement.classList.add('animating-hero');
       } else {
+        sectionAnnouncement.style.clipPath = `ellipse(0px 0px at 50% 100%)`;
         sectionRichtextBox.style.clipPath = `circle(0 at 50% 100%)`;
         document.documentElement.classList.remove('animating-hero');
       }
