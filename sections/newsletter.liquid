@@ -27,7 +27,7 @@
 <animate-input-underline class="animate-input-underline">
 <div class="newsletter{% if section.settings.full_width == 'none' %} page-width{% endif %}">
   <div class="rich-text color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width != 'none' %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
-    <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width != 'none' %} {{ page_width_class }}{% endif %}">
+    <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width != 'device' %} rich-text__wrapper{% endif %}{% if section.settings.full_width != 'none' %} {{ page_width_class }}{% endif %}">
       <div class="newsletter__wrapper {{ section.settings.content_alignment }} {% if section.settings.full_width == 'none' %} rich-text__blocks{% endif %}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
