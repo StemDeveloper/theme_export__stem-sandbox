@@ -159,8 +159,13 @@
   color: var(--color-foreground-secondary);
 }
 
-.animate-richtext .h7xl {
+.animate-richtext .h10xl {
   font-size: clamp(calc(var(--font-heading-scale) * 8rem), 14vw, calc(var(--font-heading-scale) * 11.2rem));
+  line-height: 1.1;
+}
+
+.animate-richtext .h7xl {
+  font-size: clamp(calc(var(--font-heading-scale) * 7.4rem), 14vw, calc(var(--font-heading-scale) * 10.2rem));
   line-height: 1.1;
 }
 
