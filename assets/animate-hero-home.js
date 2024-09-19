@@ -33,9 +33,17 @@ function HomeHeroTransition() {
       if(parentTopPosition < 0) {
         const parentTopPositionValue = Math.abs(parentTopPosition);
         let visibilityPx = 0;
+        let visibilityPercent = 0;
         let horizontalPenetration = 0;
         if(parentTopPositionValue > rectHero.height) {
           visibilityPx = parentTopPositionValue - rectHero.height;
+        }
+        if(parentTopPositionValue < rectHero.height) {
+          visibilityPercent = ((parentTopPositionValue - rectHero.height) / (blockAnimateEnd - rectHero.height)) * 100;
+          document.documentElement.classList.remove('animate-hero-end');
+        } else {
+          visibilityPercent = 100;
+          document.documentElement.classList.add('animate-hero-end');
         }
         sectionAnnouncement.style.clipPath = `ellipse(${visibilityPx.toFixed(2) * 3}px ${visibilityPx.toFixed(2)}px at 50% 100%)`;
         sectionRichtextBox.style.clipPath = `circle(${parentTopPositionValue.toFixed(2)}px at 50% 100%)`;
