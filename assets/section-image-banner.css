@@ -539,7 +539,7 @@
 
 .animate-hero .section--hero-banner {
   position: fixed;
-  top: 0;
+  top: var(--announcement-height, 0);
   left: 0;
   width: 100%;
   z-index: 1;
@@ -547,7 +547,7 @@
 
 .animate-hero .section--hero-banner,
 .animate-hero .section--hero-banner > .banner {
-  height: 100vh;
+  height: calc(100vh - var(--announcement-height, 0));
 }
 
 .animate-hero .section--hero-banner + .section--richtext {

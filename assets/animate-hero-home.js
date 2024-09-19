@@ -21,7 +21,7 @@ function HomeHeroTransition() {
     animationStartTime = performance.now();
   
     const runAnimation = (timestamp) => {
-      const elapsedTime = timestamp - animationStartTime;      
+      const elapsedTime = timestamp - animationStartTime;
       const rect = sectionRichtextBox.getBoundingClientRect();
       const parentTopPosition = sectionRichtext.getBoundingClientRect().top;
       const blockAnimateStart = 0;
@@ -29,16 +29,7 @@ function HomeHeroTransition() {
 
       if(parentTopPosition < 0) {
         const parentTopPositionValue = Math.abs(parentTopPosition);
-        let visibilityPercent = 0;
-
-        if(parentTopPositionValue < blockAnimateEnd) {
-          visibilityPercent = ((parentTopPositionValue - blockAnimateStart) / (blockAnimateEnd - blockAnimateStart)) * 100;
-          document.documentElement.classList.remove('animate-hero-end');
-        } else {
-          visibilityPercent = 100;
-          document.documentElement.classList.add('animate-hero-end');
-        }
-        sectionRichtextBox.style.clipPath = `circle(${visibilityPercent.toFixed(2)}% at 50% 100%)`;
+        sectionRichtextBox.style.clipPath = `circle(${parentTopPositionValue.toFixed(2)}px at 50% 100%)`;
         document.documentElement.classList.add('animating-hero');
       } else {
         sectionRichtextBox.style.clipPath = `circle(0 at 50% 100%)`;
