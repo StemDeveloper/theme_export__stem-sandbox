@@ -52,6 +52,7 @@ if (!customElements.get('animate-input-underline')) {
               return;
             }
             inputLine.style.setProperty('width', `${percentageVisible.toFixed(2)}%`);
+            percentageVisible.toFixed(2) > 0 ? field.classList.add('animating-field') : field.classList.remove('animating-field');
           });
           
           if (elapsedTime < 1000) {

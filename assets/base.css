@@ -8,6 +8,25 @@
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
@@ -3736,6 +3755,10 @@ details-disclosure > details {
 .animate-input-underline .field:hover.field::after,
 .animate-input-underline .field__input:focus-visible {
   box-shadow: none;
+}
+
+.animate-input-underline .animating-field .field__button {
+  animation: fadeInRight 1s ease-in-out;
 }
 
 /* infinite loop */
