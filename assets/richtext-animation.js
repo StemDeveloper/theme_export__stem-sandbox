@@ -5,6 +5,7 @@ if(!customElements.get('richtext-animation')) {
       constructor() {
         super();
         this.richtextParent = this.parentElement;
+        this.animateStarts = parseInt(this.dataset.animateStartIndex);
         this.animateBlocks = this.querySelectorAll('[data-animation="PopInCircle"]');
         this.scrollHandler = this.updateVisibility.bind(this);
         this.startTime = null;
@@ -22,11 +23,11 @@ if(!customElements.get('richtext-animation')) {
       updateVisibility() {
         const parentRect = this.richtextParent.getBoundingClientRect();
         if (parentRect.top <= 0 && !this.isAnimating) {
-          this.startAnimation();
+          this.startAnimation(this.animateStarts);
         }
       }
 
-      startAnimation() {
+      startAnimation(animationStartindex) {
         this.isAnimating = true;
         this.startTime = performance.now();
       
@@ -41,8 +42,8 @@ if(!customElements.get('richtext-animation')) {
             const parentTopPosition = this.richtextParent.getBoundingClientRect().top;
             const blockHeight = rect.height;
             const blockHeightRadius = 0.5 * blockHeight;
-            const blockAnimateStart = index * blockHeight;
-            const blockAnimateEnd = (index + 1) * blockHeight;
+            const blockAnimateStart = (index + animationStartindex) * blockHeight;
+            const blockAnimateEnd = (index + animationStartindex + 1) * blockHeight;
             const blockAnimateMiddle = blockAnimateEnd - blockHeightRadius;
       
             if (parentTopPosition < 0) {

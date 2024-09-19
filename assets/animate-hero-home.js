@@ -59,6 +59,7 @@ function HomeHeroTransition() {
   window.addEventListener('scroll', updateVisibility);
   document.addEventListener('load', updateVisibility);
   document.documentElement.classList.add('animate-hero-richtext');
+  sectionRichtextBox.setAttribute('data-animate-start-index', '1');
 }
 
 HomeHeroTransition();

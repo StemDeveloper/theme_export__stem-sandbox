@@ -28,6 +28,7 @@
 
 <richtext-animation 
   class="richtext--container"
+  data-animate-start-index="0"
 >
 <div class="{% unless animate_blocks > 0 %} isolate{% endunless %}{% unless section.settings.full_width %} page-width{% endunless %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
