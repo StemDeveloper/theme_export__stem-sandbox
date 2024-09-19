@@ -42,7 +42,8 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>Your Expert<br><span>Shopify<\/span> Partner.<\/strong>",
-            "heading_size": "h7xl"
+            "heading_size": "h10xl",
+            "secondary_color": "#009B72"
           }
         },
         "text_Fj6TtJ": {
