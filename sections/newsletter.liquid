@@ -33,7 +33,7 @@
 <div class="newsletter{% if section.settings.full_width_heading == 'none' %} page-width{% endif %}">
   <div class="rich-text color-{{ section.settings.color_scheme }} isolate{% if section.settings.full_width_heading != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
     <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width_heading != 'device' %} rich-text__wrapper{% endif %}{% if section.settings.full_width != 'none' %} {{ page_width_class_heading }}{% endif %}">
-      <div class="newsletter__wrapper {{ section.settings.content_alignment }} {% if section.settings.full_width_heading == 'none' %} rich-text__blocks{% endif %}">
+      <div class="newsletter__wrapper {{ section.settings.content_alignment }}{% if section.settings.full_width_heading == 'none' %} rich-text__blocks{% endif %}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
@@ -69,7 +69,7 @@
 <div class="newsletter{% if section.settings.full_width == 'none' %} page-width{% endif %}">
   <div class="rich-text color-{{ section.settings.color_scheme }} isolate{% if section.settings.full_width != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
     <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width != 'device' %} rich-text__wrapper{% endif %}{% if section.settings.full_width != 'none' %} {{ page_width_class }}{% endif %}">
-      <div class="newsletter__wrapper {{ section.settings.content_alignment }} {% if section.settings.full_width == 'none' %} rich-text__blocks{% endif %}">
+      <div class="newsletter__wrapper {{ section.settings.content_alignment }}{% if section.settings.full_width == 'none' %} rich-text__blocks{% endif %}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'email_form' -%}
