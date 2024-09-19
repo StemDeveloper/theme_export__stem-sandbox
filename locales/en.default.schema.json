@@ -3032,6 +3032,9 @@
             "heading": {
               "label": "Heading",
               "default": "Talk about your brand"
+            },
+            "secondary_color": {
+              "label": "Secondary Color"
             }
           }
         },
