@@ -277,8 +277,13 @@ h5,
   word-break: break-word;
 }
 
+.h10xl {
+  font-size: clamp(calc(var(--font-heading-scale) * 10.4rem), 14vw, calc(var(--font-heading-scale) * 14.2rem));
+  line-height: 1.1;
+}
+
 .h7xl {
-  font-size: clamp(calc(var(--font-heading-scale) * 8.6rem), 14vw, calc(var(--font-heading-scale) * 12.2rem));
+  font-size: clamp(calc(var(--font-heading-scale) * 8rem), 14vw, calc(var(--font-heading-scale) * 11.2rem));
   line-height: 1.1;
 }
 

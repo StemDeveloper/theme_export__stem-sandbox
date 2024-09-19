@@ -447,6 +447,9 @@
         },
         "options__8": {
           "label": "Extra 7X large"
+        },
+        "options__9": {
+          "label": "Extra 10X large"
         }
       },
       "image_shape": {
