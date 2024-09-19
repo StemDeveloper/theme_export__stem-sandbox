@@ -43,6 +43,7 @@
                   data-cascade
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
+                style="--color-foreground-secondary: {{ block.settings.secondary_color }}"
               >
                 {{ block.settings.heading | newline_to_br }}
               </h2>
