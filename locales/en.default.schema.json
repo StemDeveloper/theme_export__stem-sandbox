@@ -580,6 +580,9 @@
             "label": "True Full-width"
           }
         },
+        "full_width_heading": {
+          "label": "Make \"Heading\" + \"Sub-Heading\" full width"
+        },
         "infinite_loop": {
           "label": "Infinite loop"
         },

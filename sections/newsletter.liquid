@@ -19,16 +19,21 @@
 
 {% liquid
   assign page_width_class = 'page-width'
+  assign page_width_class_heading = 'page-width'
   case section.settings.full_width
     when 'device'
       assign page_width_class = 'page-width--full'
   endcase
+  case section.settings.full_width_heading
+    when 'device'
+      assign page_width_class_heading = 'page-width--full'
+  endcase
 %}
-<animate-input-underline class="animate-input-underline">
-<div class="newsletter{% if section.settings.full_width == 'none' %} page-width{% endif %}">
-  <div class="rich-text color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width != 'none' %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
-    <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width != 'device' %} rich-text__wrapper{% endif %}{% if section.settings.full_width != 'none' %} {{ page_width_class }}{% endif %}">
-      <div class="newsletter__wrapper {{ section.settings.content_alignment }} {% if section.settings.full_width == 'none' %} rich-text__blocks{% endif %}">
+<animate-input-underline class="animate-input-underline  gradient content-container section-{{ section.id }}-padding">
+<div class="newsletter{% if section.settings.full_width_heading == 'none' %} page-width{% endif %}">
+  <div class="rich-text color-{{ section.settings.color_scheme }} isolate{% if section.settings.full_width_heading != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
+    <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width_heading != 'device' %} rich-text__wrapper{% endif %}{% if section.settings.full_width != 'none' %} {{ page_width_class_heading }}{% endif %}">
+      <div class="newsletter__wrapper {{ section.settings.content_alignment }} {% if section.settings.full_width_heading == 'none' %} rich-text__blocks{% endif %}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
@@ -55,6 +60,18 @@
               >
                 {{ block.settings.text }}
               </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="newsletter{% if section.settings.full_width == 'none' %} page-width{% endif %}">
+  <div class="rich-text color-{{ section.settings.color_scheme }} isolate{% if section.settings.full_width != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
+    <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width != 'device' %} rich-text__wrapper{% endif %}{% if section.settings.full_width != 'none' %} {{ page_width_class }}{% endif %}">
+      <div class="newsletter__wrapper {{ section.settings.content_alignment }} {% if section.settings.full_width == 'none' %} rich-text__blocks{% endif %}">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
             {%- when 'email_form' -%}
               <div class="form__wrapper form__wrapper--{{ section.settings.content_alignment }}" {{ block.shopify_attributes }}>
                 {% form 'customer', class: 'newsletter-form' %}
@@ -195,6 +212,26 @@
       "type": "select",
       "id": "full_width",
       "label": "t:sections.carousel.settings.full_width.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.carousel.settings.full_width.options__1.label"
+        },
+        {
+          "value": "container",
+          "label": "t:sections.carousel.settings.full_width.options__2.label"
+        },
+        {
+          "value": "device",
+          "label": "t:sections.carousel.settings.full_width.options__3.label"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "full_width_heading",
+      "label": "t:sections.carousel.settings.full_width_heading.label",
       "options": [
         {
           "value": "none",

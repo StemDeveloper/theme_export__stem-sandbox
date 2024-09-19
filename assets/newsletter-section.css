@@ -44,3 +44,12 @@
     margin: 0 0 0 1rem;
   }
 }
+
+.newsletter + .newsletter {
+  margin-top: 2rem;
+}
+
+.rich-text--full-width > .page-width .newsletter-form {
+  width: 38rem;
+  max-width: 100%;
+}
