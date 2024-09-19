@@ -17,11 +17,18 @@
   }
 {%- endstyle -%}
 
+{% liquid
+  assign page_width_class = 'page-width'
+  case section.settings.full_width
+    when 'device'
+      assign page_width_class = 'page-width--full'
+  endcase
+%}
 <animate-input-underline class="animate-input-underline">
-<div class="newsletter{% unless section.settings.full_width %} page-width{% endunless %}">
-  <div class="rich-text color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
-    <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
-      <div class="newsletter__wrapper rich-text__blocks {{ section.settings.content_alignment }}">
+<div class="newsletter{% if section.settings.full_width == 'none' %} page-width{% endif %}">
+  <div class="rich-text color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width != 'none' %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+    <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width != 'none' %} {{ page_width_class }}{% endif %}">
+      <div class="newsletter__wrapper {{ section.settings.content_alignment }} {% if section.settings.full_width == 'none' %} rich-text__blocks{% endif %}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when '@app' -%}
@@ -185,10 +192,24 @@
       "default": "scheme-1"
     },
     {
-      "type": "checkbox",
+      "type": "select",
       "id": "full_width",
-      "default": true,
-      "label": "t:sections.newsletter.settings.full_width.label"
+      "label": "t:sections.carousel.settings.full_width.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.carousel.settings.full_width.options__1.label"
+        },
+        {
+          "value": "container",
+          "label": "t:sections.carousel.settings.full_width.options__2.label"
+        },
+        {
+          "value": "device",
+          "label": "t:sections.carousel.settings.full_width.options__3.label"
+        }
+      ],
+      "default": "none"
     },
     {
       "type": "paragraph",
