@@ -42,13 +42,16 @@ if(!customElements.get('richtext-animation')) {
             const rect = block.getBoundingClientRect();
             const parentTopPosition = this.richtextParent.getBoundingClientRect().top;
             const blockHeight = rect.height;
+            const blockWidth = rect.width;
             const blockHeightRadius = 0.5 * blockHeight;
+            const blockWidthRadius = 0.5 * blockWidth;
             const blockAnimateStart = (index + animationStartindex) * blockHeight;
             const blockAnimateEnd = (index + animationStartindex + 1) * blockHeight;
             const blockAnimateMiddle = blockAnimateEnd - blockHeightRadius;
       
             if (parentTopPosition < 0) {
-              const windowMedia = window.matchMedia('(min-width: 990px)');
+              const windowMedia = window.matchMedia('(orientation: landscape)');
+              const windowMobileMedia = window.matchMedia('(max-width: 749px)');
               const parentTopPositionValue = Math.abs(parentTopPosition);
               let visibilityPercent = 0;
               
@@ -58,9 +61,16 @@ if(!customElements.get('richtext-animation')) {
                 visibilityPercent = ((blockAnimateEnd - parentTopPositionValue) / (blockAnimateEnd - blockAnimateMiddle)) * 100;
               }
 
-              const animateCircle = (visibilityPercent / 100) * blockHeightRadius;
-              block.style.clipPath = windowMedia.matches ? `circle(${animateCircle.toFixed(2)}px at center)` : `circle(${animateCircle.toFixed(2)}px at 75% 50%)`;
-              // block.style.clipPath = windowMedia.matches ? `circle(${animateCircle.toFixed(2)}px at center)` : `circle(${visibilityPercent.toFixed(2)}% at center)`;
+              let animateRadius = blockHeight > blockWidth ? blockWidthRadius : blockHeightRadius;
+              if(windowMobileMedia.matches) {
+                animateRadius = blockWidth;
+              }
+              const animateCircle = (visibilityPercent / 100) * animateRadius;
+              if(windowMedia.matches) {
+                block.style.clipPath = `circle(${animateCircle.toFixed(2)}px at 50% 60%)`;
+              } else {
+                block.style.clipPath = windowMobileMedia.matches ? `circle(${animateCircle.toFixed(2)}px at 100% 65%)` : `circle(${animateCircle.toFixed(2)}px at 75% 65%)`;
+              }
               if(animationStartindex > 0) {
                 if(parentTopPositionValue > blockHeight) {
                   this.richtextParent.classList.add('animate-richtext');

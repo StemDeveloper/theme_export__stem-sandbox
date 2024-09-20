@@ -140,15 +140,47 @@
   clip-path: circle(0 at center);
 }
 
+@media (orientation: landscape) {  
+  .richtext--container .rich-text__text-inner {
+    top: 60%;
+    left: 40%;
+  }
+}
+
 @media (orientation: portrait) {
   .richtext--container .rich-text__text {
     width: 100vw;
   }
+
+  .richtext--container .rich-text__text-inner {
+    top: 60%;
+    left: 70%;
+  }
 }
 
-.rich-text__heading-animate-span,
-.animate-richtext-heading .rich-text__heading span,
-.animate-richtext-heading .rich-text__heading:not(.rich-text__heading-animate-span) {
+@media (orientation: portrait) and (max-width: 749px) {
+  .richtext--container .rich-text__text {
+    font-size: 14px;
+  }
+
+  .richtext--container .rich-text__text-inner
+
+  .richtext--container .rich-text__text-inner {
+    top: 65%;
+    right: 0;
+    left: auto;
+    width: 30rem;
+    padding: 1rem;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+}
+
+.section--richtext .rich-text__heading,
+.section--richtext .rich-text__heading span {
   transition: all var(--duration-long) var(--ease-out-slow);
   -webkit-transition: all var(--duration-long) var(--ease-out-slow);
   -moz-transition: all var(--duration-long) var(--ease-out-slow);
@@ -156,41 +188,64 @@
   -o-transition: all var(--duration-long) var(--ease-out-slow);
 }
 
-.section--richtext.animate-richtext-heading .rich-text__heading-animate,
-.section--richtext.animate-richtext-heading .rich-text__heading-animate span,
-.section--richtext:not(.animate-richtext-heading) .rich-text__heading-animate-span span {
+html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate,
+html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate span,
+html:not(.animate-hero-richtext) .section--richtext:not(.animate-richtext-heading) .rich-text__heading-animate-span span,
+.animate-hero-richtext:not(.animate-hero-end) .animate-richtext-heading .rich-text__heading-animate,
+.animate-hero-richtext:not(.animate-hero-end) .animate-richtext-heading .rich-text__heading-animate span,
+.animate-hero-richtext:not(.animate-hero-end) .section--richtext:not(.animate-richtext) .rich-text__heading-animate-span span {
   color: var(--color-foreground-secondary);
 }
 
+.rich-text__heading.h1 {
+  font-size: calc(var(--font-heading-scale) * 2.4rem);
+}
+
+@media screen and (min-width: 750px) {
+  .rich-text__heading.h1 {
+    font-size: calc(var(--font-heading-scale) * 4rem);
+  }
+}
+
 @media screen and (min-width: 990px) {
-  .animate-richtext-heading .rich-text__heading-animate-span.h10xl {
+  .animate-hero-end .animate-richtext .rich-text__heading-animate-span.h10xl,
+  html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate-span.h10xl {
     font-size: clamp(calc(var(--font-heading-scale) * 8rem), 14vw, calc(var(--font-heading-scale) * 11.2rem));
     line-height: 1.1;
   }
   
-  .animate-richtext-heading .rich-text__heading-animate-span.h7xl {
+  .animate-hero-end .animate-richtext .rich-text__heading-animate-span.h7xl,
+  html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate-span.h7xl {
     font-size: clamp(calc(var(--font-heading-scale) * 7.4rem), 14vw, calc(var(--font-heading-scale) * 10.2rem));
     line-height: 1.1;
   }
   
-  .animate-richtext-heading .rich-text__heading-animate-span.hxxxxl {
+  .animate-hero-end .animate-richtext .rich-text__heading-animate-span.hxxxxl,
+  html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate-span.hxxxxl {
     font-size: clamp(calc(var(--font-heading-scale) * 6.2rem), 14vw, calc(var(--font-heading-scale) * 8.2rem));
     line-height: 1.1;
   }
   
-  .animate-richtext-heading .rich-text__heading-animate-span.hxxxl {
+  .animate-hero-end .animate-richtext .rich-text__heading-animate-span.hxxxl,
+  html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate-span.hxxxl {
     font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem));
     line-height: 1.1;
   }
   
-  .animate-richtext-heading .rich-text__heading-animate-span.hxxl {
+  .animate-hero-end .animate-richtext .rich-text__heading-animate-span.hxxl,
+  html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate-span.hxxl {
     font-size: clamp(calc(var(--font-heading-scale) * 5rem), 14vw, calc(var(--font-heading-scale) * 6.6rem));
     line-height: 1.1;
   }
   
-  .animate-richtext-heading .rich-text__heading-animate-span.hxl {
+  .animate-hero-end .animate-richtext .rich-text__heading-animate-span.hxl,
+  html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate-span.hxl {
     font-size: calc(var(--font-heading-scale) * 5rem);
     line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
+  }
+
+  .rich-text__heading.h1 {
+    font-size: calc(var(--font-heading-scale) * 5.6rem);
   }
 }
 
