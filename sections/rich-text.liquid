@@ -38,7 +38,7 @@
           {%- case block.type -%}
             {%- when 'heading' -%}
               <h2
-                class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if block.settings.shrink_animate %} rich-text__heading-animate-span{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -263,6 +263,12 @@
           "id": "secondary_color",
           "label": "t:sections.rich-text.blocks.heading.settings.secondary_color.label",
           "default": "#009B72"
+        },
+        {
+          "type": "checkbox",
+          "id": "shrink_animate",
+          "label": "t:sections.rich-text.blocks.heading.settings.shrink_animate.label",
+          "default": false
         }
       ]
     },
