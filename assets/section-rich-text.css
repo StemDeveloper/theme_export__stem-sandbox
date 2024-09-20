@@ -180,7 +180,8 @@
 }
 
 .section--richtext .rich-text__heading,
-.section--richtext .rich-text__heading span {
+.section--richtext .rich-text__heading span,
+.section--richtext .rich-text__heading-animate-blur {
   transition: all var(--duration-long) var(--ease-out-slow);
   -webkit-transition: all var(--duration-long) var(--ease-out-slow);
   -moz-transition: all var(--duration-long) var(--ease-out-slow);
@@ -195,6 +196,11 @@ html:not(.animate-hero-richtext) .section--richtext:not(.animate-richtext-headin
 .animate-hero-richtext:not(.animate-hero-end) .animate-richtext-heading .rich-text__heading-animate span,
 .animate-hero-richtext:not(.animate-hero-end) .section--richtext:not(.animate-richtext) .rich-text__heading-animate-span span {
   color: var(--color-foreground-secondary);
+}
+
+.animating-circle .rich-text__heading-animate-blur {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
 }
 
 .rich-text__heading.h1 {

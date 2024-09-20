@@ -3048,6 +3048,9 @@
             },
             "color_animate": {
               "label": "Animation - Change color with Secondary Color"
+            },
+            "blur_heading": {
+              "label": "Blur on Heading with Scroll"
             }
           }
         },

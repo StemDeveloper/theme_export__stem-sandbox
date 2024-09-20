@@ -74,16 +74,26 @@ if(!customElements.get('richtext-animation')) {
               if(animationStartindex > 0) {
                 if(parentTopPositionValue > blockHeight) {
                   this.richtextParent.classList.add('animate-richtext');
+                  this.richtextParent.classList.add('animating-circle');
+                  if(parentTopPositionValue > ((this.animateBlocks.length + 1)*blockHeight)) {
+                    this.richtextParent.classList.remove('animating-circle');
+                  }
                 } else {
                   this.richtextParent.classList.remove('animate-richtext');
+                  this.richtextParent.classList.remove('animating-circle');
                 }
               } else {
                 this.richtextParent.classList.add('animate-richtext');
+                this.richtextParent.classList.add('animating-circle');
+                if(parentTopPositionValue > ((this.animateBlocks.length)*blockHeight)) {
+                  this.richtextParent.classList.remove('animating-circle');
+                }
               }
             } else {
               block.style.clipPath = `circle(0 at center)`;
               if(animationStartindex > 0) return;
               this.richtextParent.classList.remove('animate-richtext');
+              this.richtextParent.classList.remove('animating-circle');
             }
           });
 

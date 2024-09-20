@@ -40,6 +40,7 @@
               <h2
                 class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}
                   {% if block.settings.color_animate %} rich-text__heading-animate{% endif %}
+                  {% if block.settings.blur_heading %} rich-text__heading-animate-blur{% endif %}
                   {% if block.settings.shrink_animate %} rich-text__heading-animate-span{% endif %}
                   {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
                 "
@@ -279,6 +280,12 @@
           "type": "checkbox",
           "id": "color_animate",
           "label": "t:sections.rich-text.blocks.heading.settings.color_animate.label",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "blur_heading",
+          "label": "t:sections.rich-text.blocks.heading.settings.blur_heading.label",
           "default": false
         }
       ]
