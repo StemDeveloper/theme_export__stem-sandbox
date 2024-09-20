@@ -232,3 +232,7 @@
     display: list-item;
   }
 }
+/* carousel styles */
+.multicolumn--carousel .title {
+  flex: 1;
+}
