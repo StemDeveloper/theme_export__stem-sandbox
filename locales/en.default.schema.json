@@ -1157,6 +1157,9 @@
         "payment_enable": {
           "label": "Show payment icons"
         },
+        "enable_footer_credits": {
+          "label": "Show footer credits"
+        },
         "footer_credits": {
           "label": "Footer Credits"
         },

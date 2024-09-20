@@ -45,6 +45,11 @@ function HomeHeroTransition() {
           visibilityPercent = 100;
           document.documentElement.classList.add('animate-hero-end');
         }
+        if(parentTopPositionValue > (rectHero.height * 2)) {
+          document.documentElement.classList.add('animate-hero-cliped');
+        } else {
+          document.documentElement.classList.remove('animate-hero-cliped');
+        }
         sectionAnnouncement.style.clipPath = `ellipse(${visibilityPx.toFixed(2) * 3}px ${visibilityPx.toFixed(2)}px at 50% 100%)`;
         sectionRichtextBox.style.clipPath = `circle(${parentTopPositionValue.toFixed(2)}px at 50% 100%)`;
         document.documentElement.classList.add('animating-hero');
@@ -54,7 +59,7 @@ function HomeHeroTransition() {
         document.documentElement.classList.remove('animating-hero');
       }
       
-      if (elapsedTime < 1000) {
+      if (elapsedTime < 2000) {
         requestAnimationFrame(runAnimation);
       } else {
         animationIsPlaying = false;
