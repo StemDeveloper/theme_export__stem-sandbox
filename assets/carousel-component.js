@@ -4,23 +4,20 @@ if(!customElements.get('carousel-component')) {
     class CarouselComponent extends HTMLElement {
       constructor() {
         super();
+        this.banners = this.querySelectorAll('.horizontal-scrolling-banner');
+        if (!this.banners || this.banners.length === 0) {
+          return;
+        }
         if(this.dataset.infiniteLoop === 'true') this.infiniteLoop();
       }
 
       infiniteLoop() {
-        var banners = this.querySelectorAll('.horizontal-scrolling-banner');
-        if (!banners || banners.length === 0) {
-          return;
-        }
-        var pxPerSecond = parseInt(this.dataset.loopSpeed) ? parseInt(this.dataset.loopSpeed) : 50;
-        setUpElements();
-        scrollTheBanners();
-        window.addEventListener('resize', setUpElements);
+        var pxPerSecond = parseInt(this.dataset.loopSpeed);
       
-        function setUpElements() {
-          for (var i = 0; i < banners.length; i++) {
-            banners[i].classList.add('infinite-loop-initialized');
-            var currentBanner = banners[i];
+        const setUpElements = () => {
+          for (var i = 0; i < this.banners.length; i++) {
+            this.banners[i].classList.add('infinite-loop-initialized');
+            var currentBanner = this.banners[i];
             var helperWrapperClass = 'horizontal-scrolling-banner__helper-wrapper';
             var currentHelperWrapper = currentBanner.querySelector('.' + helperWrapperClass);
             if (currentHelperWrapper) {
@@ -66,10 +63,10 @@ if(!customElements.get('carousel-component')) {
           }
         }
       
-        function scrollTheBanners() {
-          for (var i = 0; i < banners.length; i++) {
-            var helperWrapper = banners[i].firstElementChild;
-            var childrenWidth = helperWrapper.dataset.childrenWidth;
+        const scrollTheBanners = () => {
+          for (var i = 0; i < this.banners.length; i++) {
+            var helperWrapper = this.banners[i].firstElementChild;
+            var childrenWidth = parseInt(helperWrapper.dataset.childrenWidth);
             var offsetLeft = helperWrapper.offsetLeft;
       
             if (offsetLeft <= (childrenWidth * -1)) {
@@ -85,6 +82,10 @@ if(!customElements.get('carousel-component')) {
           }
           requestAnimationFrame(scrollTheBanners);
         }
+
+        setUpElements();
+        scrollTheBanners();
+        window.addEventListener('resize', setUpElements);
       }
     }
   )
