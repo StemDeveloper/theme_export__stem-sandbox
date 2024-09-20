@@ -3044,6 +3044,9 @@
             },
             "shrink_animate": {
               "label": "Animation - Shrink on Scroll + Change <span> color"
+            },
+            "color_animate": {
+              "label": "Animation - Change color with Secondary Color"
             }
           }
         },
