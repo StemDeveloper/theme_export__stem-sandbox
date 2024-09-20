@@ -15,16 +15,22 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>What is your goal? <span>Let us be your guide.<\/span><\/strong>",
-            "heading_size": "hxxl",
-            "secondary_color": "#009b72"
+            "heading_size": "h1",
+            "secondary_color": "#009b72",
+            "shrink_animate": true,
+            "color_animate": true,
+            "blur_heading": false
           }
         },
         "heading_chyCeT": {
           "type": "heading",
           "settings": {
             "heading": "<strong>Supercharge your online growth.  We work with clients all over the world. \u2028Get in touch with us via the form below to discuss a potential project or partnership.<\/strong>",
-            "heading_size": "hxxl",
-            "secondary_color": "#009b72"
+            "heading_size": "h1",
+            "secondary_color": "#009b72",
+            "shrink_animate": false,
+            "color_animate": true,
+            "blur_heading": false
           }
         }
       },
@@ -32,6 +38,7 @@
         "heading_da3wU3",
         "heading_chyCeT"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
@@ -47,16 +54,46 @@
         "text_DmppYF": {
           "type": "text",
           "settings": {
-            "text": "<p>Montreal | Toronto | Vancouver<br\/><a href=\"tel:+18666447836\" target=\"_blank\" title=\"Call Us\">1.866.844.STEM<\/a><br\/><a href=\"mailto:info@stemcommerce.com\" target=\"_blank\" title=\"Email Us\">info@stemcommerce.com<\/a><br\/><br\/><\/p>",
+            "text": "<p><strong>Montreal | Toronto | Vancouver<br\/><\/strong><a href=\"tel:+18666447836\" target=\"_blank\" title=\"Call Us\"><strong>1.866.844.STEM<\/strong><\/a><strong><br\/><\/strong><a href=\"mailto:info@stemcommerce.com\" target=\"_blank\" title=\"Email Us\"><strong>info@stemcommerce.com<\/strong><\/a><br\/><br\/><\/p>",
             "content_alignment": "left",
             "full_width_block": "container",
-            "color_scheme": "scheme-1",
+            "color_scheme": "scheme-4c7fac6a-f5f8-4f83-b2d1-2949fe63dda6",
             "sticky_block": true
+          }
+        },
+        "heading_VHnDxA": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>What is your goal? <span>Let us be your guide.<\/span><\/strong>",
+            "heading_size": "h1",
+            "secondary_color": "#009b72",
+            "shrink_animate": false,
+            "color_animate": true,
+            "blur_heading": false,
+            "heading_alignment": "left",
+            "full_width_block": "container",
+            "color_scheme": ""
+          }
+        },
+        "heading_yyEQQd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Supercharge your online growth.  We work with clients all over the world. \u2028Get in touch with us via the form below to discuss a potential project or partnership.<\/strong>",
+            "heading_size": "h1",
+            "secondary_color": "#009b72",
+            "shrink_animate": false,
+            "color_animate": true,
+            "blur_heading": false,
+            "heading_alignment": "left",
+            "full_width_block": "container",
+            "color_scheme": ""
           }
         }
       },
       "block_order": [
-        "text_DmppYF"
+        "text_DmppYF",
+        "heading_VHnDxA",
+        "heading_yyEQQd"
       ],
       "settings": {
         "desktop_content_position": "left",

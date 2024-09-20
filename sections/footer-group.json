@@ -31,11 +31,11 @@
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "full_width": "device",
         "full_width_heading": "container",
-        "padding_top": 100,
-        "padding_bottom": 100
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     },
     "footer": {
@@ -46,12 +46,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
             "image_width": 110,
-            "alignment": ""
-          }
-        },
-        "text_PXCTt9": {
-          "type": "text",
-          "settings": {
+            "alignment": "",
             "heading": "",
             "subtext": "<p>Montreal | Toronto | Vancouver<br\/><a href=\"tel:+18666447836\" target=\"_blank\" title=\"Call Us\">1.866.844.STEM<\/a><br\/><a href=\"mailto:info@stemcommerce.com\" target=\"_blank\" title=\"Email Us\">info@stemcommerce.com<\/a><\/p>"
           }
@@ -66,7 +61,6 @@
       },
       "block_order": [
         "image_77Mymy",
-        "text_PXCTt9",
         "link_list_7TcLkQ"
       ],
       "settings": {
@@ -74,15 +68,16 @@
         "newsletter_enable": false,
         "newsletter_heading": "",
         "enable_follow_on_shop": false,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": false,
+        "enable_footer_credits": false,
         "footer_credits": "©2024 Stem Commerce Inc. All Rights Reserved.",
         "show_policy": false,
-        "margin_top": 100,
-        "padding_top": 100,
-        "padding_bottom": 100
+        "margin_top": 0,
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     }
   },
