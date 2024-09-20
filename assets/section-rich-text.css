@@ -147,7 +147,7 @@
 }
 
 .rich-text__heading-animate-span,
-.rich-text__heading-animate-span span,
+.animate-richtext-heading .rich-text__heading span,
 .animate-richtext-heading .rich-text__heading:not(.rich-text__heading-animate-span) {
   transition: all var(--duration-long) var(--ease-out-slow);
   -webkit-transition: all var(--duration-long) var(--ease-out-slow);
