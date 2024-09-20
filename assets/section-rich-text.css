@@ -189,6 +189,7 @@
   -o-transition: all var(--duration-long) var(--ease-out-slow);
 }
 
+.rich-text__heading-animate span,
 html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate,
 html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate span,
 html:not(.animate-hero-richtext) .section--richtext:not(.animate-richtext-heading) .rich-text__heading-animate-span span,

@@ -34,24 +34,52 @@
           assign page_width_class_block = 'page-width--full'
       endcase
     %}
-    <div class="contact__block--item contact__block--{{ block.type }}{% if block.settings.sticky_block %} contact__block--sticky{% endif %}{% if block.settings.full_width_block == 'none' %} page-width{% endif %}">
-      <div class="contact rich-text{% if block.settings.full_width_block != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
-        <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if block.settings.full_width_block != 'device' %} rich-text__wrapper{% endif %}{% if block.settings.full_width_block != 'none' %} {{ page_width_class_block }}{% endif %}">
-          <div class="rich-text__blocks {{ section.settings.content_alignment }}">
-            <div
-              class="contact__block-text {{ block.settings.content_alignment }} color-{{ block.settings.color_scheme }} gradient rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-              {{ block.shopify_attributes }}
-              {% if settings.animations_reveal_on_scroll %}
-                data-cascade
-                style="--animation-order: {{ forloop.index }};"
-              {% endif %}
-            >
-              {{ block.settings.text }}
+    {% case block.type %}
+      {%- when 'heading' -%}
+        <div class="contact__block--item contact__block--{{ block.type }}{% if block.settings.sticky_block %} contact__block--sticky{% endif %}{% if block.settings.full_width_block == 'none' %} page-width{% endif %}">
+          <div class="contact rich-text{% if block.settings.full_width_block != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
+            <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if block.settings.full_width_block != 'device' %} rich-text__wrapper{% endif %}{% if block.settings.full_width_block != 'none' %} {{ page_width_class_block }}{% endif %}">
+              <div class="rich-text__blocks {{ section.settings.content_alignment }}">
+                <h2
+                  class="contact__block-heading rich-text__heading rte inline-richtext color-{{ block.settings.color_scheme }} gradient {{ block.settings.heading_size }} {{ block.settings.heading_alignment }}
+                    {% if block.settings.color_animate %} rich-text__heading-animate{% endif %}
+                    {% if block.settings.blur_heading %} rich-text__heading-animate-blur{% endif %}
+                    {% if block.settings.shrink_animate %} rich-text__heading-animate-span{% endif %}
+                    {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
+                  "
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                  style="--color-foreground-secondary: {{ block.settings.secondary_color }}"
+                >
+                  {{ block.settings.heading | newline_to_br }}
+                </h2>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      {% when 'text' %}
+        <div class="contact__block--item contact__block--{{ block.type }}{% if block.settings.sticky_block %} contact__block--sticky{% endif %}{% if block.settings.full_width_block == 'none' %} page-width{% endif %}">
+          <div class="contact rich-text{% if block.settings.full_width_block != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
+            <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if block.settings.full_width_block != 'device' %} rich-text__wrapper{% endif %}{% if block.settings.full_width_block != 'none' %} {{ page_width_class_block }}{% endif %}">
+              <div class="rich-text__blocks {{ section.settings.content_alignment }}">
+                <div
+                  class="contact__block-text {{ block.settings.content_alignment }} color-{{ block.settings.color_scheme }} gradient rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {{ block.settings.text }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    {% endcase %}
   {% endfor %}
 {% endif %}
 <div class="contact__forms{% if section.settings.full_width == 'none' %} page-width{% endif %}">
@@ -317,6 +345,134 @@
     }
   ],
   "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.rich-text.blocks.heading.name",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "heading",
+          "default": "t:sections.rich-text.blocks.heading.settings.heading.default",
+          "label": "t:sections.rich-text.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__4.label"
+            },
+            {
+              "value": "hxxl",
+              "label": "t:sections.all.heading_size.options__5.label"
+            },
+            {
+              "value": "hxxxl",
+              "label": "t:sections.all.heading_size.options__6.label"
+            },
+            {
+              "value": "hxxxxl",
+              "label": "t:sections.all.heading_size.options__7.label"
+            },
+            {
+              "value": "h7xl",
+              "label": "t:sections.all.heading_size.options__8.label"
+            },
+            {
+              "value": "h10xl",
+              "label": "t:sections.all.heading_size.options__9.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "color",
+          "id": "secondary_color",
+          "label": "t:sections.rich-text.blocks.heading.settings.secondary_color.label",
+          "default": "#009B72"
+        },
+        {
+          "type": "checkbox",
+          "id": "shrink_animate",
+          "label": "t:sections.rich-text.blocks.heading.settings.shrink_animate.label",
+          "info": "t:sections.rich-text.blocks.heading.settings.shrink_animate.info",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "color_animate",
+          "label": "t:sections.rich-text.blocks.heading.settings.color_animate.label",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "blur_heading",
+          "label": "t:sections.rich-text.blocks.heading.settings.blur_heading.label",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "heading_alignment",
+          "label": "t:sections.collapsible_content.settings.heading_alignment.label",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.collapsible_content.settings.heading_alignment.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.collapsible_content.settings.heading_alignment.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.collapsible_content.settings.heading_alignment.options__3.label"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "id": "full_width_block",
+          "label": "t:sections.carousel.settings.full_width.label",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.carousel.settings.full_width.options__1.label"
+            },
+            {
+              "value": "container",
+              "label": "t:sections.carousel.settings.full_width.options__2.label"
+            },
+            {
+              "value": "device",
+              "label": "t:sections.carousel.settings.full_width.options__3.label"
+            }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "color_scheme",
+          "id": "color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-1"
+        }
+      ]
+    },
     {
       "type": "text",
       "name": "t:sections.rich-text.blocks.text.name",

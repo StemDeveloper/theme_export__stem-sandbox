@@ -52,3 +52,7 @@
   top: calc(var(--header-height, 0) + var(--announcement-height, 0));
   z-index: 1;
 }
+
+.contact__block-text a {
+  text-decoration: none;
+}

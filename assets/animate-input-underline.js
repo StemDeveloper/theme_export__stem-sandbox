@@ -6,6 +6,7 @@ if (!customElements.get('animate-input-underline')) {
         super();
         this.startTime = null;
         this.isAnimating = false;
+        this.richtextParent = this.parentElement;
         this.inputFields = this.querySelectorAll('.field');
         this.inputFields.forEach((input) => {
           const inputLine = document.createElement('span');
@@ -34,6 +35,17 @@ if (!customElements.get('animate-input-underline')) {
           const viewportHeight = window.innerHeight;
           const scrollY = window.scrollY;
           const viewportCenter = scrollY + viewportHeight / 2;
+          const parentTopPosition = this.richtextParent.getBoundingClientRect().top;
+
+          if(parentTopPosition < 0) {
+            this.richtextParent.classList.add('animate-richtext');
+            this.richtextParent.classList.add('animating-circle');
+            this.richtextParent.classList.add('animate-richtext-heading');
+          } else {
+            this.richtextParent.classList.remove('animate-richtext');
+            this.richtextParent.classList.remove('animating-circle');
+            this.richtextParent.classList.remove('animate-richtext-heading');
+          }
           
           this.inputFields.forEach(field => {
             const inputLine = field.querySelector('.animate__field-line');
