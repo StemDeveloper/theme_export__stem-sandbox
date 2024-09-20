@@ -764,6 +764,15 @@
       "presets": {
         "name": "Contact form"
       },
+      "blocks": {
+        "text": {
+          "settings": {
+            "sticky_block": {
+              "label": "Sticky"
+            }
+          }
+        }
+      },
       "settings": {
         "title": {
           "default": "Contact form",

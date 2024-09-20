@@ -41,3 +41,14 @@
     grid-column-gap: 2rem;
   }
 }
+/* custom styles */
+.contact__block--item + .contact__forms,
+.contact__block--item + .contact__block--item {
+  margin-top: 2rem;
+}
+
+.contact__block--sticky {
+  position: sticky;
+  top: calc(var(--header-height, 0) + var(--announcement-height, 0));
+  z-index: 1;
+}

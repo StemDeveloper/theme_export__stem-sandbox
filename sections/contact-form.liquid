@@ -23,39 +23,38 @@
       assign page_width_class = 'page-width--full'
   endcase
 %}
-<animate-input-underline class="animate-input-underline color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+<animate-input-underline class="animate-input-underline">
+<div class="section-contact-container isolate color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
 {% if section.blocks.size > 0 %}
-  <div class="contact__blocks">
-    {% for block in section.blocks %}
-      {% liquid
-        assign page_width_class_block = 'page-width'
-        case block.settings.full_width_block
-          when 'device'
-            assign page_width_class_block = 'page-width--full'
-        endcase
-      %}
-      <div class="isolate{% if block.settings.full_width_block == 'none' %} page-width{% endif %}">
-        <div class="contact rich-text{% if block.settings.full_width_block != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
-          <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if block.settings.full_width_block != 'device' %} rich-text__wrapper{% endif %}{% if block.settings.full_width_block != 'none' %} {{ page_width_class_block }}{% endif %}">
-            <div class="rich-text__blocks {{ section.settings.content_alignment }}">
-              <div
-                class="contact__block-text {{ block.settings.content_alignment }} color-{{ block.settings.color_scheme }} gradient rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {{ block.settings.text }}
-              </div>
+  {% for block in section.blocks %}
+    {% liquid
+      assign page_width_class_block = 'page-width'
+      case block.settings.full_width_block
+        when 'device'
+          assign page_width_class_block = 'page-width--full'
+      endcase
+    %}
+    <div class="contact__block--item contact__block--{{ block.type }}{% if block.settings.sticky_block %} contact__block--sticky{% endif %}{% if block.settings.full_width_block == 'none' %} page-width{% endif %}">
+      <div class="contact rich-text{% if block.settings.full_width_block != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
+        <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if block.settings.full_width_block != 'device' %} rich-text__wrapper{% endif %}{% if block.settings.full_width_block != 'none' %} {{ page_width_class_block }}{% endif %}">
+          <div class="rich-text__blocks {{ section.settings.content_alignment }}">
+            <div
+              class="contact__block-text {{ block.settings.content_alignment }} color-{{ block.settings.color_scheme }} gradient rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {{ block.shopify_attributes }}
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              {{ block.settings.text }}
             </div>
           </div>
         </div>
       </div>
-    {% endfor %}
-  </div>
+    </div>
+  {% endfor %}
 {% endif %}
-<div class="isolate{% if section.settings.full_width == 'none' %} page-width{% endif %}">
+<div class="contact__forms{% if section.settings.full_width == 'none' %} page-width{% endif %}">
   <div class="contact rich-text{% if section.settings.full_width != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
     <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width != 'device' %} rich-text__wrapper{% endif %}{% if section.settings.full_width != 'none' %} {{ page_width_class }}{% endif %}">
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
@@ -178,6 +177,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 </animate-input-underline>
 
@@ -373,6 +373,12 @@
           "id": "color_scheme",
           "label": "t:sections.all.colors.label",
           "default": "scheme-1"
+        },
+        {
+          "type": "checkbox",
+          "id": "sticky_block",
+          "label": "t:sections.contact-form.blocks.text.settings.sticky_block.label",
+          "default": false
         }
       ]
     }
