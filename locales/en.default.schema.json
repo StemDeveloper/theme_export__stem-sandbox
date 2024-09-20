@@ -568,6 +568,9 @@
         "title": {
           "default": "Carousel"
         },
+        "title_full_width": {
+          "label": "Make \"Heading\" full width"
+        },
         "full_width": {
           "label": "Make section full width",
           "options__1": {

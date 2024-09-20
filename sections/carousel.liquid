@@ -18,9 +18,14 @@
 
 {%- liquid
   assign page_width_class = 'page-width'
+  assign page_width_title_class = 'page-width'
   case section.settings.full_width
     when 'device'
       assign page_width_class = 'page-width--full'
+  endcase
+  case section.settings.title_full_width
+    when 'device'
+      assign page_width_title_class = 'page-width--full'
   endcase
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
   assign show_mobile_slider = false
@@ -29,14 +34,9 @@
   endif
 -%}
 
-<div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
-  <div
-    class="{{ page_width_class }} section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-    {% if settings.animations_reveal_on_scroll %}
-      data-cascade
-    {% endif %}
-  >
-    <div class="{% if section.settings.full_width == 'none' %} rich-text__blocks{% endif %}">
+<div class="multicolumn--carousel color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding isolate">
+  <div class="carousel--title{% if section.settings.title_full_width == 'none' %} rich-text__blocks{% endif %}">
+  <div class="{{ page_width_title_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
         <h2 class="title inline-richtext {{ section.settings.heading_size }} {{ section.settings.heading_alignment }}">
@@ -49,6 +49,16 @@
         {%- endif -%}
       </div>
     {%- endunless -%}
+  </div>
+  </div>
+<div class="multicolumn {% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+  <div
+    class="{{ page_width_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    {% if settings.animations_reveal_on_scroll %}
+      data-cascade
+    {% endif %}
+  >
+    <div class="{% if section.settings.full_width == 'none' %} rich-text__blocks{% endif %}">
     <carousel-component 
       class="carousel-component"
       data-infinite-loop="{{ section.settings.infinite_loop }}"
@@ -203,6 +213,7 @@
     </div>
   </div>
 </div>
+</div>
 
 {% schema %}
 {
@@ -218,6 +229,26 @@
       "id": "title",
       "default": "t:sections.carousel.settings.title.default",
       "label": "t:sections.multicolumn.settings.title.label"
+    },
+    {
+      "type": "select",
+      "id": "title_full_width",
+      "label": "t:sections.carousel.settings.title_full_width.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.carousel.settings.full_width.options__1.label"
+        },
+        {
+          "value": "container",
+          "label": "t:sections.carousel.settings.full_width.options__2.label"
+        },
+        {
+          "value": "device",
+          "label": "t:sections.carousel.settings.full_width.options__3.label"
+        }
+      ],
+      "default": "none"
     },
     {
       "type": "select",
