@@ -147,7 +147,8 @@
 }
 
 .rich-text__heading-animate-span,
-.rich-text__heading-animate-span span {
+.rich-text__heading-animate-span span,
+.animate-richtext-heading .rich-text__heading:not(.rich-text__heading-animate-span) {
   transition: all var(--duration-long) var(--ease-out-slow);
   -webkit-transition: all var(--duration-long) var(--ease-out-slow);
   -moz-transition: all var(--duration-long) var(--ease-out-slow);
@@ -155,6 +156,7 @@
   -o-transition: all var(--duration-long) var(--ease-out-slow);
 }
 
+.animate-richtext-heading .rich-text__heading:not(.rich-text__heading-animate-span),
 .section--richtext:not(.animate-richtext) .rich-text__heading-animate-span span {
   color: var(--color-foreground-secondary);
 }

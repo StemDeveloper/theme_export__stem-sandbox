@@ -36,6 +36,7 @@ if(!customElements.get('richtext-animation')) {
           const viewportHeight = window.innerHeight;
           const scrollY = window.scrollY;
           const viewportCenter = scrollY + viewportHeight / 2;
+          const parentTopPosition = this.richtextParent.getBoundingClientRect().top;
       
           this.animateBlocks.forEach((block, index) => {
             const rect = block.getBoundingClientRect();
@@ -75,6 +76,12 @@ if(!customElements.get('richtext-animation')) {
               this.richtextParent.classList.remove('animate-richtext');
             }
           });
+
+          if(parentTopPosition < 0) {
+            this.richtextParent.classList.add('animate-richtext-heading');
+          } else {
+            this.richtextParent.classList.remove('animate-richtext-heading');
+          }
           
           if (elapsedTime < 1000) {
             requestAnimationFrame(runAnimation);
