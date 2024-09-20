@@ -1088,6 +1088,16 @@
               "label": "Heading",
               "default": "Quick links"
             },
+            "enable_social_follow": {
+              "label": "Follow us on"
+            },
+            "social_follow_label": {
+              "label": "Follow us text",
+              "default": "Follow us on"
+            },
+            "color_follow": {
+              "label": "Color"
+            },
             "menu": {
               "label": "Menu",
               "info": "Displays only top-level menu items."

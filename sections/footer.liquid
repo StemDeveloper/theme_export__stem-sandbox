@@ -170,6 +170,16 @@
                       {{ block.settings.subtext }}
                     </div>
                   {%- when 'link_list' -%}
+                    {%- if block.settings.enable_social_follow and block.settings.social_follow_label != blank -%}
+                      <a 
+                        class="footer-block__details--follow"
+                        style="--footer-follow-color: {{ block.settings.color_follow }};"
+                        {% if settings.social_instagram_link != blank %}href="{{ settings.social_instagram_link }}"{% else %}disbled="disbled"{% endif %}
+                      >
+                        <span class="social__follow--label">{{ block.settings.social_follow_label }}</span>
+                        <span class="social__follow--icon">{{- 'icon-instagram.svg' | inline_asset_content -}}</span>
+                      </a>
+                    {%- endif -%}
                     {%- if block.settings.menu != blank -%}
                       <ul class="footer-block__details-content list-unstyled">
                         {%- for link in block.settings.menu.links -%}
@@ -445,6 +455,24 @@
           "id": "heading",
           "default": "t:sections.footer.blocks.link_list.settings.heading.default",
           "label": "t:sections.footer.blocks.link_list.settings.heading.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_social_follow",
+          "label": "t:sections.footer.blocks.link_list.settings.enable_social_follow.label",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "social_follow_label",
+          "label": "t:sections.footer.blocks.link_list.settings.social_follow_label.label",
+          "default": "t:sections.footer.blocks.link_list.settings.social_follow_label.default"
+        },
+        {
+          "type": "color",
+          "id": "color_follow",
+          "label": "t:sections.footer.blocks.link_list.settings.color_follow.label",
+          "default": "#00BC84"
         },
         {
           "type": "link_list",
