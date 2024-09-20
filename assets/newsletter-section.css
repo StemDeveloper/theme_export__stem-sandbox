@@ -53,3 +53,21 @@
   width: 38rem;
   max-width: 100%;
 }
+
+@media screen and (min-width: 750px) {
+  .page-width--full .newsletter-form {
+    max-width: 50rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .page-width--full .newsletter-form {
+    max-width: 78rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-width--full .newsletter-form {
+    max-width: 81rem;
+  }
+}
