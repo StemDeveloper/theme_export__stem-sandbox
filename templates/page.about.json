@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -15,7 +24,11 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>Stem Commerce is a full-service Shopify agency, with the vision to transform the way people do business online. A leading expert and preferred partner, we’ve been at the top of our game since Shopify’s inception and continue to expand our capabilities to better serve our clients. <\/strong>",
-            "heading_size": "h0"
+            "heading_size": "h0",
+            "secondary_color": "#009B72",
+            "shrink_animate": false,
+            "color_animate": false,
+            "blur_heading": true
           }
         },
         "text_nmGfTz": {
@@ -62,7 +75,11 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>We bring the right people together, building robust, responsive teams to design high-growth eCommerce stores. To us, every project is a partnership and we are committed to doing everything necessary to drive real results for your business in record-fast time.<\/strong>",
-            "heading_size": "h0"
+            "heading_size": "h0",
+            "secondary_color": "#009B72",
+            "shrink_animate": false,
+            "color_animate": false,
+            "blur_heading": true
           }
         },
         "text_t6JRjL": {
