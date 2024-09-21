@@ -45,7 +45,7 @@
             "heading_size": "h10xl",
             "secondary_color": "#009b72",
             "shrink_animate": true,
-            "color_animate": false,
+            "color_animate": true,
             "blur_heading": true
           }
         },
