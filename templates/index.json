@@ -46,7 +46,7 @@
             "secondary_color": "#009b72",
             "shrink_animate": true,
             "color_animate": false,
-            "blur_heading": false
+            "blur_heading": true
           }
         },
         "text_Fj6TtJ": {
