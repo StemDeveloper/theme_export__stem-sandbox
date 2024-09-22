@@ -107,7 +107,7 @@
 }
 
 .page-width-none {
-  margin: auto;
+  margin: 0 auto;
   max-width: calc(100% - 8rem / var(--font-body-scale));
 }
 
