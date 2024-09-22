@@ -535,6 +535,11 @@ h6:empty {
   display: none;
 }
 
+.d-block,
+.d-block:empty {
+  display: block;
+}
+
 .link,
 .customer a {
   cursor: pointer;
