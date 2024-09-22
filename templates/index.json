@@ -234,10 +234,10 @@
     "multicard_T7NqXb": {
       "type": "multicard",
       "blocks": {
-        "column_jM48Bp": {
+        "column_HbpcBj": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -254,10 +254,10 @@
             "link": ""
           }
         },
-        "column_HbpcBj": {
+        "column_jM48Bp": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+            "image": "shopify:\/\/shop_images\/two-people-surfing-in-blue-choppy-water.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -266,9 +266,9 @@
         }
       },
       "block_order": [
-        "column_jM48Bp",
+        "column_HbpcBj",
         "column_Ny3Kb9",
-        "column_HbpcBj"
+        "column_jM48Bp"
       ],
       "settings": {
         "title": "<strong>Our clients are forward-thinking and content focused.<\/strong>",
