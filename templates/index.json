@@ -46,7 +46,7 @@
             "secondary_color": "#009b72",
             "shrink_animate": true,
             "color_animate": true,
-            "blur_heading": true
+            "blur_heading": false
           }
         },
         "text_Fj6TtJ": {
@@ -231,33 +231,33 @@
         "padding_bottom": 100
       }
     },
-    "multicolumn_NktPLq": {
-      "type": "multicolumn",
+    "multicard_T7NqXb": {
+      "type": "multicard",
       "blocks": {
-        "column_c4NjMq": {
+        "column_jM48Bp": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_wDHCdQ": {
+        "column_Ny3Kb9": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_cRkzcY": {
+        "column_HbpcBj": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -266,13 +266,12 @@
         }
       },
       "block_order": [
-        "column_c4NjMq",
-        "column_wDHCdQ",
-        "column_cRkzcY"
+        "column_jM48Bp",
+        "column_Ny3Kb9",
+        "column_HbpcBj"
       ],
-      "disabled": true,
       "settings": {
-        "title": "<strong>Our clients are forward-thinking and content focused. They are design-driven. Disruptive within their spaces. They are rebels. Risk-takers. Purposeful, timeless, thoughtful. Our clients are ready to do what it takes to grow their businesses.<\/strong>",
+        "title": "<strong>Our clients are forward-thinking and content focused.<\/strong>",
         "heading_size": "h0",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -283,8 +282,8 @@
         "button_link": "",
         "color_scheme": "",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 100,
+        "swipe_on_mobile": true,
+        "padding_top": 56,
         "padding_bottom": 100
       }
     },
@@ -410,7 +409,7 @@
     "image_banner",
     "rich_text_9BnG6a",
     "carousel_wV3JFV",
-    "multicolumn_NktPLq",
+    "multicard_T7NqXb",
     "carousel_Qd8zph"
   ]
 }
