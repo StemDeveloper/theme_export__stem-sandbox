@@ -92,7 +92,7 @@
             "secondary_color": "#009b72",
             "shrink_animate": false,
             "color_animate": true,
-            "blur_heading": false,
+            "blur_heading": true,
             "heading_alignment": "left",
             "full_width_block": "container",
             "color_scheme": ""
