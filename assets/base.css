@@ -106,7 +106,7 @@
   padding: 0;
 }
 
-.page-width-none {
+.page-width .page-width-none {
   margin: 0 auto;
   max-width: calc(100% - 8rem / var(--font-body-scale));
 }
