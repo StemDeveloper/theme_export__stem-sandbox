@@ -67,7 +67,7 @@
             "heading": "",
             "enable_social_follow": true,
             "social_follow_label": "Follow us on",
-            "color_follow": "#00BC84",
+            "color_follow": "#00bc84",
             "menu": "menu-working"
           }
         }
@@ -89,8 +89,8 @@
         "footer_credits": "©2024 Stem Commerce Inc. All Rights Reserved.",
         "show_policy": false,
         "margin_top": 0,
-        "padding_top": 56,
-        "padding_bottom": 56
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
