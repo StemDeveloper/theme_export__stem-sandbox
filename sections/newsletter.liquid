@@ -29,7 +29,8 @@
       assign page_width_class_heading = 'page-width--full'
   endcase
 %}
-<animate-input-underline class="animate-input-underline  gradient content-container section-{{ section.id }}-padding">
+<animate-input-underline class="animate-input-underline d-block section-{{ section.id }}-padding{% unless settings.enable_footer_mask %} gradient{% endunless %} content-container">
+<div class="">
 <div class="newsletter{% if section.settings.full_width_heading == 'none' %} page-width{% endif %}">
   <div class="rich-text color-{{ section.settings.color_scheme }} isolate{% if section.settings.full_width_heading != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
     <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width_heading != 'device' %} rich-text__wrapper{% endif %}{% if section.settings.full_width != 'none' %} {{ page_width_class_heading }}{% endif %}">
@@ -149,6 +150,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 </animate-input-underline>
 
