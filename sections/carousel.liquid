@@ -36,7 +36,6 @@
 
 <div class="multicolumn--carousel color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding isolate">
   <div class="carousel--title {{ page_width_title_class }} rich-text">
-  <div class="{% if section.settings.title_full_width == 'none' %} page-width-none{% endif %}">
   <div class="{% if section.settings.title_full_width == 'none' %} rich-text__blocks{% endif %}">
   <div class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     {%- unless section.settings.title == blank -%}
@@ -54,7 +53,6 @@
   </div>
   </div>
   </div>
-  </div>
 <div class="multicolumn {% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div
     class="{{ page_width_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -62,7 +60,6 @@
       data-cascade
     {% endif %}
   >
-    <div class="{% if section.settings.full_width == 'none' %} page-width-none{% endif %}">
     <div class="{% if section.settings.full_width == 'none' %} rich-text__blocks{% endif %}">
     <carousel-component 
       class="carousel-component"
@@ -214,7 +211,6 @@
           {{ section.settings.button_label | escape }}
         </a>
       {%- endif -%}
-    </div>
     </div>
     </div>
   </div>
