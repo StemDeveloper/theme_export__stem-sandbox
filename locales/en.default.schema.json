@@ -2654,6 +2654,27 @@
         }
       }
     },
+    "multicard": {
+      "name": "Multicard",
+      "settings": {
+        "title": {
+          "default": "Multicard"
+        }
+      },
+      "blocks": {
+        "card": {
+          "name": "Card",
+          "settings": {
+            "title": {
+              "default": "Card"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Multicard"
+      }
+    },
     "multicolumn": {
       "name": "Multicolumn",
       "settings": {
