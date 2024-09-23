@@ -15,7 +15,7 @@
         "image_WDMBe3": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem-Commerce-Logo-2021.png"
+            "image": "shopify://shop_images/Stem-Commerce-Logo-2021.png"
           }
         }
       },
@@ -41,18 +41,19 @@
         "heading_RrGAzx": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Your Expert<br><span>Shopify<\/span> Partner.<\/strong>",
+            "heading": "<strong>Your Expert<br><span>Shopify</span> Partner.</strong>",
             "heading_size": "h10xl",
             "secondary_color": "#009b72",
             "shrink_animate": true,
             "color_animate": true,
-            "blur_heading": false
+            "blur_heading": false,
+            "blur_strength": 3
           }
         },
         "text_Fj6TtJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Fast and Fail-Proof Execution.<\/p><p>We thread the needle of good design, purposeful content and performance focus through all touchpoints of digital marketing.<\/p>",
+            "text": "<p>Fast and Fail-Proof Execution.</p><p>We thread the needle of good design, purposeful content and performance focus through all touchpoints of digital marketing.</p>",
             "color_scheme": "scheme-3"
           }
         }
@@ -76,7 +77,7 @@
         "column_FF7KA4": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -86,7 +87,7 @@
         "column_xUxynb": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "image": "shopify://shop_images/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -96,7 +97,7 @@
         "column_gwREW7": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -106,7 +107,7 @@
         "column_PPGp7b": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "image": "shopify://shop_images/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -116,7 +117,7 @@
         "column_HqfH79": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -126,7 +127,7 @@
         "column_pG9dNH": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "image": "shopify://shop_images/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -136,7 +137,7 @@
         "column_MJ6kLE": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -146,7 +147,7 @@
         "column_FAYKrP": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "image": "shopify://shop_images/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -156,7 +157,7 @@
         "column_jrBhg8": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -166,7 +167,7 @@
         "column_wFxhBh": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "image": "shopify://shop_images/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -176,7 +177,7 @@
         "column_BFLqMw": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -186,7 +187,7 @@
         "column_AqXpkx": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "image": "shopify://shop_images/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -209,7 +210,7 @@
         "column_AqXpkx"
       ],
       "settings": {
-        "title": "<strong>Some of the great brands we have worked with<\/strong>",
+        "title": "<strong>Some of the great brands we have worked with</strong>",
         "title_full_width": "container",
         "heading_size": "h1",
         "heading_alignment": "left",
@@ -237,7 +238,7 @@
         "column_HbpcBj": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+            "image": "shopify://shop_images/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -247,7 +248,7 @@
         "column_Ny3Kb9": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg",
+            "image": "shopify://shop_images/green-and-white-marbled-coloring.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -257,7 +258,7 @@
         "column_jM48Bp": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/two-people-surfing-in-blue-choppy-water.jpg",
+            "image": "shopify://shop_images/two-people-surfing-in-blue-choppy-water.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -271,8 +272,11 @@
         "column_jM48Bp"
       ],
       "settings": {
-        "title": "<strong>Our clients are forward-thinking and content focused. They are design-driven. Disruptive within their spaces. They are rebels. Risk-takers. Purposeful, timeless, thoughtful. Our clients are ready to do what it takes to grow their business.<\/strong>",
+        "sticky_multicard": false,
+        "title": "<strong>Our clients are forward-thinking and content focused. They are design-driven. Disruptive within their spaces. They are rebels. Risk-takers. Purposeful, timeless, thoughtful. Our clients are ready to do what it takes to grow their business.</strong>",
         "heading_size": "h0",
+        "secondary_color": "#009B72",
+        "blur_heading": true,
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 1,
@@ -293,7 +297,7 @@
         "column_UnVaap": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "image": "shopify://shop_images/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -303,7 +307,7 @@
         "column_Xb3R3E": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -313,7 +317,7 @@
         "column_Q4wbJB": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "image": "shopify://shop_images/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -323,7 +327,7 @@
         "column_WFCMni": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -333,7 +337,7 @@
         "column_wM87zE": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "image": "shopify://shop_images/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -343,7 +347,7 @@
         "column_eeQXft": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -353,7 +357,7 @@
         "column_mRRmrt": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce.png",
+            "image": "shopify://shop_images/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -363,7 +367,7 @@
         "column_9xEiqb": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -382,7 +386,7 @@
         "column_9xEiqb"
       ],
       "settings": {
-        "title": "<strong>Client Success Spotlights<\/strong>",
+        "title": "<strong>Client Success Spotlights</strong>",
         "title_full_width": "container",
         "heading_size": "h1",
         "heading_alignment": "left",
