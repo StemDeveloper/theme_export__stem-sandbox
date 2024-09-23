@@ -2672,6 +2672,9 @@
         },
         "title": {
           "default": "Multicard"
+        },
+        "blur_heading": {
+          "label": "Blur on Heading with Scroll"
         }
       },
       "blocks": {

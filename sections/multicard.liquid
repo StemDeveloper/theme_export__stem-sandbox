@@ -1,5 +1,6 @@
 {{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'multicard-animation.js' | asset_url }}" defer="defer"></script>
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -29,6 +30,12 @@
       top: calc(var(--announcement-height, 0) + var(--header-height, 0));
     }
   {% endif %}
+  {% if section.settings.blur_heading %}
+    .animate-multicard .multicard-heading--blur {
+      filter: blur(3px);
+      -webkit-filter: blur(3px);
+    }
+  {% endif %}
 {%- endstyle -%}
 
 {%- liquid
@@ -39,6 +46,9 @@
   endif
 -%}
 
+<multicard-animation
+  class="multicard--container"
+>
 <div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div
     class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -48,7 +58,11 @@
   >
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
-        <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+        <h2 
+          class="title inline-richtext {{ section.settings.heading_size }}
+            {% if section.settings.blur_heading %} multicard-heading--blur{% endif %}
+          "
+        >
           {{ section.settings.title }}
         </h2>
         {%- if section.settings.button_label != blank and show_mobile_slider -%}
@@ -205,11 +219,12 @@
     </div>
   </div>
 </div>
+</multicard-animation>
 
 {% schema %}
 {
   "name": "t:sections.multicard.name",
-  "class": "section",
+  "class": "section section-multicard",
   "tag": "section",
   "disabled_on": {
     "groups": ["header", "footer"]
@@ -255,6 +270,12 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "blur_heading",
+      "label": "t:sections.multicard.settings.blur_heading.label",
+      "default": false
     },
     {
       "type": "select",
