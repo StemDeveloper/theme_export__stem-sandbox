@@ -32,10 +32,11 @@
       height: 100%;
       background-color: rgb(var(--color-foreground));
       color: rgb(var(--color-background));
-      z-index: -1;
+      z-index: 0;
     }
     .utility-bar--mask, 
-    .utility-bar--mask * {
+    .utility-bar--mask *,
+    .utility-bar--mask *:hover {
       color: rgb(var(--color-background));
     }
     .section-header,
