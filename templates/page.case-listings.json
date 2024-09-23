@@ -22,7 +22,7 @@
       "settings": {
         "sticky_multicard": true,
         "title": "<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odi.</strong>",
-        "heading_size": "h1",
+        "heading_size": "hxxl",
         "secondary_color": "#009B72",
         "blur_heading": true,
         "image_width": "full",
