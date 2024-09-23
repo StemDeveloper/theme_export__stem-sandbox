@@ -3101,6 +3101,9 @@
             },
             "blur_heading": {
               "label": "Blur on Heading with Scroll"
+            },
+            "blur_strength": {
+              "label": "Blur strength"
             }
           }
         },

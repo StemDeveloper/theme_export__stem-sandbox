@@ -49,7 +49,7 @@
                   data-cascade
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
-                style="--color-foreground-secondary: {{ block.settings.secondary_color }}"
+                style="--color-foreground-secondary: {{ block.settings.secondary_color }}; --heading-blur-strength: {{ block.settings.blur_strength }}px;"
               >
                 {{ block.settings.heading | newline_to_br }}
               </h2>
@@ -287,6 +287,16 @@
           "id": "blur_heading",
           "label": "t:sections.rich-text.blocks.heading.settings.blur_heading.label",
           "default": false
+        },
+        {
+          "type": "range",
+          "id": "blur_strength",
+          "label": "t:sections.rich-text.blocks.heading.settings.blur_strength.label",
+          "default": 3,
+          "unit": "px",
+          "step": 1,
+          "max": 5,
+          "min": 1
         }
       ]
     },

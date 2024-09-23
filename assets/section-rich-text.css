@@ -200,8 +200,8 @@ html:not(.animate-hero-richtext) .section--richtext:not(.animate-richtext-headin
 }
 
 .animating-circle .rich-text__heading-animate-blur {
-  filter: blur(3px);
-  -webkit-filter: blur(3px);
+  filter: blur(var(--heading-blur-strength, 2px));
+  -webkit-filter: blur(var(--heading-blur-strength, 2px));
 }
 
 .rich-text__heading.h1 {
