@@ -2666,6 +2666,10 @@
     "multicard": {
       "name": "Multicard",
       "settings": {
+        "sticky_multicard": {
+          "label": "Sticky multicard",
+          "info": "Keeps section sticky on Top"
+        },
         "title": {
           "default": "Multicard"
         }
