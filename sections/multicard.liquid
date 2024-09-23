@@ -34,6 +34,7 @@
     .animate-multicard .multicard-heading--blur {
       filter: blur(3px);
       -webkit-filter: blur(3px);
+      color: var(--color-foreground-secondary);
     }
   {% endif %}
 {%- endstyle -%}
@@ -62,6 +63,7 @@
           class="title inline-richtext {{ section.settings.heading_size }}
             {% if section.settings.blur_heading %} multicard-heading--blur{% endif %}
           "
+          style="--color-foreground-secondary: {{ section.settings.secondary_color }}"
         >
           {{ section.settings.title }}
         </h2>
@@ -270,6 +272,12 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color",
+      "id": "secondary_color",
+      "label": "t:sections.rich-text.blocks.heading.settings.secondary_color.label",
+      "default": "#009B72"
     },
     {
       "type": "checkbox",
