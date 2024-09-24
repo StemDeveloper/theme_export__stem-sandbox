@@ -533,7 +533,6 @@
 }
 
 .animate-hero .section--hero-banner + .section--richtext {
-  --animation-extra: 1;
   margin-top: calc(var(--header-height) * -1);
 }
 

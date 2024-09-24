@@ -5,7 +5,6 @@ if(!customElements.get('richtext-animation')) {
       constructor() {
         super();
         this.richtextParent = this.parentElement;
-        this.animateStarts = parseInt(this.dataset.animateStartIndex);
         this.animateBlocks = this.querySelectorAll('[data-animation="PopInCircle"]');
         this.scrollHandler = this.updateVisibility.bind(this);
         this.startTime = null;
@@ -23,19 +22,17 @@ if(!customElements.get('richtext-animation')) {
       updateVisibility() {
         const parentRect = this.richtextParent.getBoundingClientRect();
         if (parentRect.top <= 0 && !this.isAnimating) {
-          this.startAnimation(this.animateStarts);
+          this.startAnimation();
         }
       }
 
-      startAnimation(animationStartindex) {
+      startAnimation() {
         this.isAnimating = true;
         this.startTime = performance.now();
+        this.animateStarts = parseInt(this.dataset.animateStartPx);
       
         const runAnimation = (timestamp) => {
           const elapsedTime = timestamp - this.startTime;
-          const viewportHeight = window.innerHeight;
-          const scrollY = window.scrollY;
-          const viewportCenter = scrollY + viewportHeight / 2;
           const parentTopPosition = this.richtextParent.getBoundingClientRect().top;
       
           this.animateBlocks.forEach((block, index) => {
@@ -45,8 +42,8 @@ if(!customElements.get('richtext-animation')) {
             const blockWidth = rect.width;
             const blockHeightRadius = 0.5 * blockHeight;
             const blockWidthRadius = 0.5 * blockWidth;
-            const blockAnimateStart = (index + animationStartindex) * blockHeight;
-            const blockAnimateEnd = (index + animationStartindex + 1) * blockHeight;
+            const blockAnimateStart = (index * blockHeight) + this.animateStarts;
+            const blockAnimateEnd = ((index + 1) * blockHeight) + this.animateStarts;
             const blockAnimateMiddle = blockAnimateEnd - blockHeightRadius;
       
             if (parentTopPosition < 0) {
@@ -71,8 +68,8 @@ if(!customElements.get('richtext-animation')) {
               } else {
                 block.style.clipPath = windowMobileMedia.matches ? `circle(${animateCircle.toFixed(2)}px at 100% 65%)` : `circle(${animateCircle.toFixed(2)}px at 75% 65%)`;
               }
-              if(animationStartindex > 0) {
-                if(parentTopPositionValue > blockHeight) {
+              if(this.animateStarts > 0) {
+                if(parentTopPositionValue > this.animateStarts) {
                   this.richtextParent.classList.add('animate-richtext');
                   this.richtextParent.classList.add('animating-circle');
                   if(parentTopPositionValue > ((this.animateBlocks.length + 1)*blockHeight)) {
@@ -91,7 +88,7 @@ if(!customElements.get('richtext-animation')) {
               }
             } else {
               block.style.clipPath = `circle(0 at center)`;
-              if(animationStartindex > 0) return;
+              if(this.animateStarts > 0) return;
               this.richtextParent.classList.remove('animate-richtext');
               this.richtextParent.classList.remove('animating-circle');
             }

@@ -86,7 +86,7 @@
 }
 /* custom codes */
 .section--richtext {
-  min-height: calc(var(--richtext-animation-height, 100vh) * (var(--richtext-animation-blocks, 0) + var(--animation-extra, 0) + 1));
+  min-height: calc((var(--richtext-animation-height, 100vh) * (var(--richtext-animation-blocks, 0) + 1)) + var(--animation-extra, 0px));
   overflow: clip;
 }
 
@@ -193,7 +193,7 @@
 html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate,
 html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate span,
 html:not(.animate-hero-richtext) .section--richtext:not(.animate-richtext-heading) .rich-text__heading-animate-span span,
-.animate-hero-richtext:not(.animate-hero-end) .animate-richtext-heading .rich-text__heading-animate,
+.animate-hero-richtext.animate-hero-end .animate-richtext-heading .rich-text__heading-animate,
 .animate-hero-richtext:not(.animate-hero-end) .animate-richtext-heading .rich-text__heading-animate span,
 .animate-hero-richtext:not(.animate-hero-end) .section--richtext:not(.animate-richtext) .rich-text__heading-animate-span span {
   color: var(--color-foreground-secondary);
