@@ -4,11 +4,12 @@ if(!customElements.get('richtext-animation')) {
     class RichtextAnimation extends HTMLElement {
       constructor() {
         super();
-        this.richtextParent = this.parentElement;
-        this.animateBlocks = this.querySelectorAll('[data-animation="PopInCircle"]');
-        this.scrollHandler = this.updateVisibility.bind(this);
         this.startTime = null;
         this.isAnimating = false;
+        this.richtextParent = this.parentElement;
+        this.richtextHeading = this.querySelector('[data-blur-strength]');
+        this.animateBlocks = this.querySelectorAll('[data-animation="PopInCircle"]');
+        this.scrollHandler = this.updateVisibility.bind(this);
       }
 
       connectedCallback() {
@@ -33,7 +34,6 @@ if(!customElements.get('richtext-animation')) {
       
         const runAnimation = (timestamp) => {
           const elapsedTime = timestamp - this.startTime;
-          const parentTopPosition = this.richtextParent.getBoundingClientRect().top;
       
           this.animateBlocks.forEach((block, index) => {
             const rect = block.getBoundingClientRect();
@@ -51,7 +51,6 @@ if(!customElements.get('richtext-animation')) {
               const windowMobileMedia = window.matchMedia('(max-width: 749px)');
               const parentTopPositionValue = Math.abs(parentTopPosition);
               let visibilityPercent = 0;
-              
               if (parentTopPositionValue >= blockAnimateStart && parentTopPositionValue < blockAnimateMiddle) {
                 visibilityPercent = ((parentTopPositionValue - blockAnimateStart) / (blockAnimateMiddle - blockAnimateStart)) * 100;
               } else if (parentTopPositionValue >= blockAnimateMiddle && parentTopPositionValue < blockAnimateEnd) {
@@ -63,6 +62,10 @@ if(!customElements.get('richtext-animation')) {
                 animateRadius = blockWidth;
               }
               const animateCircle = (visibilityPercent / 100) * animateRadius;
+              if(parentTopPositionValue >= blockAnimateStart && parentTopPositionValue < blockAnimateEnd) {
+                const animateBlurStrength = (visibilityPercent / 100) * parseInt(this.richtextHeading.dataset.blurStrength);
+                this.richtextHeading.style.setProperty('--heading-blur-strength', `${animateBlurStrength.toFixed(2)}px`);
+              }
               if(windowMedia.matches) {
                 block.style.clipPath = `circle(${animateCircle.toFixed(2)}px at 50% 60%)`;
               } else {
@@ -93,12 +96,6 @@ if(!customElements.get('richtext-animation')) {
               this.richtextParent.classList.remove('animating-circle');
             }
           });
-
-          if(parentTopPosition < 0) {
-            this.richtextParent.classList.add('animate-richtext-heading');
-          } else {
-            this.richtextParent.classList.remove('animate-richtext-heading');
-          }
           
           if (elapsedTime < 1000) {
             requestAnimationFrame(runAnimation);

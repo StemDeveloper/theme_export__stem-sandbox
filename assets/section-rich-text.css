@@ -180,8 +180,7 @@
 }
 
 .section--richtext .rich-text__heading,
-.section--richtext .rich-text__heading span,
-.section--richtext .rich-text__heading-animate-blur {
+.section--richtext .rich-text__heading span {
   transition: all var(--duration-long) var(--ease-out-slow);
   -webkit-transition: all var(--duration-long) var(--ease-out-slow);
   -moz-transition: all var(--duration-long) var(--ease-out-slow);
@@ -189,19 +188,18 @@
   -o-transition: all var(--duration-long) var(--ease-out-slow);
 }
 
-.rich-text__heading-animate span,
-html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate,
-html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate span,
-html:not(.animate-hero-richtext) .section--richtext:not(.animate-richtext-heading) .rich-text__heading-animate-span span,
-.animate-hero-richtext.animate-hero-end .animate-richtext-heading .rich-text__heading-animate,
-.animate-hero-richtext:not(.animate-hero-end) .animate-richtext-heading .rich-text__heading-animate span,
-.animate-hero-richtext:not(.animate-hero-end) .section--richtext:not(.animate-richtext) .rich-text__heading-animate-span span {
+.section--richtext:not(.animate-richtext) .rich-text__heading-animate-span span {
   color: var(--color-foreground-secondary);
 }
 
+.animate-richtext .rich-text__heading-animate {
+  color: rgba(var(--color-foreground-secondary), .8);
+}
+
 .animating-circle .rich-text__heading-animate-blur {
-  filter: blur(var(--heading-blur-strength, 2px));
-  -webkit-filter: blur(var(--heading-blur-strength, 2px));
+  filter: blur(var(--heading-blur-strength, 3px));
+  -webkit-filter: blur(var(--heading-blur-strength, 3px));
+  text-shadow: 0 0 calc(var(--heading-blur-strength)* 2) rgba(var(--color-foreground-secondary), 1);
 }
 
 .rich-text__heading.h1 {
@@ -215,40 +213,12 @@ html:not(.animate-hero-richtext) .section--richtext:not(.animate-richtext-headin
 }
 
 @media screen and (min-width: 990px) {
-  .animate-hero-end .animate-richtext .rich-text__heading-animate-span.h10xl,
-  html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate-span.h10xl {
-    font-size: clamp(calc(var(--font-heading-scale) * 8rem), 14vw, calc(var(--font-heading-scale) * 11.2rem));
-    line-height: 1.1;
-  }
-  
-  .animate-hero-end .animate-richtext .rich-text__heading-animate-span.h7xl,
-  html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate-span.h7xl {
-    font-size: clamp(calc(var(--font-heading-scale) * 7.4rem), 14vw, calc(var(--font-heading-scale) * 10.2rem));
-    line-height: 1.1;
-  }
-  
-  .animate-hero-end .animate-richtext .rich-text__heading-animate-span.hxxxxl,
-  html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate-span.hxxxxl {
-    font-size: clamp(calc(var(--font-heading-scale) * 6.2rem), 14vw, calc(var(--font-heading-scale) * 8.2rem));
-    line-height: 1.1;
-  }
-  
-  .animate-hero-end .animate-richtext .rich-text__heading-animate-span.hxxxl,
-  html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate-span.hxxxl {
-    font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem));
-    line-height: 1.1;
-  }
-  
-  .animate-hero-end .animate-richtext .rich-text__heading-animate-span.hxxl,
-  html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate-span.hxxl {
-    font-size: clamp(calc(var(--font-heading-scale) * 5rem), 14vw, calc(var(--font-heading-scale) * 6.6rem));
-    line-height: 1.1;
-  }
-  
-  .animate-hero-end .animate-richtext .rich-text__heading-animate-span.hxl,
-  html:not(.animate-hero-richtext) .animate-richtext-heading .rich-text__heading-animate-span.hxl {
-    font-size: calc(var(--font-heading-scale) * 5rem);
-    line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
+  .animate-richtext .rich-text__heading-animate-span {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
   }
 
   .rich-text__heading.h1 {
