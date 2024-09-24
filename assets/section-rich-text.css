@@ -202,7 +202,7 @@
   text-shadow: 0 0 calc(var(--heading-blur-strength)* 2) rgba(var(--color-foreground-secondary), 1);
 }
 
-.animate-richtext .rich-text__heading-animate-span {
+.section--richtext .rich-text__heading-animate-span {
   transform-origin: top left;
 }
 
