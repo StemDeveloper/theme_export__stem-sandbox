@@ -202,6 +202,10 @@
   text-shadow: 0 0 calc(var(--heading-blur-strength)* 2) rgba(var(--color-foreground-secondary), 1);
 }
 
+.animate-richtext .rich-text__heading-animate-span {
+  transform-origin: top left;
+}
+
 .rich-text__heading.h1 {
   font-size: calc(var(--font-heading-scale) * 2.4rem);
 }
