@@ -3748,6 +3748,18 @@ details-disclosure > details {
   z-index: 3;
 }
 
+.animate-input-underline .field .animate__field-line {
+  transition: all 3s var(--ease-out-slow);
+  -webkit-transition: all 3s var(--ease-out-slow);
+  -moz-transition: all 3s var(--ease-out-slow);
+  -ms-transition: all 3s var(--ease-out-slow);
+  -o-transition: all 3s var(--ease-out-slow);
+}
+
+.animate-input-underline .animating-field .animate__field-line {
+  width: 100%;
+}
+
 .animate-input-underline .center .field .animate__field-line {
   left: 50%;
   transform: translateX(-50%);
