@@ -8,6 +8,8 @@ if(!customElements.get('multicard-animation')) {
         this.isAnimating = false;
         this.mainBody = this.closest('body');
         this.multicardParent = this.parentElement;
+        this.multicardSticky = this.dataset.stickyMulticard === 'true';
+        this.multicardStickyHeading = this.dataset.stickyHeading === 'true';
         this.scrollHandler = this.updateVisibility.bind(this);
         this.updateVisibility();
       }
@@ -34,11 +36,14 @@ if(!customElements.get('multicard-animation')) {
         const runAnimation = (timestamp) => {
           const elapsedTime = timestamp - this.startTime;
           const rect = this.mainBody.getBoundingClientRect();
+          const rectParent = this.multicardParent.getBoundingClientRect();
           
-          if(rect.top < 0) {
-            this.multicardParent.classList.add('animate-multicard');
-          } else {
-            this.multicardParent.classList.remove('animate-multicard');
+          if(this.multicardSticky) {
+            rect.top < 0 ? this.multicardParent.classList.add('animate-multicard') : this.multicardParent.classList.remove('animate-multicard');
+          }
+          
+          if(this.multicardStickyHeading) {
+            rectParent.top < 0 ? this.multicardParent.classList.add('animate-multicard-heading') : this.multicardParent.classList.remove('animate-multicard-heading');
           }
 
           if (elapsedTime < 2000) {

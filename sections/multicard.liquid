@@ -31,10 +31,19 @@
     }
   {% endif %}
   {% if section.settings.blur_heading %}
-    .animate-multicard .multicard-heading--blur {
-      filter: blur(3px);
-      -webkit-filter: blur(3px);
-      color: var(--color-foreground-secondary);
+    .multicard-heading--blur {
+      transition: all var(--duration-long) ease;
+      -webkit-transition: all var(--duration-long) ease;
+      -moz-transition: all var(--duration-long) ease;
+      -ms-transition: all var(--duration-long) ease;
+      -o-transition: all var(--duration-long) ease;
+    }
+    .animate-multicard .multicard-heading--blur,
+    .animate-multicard-heading .multicard-heading--blur {
+      filter: blur(var(--heading-blur-strength, 3px));
+      -webkit-filter: blur(var(--heading-blur-strength, 3px));
+      color: rgba(var(--color-foreground-secondary), .8);
+      text-shadow: 0 0 calc(var(--heading-blur-strength)* 2) rgba(var(--color-foreground-secondary), 1);
     }
   {% endif %}
 {%- endstyle -%}
@@ -49,6 +58,9 @@
 
 <multicard-animation
   class="multicard--container"
+  data-sticky-multicard="{{ section.settings.sticky_multicard }}"
+  data-sticky-heading="{{ section.settings.sticky_title }}"
+  style="--heading-blur-strength: {{ section.settings.blur_strength }}px;"
 >
 <div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div
@@ -58,12 +70,16 @@
     {% endif %}
   >
     {%- unless section.settings.title == blank -%}
-      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
+      <div 
+        class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title
+          {% if section.settings.sticky_title %} multicard-heading--sticky{% endif %}
+        "
+      >
         <h2 
           class="title inline-richtext {{ section.settings.heading_size }}
             {% if section.settings.blur_heading %} multicard-heading--blur{% endif %}
           "
-          style="--color-foreground-secondary: {{ section.settings.secondary_color }}"
+          style="--color-foreground-secondary: {{ section.settings.secondary_color.red }}, {{ section.settings.secondary_color.green }}, {{ section.settings.secondary_color.blue }};"
         >
           {{ section.settings.title }}
         </h2>
@@ -284,6 +300,16 @@
       "id": "blur_heading",
       "label": "t:sections.multicard.settings.blur_heading.label",
       "default": false
+    },
+    {
+      "type": "range",
+      "id": "blur_strength",
+      "label": "t:sections.rich-text.blocks.heading.settings.blur_strength.label",
+      "default": 3,
+      "unit": "px",
+      "step": 1,
+      "max": 10,
+      "min": 1
     },
     {
       "type": "select",
