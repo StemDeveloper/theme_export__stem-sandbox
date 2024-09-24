@@ -2673,6 +2673,9 @@
         "title": {
           "default": "Multicard"
         },
+        "sticky_title": {
+          "label": "Sticky heading"
+        },
         "blur_heading": {
           "label": "Blur on Heading with Scroll"
         }
