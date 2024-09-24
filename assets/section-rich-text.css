@@ -189,7 +189,7 @@
 }
 
 .section--richtext:not(.animate-richtext) .rich-text__heading-animate-span span {
-  color: var(--color-foreground-secondary);
+  color: rgba(var(--color-foreground-secondary), 1);
 }
 
 .animate-richtext .rich-text__heading-animate {
