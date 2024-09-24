@@ -4,6 +4,9 @@
 {{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
+{% if settings.enable_footer_mask %}
+  <script src="{{ 'footer-mask.js' | asset_url }}" defer="defer"></script>
+{% endif %}
 
 {%- style -%}
   .footer {
@@ -55,10 +58,10 @@
       bottom: 0;
       z-index: -1;
     }
-    body:not(.template-index) .section-footer {
+    .section-footer-mask {
       z-index: 0;
     }
-    .animate-hero-cliped .section-footer {
+    .animate-hero-end .template-index .section-footer-mask {
       z-index: 1;
     }
     body:not(.template-index) .content-for-layout {
@@ -68,27 +71,27 @@
     .section-footer .footer::before {
       content: '';
       position: fixed;
-      top: var(--announcement-height, 0);
+      top: calc(var(--announcement-height, 0) + var(--header-height, 0));
       left: 0;
       width: 100%;
-      height: calc(100% - var(--announcement-height, 0));
+      height: calc(100% - (var(--announcement-height, 0) + var(--header-height, 0)));
       background: rgb(var(--color-background));
       background: var(--gradient-background);
       background-attachment: fixed;
       z-index: -1;
     }
-    body:not(.template-index) .section-footer .footer::before {
+    .section-footer-mask::before {
       top: calc(var(--announcement-height, 0) + var(--header-height, 0));
       height: calc(100% - (var(--announcement-height, 0) + var(--header-height, 0)));
-    }
-    @media (orientation: landscape) and (min-width: 1440px) {
-      .section--newsletter::after {
-        max-height: 70vh;
-      }
     }
     @media (orientation: landscape) {
       .section--newsletter::after {
         max-height: 50vh;
+      }
+    }
+    @media (orientation: landscape) and (min-width: 1920px) {
+      .section--newsletter::after {
+        max-height: 35vh;
       }
     }
     @media (orientation: portrait) {
