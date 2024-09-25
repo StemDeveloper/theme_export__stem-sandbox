@@ -36,14 +36,19 @@
       top: 0;
       z-index: 0;
     }
-    .shopify-section-announcement-sticky:not(.shopify-section-announcement-hidden) ~ .content-for-layout #shopify-section-{{ section.id }} .multicard-heading--sticky {
-      top: var(--announcement-height, 0);
+    #shopify-section-{{ section.id }} .multicard-heading--sticky {
+      max-width: 82rem;
+      min-height: 100vh;
     }
-    .shopify-section-header-sticky:not(.shopify-section-header-hidden) ~ .content-for-layout #shopify-section-{{ section.id }} .multicard-heading--sticky {
-      top: var(--header-height, 0);
+    #shopify-section-{{ section.id }} .multicard-heading--sticky + slider-component {
+      max-width: 47%;
+      margin-left: auto;
+      margin-bottom: 40vh;
     }
-    .shopify-section-announcement-sticky:not(.shopify-section-announcement-hidden) + .shopify-section-header-sticky:not(.shopify-section-header-hidden) ~ .content-for-layout #shopify-section-{{ section.id }} .multicard-heading--sticky {
-      top: calc(var(--announcement-height, 0) + var(--header-height, 0));
+    @media screen and (orientation: landscape) {
+      #shopify-section-{{ section.id }} .multicard-heading--sticky + slider-component {
+        margin-bottom: 70vh;
+      }
     }
   {% endif %}
   {% if section.settings.blur_heading %}
@@ -77,7 +82,7 @@
   data-sticky-multicard="{{ section.settings.sticky_multicard }}"
   data-sticky-heading="{{ section.settings.sticky_title }}"
   data-blur-strength="{{ section.settings.blur_strength }}"
-  style="--heading-blur-strength: {{ section.settings.blur_strength }}px;"
+  style="--heading-blur-strength: 0px;"
 >
 <div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div

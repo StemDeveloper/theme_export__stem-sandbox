@@ -10,6 +10,7 @@ if(!customElements.get('multicard-animation')) {
         this.multicardParent = this.parentElement;
         this.multicardSticky = this.dataset.stickyMulticard === 'true';
         this.multicardStickyHeading = this.dataset.stickyHeading === 'true';
+        this.multicardHeader = this.querySelector('.multicard-heading--sticky');
         this.scrollHandler = this.updateVisibility.bind(this);
         this.updateVisibility();
       }
@@ -37,13 +38,41 @@ if(!customElements.get('multicard-animation')) {
           const elapsedTime = timestamp - this.startTime;
           const rect = this.mainBody.getBoundingClientRect();
           const rectParent = this.multicardParent.getBoundingClientRect();
+          const rectHeading = this.multicardHeader.getBoundingClientRect();
+          const rectParentHeight = rectParent.height;
+          const blockAnimateStart = 0;
+          const blockAnimateStartEnd = rectHeading.height / 2;
+          const blockAnimateEndStart = rectParentHeight - rectHeading.height - (rectHeading.height / 2);
+          const blockAnimateEndEnd = rectParentHeight - rectHeading.height;
           
           if(this.multicardSticky) {
             rect.top < 0 ? this.multicardParent.classList.add('animate-multicard') : this.multicardParent.classList.remove('animate-multicard');
           }
-          
-          if(this.multicardStickyHeading) {
-            rectParent.top < 0 ? this.multicardParent.classList.add('animate-multicard-heading') : this.multicardParent.classList.remove('animate-multicard-heading');
+
+          if (this.multicardStickyHeading) {
+            if (rectParent.top < 0) {
+              const parentTopPositionValue = Math.abs(rectParent.top);
+              let visibilityPercent = 0;
+
+              if (parentTopPositionValue >= blockAnimateStart && parentTopPositionValue < blockAnimateStartEnd) {
+                visibilityPercent = ((parentTopPositionValue - blockAnimateStart) / (blockAnimateStartEnd - blockAnimateStart)) * 100;
+              } else if (parentTopPositionValue >= blockAnimateStartEnd && parentTopPositionValue < blockAnimateEndStart) {
+                visibilityPercent = 100;
+              } else if (parentTopPositionValue >= blockAnimateEndStart && parentTopPositionValue < blockAnimateEndEnd) {
+                visibilityPercent = ((blockAnimateEndEnd - parentTopPositionValue) / (blockAnimateEndEnd - blockAnimateEndStart)) * 100;
+              }
+
+              if(parentTopPositionValue >= blockAnimateStart && parentTopPositionValue < blockAnimateEndEnd) {
+                const animateBlurStrength = (visibilityPercent / 100) * parseInt(this.dataset.blurStrength);
+                this.style.setProperty('--heading-blur-strength', `${animateBlurStrength.toFixed(2)}px`);
+              } else {
+                this.style.setProperty('--heading-blur-strength', `0px`);
+              }
+
+              this.multicardParent.classList.add('animate-multicard-heading');
+            } else {
+              this.multicardParent.classList.remove('animate-multicard-heading');
+            }
           }
 
           if (elapsedTime < 2000) {
