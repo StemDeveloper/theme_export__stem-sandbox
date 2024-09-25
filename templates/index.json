@@ -279,8 +279,9 @@
         "column_q7RUpq": {
           "type": "column",
           "settings": {
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/model-laughs-barefoot.jpg",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -288,8 +289,9 @@
         "column_HTQyNe": {
           "type": "column",
           "settings": {
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/person-writing-in-notebook-beside-laptop-working-from-bed.jpg",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
