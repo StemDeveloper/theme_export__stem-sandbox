@@ -265,12 +265,43 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_ybYhTq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mens-fashion-man-in-shirt-and-jeans-leaning-on-bicycle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_q7RUpq": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HTQyNe": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "column_HbpcBj",
         "column_Ny3Kb9",
-        "column_jM48Bp"
+        "column_jM48Bp",
+        "column_ybYhTq",
+        "column_q7RUpq",
+        "column_HTQyNe"
       ],
       "settings": {
         "sticky_multicard": false,
