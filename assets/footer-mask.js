@@ -20,7 +20,11 @@ function FooterMaskTransition() {
       const elapsedTime = timestamp - animationStartTime;
       const rect = sectionsBody.getBoundingClientRect();
 
-      windowHeight > rect.bottom ? sectionFooter.classList.add('section-footer-mask') : sectionFooter.classList.remove('section-footer-mask');
+      if(windowHeight > (rect.height / 2)) {
+        Math.abs(rect.top) > (window.innerHeight / 2) ? sectionFooter.classList.add('section-footer-mask') : sectionFooter.classList.remove('section-footer-mask');
+      } else {
+        windowHeight > rect.bottom ? sectionFooter.classList.add('section-footer-mask') : sectionFooter.classList.remove('section-footer-mask');
+      }
       
       if (elapsedTime < 2000) {
         requestAnimationFrame(runAnimation);

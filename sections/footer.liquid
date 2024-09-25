@@ -71,18 +71,22 @@
     .section-footer .footer::before {
       content: '';
       position: fixed;
-      top: calc(var(--announcement-height, 0) + var(--header-height, 0));
+      top: var(--announcement-height, 0);
       left: 0;
       width: 100%;
-      height: calc(100% - (var(--announcement-height, 0) + var(--header-height, 0)));
+      height: calc(100% - var(--announcement-height, 0));
       background: rgb(var(--color-background));
       background: var(--gradient-background);
       background-attachment: fixed;
       z-index: -1;
     }
-    .section-footer-mask .footer::before {
+    .section-footer:not(.section-footer-mask) .footer::before {
       top: calc(var(--announcement-height, 0) + var(--header-height, 0));
       height: calc(100% - (var(--announcement-height, 0) + var(--header-height, 0)));
+    }
+    .section-footer ~ * {
+      position: relative;
+      z-index: 1;
     }
     @media (orientation: landscape) {
       .section--newsletter::after {
