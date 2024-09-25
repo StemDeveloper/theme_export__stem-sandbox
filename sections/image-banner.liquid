@@ -27,6 +27,15 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
+  {% if section.settings.hero_arrow %}
+    .hero-arrow {
+      position: absolute;
+      right: 100px;
+      bottom: 60px;
+      z-index: 2;
+      color: rgb(var(--color-background));
+    }
+  {% endif %}
 {%- endstyle -%}
 
 {%- liquid
@@ -168,6 +177,11 @@
       {%- endfor -%}
     </div>
   </div>
+  {% if section.settings.hero_arrow %}
+    <div class="hero-arrow">
+      {{- 'icon-hero-arrow.svg' | inline_asset_content -}}
+    </div>
+  {% endif %}
 </div>
 
 {% schema %}
@@ -188,6 +202,12 @@
       "type": "image_picker",
       "id": "image_2",
       "label": "t:sections.image-banner.settings.image_2.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "hero_arrow",
+      "label": "t:sections.image-banner.settings.hero_arrow.label",
+      "default": true
     },
     {
       "type": "range",

@@ -1327,6 +1327,9 @@
         "image_2": {
           "label": "Second image"
         },
+        "hero_arrow": {
+          "label": "Hero arrow"
+        },
         "image_overlay_opacity": {
           "label": "Image overlay opacity"
         },
