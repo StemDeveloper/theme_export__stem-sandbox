@@ -165,20 +165,20 @@
             "link": ""
           }
         },
-        "column_HQbVp4": {
+        "column_KJiBaC": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-Arthur-Murray-West-Island.png",
+            "image": "shopify://shop_images/Stem-Commerce-Client-Beco-Boutique.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_KJiBaC": {
+        "column_HQbVp4": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-Beco-Boutique.png",
+            "image": "shopify://shop_images/Stem-Commerce-Client-Arthur-Murray-West-Island.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -196,8 +196,8 @@
         "column_gwREW7",
         "column_aHGfM6",
         "column_HqfH79",
-        "column_HQbVp4",
-        "column_KJiBaC"
+        "column_KJiBaC",
+        "column_HQbVp4"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
