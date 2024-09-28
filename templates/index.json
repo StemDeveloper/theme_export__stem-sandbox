@@ -95,6 +95,16 @@
             "link": ""
           }
         },
+        "column_FCzeRd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-DataCandy.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_PPGp7b": {
           "type": "column",
           "settings": {
@@ -274,21 +284,12 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column_FCzeRd": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-DataCandy.png",
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
         "column_pG9dNH",
         "column_xUxynb",
+        "column_FCzeRd",
         "column_PPGp7b",
         "column_QmaKTN",
         "column_k44bah",
@@ -306,8 +307,7 @@
         "column_JmwUJ7",
         "column_CLpgVW",
         "column_YUWtEm",
-        "column_nJYT7P",
-        "column_FCzeRd"
+        "column_nJYT7P"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
