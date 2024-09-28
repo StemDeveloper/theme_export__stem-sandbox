@@ -284,6 +284,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_Yggd87": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Destination-Logistics.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -307,7 +317,8 @@
         "column_JmwUJ7",
         "column_CLpgVW",
         "column_YUWtEm",
-        "column_nJYT7P"
+        "column_nJYT7P",
+        "column_Yggd87"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
