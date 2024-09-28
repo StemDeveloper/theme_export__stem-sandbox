@@ -294,6 +294,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_mBJQAb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Chewpod.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -318,7 +328,8 @@
         "column_CLpgVW",
         "column_Yggd87",
         "column_YUWtEm",
-        "column_nJYT7P"
+        "column_nJYT7P",
+        "column_mBJQAb"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
