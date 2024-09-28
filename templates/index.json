@@ -185,20 +185,20 @@
             "link": ""
           }
         },
-        "column_8FLpjh": {
+        "column_GqYmic": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-Proven-Industries.png",
+            "image": "shopify://shop_images/Stem-Commerce-Client-Biocompost.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_GqYmic": {
+        "column_8FLpjh": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-Biocompost.png",
+            "image": "shopify://shop_images/Stem-Commerce-Client-Proven-Industries.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -218,8 +218,8 @@
         "column_HqfH79",
         "column_KJiBaC",
         "column_HQbVp4",
-        "column_8FLpjh",
-        "column_GqYmic"
+        "column_GqYmic",
+        "column_8FLpjh"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
