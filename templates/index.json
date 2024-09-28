@@ -165,6 +165,16 @@
             "link": ""
           }
         },
+        "column_tCAAJT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Hidrate-Spark.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_QmaKTN": {
           "type": "column",
           "settings": {
@@ -406,6 +416,7 @@
         "column_PPGp7b",
         "column_FVbHPH",
         "column_JCAaiL",
+        "column_tCAAJT",
         "column_QmaKTN",
         "column_k44bah",
         "column_FF7KA4",
