@@ -409,8 +409,8 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Stem-Commerce-Client-Hyper-Hitches.png",
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
