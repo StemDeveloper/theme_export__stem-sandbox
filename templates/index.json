@@ -304,6 +304,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_9X7ywE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Viva.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -329,7 +339,8 @@
         "column_Yggd87",
         "column_mBJQAb",
         "column_YUWtEm",
-        "column_nJYT7P"
+        "column_nJYT7P",
+        "column_9X7ywE"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
