@@ -155,6 +155,16 @@
             "link": ""
           }
         },
+        "column_aHGfM6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Sta-Active.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_HQbVp4": {
           "type": "column",
           "settings": {
@@ -174,6 +184,7 @@
         "column_k44bah",
         "column_HqfH79",
         "column_gwREW7",
+        "column_aHGfM6",
         "column_HQbVp4"
       ],
       "settings": {
