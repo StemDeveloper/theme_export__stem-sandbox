@@ -145,6 +145,16 @@
             "link": ""
           }
         },
+        "column_JCAaiL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Gusti.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_QmaKTN": {
           "type": "column",
           "settings": {
@@ -364,6 +374,7 @@
         "column_9BPXUT",
         "column_PPGp7b",
         "column_FVbHPH",
+        "column_JCAaiL",
         "column_QmaKTN",
         "column_k44bah",
         "column_FF7KA4",
