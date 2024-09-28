@@ -215,6 +215,16 @@
             "link": ""
           }
         },
+        "column_KtxyQY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Brain-Wash.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_JmwUJ7": {
           "type": "column",
           "settings": {
@@ -241,6 +251,7 @@
         "column_HQbVp4",
         "column_GqYmic",
         "column_8FLpjh",
+        "column_KtxyQY",
         "column_JmwUJ7"
       ],
       "settings": {
