@@ -184,6 +184,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_geKjnN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Proven-Industries.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -197,7 +207,8 @@
         "column_aHGfM6",
         "column_HqfH79",
         "column_KJiBaC",
-        "column_HQbVp4"
+        "column_HQbVp4",
+        "column_geKjnN"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
