@@ -424,6 +424,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_riEJar": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Izotti.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -461,7 +471,8 @@
         "column_KfhDLP",
         "column_NFEkQH",
         "column_xEUVKj",
-        "column_8Vy4P3"
+        "column_8Vy4P3",
+        "column_riEJar"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
