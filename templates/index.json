@@ -205,6 +205,16 @@
             "link": ""
           }
         },
+        "column_K3rDV6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Chetwyn-Farms.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_8FLpjh": {
           "type": "column",
           "settings": {
@@ -264,16 +274,6 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column_K3rDV6": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-Chetwyn-Farms.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
@@ -290,13 +290,13 @@
         "column_bGkndc",
         "column_HQbVp4",
         "column_GqYmic",
+        "column_K3rDV6",
         "column_8FLpjh",
         "column_KtxyQY",
         "column_JmwUJ7",
         "column_CLpgVW",
         "column_YUWtEm",
-        "column_nJYT7P",
-        "column_K3rDV6"
+        "column_nJYT7P"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
