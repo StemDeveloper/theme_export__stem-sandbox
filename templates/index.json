@@ -245,6 +245,16 @@
             "link": ""
           }
         },
+        "column_YUWtEm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Stamps.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_nJYT7P": {
           "type": "column",
           "settings": {
@@ -274,6 +284,7 @@
         "column_KtxyQY",
         "column_JmwUJ7",
         "column_CLpgVW",
+        "column_YUWtEm",
         "column_nJYT7P"
       ],
       "settings": {
