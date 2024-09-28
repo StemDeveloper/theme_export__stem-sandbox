@@ -384,6 +384,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_NFEkQH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Henkaa.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -417,7 +427,8 @@
         "column_YUWtEm",
         "column_nJYT7P",
         "column_9X7ywE",
-        "column_KfhDLP"
+        "column_KfhDLP",
+        "column_NFEkQH"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
