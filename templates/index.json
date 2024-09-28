@@ -75,6 +75,16 @@
     "carousel_wV3JFV": {
       "type": "carousel",
       "blocks": {
+        "column_pG9dNH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Invisalign.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_xUxynb": {
           "type": "column",
           "settings": {
@@ -105,6 +115,26 @@
             "link": ""
           }
         },
+        "column_QmaKTN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Alton-Gray.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_k44bah": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Manhattan.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_HqfH79": {
           "type": "column",
           "settings": {
@@ -125,20 +155,9 @@
             "link": ""
           }
         },
-        "column_pG9dNH": {
+        "column_HQbVp4": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-Invisalign.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_QmaKTN": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-Alton-Gray.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -147,13 +166,15 @@
         }
       },
       "block_order": [
+        "column_pG9dNH",
         "column_xUxynb",
         "column_PPGp7b",
         "column_FF7KA4",
+        "column_QmaKTN",
+        "column_k44bah",
         "column_HqfH79",
         "column_gwREW7",
-        "column_pG9dNH",
-        "column_QmaKTN"
+        "column_HQbVp4"
       ],
       "settings": {
         "title": "<strong>Some of the great brands we have worked with</strong>",
