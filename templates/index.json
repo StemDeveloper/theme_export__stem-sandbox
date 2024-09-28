@@ -75,6 +75,16 @@
     "carousel_wV3JFV": {
       "type": "carousel",
       "blocks": {
+        "column_6WFQKp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Endy.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_pG9dNH": {
           "type": "column",
           "settings": {
@@ -317,6 +327,7 @@
         }
       },
       "block_order": [
+        "column_6WFQKp",
         "column_pG9dNH",
         "column_xUxynb",
         "column_FCzeRd",
