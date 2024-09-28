@@ -234,6 +234,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_CLpgVW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Briping.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -252,7 +262,8 @@
         "column_GqYmic",
         "column_8FLpjh",
         "column_KtxyQY",
-        "column_JmwUJ7"
+        "column_JmwUJ7",
+        "column_CLpgVW"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
