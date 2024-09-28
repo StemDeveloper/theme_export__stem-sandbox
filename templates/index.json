@@ -265,6 +265,16 @@
             "link": ""
           }
         },
+        "column_Yggd87": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Destination-Logistics.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_YUWtEm": {
           "type": "column",
           "settings": {
@@ -279,16 +289,6 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Stem-Commerce-Client-Candace-and-Basil.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_Yggd87": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-Destination-Logistics.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -316,9 +316,9 @@
         "column_KtxyQY",
         "column_JmwUJ7",
         "column_CLpgVW",
+        "column_Yggd87",
         "column_YUWtEm",
-        "column_nJYT7P",
-        "column_Yggd87"
+        "column_nJYT7P"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
