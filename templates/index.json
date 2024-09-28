@@ -134,66 +134,6 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column_MJ6kLE": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_FAYKrP": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem_Commerce.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_jrBhg8": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_wFxhBh": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem_Commerce.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_BFLqMw": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_AqXpkx": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem_Commerce.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
@@ -202,13 +142,7 @@
         "column_gwREW7",
         "column_PPGp7b",
         "column_HqfH79",
-        "column_pG9dNH",
-        "column_MJ6kLE",
-        "column_FAYKrP",
-        "column_jrBhg8",
-        "column_wFxhBh",
-        "column_BFLqMw",
-        "column_AqXpkx"
+        "column_pG9dNH"
       ],
       "settings": {
         "title": "<strong>Some of the great brands we have worked with</strong>",
