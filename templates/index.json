@@ -214,6 +214,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_JmwUJ7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Boutique-Limparfaite.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -230,7 +240,8 @@
         "column_bGkndc",
         "column_HQbVp4",
         "column_GqYmic",
-        "column_8FLpjh"
+        "column_8FLpjh",
+        "column_JmwUJ7"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
