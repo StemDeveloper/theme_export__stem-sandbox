@@ -334,6 +334,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_FVbHPH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-FanInk.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -362,7 +372,8 @@
         "column_mBJQAb",
         "column_YUWtEm",
         "column_nJYT7P",
-        "column_9X7ywE"
+        "column_9X7ywE",
+        "column_FVbHPH"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
