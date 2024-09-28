@@ -414,6 +414,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_8Vy4P3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-iCLoth.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -450,7 +460,8 @@
         "column_9X7ywE",
         "column_KfhDLP",
         "column_NFEkQH",
-        "column_xEUVKj"
+        "column_xEUVKj",
+        "column_8Vy4P3"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
