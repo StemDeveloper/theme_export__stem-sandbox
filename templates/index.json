@@ -85,6 +85,16 @@
             "link": ""
           }
         },
+        "column_PPGp7b": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Aigle.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_FF7KA4": {
           "type": "column",
           "settings": {
@@ -99,16 +109,6 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Stem-Commerce-Client-Abaka.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_PPGp7b": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -138,9 +138,9 @@
       },
       "block_order": [
         "column_xUxynb",
+        "column_PPGp7b",
         "column_FF7KA4",
         "column_gwREW7",
-        "column_PPGp7b",
         "column_HqfH79",
         "column_pG9dNH"
       ],
