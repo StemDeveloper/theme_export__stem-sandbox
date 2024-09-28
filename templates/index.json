@@ -225,6 +225,16 @@
             "link": ""
           }
         },
+        "column_DQkADW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Feddes.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_HQbVp4": {
           "type": "column",
           "settings": {
@@ -344,16 +354,6 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column_DQkADW": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-Feddes.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
@@ -372,6 +372,7 @@
         "column_HqfH79",
         "column_KJiBaC",
         "column_bGkndc",
+        "column_DQkADW",
         "column_HQbVp4",
         "column_GqYmic",
         "column_K3rDV6",
@@ -383,8 +384,7 @@
         "column_mBJQAb",
         "column_YUWtEm",
         "column_nJYT7P",
-        "column_9X7ywE",
-        "column_DQkADW"
+        "column_9X7ywE"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
