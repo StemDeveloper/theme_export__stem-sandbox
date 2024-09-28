@@ -105,20 +105,20 @@
             "link": ""
           }
         },
-        "column_gwREW7": {
+        "column_HqfH79": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-Abaka.png",
+            "image": "shopify://shop_images/Stem-Commerce-Client-Air-Filtration.png",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_HqfH79": {
+        "column_gwREW7": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem-Commerce-Client-Abaka.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -140,8 +140,8 @@
         "column_xUxynb",
         "column_PPGp7b",
         "column_FF7KA4",
-        "column_gwREW7",
         "column_HqfH79",
+        "column_gwREW7",
         "column_pG9dNH"
       ],
       "settings": {
