@@ -75,16 +75,6 @@
     "carousel_wV3JFV": {
       "type": "carousel",
       "blocks": {
-        "column_FF7KA4": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-Boutique-Tag.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_xUxynb": {
           "type": "column",
           "settings": {
@@ -95,10 +85,20 @@
             "link": ""
           }
         },
+        "column_FF7KA4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Boutique-Tag.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_gwREW7": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem-Commerce-Client-Abaka.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -137,8 +137,8 @@
         }
       },
       "block_order": [
-        "column_FF7KA4",
         "column_xUxynb",
+        "column_FF7KA4",
         "column_gwREW7",
         "column_PPGp7b",
         "column_HqfH79",
