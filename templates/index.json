@@ -95,6 +95,16 @@
             "link": ""
           }
         },
+        "column_MEgp7p": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-HairClub.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_xUxynb": {
           "type": "column",
           "settings": {
@@ -369,6 +379,7 @@
       "block_order": [
         "column_6WFQKp",
         "column_pG9dNH",
+        "column_MEgp7p",
         "column_xUxynb",
         "column_FCzeRd",
         "column_9BPXUT",
