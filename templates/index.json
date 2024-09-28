@@ -135,6 +135,16 @@
             "link": ""
           }
         },
+        "column_FVbHPH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-FanInk.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_QmaKTN": {
           "type": "column",
           "settings": {
@@ -334,16 +344,6 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column_FVbHPH": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-FanInk.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
@@ -353,6 +353,7 @@
         "column_FCzeRd",
         "column_9BPXUT",
         "column_PPGp7b",
+        "column_FVbHPH",
         "column_QmaKTN",
         "column_k44bah",
         "column_FF7KA4",
@@ -372,8 +373,7 @@
         "column_mBJQAb",
         "column_YUWtEm",
         "column_nJYT7P",
-        "column_9X7ywE",
-        "column_FVbHPH"
+        "column_9X7ywE"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
