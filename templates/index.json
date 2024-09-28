@@ -175,6 +175,16 @@
             "link": ""
           }
         },
+        "column_bGkndc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Boie-USA.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_HQbVp4": {
           "type": "column",
           "settings": {
@@ -204,16 +214,6 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column_bGkndc": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-Boie-USA.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
@@ -227,10 +227,10 @@
         "column_aHGfM6",
         "column_HqfH79",
         "column_KJiBaC",
+        "column_bGkndc",
         "column_HQbVp4",
         "column_GqYmic",
-        "column_8FLpjh",
-        "column_bGkndc"
+        "column_8FLpjh"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
