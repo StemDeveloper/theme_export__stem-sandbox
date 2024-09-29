@@ -165,6 +165,16 @@
             "link": ""
           }
         },
+        "column_4gpzG8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Kilne.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_n8Nhr3": {
           "type": "column",
           "settings": {
@@ -466,6 +476,7 @@
         "column_PPGp7b",
         "column_FVbHPH",
         "column_JCAaiL",
+        "column_4gpzG8",
         "column_n8Nhr3",
         "column_FF7KA4",
         "column_tCAAJT",
