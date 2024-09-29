@@ -224,6 +224,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_8yiA6z": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-CandB.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -241,7 +251,8 @@
         "column_6wNJrR",
         "column_84p7LX",
         "column_hBhdeL",
-        "column_cHDPaf"
+        "column_cHDPaf",
+        "column_8yiA6z"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
