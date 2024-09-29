@@ -195,20 +195,20 @@
             "link": ""
           }
         },
-        "column_hBhdeL": {
+        "column_84p7LX": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Limparfaite.jpg",
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Brain-Wash.jpg",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_84p7LX": {
+        "column_hBhdeL": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Brain-Wash.jpg",
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Limparfaite.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -229,8 +229,8 @@
         "column_Aqn6mb",
         "column_TQC6G4",
         "column_6wNJrR",
-        "column_hBhdeL",
-        "column_84p7LX"
+        "column_84p7LX",
+        "column_hBhdeL"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
