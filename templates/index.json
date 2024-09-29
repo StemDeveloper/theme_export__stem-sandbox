@@ -75,16 +75,6 @@
     "carousel_wV3JFV": {
       "type": "carousel",
       "blocks": {
-        "column_zKeHmw": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Client-Life-House.png",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_6WFQKp": {
           "type": "column",
           "settings": {
@@ -119,6 +109,16 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Stem-Commerce-Client-Surplus-Brands.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zKeHmw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Life-House.png",
             "title": "",
             "text": "",
             "link_label": "",
@@ -517,11 +517,11 @@
         }
       },
       "block_order": [
-        "column_zKeHmw",
         "column_6WFQKp",
         "column_pG9dNH",
         "column_MEgp7p",
         "column_xUxynb",
+        "column_zKeHmw",
         "column_q8DWmT",
         "column_FCzeRd",
         "column_9BPXUT",
