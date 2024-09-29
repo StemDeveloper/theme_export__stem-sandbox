@@ -685,7 +685,6 @@
         "column_UnVaap": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem_Commerce.png",
             "title": "",
             "text": "",
             "link_label": "",
