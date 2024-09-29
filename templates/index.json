@@ -434,6 +434,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_f4KQ7f": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Zorrata.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -472,7 +482,8 @@
         "column_NFEkQH",
         "column_xEUVKj",
         "column_8Vy4P3",
-        "column_riEJar"
+        "column_riEJar",
+        "column_f4KQ7f"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
