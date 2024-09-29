@@ -75,6 +75,16 @@
     "carousel_wV3JFV": {
       "type": "carousel",
       "blocks": {
+        "column_zKeHmw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Life-House.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_6WFQKp": {
           "type": "column",
           "settings": {
@@ -507,6 +517,7 @@
         }
       },
       "block_order": [
+        "column_zKeHmw",
         "column_6WFQKp",
         "column_pG9dNH",
         "column_MEgp7p",
