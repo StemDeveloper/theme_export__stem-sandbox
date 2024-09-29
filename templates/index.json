@@ -72,6 +72,411 @@
         "padding_bottom": 56
       }
     },
+    "carousel_eyWXRG": {
+      "type": "carousel",
+      "blocks": {
+        "column_9NtyRt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Surplus-Brands.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_UHfPjc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Abaka.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_enGQ79": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Aigle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_h7QQDa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Air-Filtration.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_H9RqBU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Invisalign.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mgkmdn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Kyodan.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_aCDxbV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-ManhattanInc.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NyF87t": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Alton-Gray.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_eHTPHC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Arthur-Murray-West-Island.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Aqn6mb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Beco.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TQC6G4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Biocompost.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6wNJrR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-BoieUSA.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_9NtyRt",
+        "column_UHfPjc",
+        "column_enGQ79",
+        "column_h7QQDa",
+        "column_H9RqBU",
+        "column_mgkmdn",
+        "column_aCDxbV",
+        "column_NyF87t",
+        "column_eHTPHC",
+        "column_Aqn6mb",
+        "column_TQC6G4",
+        "column_6wNJrR"
+      ],
+      "settings": {
+        "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
+        "title_full_width": "device",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "full_width": "device",
+        "infinite_loop": true,
+        "auto_looping_speed": "150",
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "slider_visual": "counter",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "multicard_T7NqXb": {
+      "type": "multicard",
+      "blocks": {
+        "column_HbpcBj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Ny3Kb9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/green-and-white-marbled-coloring.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_jM48Bp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/two-people-surfing-in-blue-choppy-water.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ybYhTq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/mens-fashion-man-in-shirt-and-jeans-leaning-on-bicycle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_q7RUpq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/model-laughs-barefoot.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HTQyNe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/person-writing-in-notebook-beside-laptop-working-from-bed.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_HbpcBj",
+        "column_Ny3Kb9",
+        "column_jM48Bp",
+        "column_ybYhTq",
+        "column_q7RUpq",
+        "column_HTQyNe"
+      ],
+      "settings": {
+        "sticky_multicard": false,
+        "title": "<strong>Our clients are forward-thinking and content focused. They are design-driven. Disruptive within their spaces. They are rebels. Risk-takers. Purposeful, timeless, thoughtful. Our clients are ready to do what it takes to grow their business.</strong>",
+        "heading_size": "h0",
+        "secondary_color": "#60e5b5",
+        "sticky_title": true,
+        "blur_heading": true,
+        "blur_strength": 5,
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "carousel_Qd8zph": {
+      "type": "carousel",
+      "blocks": {
+        "column_UnVaap": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Surplus-Brands.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Xb3R3E": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Abaka.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Q4wbJB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Aigle.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WFCMni": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Air-Filtration.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_wM87zE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Invisalign.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_eeQXft": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Alton-Gray.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mRRmrt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-ManhattanInc.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9xEiqb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Arthur-Murray-West-Island.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9nqmVd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Beco.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_feJ4XB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Biocompost.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6VBPcB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-BoieUSA.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_UnVaap",
+        "column_Xb3R3E",
+        "column_Q4wbJB",
+        "column_WFCMni",
+        "column_wM87zE",
+        "column_eeQXft",
+        "column_mRRmrt",
+        "column_9xEiqb",
+        "column_9nqmVd",
+        "column_feJ4XB",
+        "column_6VBPcB"
+      ],
+      "settings": {
+        "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
+        "title_full_width": "device",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "full_width": "device",
+        "infinite_loop": true,
+        "auto_looping_speed": "150",
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "slider_visual": "none",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "carousel_wV3JFV": {
       "type": "carousel",
       "blocks": {
@@ -583,411 +988,6 @@
         "swipe_on_mobile": true,
         "padding_top": 100,
         "padding_bottom": 100
-      }
-    },
-    "multicard_T7NqXb": {
-      "type": "multicard",
-      "blocks": {
-        "column_HbpcBj": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_Ny3Kb9": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/green-and-white-marbled-coloring.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_jM48Bp": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/two-people-surfing-in-blue-choppy-water.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_ybYhTq": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/mens-fashion-man-in-shirt-and-jeans-leaning-on-bicycle.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_q7RUpq": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/model-laughs-barefoot.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_HTQyNe": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/person-writing-in-notebook-beside-laptop-working-from-bed.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_HbpcBj",
-        "column_Ny3Kb9",
-        "column_jM48Bp",
-        "column_ybYhTq",
-        "column_q7RUpq",
-        "column_HTQyNe"
-      ],
-      "settings": {
-        "sticky_multicard": false,
-        "title": "<strong>Our clients are forward-thinking and content focused. They are design-driven. Disruptive within their spaces. They are rebels. Risk-takers. Purposeful, timeless, thoughtful. Our clients are ready to do what it takes to grow their business.</strong>",
-        "heading_size": "h0",
-        "secondary_color": "#60e5b5",
-        "sticky_title": true,
-        "blur_heading": true,
-        "blur_strength": 5,
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 1,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 12,
-        "padding_bottom": 12
-      }
-    },
-    "carousel_Qd8zph": {
-      "type": "carousel",
-      "blocks": {
-        "column_UnVaap": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Clients-Surplus-Brands.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_Xb3R3E": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Clients-Abaka.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_Q4wbJB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Clients-Aigle.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_WFCMni": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Clients-Air-Filtration.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_wM87zE": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Clients-Invisalign.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_eeQXft": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Clients-Alton-Gray.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_mRRmrt": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Clients-ManhattanInc.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_9xEiqb": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Clients-Arthur-Murray-West-Island.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_9nqmVd": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Clients-Beco.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_feJ4XB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Clients-Biocompost.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_6VBPcB": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Clients-BoieUSA.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_UnVaap",
-        "column_Xb3R3E",
-        "column_Q4wbJB",
-        "column_WFCMni",
-        "column_wM87zE",
-        "column_eeQXft",
-        "column_mRRmrt",
-        "column_9xEiqb",
-        "column_9nqmVd",
-        "column_feJ4XB",
-        "column_6VBPcB"
-      ],
-      "settings": {
-        "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
-        "title_full_width": "device",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 6,
-        "full_width": "device",
-        "infinite_loop": true,
-        "auto_looping_speed": "150",
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "slider_visual": "none",
-        "color_scheme": "",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
-    "carousel_eyWXRG": {
-      "type": "carousel",
-      "blocks": {
-        "column_9NtyRt": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Surplus-Brands.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_UHfPjc": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Abaka.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_enGQ79": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Aigle.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_h7QQDa": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Air-Filtration.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_H9RqBU": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Invisalign.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_mgkmdn": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Kyodan.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_aCDxbV": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-ManhattanInc.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_NyF87t": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Alton-Gray.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_eHTPHC": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Arthur-Murray-West-Island.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_Aqn6mb": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Beco.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_TQC6G4": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Biocompost.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_6wNJrR": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-BoieUSA.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_9NtyRt",
-        "column_UHfPjc",
-        "column_enGQ79",
-        "column_h7QQDa",
-        "column_H9RqBU",
-        "column_mgkmdn",
-        "column_aCDxbV",
-        "column_NyF87t",
-        "column_eHTPHC",
-        "column_Aqn6mb",
-        "column_TQC6G4",
-        "column_6wNJrR"
-      ],
-      "settings": {
-        "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
-        "title_full_width": "device",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 6,
-        "full_width": "device",
-        "infinite_loop": true,
-        "auto_looping_speed": "150",
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "slider_visual": "counter",
-        "color_scheme": "",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
