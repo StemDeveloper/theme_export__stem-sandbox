@@ -474,6 +474,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_W9qwkf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Kusshi.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -516,7 +526,8 @@
         "column_xEUVKj",
         "column_8Vy4P3",
         "column_riEJar",
-        "column_f4KQ7f"
+        "column_f4KQ7f",
+        "column_W9qwkf"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
