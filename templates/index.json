@@ -295,6 +295,16 @@
             "link": ""
           }
         },
+        "column_n8Nhr3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Just-Vertical.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_8FLpjh": {
           "type": "column",
           "settings": {
@@ -469,6 +479,7 @@
         "column_HQbVp4",
         "column_GqYmic",
         "column_K3rDV6",
+        "column_n8Nhr3",
         "column_8FLpjh",
         "column_KtxyQY",
         "column_JmwUJ7",
