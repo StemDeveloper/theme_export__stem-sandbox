@@ -225,7 +225,7 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "slider_visual": "counter",
+        "slider_visual": "none",
         "color_scheme": "",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
