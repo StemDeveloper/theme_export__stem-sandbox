@@ -195,6 +195,16 @@
             "link": ""
           }
         },
+        "column_cHDPaf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Briping.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_6wNJrR": {
           "type": "column",
           "settings": {
@@ -215,20 +225,20 @@
             "link": ""
           }
         },
-        "column_cHDPaf": {
+        "column_8yiA6z": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Briping.jpg",
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-CandB.jpg",
             "title": "",
             "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_8yiA6z": {
+        "column_8Jbj6g": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-CandB.jpg",
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Stamps.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -249,10 +259,11 @@
         "column_eHTPHC",
         "column_Aqn6mb",
         "column_TQC6G4",
+        "column_cHDPaf",
         "column_6wNJrR",
         "column_hBhdeL",
-        "column_cHDPaf",
-        "column_8yiA6z"
+        "column_8yiA6z",
+        "column_8Jbj6g"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
