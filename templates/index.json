@@ -905,8 +905,19 @@
         "column_NyF87t": {
           "type": "column",
           "settings": {
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Alton-Gray.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_eHTPHC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Arthur-Murray-West-Island.jpg",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -914,8 +925,9 @@
         "column_Aqn6mb": {
           "type": "column",
           "settings": {
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Beco.jpg",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -923,8 +935,9 @@
         "column_TQC6G4": {
           "type": "column",
           "settings": {
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Biocompost.jpg",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -957,6 +970,7 @@
         "column_mgkmdn",
         "column_aCDxbV",
         "column_NyF87t",
+        "column_eHTPHC",
         "column_Aqn6mb",
         "column_TQC6G4",
         "column_6wNJrR",
