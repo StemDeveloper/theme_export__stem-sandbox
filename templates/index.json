@@ -115,6 +115,16 @@
             "link": ""
           }
         },
+        "column_q8DWmT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Retyche.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_FCzeRd": {
           "type": "column",
           "settings": {
@@ -501,6 +511,7 @@
         "column_pG9dNH",
         "column_MEgp7p",
         "column_xUxynb",
+        "column_q8DWmT",
         "column_FCzeRd",
         "column_9BPXUT",
         "column_ngi8cF",
