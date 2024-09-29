@@ -135,6 +135,16 @@
             "link": ""
           }
         },
+        "column_ngi8cF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Leons.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_rnknKU": {
           "type": "column",
           "settings": {
@@ -493,6 +503,7 @@
         "column_xUxynb",
         "column_FCzeRd",
         "column_9BPXUT",
+        "column_ngi8cF",
         "column_rnknKU",
         "column_PPGp7b",
         "column_FVbHPH",
