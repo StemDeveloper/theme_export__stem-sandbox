@@ -685,6 +685,7 @@
         "column_UnVaap": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Surplus-Brands.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -694,7 +695,7 @@
         "column_Xb3R3E": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Abaka.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -704,7 +705,7 @@
         "column_Q4wbJB": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem_Commerce.png",
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Aigle.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -714,7 +715,7 @@
         "column_WFCMni": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Air-Filtration.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -724,7 +725,7 @@
         "column_wM87zE": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem_Commerce.png",
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Invisalign.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -734,7 +735,7 @@
         "column_eeQXft": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Alton-Gray.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -744,7 +745,7 @@
         "column_mRRmrt": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem_Commerce.png",
+            "image": "shopify://shop_images/Stem-Commerce-Clients-ManhattanInc.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -754,7 +755,17 @@
         "column_9xEiqb": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem_Commerce_Inc..png",
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Arthur-Murray-West-Island.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9nqmVd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Beco.jpg",
             "title": "",
             "text": "",
             "link_label": "",
@@ -770,7 +781,8 @@
         "column_wM87zE",
         "column_eeQXft",
         "column_mRRmrt",
-        "column_9xEiqb"
+        "column_9xEiqb",
+        "column_9nqmVd"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
