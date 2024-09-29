@@ -214,6 +214,16 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_cHDPaf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Briping.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -230,7 +240,8 @@
         "column_TQC6G4",
         "column_6wNJrR",
         "column_84p7LX",
-        "column_hBhdeL"
+        "column_hBhdeL",
+        "column_cHDPaf"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
