@@ -861,12 +861,104 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_h7QQDa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Air-Filtration.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_H9RqBU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Invisalign.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mgkmdn": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_aCDxbV": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NyF87t": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Aqn6mb": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TQC6G4": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6wNJrR": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_nPDaTT": {
+          "type": "column",
+          "settings": {
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "column_9NtyRt",
         "column_UHfPjc",
-        "column_enGQ79"
+        "column_enGQ79",
+        "column_h7QQDa",
+        "column_H9RqBU",
+        "column_mgkmdn",
+        "column_aCDxbV",
+        "column_NyF87t",
+        "column_Aqn6mb",
+        "column_TQC6G4",
+        "column_6wNJrR",
+        "column_nPDaTT"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
