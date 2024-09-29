@@ -135,6 +135,16 @@
             "link": ""
           }
         },
+        "column_rnknKU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Client-Kindra.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_PPGp7b": {
           "type": "column",
           "settings": {
@@ -473,6 +483,7 @@
         "column_xUxynb",
         "column_FCzeRd",
         "column_9BPXUT",
+        "column_rnknKU",
         "column_PPGp7b",
         "column_FVbHPH",
         "column_JCAaiL",
