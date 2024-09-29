@@ -885,8 +885,9 @@
         "column_mgkmdn": {
           "type": "column",
           "settings": {
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Kyodan.jpg",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -894,8 +895,9 @@
         "column_aCDxbV": {
           "type": "column",
           "settings": {
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-ManhattanInc.jpg",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
