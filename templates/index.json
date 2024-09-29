@@ -771,6 +771,26 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_feJ4XB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-Biocompost.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_6VBPcB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Clients-BoieUSA.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -782,7 +802,9 @@
         "column_eeQXft",
         "column_mRRmrt",
         "column_9xEiqb",
-        "column_9nqmVd"
+        "column_9nqmVd",
+        "column_feJ4XB",
+        "column_6VBPcB"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
