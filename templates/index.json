@@ -945,17 +945,9 @@
         "column_6wNJrR": {
           "type": "column",
           "settings": {
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_nPDaTT": {
-          "type": "column",
-          "settings": {
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-BoieUSA.jpg",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -973,8 +965,7 @@
         "column_eHTPHC",
         "column_Aqn6mb",
         "column_TQC6G4",
-        "column_6wNJrR",
-        "column_nPDaTT"
+        "column_6wNJrR"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
