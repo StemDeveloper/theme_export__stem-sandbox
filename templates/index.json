@@ -95,6 +95,16 @@
             "link": ""
           }
         },
+        "column_84p7LX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Brain-Wash.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_enGQ79": {
           "type": "column",
           "settings": {
@@ -195,16 +205,6 @@
             "link": ""
           }
         },
-        "column_84p7LX": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Brain-Wash.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_hBhdeL": {
           "type": "column",
           "settings": {
@@ -239,6 +239,7 @@
       "block_order": [
         "column_9NtyRt",
         "column_UHfPjc",
+        "column_84p7LX",
         "column_enGQ79",
         "column_h7QQDa",
         "column_H9RqBU",
@@ -249,7 +250,6 @@
         "column_Aqn6mb",
         "column_TQC6G4",
         "column_6wNJrR",
-        "column_84p7LX",
         "column_hBhdeL",
         "column_cHDPaf",
         "column_8yiA6z"
