@@ -45,10 +45,10 @@
       margin-left: auto;
       margin-bottom: 40vh;
     }
-    @media screen and (orientation: portrait) and (max-width: 749px) {
+    @media screen and (orientation: landscape) {
       #shopify-section-{{ section.id }} .multicard-heading--sticky + slider-component {
-        max-width: 27rem;
-        margin-bottom: 50vh;
+        max-width: 52.6rem;
+        margin-bottom: 70vh;
       }
     }
     @media screen and (orientation: portrait) and (max-width: 989px) {
@@ -57,10 +57,10 @@
         margin-bottom: 50vh;
       }
     }
-    @media screen and (orientation: landscape) {
+    @media screen and (orientation: portrait) and (max-width: 749px) {
       #shopify-section-{{ section.id }} .multicard-heading--sticky + slider-component {
-        max-width: 52.6rem;
-        margin-bottom: 70vh;
+        max-width: 27rem;
+        margin-bottom: 50vh;
       }
     }
   {% endif %}
