@@ -282,7 +282,7 @@
         "button_link": "",
         "slider_visual": "none",
         "color_scheme": "",
-        "columns_mobile": "2",
+        "columns_mobile": 5,
         "swipe_on_mobile": true,
         "padding_top": 48,
         "padding_bottom": 48
@@ -526,7 +526,7 @@
         "button_link": "",
         "slider_visual": "none",
         "color_scheme": "",
-        "columns_mobile": "2",
+        "columns_mobile": 2,
         "swipe_on_mobile": true,
         "padding_top": 100,
         "padding_bottom": 100
@@ -1039,7 +1039,7 @@
         "button_link": "",
         "slider_visual": "none",
         "color_scheme": "",
-        "columns_mobile": "2",
+        "columns_mobile": 2,
         "swipe_on_mobile": true,
         "padding_top": 100,
         "padding_bottom": 100
