@@ -64,7 +64,7 @@
   >
     <div class="{% if section.settings.full_width == 'none' %} page-width-none{% endif %}">
     <div class="{% if section.settings.full_width == 'none' %} rich-text__blocks{% endif %}">
-    <carousel-component 
+    <carousel-component
       class="carousel-component"
       data-infinite-loop="{{ section.settings.infinite_loop }}"
       data-loop-speed="{{ section.settings.auto_looping_speed }}"
@@ -400,6 +400,10 @@
         {
           "value": "150",
           "label": "t:sections.carousel.settings.auto_looping_speed.options__3.label"
+        },
+        {
+          "value": "200",
+          "label": "t:sections.carousel.settings.auto_looping_speed.options__4.label"
         }
       ]
     },
