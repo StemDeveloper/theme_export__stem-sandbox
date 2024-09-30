@@ -275,7 +275,7 @@
         "columns_desktop": 5,
         "full_width": "device",
         "infinite_loop": true,
-        "auto_looping_speed": "150",
+        "auto_looping_speed": "200",
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
