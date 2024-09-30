@@ -3816,12 +3816,12 @@ details-disclosure > details {
   transition-timing-function: linear;
 }
 
-@media screen and (max-width: 749px) {
-  .carousel-component[data-infinite-loop="true"] .multicolumn-card__image-wrapper {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+.carousel-component[data-infinite-loop="true"] .multicolumn-card__image-wrapper {
+  margin-left: 0;
+  margin-right: 0;
+}
 
+@media screen and (max-width: 749px) {
   .carousel-component[data-infinite-loop="true"] .grid--peek .grid__item {
     min-width: auto;
   }
