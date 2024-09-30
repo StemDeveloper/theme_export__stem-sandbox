@@ -518,7 +518,7 @@
         "image_ratio": "adapt",
         "columns_desktop": 6,
         "full_width": "device",
-        "infinite_loop": true,
+        "infinite_loop": false,
         "auto_looping_speed": "150",
         "column_alignment": "center",
         "background_style": "none",
