@@ -602,6 +602,9 @@
           },
           "options__4": {
             "label": "Extra Fast"
+          },
+          "options__5": {
+            "label": "Extra Extra Fast"
           }
         }
       },
