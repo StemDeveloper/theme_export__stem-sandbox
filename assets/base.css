@@ -3830,3 +3830,7 @@ details-disclosure > details {
     margin-left: 0;
   }
 }
+
+.carousel-component[data-infinite-loop="true"] {
+  --grid-desktop-horizontal-spacing: 0px;
+}
