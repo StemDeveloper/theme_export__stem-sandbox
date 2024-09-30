@@ -45,6 +45,18 @@
       margin-left: auto;
       margin-bottom: 40vh;
     }
+    @media screen and (orientation: portrait) and (max-width: 749px) {
+      #shopify-section-{{ section.id }} .multicard-heading--sticky + slider-component {
+        max-width: 70%;
+        margin-bottom: 50vh;
+      }
+    }
+    @media screen and (orientation: portrait) and (max-width: 989px) {
+      #shopify-section-{{ section.id }} .multicard-heading--sticky + slider-component {
+        max-width: 60%;
+        margin-bottom: 50vh;
+      }
+    }
     @media screen and (orientation: landscape) {
       #shopify-section-{{ section.id }} .multicard-heading--sticky + slider-component {
         margin-bottom: 70vh;
@@ -92,12 +104,12 @@
     {% endif %}
   >
     {%- unless section.settings.title == blank -%}
-      <div 
+      <div
         class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title
           {% if section.settings.sticky_title %} multicard-heading--sticky{% endif %}
         "
       >
-        <h2 
+        <h2
           class="title inline-richtext {{ section.settings.heading_size }}
             {% if section.settings.blur_heading %} multicard-heading--blur{% endif %}
           "
