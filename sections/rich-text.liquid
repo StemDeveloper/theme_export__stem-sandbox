@@ -3,6 +3,7 @@
 <script src="{{ 'richtext-animation.js' | asset_url }}" defer="defer"></script>
 {% liquid
   assign animate_blocks = 0
+  assign animate_text_blocks = 0
   for block in section.blocks
     if block.type == 'text'
       assign animate_blocks = animate_blocks | plus: 1
@@ -76,9 +77,17 @@
                 {% endif %}
               >
                 <div class="rich-text__text-inner">
-                  {{ block.settings.text }}
+                  <div class="rich-text__text-box">
+                    {{ block.settings.text }}
+                  </div>
+                  {% if section.settings.hero_arrow and animate_text_blocks == 0 %}
+                    <div class="rich-text__arrow">
+                      {{- 'icon-richtext-arrow.svg' | inline_asset_content -}}
+                    </div>
+                  {% endif %}
                 </div>
               </div>
+              {%- assign animate_text_blocks = 1 -%}
             {%- when 'button' -%}
               <div
                 class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -176,6 +185,12 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "hero_arrow",
+      "label": "t:sections.image-banner.settings.hero_arrow.label",
+      "default": false
     },
     {
       "type": "checkbox",
