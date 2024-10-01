@@ -4,6 +4,7 @@ if(!customElements.get('carousel-component')) {
     class CarouselComponent extends HTMLElement {
       constructor() {
         super();
+        this.mouseDown = false;
         this.banners = this.querySelectorAll('.horizontal-scrolling-banner');
         if (!this.banners || this.banners.length === 0) {
           return;
@@ -58,26 +59,58 @@ if(!customElements.get('carousel-component')) {
             for (var i = 0; i < childrenCount; i++) {
               transitionHelperWrapper.appendChild(children[0]);
             }
+            var transitionPxPerSecond = (childrenWidth / pxPerSecond).toFixed();
             currentBanner.appendChild(transitionHelperWrapper);
             transitionHelperWrapper.dataset.childrenWidth = childrenWidth;
+            this.style.setProperty('--infinite-loop-value', `${childrenWidth * -1}px`);
+            this.style.setProperty('--infinite-loop-time', `${transitionPxPerSecond}s`);
           }
         }
+        
+        this.addEventListener('mousedown', (event) => {
+          this.mouseDown = true;
+          this.dataset.dragging = true;
+          this.initialMouseX = event.clientX;
+          this.relativeMouseX = 0;
+        });
+
+        this.addEventListener('mouseleave', () => {
+          this.mouseDown = false;
+          this.dataset.dragging = false;
+          this.relativeMouseX = 0;
+        });
+
+        this.addEventListener('mouseup', () => {
+          this.mouseDown = false;
+          this.dataset.dragging = false;
+          this.relativeMouseX = 0;
+        });
+
+        this.addEventListener('mousemove', (event) => {
+          if (this.mouseDown) {
+            const currentMouseX = event.clientX;
+            const deltaMouseX = currentMouseX - this.initialMouseX;
+            this.relativeMouseX = deltaMouseX;
+
+            for (var i = 0; i < this.banners.length; i++) {
+              var helperWrapper = this.banners[i].firstElementChild;
+              var childrenWidth = parseInt(helperWrapper.dataset.childrenWidth);
+              var offsetLeft = helperWrapper.offsetLeft;
+
+              // helperWrapper.style.left = `${offsetLeft + this.relativeMouseX}px`;
+              helperWrapper.style.transform = `translateX(${this.relativeMouseX}px)`;
+            }
+          }
+        });
       
-        const scrollTheBanners = () => {
+        const scrollTheBanners = (timestamp) => {
           for (var i = 0; i < this.banners.length; i++) {
             var helperWrapper = this.banners[i].firstElementChild;
             var childrenWidth = parseInt(helperWrapper.dataset.childrenWidth);
             var offsetLeft = helperWrapper.offsetLeft;
-      
+            
             if (offsetLeft <= (childrenWidth * -1)) {
-              helperWrapper.style.transitionDuration = '0s';
-              helperWrapper.style.left = '0px';
-              helperWrapper.style.removeProperty('transition-duration');
-            } else if (helperWrapper.style.left === '' || helperWrapper.style.left === '0px') {
-              setTimeout(function() {
-                helperWrapper.style.transitionDuration = (childrenWidth / pxPerSecond).toFixed() + 's';
-                helperWrapper.style.left = (childrenWidth * -1) + 'px';
-              }, 0);
+              helperWrapper.style.removeProperty('transform');
             }
           }
           requestAnimationFrame(scrollTheBanners);

@@ -3811,9 +3811,37 @@ details-disclosure > details {
   align-items: center;
   display: flex;
   left: 0;
-  transform: translateZ(0);
-  transition-property: left;
+  animation: InfiniteLoop var(--infinite-loop-time, 20s) linear infinite;
+  -webkit-animation: InfiniteLoop var(--infinite-loop-time, 20s) linear infinite;
+}
+
+.carousel-component[data-infinite-loop="true"] .horizontal-scrolling-banner__helper-wrapper:hover {
+  animation-play-state: paused;
+  cursor: grab;
+}
+
+.carousel-component[data-dragging="true"] .horizontal-scrolling-banner__helper-wrapper:hover {
+  cursor: grabbing;
+  transition-property: transform;
   transition-timing-function: linear;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+}
+
+.carousel-component[data-dragging="true"] .horizontal-scrolling-banner__helper-wrapper:hover .grid__item {
+  position: relative;
+}
+
+.carousel-component[data-dragging="true"] .horizontal-scrolling-banner__helper-wrapper:hover .grid__item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel-component[data-infinite-loop="true"] .multicolumn-card__image-wrapper {
@@ -3833,4 +3861,13 @@ details-disclosure > details {
 
 .carousel-component[data-infinite-loop="true"] {
   --grid-desktop-horizontal-spacing: 0px;
+}
+
+@keyframes InfiniteLoop {
+  from {
+    left: 0;
+  }
+  to {
+    left: var(--infinite-loop-value, -100%);
+  }
 }
