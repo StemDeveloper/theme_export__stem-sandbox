@@ -18,13 +18,13 @@
           "type": "heading",
           "settings": {
             "heading": "Want more great content delivered to your inbox?",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "paragraph_7pGMJD": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Sign Up for our newsletter</p>"
+            "text": "<h2>Sign Up for our newsletter</h2>"
           }
         },
         "email_form_8dfceK": {
