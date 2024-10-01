@@ -23,23 +23,25 @@
         "heading_da3wU3": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>What is your goal? <span>Let us be your guide.<\/span><\/strong>",
+            "heading": "<strong>What is your goal? <span>Let us be your guide.</span></strong>",
             "heading_size": "h1",
             "secondary_color": "#009b72",
             "shrink_animate": true,
             "color_animate": true,
-            "blur_heading": false
+            "blur_heading": false,
+            "blur_strength": 3
           }
         },
         "heading_chyCeT": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Supercharge your online growth.  We work with clients all over the world. \u2028Get in touch with us via the form below to discuss a potential project or partnership.<\/strong>",
+            "heading": "<strong>Supercharge your online growth.  We work with clients all over the world.  Get in touch with us via the form below to discuss a potential project or partnership.</strong>",
             "heading_size": "h1",
             "secondary_color": "#009b72",
             "shrink_animate": false,
             "color_animate": true,
-            "blur_heading": false
+            "blur_heading": false,
+            "blur_strength": 3
           }
         }
       },
@@ -52,6 +54,7 @@
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "scheme-1",
+        "hero_arrow": false,
         "full_width": true,
         "padding_top": 56,
         "padding_bottom": 100
@@ -63,7 +66,7 @@
         "text_DmppYF": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Montreal | Toronto | Vancouver<br\/><\/strong><a href=\"tel:+18666447836\" target=\"_blank\" title=\"Call Us\"><strong>1.866.844.STEM<\/strong><\/a><strong><br\/><\/strong><a href=\"mailto:info@stemcommerce.com\" target=\"_blank\" title=\"Email Us\"><strong>info@stemcommerce.com<\/strong><\/a><br\/><br\/><\/p>",
+            "text": "<p><strong>Montreal | Toronto | Vancouver<br/></strong><a href=\"tel:+18666447836\" target=\"_blank\" title=\"Call Us\"><strong>1.866.844.STEM</strong></a><strong><br/></strong><a href=\"mailto:info@stemcommerce.com\" target=\"_blank\" title=\"Email Us\"><strong>info@stemcommerce.com</strong></a></p>",
             "content_alignment": "left",
             "full_width_block": "container",
             "color_scheme": "scheme-4c7fac6a-f5f8-4f83-b2d1-2949fe63dda6",
@@ -73,7 +76,7 @@
         "heading_VHnDxA": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>What is your goal? <span>Let us be your guide.<\/span><\/strong>",
+            "heading": "<strong>What is your goal? <span>Let us be your guide.</span></strong>",
             "heading_size": "h1",
             "secondary_color": "#009b72",
             "shrink_animate": false,
@@ -87,7 +90,7 @@
         "heading_yyEQQd": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Supercharge your online growth.  We work with clients all over the world. \u2028Get in touch with us via the form below to discuss a potential project or partnership.<\/strong>",
+            "heading": "<strong>Supercharge your online growth.  We work with clients all over the world.  Get in touch with us via the form below to discuss a potential project or partnership.</strong>",
             "heading_size": "h1",
             "secondary_color": "#009b72",
             "shrink_animate": false,
