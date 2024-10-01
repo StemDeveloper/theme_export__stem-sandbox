@@ -205,6 +205,10 @@
     top: 60%;
     left: 60%;
   }
+
+  .richtext--container .rich-text__arrow {
+    right: 0;
+  }
 }
 
 @media (orientation: portrait) and (max-width: 749px) {
