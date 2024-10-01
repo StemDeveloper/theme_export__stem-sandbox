@@ -15,6 +15,20 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  {% if settings.enable_footer_mask %}
+    @media screen and (min-width: 1440px) {
+      .section-{{ section.id }}-padding {
+        padding-bottom: {{ section.settings.padding_bottom | times: 2 | round: 0 }}px;
+      }
+    }
+
+    @media screen and (min-width: 1921px) {
+      .section-{{ section.id }}-padding {
+        padding-bottom: {{ section.settings.padding_bottom | times: 3 | round: 0 }}px;
+      }
+    }
+  {% endif %}
 {%- endstyle -%}
 
 {% liquid
