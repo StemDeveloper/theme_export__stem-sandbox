@@ -583,6 +583,9 @@
             "label": "True Full-width"
           }
         },
+        "columns_tablet": {
+          "label": "Number of columns on tablet"
+        },
         "full_width_heading": {
           "label": "Make \"Heading\" + \"Sub-Heading\" full width"
         },
