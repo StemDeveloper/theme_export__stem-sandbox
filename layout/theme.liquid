@@ -120,6 +120,25 @@
     %}
 
     {% style %}
+      @font-face {
+        font-family: "HKGrotesk-SemiBold";
+        src: url("{{ 'HKGrotesk-SemiBold.woff' | asset_url }}") format("woff");
+      }
+      @font-face {
+        font-family: "HKGrotesk-Regular";
+        src: url("{{ 'HKGrotesk-Regular.woff' | asset_url }}") format("woff");
+      }
+      @font-face {
+        font-family: "HKGrotesk-Medium";
+        src: url("{{ 'HKGrotesk-Medium.woff' | asset_url }}") format("woff");
+      }
+      @font-face {
+        font-family: "HKGrotesk-Bold";
+        src: url("{{ 'HKGrotesk-Bold.woff' | asset_url }}") format("woff");
+      }
+    {% endstyle %}
+
+    {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}
@@ -173,6 +192,11 @@
       }
 
       :root {
+        --font-HKGrotesk-SemiBold: 'HKGrotesk-SemiBold', {{ settings.type_body_font.fallback_families }};
+        --font-HKGrotesk-Regular: 'HKGrotesk-Regular', {{ settings.type_body_font.fallback_families }};
+        --font-HKGrotesk-Medium: 'HKGrotesk-Medium', {{ settings.type_body_font.fallback_families }};
+        --font-HKGrotesk-Bold: 'HKGrotesk-Bold', {{ settings.type_body_font.fallback_families }};
+
         --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
