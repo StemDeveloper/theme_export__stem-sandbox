@@ -69,7 +69,7 @@ if(!customElements.get('richtext-animation')) {
               if(windowMedia.matches) {
                 block.style.clipPath = `circle(${animateCircle.toFixed(2)}px at 50% 60%)`;
               } else {
-                block.style.clipPath = windowMobileMedia.matches ? `circle(${animateCircle.toFixed(2)}px at 100% 65%)` : `circle(${animateCircle.toFixed(2)}px at 75% 65%)`;
+                block.style.clipPath = windowMobileMedia.matches ? `circle(${animateCircle.toFixed(2)}px at 100% 65%)` : `circle(${animateCircle.toFixed(2)}px at 60% 65%)`;
               }
               if(this.animateStarts > 0) {
                 if(parentTopPositionValue > this.animateStarts) {

@@ -144,8 +144,14 @@
 .richtext--container .rich-text__arrow {
   display: flex;
   position: absolute;
+  top: 100%;
   width: 11.2rem;
   height: 11.2rem;
+}
+
+.richtext--container .rich-text__arrow svg {
+  width: 100%;
+  height: 100%;
 }
 
 .richtext--container div[data-animation="PopInCircle"] {
@@ -158,7 +164,6 @@
   }
 
   .richtext--container .rich-text__arrow {
-    top: 100%;
     left: 70%;
     width: 16.4rem;
     height: 16.4rem;
@@ -185,6 +190,10 @@
     top: 60%;
     left: 40%;
   }
+
+  .richtext--container .rich-text__arrow {
+    right: 0;
+  }
 }
 
 @media (orientation: portrait) {
@@ -194,7 +203,7 @@
 
   .richtext--container .rich-text__text-inner {
     top: 60%;
-    left: 70%;
+    left: 60%;
   }
 }
 
@@ -202,8 +211,6 @@
   .richtext--container .rich-text__text {
     font-size: 14px;
   }
-
-  .richtext--container .rich-text__text-inner
 
   .richtext--container .rich-text__text-inner {
     top: 65%;
