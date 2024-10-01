@@ -67,7 +67,7 @@
         "desktop_content_position": "left",
         "content_alignment": "left",
         "color_scheme": "",
-        "hero_arrow": false,
+        "hero_arrow": true,
         "full_width": true,
         "padding_top": 56,
         "padding_bottom": 56
