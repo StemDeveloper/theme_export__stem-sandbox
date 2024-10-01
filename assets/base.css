@@ -2359,6 +2359,11 @@ input[type='checkbox'] {
   min-height: 3.8rem;
 }
 
+.announcement-bar__message {
+  font-family: var(--font-HKGrotesk-Medium);
+  font-weight: var(--font-body-weight-regular);
+}
+
 .announcement-bar-slider--fade-in-next .announcement-bar__message,
 .announcement-bar-slider--fade-in-previous .announcement-bar__message,
 .announcement-bar-slider--fade-out-next .announcement-bar__message,
@@ -2937,12 +2942,17 @@ details[open] > .header__submenu {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
   transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
   -webkit-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
   -moz-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
   -ms-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
   -o-transition: all 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
+}
+
+.header__menu-item {
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
 }
 
 .header__menu-item:hover {
