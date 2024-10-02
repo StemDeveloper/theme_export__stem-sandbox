@@ -285,11 +285,19 @@
   .h10xl {
     font-size: calc(var(--font-heading-scale) * 6.6rem);
   }
+
+  .section--richtext .rich-text__heading.h0 {
+    font-size: calc(var(--font-heading-scale) * 4rem);
+  }
 }
 
 @media screen and (max-width: 749px) {
   .h10xl {
     font-size: calc(var(--font-heading-scale) * 3.6rem);
+  }
+
+  .section--richtext .rich-text__heading.h0 {
+    font-size: calc(var(--font-heading-scale) * 2.4rem);
   }
 }
 
