@@ -147,6 +147,47 @@ if(!customElements.get('carousel-component')) {
           scrollTheBanners();
         });
 
+        this.addEventListener("touchstart", (event) => {
+          this.mouseDown = true;
+          this.mouseEntered = true;
+          this.dataset.dragging = true;
+          this.dataset.mouseEntered = true;
+          this.initialMouseX = event.touches[0].clientX;
+          this.relativeMouseX = 0;
+        });
+        
+        this.addEventListener("touchmove", (event) => {
+          if (this.mouseDown) {
+            const currentMouseX = event.touches[0].clientX;
+            const deltaMouseX = currentMouseX - this.initialMouseX;
+            this.relativeMouseX = deltaMouseX;
+            this.savedValue = this.loopedValue + (this.relativeMouseX * -1);
+        
+            for (var i = 0; i < this.banners.length; i++) {
+              var helperWrapper = this.banners[i].firstElementChild;
+              helperWrapper.style.transform = `translateX(${(this.loopedValue + (this.relativeMouseX * -1)) * -1}px)`;
+            }
+          }
+        });
+
+        this.addEventListener("touchend", () => {
+          this.mouseDown = false;
+          this.mouseEntered = false;
+          this.dataset.dragging = false;
+          this.dataset.mouseEntered = false;
+          this.relativeMouseX = 0;
+          scrollTheBanners();
+        });
+        
+        this.addEventListener("touchcancel", () => {
+          this.mouseDown = false;
+          this.mouseEntered = false;
+          this.dataset.dragging = false;
+          this.dataset.mouseEntered = false;
+          this.relativeMouseX = 0;
+          scrollTheBanners();
+        });
+
         setUpElements();
         scrollTheBanners();
         window.addEventListener('resize', setUpElements);
