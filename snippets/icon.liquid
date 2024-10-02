@@ -1,0 +1,19 @@
+<div class="icon-wrapper">
+  {% case icon %}
+    {% when 'honesty' %}
+      {{- 'icon-honesty.svg' | inline_asset_content -}}
+
+    {% when 'communication' %}
+      {{- 'icon-communication.svg' | inline_asset_content -}}
+
+    {% when 'teamwork' %}
+      {{- 'icon-teamwork.svg' | inline_asset_content -}}
+
+    {% when 'results' %}
+      {{- 'icon-results.svg' | inline_asset_content -}}
+
+    {% when 'respect' %}
+      {{- 'icon-respect.svg' | inline_asset_content -}}
+      
+  {% endcase %}
+</div>

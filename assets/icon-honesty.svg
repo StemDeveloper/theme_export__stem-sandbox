@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="55" viewBox="0 0 64 55" fill="none" class="icon icon-honesty">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M52.2174 1H11.7826C5.82754 1 1 5.87084 1 11.8793V33.638C1 39.6465 5.82754 44.5173 11.7826 44.5173H14.4783L14.6885 52.6768C14.7028 53.2115 15.0265 53.688 15.5155 53.8945C16.0045 54.101 16.568 53.9991 16.9556 53.6342L26.6087 44.5173H37.3913L47.4838 53.6043C47.8849 53.9659 48.4606 54.0523 48.9486 53.8241C49.4366 53.596 49.7435 53.0969 49.7293 52.5544L49.5217 44.5173H52.2174C58.1725 44.5173 63 39.6465 63 33.638V11.8793C63 5.87084 58.1725 1 52.2174 1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M27 25H20V32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 26.3036C38.5556 30.5449 34.4543 33.2823 30.0019 32.9768C25.5494 32.6713 21.8568 29.3992 21 25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M37 20H44V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 18.6964C25.4444 14.4551 29.5457 11.7177 33.9981 12.0232C38.4506 12.3287 42.1432 15.6008 43 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -110,3 +110,50 @@ if(!customElements.get('richtext-animation')) {
     }
   );
 }
+
+if(!customElements.get('richtext-tab')) {
+  customElements.define(
+    'richtext-tab',
+    class RichtextTab extends HTMLElement {
+      constructor() {
+        super();
+        this.buttons = this.querySelectorAll('.js-tab-button');
+        this.contents = this.querySelectorAll('.js-tab-content');
+      }
+
+      connectedCallback() {
+        this.buttons?.forEach((button) => {
+          button.addEventListener('mouseenter', () => {
+            this.toggleAttribute(button);
+            this.toggleRelatedTabsAttribute(button);
+          });
+          button.addEventListener('click', () => {
+            this.toggleAttribute(button);
+            this.toggleRelatedTabsAttribute(button);
+          });
+        });
+      }
+
+      toggleAttribute(button) {
+        if(button.dataset.tabActive === 'true' || button.dataset.tabActive === true) return;
+        this.buttons.forEach((button) => button.dataset.tabActive = false);
+        this.contents.forEach((content) => content.dataset.tabActive = false);
+        button.dataset.tabActive = true;
+        this.querySelector(`#${button.dataset.tabTarget}`).dataset.tabActive = true;
+      }
+
+      toggleRelatedTabsAttribute(button) {
+        const relatedTabs = Array.from(document.querySelectorAll('richtext-tab')).filter(item => item.dataset.section === this.dataset.section && item != this);
+        if(relatedTabs.length === 0) return;
+        relatedTabs.forEach((richtextTab) => {
+          const richtextTabButtons = Array.from(richtextTab.querySelectorAll('.js-tab-button'));
+          const richtextTabContents = Array.from(richtextTab.querySelectorAll('.js-tab-content'));
+          richtextTabButtons.forEach((button) => button.dataset.tabActive = false);
+          richtextTabContents.forEach((content) => content.dataset.tabActive = false);
+          richtextTabButtons.find(item => item.dataset.tabTarget === button.dataset.tabTarget).dataset.tabActive = true;
+          richtextTab.querySelector(`#${button.dataset.tabTarget}`).dataset.tabActive = true;
+        })
+      }
+    }
+  )
+}

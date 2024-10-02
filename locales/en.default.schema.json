@@ -3140,6 +3140,24 @@
             "text": {
               "label": "Description",
               "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            },
+            "icon_description_header": {
+              "content": "Icon + Description for Bullet Points"
+            },
+            "icon": {
+              "label": "Icon",
+              "options__0": "None",
+              "options__1": "Honesty",
+              "options__2": "Communication",
+              "options__3": "Teamwork",
+              "options__4": "Results",
+              "options__5": "Respect"
+            },
+            "icon_label": {
+              "label": "Icon Title"
+            },
+            "icon_description": {
+              "label": "Icon Description"
             }
           }
         },

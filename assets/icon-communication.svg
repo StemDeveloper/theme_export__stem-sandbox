@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="59" height="58" viewBox="0 0 59 58" fill="none" class="icon icon-communication">
+  <path d="M22.8662 47.325L18.15 52V42.2857H3.45C2.0969 42.2857 1 41.1984 1 39.8571V3.42857C1 2.08731 2.0969 1 3.45 1H47.55C48.9031 1 50 2.08731 50 3.42857V20.4286" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M28 47.1538H40.5L50.5 57V47.1538H55.5C56.8807 47.1538 58 46.0518 58 44.6923V27.4615C58 26.1021 56.8807 25 55.5 25H30.5C29.1193 25 28 26.1021 28 27.4615V47.1538Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13 11H39" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13 20H39" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M36 33H50" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M36 40H50" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13 31H24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

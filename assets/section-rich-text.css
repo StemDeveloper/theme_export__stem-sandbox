@@ -292,3 +292,113 @@
     font-size: calc(var(--font-heading-scale) * 3.6rem);
   }
 }
+
+/* rich text tab accordion */
+.rich-text__text-tab {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 70rem;
+  height: auto;
+  max-height: 48rem;
+  overflow-x: clip;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.richtext-tab .richtext-tab--container {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: minmax(auto,25rem) 1fr;
+  padding: 0 1rem;
+}
+
+.richtext-tab .tab-button {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 2.4rem;
+}
+
+.richtext-tab .tab-button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+}
+
+.richtext-tab .tab-button[data-tab-active="true"] {
+  color: rgba(var(--color-foreground), 1);
+}
+
+.richtext-tab .tab-button + .tab-button {
+  margin-top: 4rem;
+}
+
+.richtext-tab .icon-wrapper {
+  display: flex;
+  color: rgba(var(--color-foreground), 1);
+}
+
+.richtext-tab .icon-wrapper .icon {
+  width: 100%;
+  height: 100%;
+}
+
+.richtext-tab .tab-content {
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+}
+
+.richtext-tab .tab-content[data-tab-active="false"] {
+  display: none;
+}
+
+@media screen and (min-width: 750px) {
+  .richtext-tab .tab-button,
+  .richtext-tab .tab-content {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  .richtext-tab .icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .rich-text__text-tab {
+    left: 50%;
+    width: 74rem;
+  }
+
+  .richtext-tab .tab-button,
+  .richtext-tab .tab-content {
+    font-size: 3.2rem;
+    line-height: 1.2;
+  }
+
+  .richtext-tab .icon-wrapper {
+    width: 6rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .rich-text__text-tab {
+    top: 60%;
+    left: 50%;
+    width: 74rem;
+    max-height: 48rem;
+  }
+
+  .richtext-tab .richtext-tab--container {
+    padding: 0 2rem;
+  }
+}
