@@ -148,8 +148,8 @@
                           assign icon_label = 'icon_label_' | append: i
                           assign icon_description = 'icon_description_' | append: i
                         %}
-                        <div class="tab-accordion--item">
-                          {% if block.settings[icon_description] != blank and block.settings[icon] != 'none' or block.settings[icon_label] != blank %}
+                        {% if block.settings[icon_description] != blank and block.settings[icon] != 'none' or block.settings[icon_label] != blank %}
+                          <div class="tab-accordion--item">
                             <button 
                               class="tab-button js-tab-button{% if block.settings[icon] != 'none' %} tab-button--icon{% endif %}"
                               data-tab-target="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}"
@@ -172,7 +172,7 @@
                                 {{ block.settings[icon_description] }}
                               </div>
                             </div>
-                        </div>
+                          </div>
                         {% endif %}
                       {% endfor %}
                     </div>

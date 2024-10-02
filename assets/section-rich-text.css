@@ -217,7 +217,7 @@
   }
 
   .richtext--container .rich-text__text-inner {
-    top: 65%;
+    top: 50%;
     right: 0;
     left: auto;
     width: 30rem;
@@ -360,19 +360,6 @@
   display: none;
 }
 
-@media screen and (min-width: 750px) {
-  .richtext-tab .tab-button,
-  .richtext-tab .tab-content {
-    font-size: 1.6rem;
-    line-height: 1.5;
-  }
-
-  .richtext-tab .icon-wrapper {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
 @media screen and (min-width: 990px) {
   .rich-text__text-tab {
     left: 50%;
@@ -400,5 +387,96 @@
 
   .richtext-tab .richtext-tab--container {
     padding: 0 2rem;
+  }
+}
+
+.richtext-tab .tab-accordion--item + .tab-accordion--item {
+  margin-top: 3rem;
+}
+
+.richtext-tab .tab-accordion--item .tab-button {
+  position: relative;
+}
+
+.richtext-tab .tab-accordion--item .tab-content--inner {
+  padding-top: 0.8rem;
+}
+
+.richtext-tab .tab-accordion--item .tab-accordion--icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.richtext-tab .tab-accordion--item .tab-accordion--icon::before, 
+.richtext-tab .tab-accordion--item .tab-accordion--icon::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: currentColor;
+  transition: all var(--duration-medium) var(--ease-out-slow);
+  -webkit-transition: all var(--duration-medium) var(--ease-out-slow);
+  -moz-transition: all var(--duration-medium) var(--ease-out-slow);
+  -ms-transition: all var(--duration-medium) var(--ease-out-slow);
+  -o-transition: all var(--duration-medium) var(--ease-out-slow);
+}
+
+.richtext-tab .tab-accordion--item .tab-accordion--icon::before {
+  width: 1.2rem;
+  height: 0.2rem;
+  top: calc(50% - 0.1rem);
+}
+
+.richtext-tab .tab-accordion--item .tab-accordion--icon::after {
+  left: calc(50% - 0.1rem);
+  width: 0.2rem;
+  height: 1.2rem;
+}
+
+.richtext-tab .tab-accordion--item .tab-button[data-tab-active="true"] .tab-accordion--icon::before, 
+.richtext-tab .tab-accordion--item .tab-button[data-tab-active="true"] .tab-accordion--icon::after {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
+.richtext-tab .tab-accordion--item .tab-button[data-tab-active="true"] .tab-accordion--icon::before {
+  opacity: 0;
+}
+
+@media screen and (max-width: 989px) {
+  .richtext-tab .tab-button,
+  .richtext-tab .tab-content {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  .richtext-tab .icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .rich-text__text-tab {
+    left: 60%;
+    width: 50rem;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .rich-text__text-tab {
+    top: 50%;
+    left: 65%;
+    width: 60%;
   }
 }
