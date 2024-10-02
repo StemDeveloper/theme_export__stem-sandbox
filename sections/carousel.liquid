@@ -44,7 +44,7 @@
         <h2 class="title inline-richtext {{ section.settings.heading_size }} {{ section.settings.heading_alignment }}">
           {{ section.settings.title }}
         </h2>
-        {%- if section.settings.button_label != blank and show_mobile_slider -%}
+        {%- if section.settings.button_label != blank and show_mobile_slider and section.settings.infinite_loop == false -%}
           <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">
             {{- section.settings.button_label | escape -}}
           </a>
@@ -76,7 +76,7 @@
           grid--{{ section.settings.columns_mobile }}-col 
           grid--{{ section.settings.columns_tablet }}-col-tablet
           grid--{{ section.settings.columns_desktop }}-col-desktop
-          {% if show_mobile_slider %} slider slider--tablet grid--peek{% endif %}
+          {% if show_mobile_slider and section.settings.infinite_loop == false %} slider slider--tablet grid--peek{% endif %}
           {% if section.settings.infinite_loop %} horizontal-scrolling-banner{% endif %}
         "
         id="Slider-{{ section.id }}"
@@ -180,7 +180,7 @@
         {%- endfor -%}
       </ul>
 
-      {%- if show_mobile_slider -%}
+      {%- if show_mobile_slider and section.settings.infinite_loop == false -%}
         <div class="slider-buttons large-up-hide{% if section.settings.slider_visual == 'none' %} hidden{% endif %}">
           <button
             type="button"
@@ -208,7 +208,7 @@
       {%- endif -%}
     </slider-component>
     </carousel-component>
-    <div class="center{% if show_mobile_slider %} small-hide medium-hide{% endif %}">
+    <div class="center{% if show_mobile_slider and section.settings.infinite_loop == false %} small-hide medium-hide{% endif %}">
       {%- if section.settings.button_label != blank -%}
         <a
           class="button button--primary"
