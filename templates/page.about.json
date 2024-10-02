@@ -36,21 +36,66 @@
           "type": "text",
           "settings": {
             "text": "<p><strong>Why?</strong></p><p><strong>Born in 2013, Stem Commerce emerged to fill a gap in the digital market for high end design and web development.</strong></p><p><strong>As the industry evolved, our team grew into a comprehensive agency that empowers serious entrepreneurs who want to grow their online businesses with the help of our agile development, proven expertise and trusted content. We are a tight-knit team that pride ourselves on fostering a stress-free, collaborative, fun, results-driven and impactful environment.</strong></p>",
-            "color_scheme": "scheme-3"
+            "color_scheme": "scheme-3",
+            "icon_1": "none",
+            "icon_label_1": "",
+            "icon_description_1": "",
+            "icon_2": "none",
+            "icon_label_2": "",
+            "icon_description_2": "",
+            "icon_3": "none",
+            "icon_label_3": "",
+            "icon_description_3": "",
+            "icon_4": "none",
+            "icon_label_4": "",
+            "icon_description_4": "",
+            "icon_5": "none",
+            "icon_label_5": "",
+            "icon_description_5": ""
           }
         },
         "text_wmxfA4": {
           "type": "text",
           "settings": {
             "text": "<p><strong>Who?</strong></p><p><strong>When you work with Stem, everything will always be alright.</strong></p><p><strong>Under the direction and leadership of founder Stefano Mastrocola, we’ve achieved colossal milestones over the last decade for leading online stores like Endy Mattress, Amazon’s Ring and more. Constantly adapting to the growth and evolution of Shopify itself, we continue to channel our success formula onto every client that steps through our door.</strong></p>",
-            "color_scheme": "scheme-3"
+            "color_scheme": "scheme-3",
+            "icon_1": "none",
+            "icon_label_1": "",
+            "icon_description_1": "",
+            "icon_2": "none",
+            "icon_label_2": "",
+            "icon_description_2": "",
+            "icon_3": "none",
+            "icon_label_3": "",
+            "icon_description_3": "",
+            "icon_4": "none",
+            "icon_label_4": "",
+            "icon_description_4": "",
+            "icon_5": "none",
+            "icon_label_5": "",
+            "icon_description_5": ""
           }
         },
         "text_WUyEha": {
           "type": "text",
           "settings": {
             "text": "<p><strong>How?</strong></p><p><strong>High quality execution and an agile team philosophy, no matter the work, sets us apart.</strong></p><p><strong>We understand that as a business owner, time is the most valuable currency you own. Our global team has the privilege of working in different time zones, which allows us to execute strategies in record time – what Stem can do in twenty-four hours might take others an entire week. Those saved minutes can mean the difference in millions of dollars for your business.</strong></p>",
-            "color_scheme": "scheme-3"
+            "color_scheme": "scheme-3",
+            "icon_1": "none",
+            "icon_label_1": "",
+            "icon_description_1": "",
+            "icon_2": "none",
+            "icon_label_2": "",
+            "icon_description_2": "",
+            "icon_3": "none",
+            "icon_label_3": "",
+            "icon_description_3": "",
+            "icon_4": "none",
+            "icon_label_4": "",
+            "icon_description_4": "",
+            "icon_5": "none",
+            "icon_label_5": "",
+            "icon_description_5": ""
           }
         }
       },
@@ -88,8 +133,23 @@
         "text_t6JRjL": {
           "type": "text",
           "settings": {
-            "text": "<ul><li><strong>Test 1</strong></li><li><strong>Test 2</strong></li><li><strong>Test 3</strong></li><li><strong>Test 4</strong></li><li><strong>Test 5</strong></li></ul>",
-            "color_scheme": "scheme-3"
+            "text": "",
+            "color_scheme": "scheme-837da333-4ae4-4495-8fbf-02d804c2e4ef",
+            "icon_1": "honesty",
+            "icon_label_1": "Honesty",
+            "icon_description_1": "<p>The freedom to be innovative and share an endless supply of authentic ideas. Our candor is the foundation of our trustworthiness and allows us to use our expertise to its full potential.</p>",
+            "icon_2": "communication",
+            "icon_label_2": "Exchange",
+            "icon_description_2": "<p>We foster an open channel of communication internally and with our clients. By being approachable, nothing gets lost in translation and no time is wasted in getting clients the results they want.</p>",
+            "icon_3": "teamwork",
+            "icon_label_3": "Teamwork",
+            "icon_description_3": "<p>The freedom to be innovative and share an endless supply of authentic ideas. Our candor is the foundation of our trustworthiness and allows us to use our expertise to its full potential.</p>",
+            "icon_4": "results",
+            "icon_label_4": "Results",
+            "icon_description_4": "<p>We foster an open channel of communication internally and with our clients. By being approachable, nothing gets lost in translation and no time is wasted in getting clients the results they want.</p>",
+            "icon_5": "respect",
+            "icon_label_5": "Respect",
+            "icon_description_5": "<p>The freedom to be innovative and share an endless supply of authentic ideas. Our candor is the foundation of our trustworthiness and allows us to use our expertise to its full potential.</p>"
           }
         }
       },
