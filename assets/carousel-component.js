@@ -4,7 +4,10 @@ if(!customElements.get('carousel-component')) {
     class CarouselComponent extends HTMLElement {
       constructor() {
         super();
+        this.savedValue = 0;
+        this.loopedValue = 0;
         this.mouseDown = false;
+        this.mouseEntered = false;
         this.banners = this.querySelectorAll('.horizontal-scrolling-banner');
         if (!this.banners || this.banners.length === 0) {
           return;
@@ -59,12 +62,48 @@ if(!customElements.get('carousel-component')) {
             for (var i = 0; i < childrenCount; i++) {
               transitionHelperWrapper.appendChild(children[0]);
             }
-            var transitionPxPerSecond = (childrenWidth / pxPerSecond).toFixed();
             currentBanner.appendChild(transitionHelperWrapper);
             transitionHelperWrapper.dataset.childrenWidth = childrenWidth;
-            this.style.setProperty('--infinite-loop-value', `${childrenWidth * -1}px`);
-            this.style.setProperty('--infinite-loop-time', `${transitionPxPerSecond}s`);
           }
+        }
+        
+        let lastTimestamp = 0;
+        let animationStarted = false;
+        const scrollTheBanners = (timestamp) => {
+          const stepSize = 1;
+          for (var i = 0; i < this.banners.length; i++) {
+            var helperWrapper = this.banners[i].firstElementChild;
+            const threshHold = parseInt(helperWrapper.dataset.childrenWidth);
+          
+            if (typeof this.savedValue === 'undefined') this.savedValue = 0;
+            if (typeof this.loopedValue === 'undefined') this.loopedValue = this.savedValue;
+            
+            if (!animationStarted) {
+              lastTimestamp = timestamp;
+              animationStarted = true;
+            }
+          
+            const delta = timestamp - lastTimestamp;
+            lastTimestamp = timestamp;
+            
+            if (this.mouseEntered) {
+              this.savedValue = this.loopedValue;
+              animationStarted = false;
+              return;
+            }
+            
+            this.loopedValue += stepSize * delta * 0.1;
+            
+            if (this.loopedValue >= threshHold) {
+              this.loopedValue = this.loopedValue % threshHold;
+            }
+            
+            if (isNaN(this.loopedValue)) this.loopedValue = this.savedValue;
+          
+            helperWrapper.style.transform = `translateX(${this.loopedValue.toFixed() * -1}px)`;
+          }
+        
+          requestAnimationFrame(scrollTheBanners);
         }
         
         this.addEventListener('mousedown', (event) => {
@@ -74,10 +113,9 @@ if(!customElements.get('carousel-component')) {
           this.relativeMouseX = 0;
         });
 
-        this.addEventListener('mouseleave', () => {
-          this.mouseDown = false;
-          this.dataset.dragging = false;
-          this.relativeMouseX = 0;
+        this.addEventListener('mouseenter', () => {
+          this.mouseEntered = true;
+          this.dataset.mouseEntered = true;
         });
 
         this.addEventListener('mouseup', () => {
@@ -91,30 +129,23 @@ if(!customElements.get('carousel-component')) {
             const currentMouseX = event.clientX;
             const deltaMouseX = currentMouseX - this.initialMouseX;
             this.relativeMouseX = deltaMouseX;
+            this.savedValue = this.loopedValue + (this.relativeMouseX * -1);
 
             for (var i = 0; i < this.banners.length; i++) {
               var helperWrapper = this.banners[i].firstElementChild;
-              var childrenWidth = parseInt(helperWrapper.dataset.childrenWidth);
-              var offsetLeft = helperWrapper.offsetLeft;
-
-              // helperWrapper.style.left = `${offsetLeft + this.relativeMouseX}px`;
-              helperWrapper.style.transform = `translateX(${this.relativeMouseX}px)`;
+              helperWrapper.style.transform = `translateX(${(this.loopedValue + (this.relativeMouseX * -1)) * -1}px)`;
             }
           }
         });
-      
-        const scrollTheBanners = (timestamp) => {
-          for (var i = 0; i < this.banners.length; i++) {
-            var helperWrapper = this.banners[i].firstElementChild;
-            var childrenWidth = parseInt(helperWrapper.dataset.childrenWidth);
-            var offsetLeft = helperWrapper.offsetLeft;
-            
-            if (offsetLeft <= (childrenWidth * -1)) {
-              helperWrapper.style.removeProperty('transform');
-            }
-          }
-          requestAnimationFrame(scrollTheBanners);
-        }
+        
+        this.addEventListener('mouseleave', () => {
+          this.mouseDown = false;
+          this.mouseEntered = false;
+          this.dataset.dragging = false;
+          this.dataset.mouseEntered = false;
+          this.relativeMouseX = 0;
+          scrollTheBanners();
+        });
 
         setUpElements();
         scrollTheBanners();
