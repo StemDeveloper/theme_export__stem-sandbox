@@ -169,9 +169,12 @@
     </div>
   </div>
   {% if section.settings.hero_arrow %}
-    <div class="hero-arrow">
+    <hero-arrow 
+      class="hero-arrow"
+      data-animation-delay="0"
+    >
       {{- 'icon-hero-arrow.svg' | inline_asset_content -}}
-    </div>
+    </hero-arrow>
   {% endif %}
 </div>
 

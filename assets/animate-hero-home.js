@@ -72,6 +72,9 @@ function HomeHeroTransition() {
   let visibilityPx = Math.sqrt((rectWidthHalf * rectWidthHalf) + (rect.height * rect.height));
   document.documentElement.style.setProperty('--animation-extra', `${visibilityPx.toFixed(2)}px`);
   sectionRichtextBox.dataset.animateStartPx = visibilityPx.toFixed(2);
+  if(sectionHero.querySelector('hero-arrow')) {
+    sectionHero.querySelector('hero-arrow').dataset.animationDelay = visibilityPx.toFixed(2);
+  }
 }
 
 HomeHeroTransition();
