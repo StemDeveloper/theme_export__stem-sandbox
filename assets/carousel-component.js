@@ -69,6 +69,8 @@ if(!customElements.get('carousel-component')) {
         
         let lastTimestamp = 0;
         let animationStarted = false;
+        let userExperience = window.matchMedia('(min-width: 750px)').matches ? 0.2 : 0.1;
+        window.matchMedia('(min-width: 750px)').addEventListener('change', () => userExperience = window.matchMedia('(min-width: 750px)').matches ? 0.2 : 0.1);
         const scrollTheBanners = (timestamp) => {
           const stepSize = 1;
           for (var i = 0; i < this.banners.length; i++) {
@@ -92,7 +94,7 @@ if(!customElements.get('carousel-component')) {
               return;
             }
             
-            this.loopedValue += stepSize * delta * 0.1;
+            this.loopedValue += stepSize * delta * userExperience;
             
             if (this.loopedValue >= threshHold) {
               this.loopedValue = this.loopedValue % threshHold;
