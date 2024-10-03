@@ -55,7 +55,22 @@
           "type": "text",
           "settings": {
             "text": "<p><strong>Fast and Fail-Proof Execution.</strong></p><p><strong>We thread the needle of good design, purposeful content and performance focus through all touchpoints of digital marketing.</strong></p>",
-            "color_scheme": "scheme-3"
+            "color_scheme": "scheme-3",
+            "icon_1": "none",
+            "icon_label_1": "",
+            "icon_description_1": "",
+            "icon_2": "none",
+            "icon_label_2": "",
+            "icon_description_2": "",
+            "icon_3": "none",
+            "icon_label_3": "",
+            "icon_description_3": "",
+            "icon_4": "none",
+            "icon_label_4": "",
+            "icon_description_4": "",
+            "icon_5": "none",
+            "icon_label_5": "",
+            "icon_description_5": ""
           }
         }
       },
@@ -273,8 +288,8 @@
         "heading_alignment": "center",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 6,
-        "columns_tablet": 4,
+        "columns_desktop": 5,
+        "columns_tablet": 3,
         "full_width": "device",
         "infinite_loop": true,
         "column_alignment": "center",
@@ -283,7 +298,7 @@
         "button_link": "",
         "slider_visual": "none",
         "color_scheme": "",
-        "columns_mobile": 3,
+        "columns_mobile": 2,
         "swipe_on_mobile": true,
         "padding_top": 48,
         "padding_bottom": 48
