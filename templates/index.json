@@ -56,6 +56,7 @@
           "settings": {
             "text": "<p><strong>Fast and Fail-Proof Execution.</strong></p><p><strong>We thread the needle of good design, purposeful content and performance focus through all touchpoints of digital marketing.</strong></p>",
             "color_scheme": "scheme-3",
+            "text_arrow": false,
             "icon_1": "none",
             "icon_label_1": "",
             "icon_description_1": "",
@@ -288,8 +289,8 @@
         "heading_alignment": "center",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 5,
-        "columns_tablet": 3,
+        "columns_desktop": 6,
+        "columns_tablet": 4,
         "full_width": "device",
         "infinite_loop": true,
         "column_alignment": "center",
