@@ -3,7 +3,6 @@
 
 {% liquid
   assign animate_blocks = 0
-  assign animate_text_blocks = 0
   for block in section.blocks
     if block.type == 'text'
       assign animate_blocks = animate_blocks | plus: 1
@@ -80,7 +79,7 @@
                   <div class="rich-text__text-box">
                     {{ block.settings.text }}
                   </div>
-                  {% if section.settings.hero_arrow and animate_text_blocks == 0 %}
+                  {% if block.settings.text_arrow %}
                     <div class="rich-text__arrow">
                       {{- 'icon-richtext-arrow.svg' | inline_asset_content -}}
                     </div>
@@ -179,7 +178,6 @@
                   </richtext-tab>
                 </div>
               </div>
-              {%- assign animate_text_blocks = 1 -%}
             {%- when 'button' -%}
               <div
                 class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -220,6 +218,14 @@
     </div>
   </div>
 </div>
+{% if section.settings.hero_arrow %}
+  <hero-arrow 
+    class="hero-arrow"
+    data-animation-delay="0"
+  >
+    {{- 'icon-hero-arrow.svg' | inline_asset_content -}}
+  </hero-arrow>
+{% endif %}
 </richtext-animation>
 
 {% schema %}
@@ -473,6 +479,12 @@
           "id": "color_scheme",
           "label": "t:sections.all.colors.label",
           "default": "scheme-1"
+        },
+        {
+          "type": "checkbox",
+          "id": "text_arrow",
+          "label": "t:sections.rich-text.blocks.text.settings.text_arrow.label",
+          "default": false
         },
         {
           "type": "header",

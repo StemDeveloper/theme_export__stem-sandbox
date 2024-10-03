@@ -3972,3 +3972,55 @@ details-disclosure > details {
     height: 2.6rem;
   }
 }
+
+/* hero arrow */
+.shopify-section .hero-arrow {
+  display: flex;
+  position: fixed;
+  right: 100px;
+  bottom: 60px;
+  color: rgb(var(--color-background));
+  transform-origin: bottom center;
+  transition: transform 2s ease, color 1s ease;
+  -webkit-transition: transform 2s ease, color 1s ease;
+  -moz-transition: transform 2s ease, color 1s ease;
+  -ms-transition: transform 2s ease, color 1s ease;
+  -o-transition: transform 2s ease, color 1s ease;
+  z-index: 2;
+}
+
+.shopify-section:not(.section--hero-banner) .hero-arrow {
+  color: rgb(var(--color-foreground));
+}
+
+.shopify-section .hero-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 989px) {
+  .shopify-section .hero-arrow {
+    right: 36px;
+    bottom: 80px;
+    width: 3.2rem;
+    height: 5.2rem;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .shopify-section .hero-arrow {
+    right: 18px;
+    bottom: 32px;
+    width: 2.4rem;
+    height: 4rem;
+  }
+}
+
+.shopify-section.remove-hero-arrow .hero-arrow {
+  color: rgb(var(--color-secondary-button-text));
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+}

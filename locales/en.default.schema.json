@@ -3141,6 +3141,9 @@
               "label": "Description",
               "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
             },
+            "text_arrow": {
+              "label": "Text arrow"
+            },
             "icon_description_header": {
               "content": "Icon + Description for Bullet Points"
             },

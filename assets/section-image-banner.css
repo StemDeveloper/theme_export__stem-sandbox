@@ -551,35 +551,3 @@
 .animate-hero .section--hero-banner + .section--richtext > .richtext--container {
   clip-path: circle(0 at 50% 100%);
 }
-
-.section--hero-banner .hero-arrow {
-  display: flex;
-  position: absolute;
-  right: 100px;
-  bottom: 60px;
-  color: rgb(var(--color-background));
-  z-index: 2;
-}
-
-.section--hero-banner .hero-arrow svg {
-  width: 100%;
-  height: 100%;
-}
-
-@media screen and (max-width: 989px) {
-  .section--hero-banner .hero-arrow {
-    right: 36px;
-    bottom: 80px;
-    width: 3.2rem;
-    height: 5.2rem;
-  }
-}
-
-@media screen and (max-width: 749px) {
-  .section--hero-banner .hero-arrow {
-    right: 18px;
-    bottom: 32px;
-    width: 2.4rem;
-    height: 4rem;
-  }
-}
