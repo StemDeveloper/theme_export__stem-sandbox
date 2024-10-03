@@ -207,6 +207,14 @@
   </div>
 </div>
 </div>
+{% if section.settings.hero_arrow %}
+  <hero-arrow 
+    class="hero-arrow"
+    data-animation-delay="0"
+  >
+    {{- 'icon-hero-arrow.svg' | inline_asset_content -}}
+  </hero-arrow>
+{% endif %}
 </animate-input-underline>
 
 {% schema %}
@@ -218,6 +226,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "hero_arrow",
+      "label": "t:sections.image-banner.settings.hero_arrow.label",
+      "default": true
+    },
     {
       "type": "select",
       "id": "desktop_content_position",
