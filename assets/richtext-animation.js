@@ -47,7 +47,8 @@ if(!customElements.get('richtext-animation')) {
             const blockAnimateMiddle = blockAnimateEnd - blockHeightRadius;
       
             if (parentTopPosition < 0) {
-              const windowMedia = window.matchMedia('(orientation: landscape)');
+              const windowMedia = window.matchMedia('(min-width: 990px)');
+              const windowTabletMedia = window.matchMedia('(min-width: 750px) and (max-width: 989px)');
               const windowMobileMedia = window.matchMedia('(max-width: 749px)');
               const parentTopPositionValue = Math.abs(parentTopPosition);
               let visibilityPercent = 0;
@@ -57,9 +58,12 @@ if(!customElements.get('richtext-animation')) {
                 visibilityPercent = ((blockAnimateEnd - parentTopPositionValue) / (blockAnimateEnd - blockAnimateMiddle)) * 100;
               }
 
-              let animateRadius = blockHeight > blockWidth ? blockWidthRadius : blockHeightRadius;
+              let animateRadius = 470;
+              if(windowTabletMedia.matches) {
+                animateRadius = 330;
+              }
               if(windowMobileMedia.matches) {
-                animateRadius = blockWidth;
+                animateRadius = 320;
               }
               const animateCircle = (visibilityPercent / 100) * animateRadius;
               if(parentTopPositionValue >= blockAnimateStart && parentTopPositionValue < blockAnimateEnd) {
@@ -68,8 +72,10 @@ if(!customElements.get('richtext-animation')) {
               }
               if(windowMedia.matches) {
                 block.style.clipPath = `circle(${animateCircle.toFixed(2)}px at 50% 60%)`;
+              } else if (windowTabletMedia.matches) {
+                block.style.clipPath = `circle(${animateCircle.toFixed(2)}px at 60% 65%)`;
               } else {
-                block.style.clipPath = windowMobileMedia.matches ? `circle(${animateCircle.toFixed(2)}px at 100% 50%)` : `circle(${animateCircle.toFixed(2)}px at 60% 65%)`;
+                block.style.clipPath = `circle(${animateCircle.toFixed(2)}px at 80% 65%)`;
               }
               if(this.animateStarts > 0) {
                 if(parentTopPositionValue > this.animateStarts) {

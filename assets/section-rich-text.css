@@ -304,17 +304,17 @@
 /* rich text tab accordion */
 .rich-text__text-tab {
   position: absolute;
-  top: 60%;
-  left: 50%;
-  width: 70rem;
+  top: 65%;
+  right: 2rem;
+  width: 27rem;
   height: auto;
   max-height: 48rem;
   overflow-x: clip;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 
 .richtext-tab .richtext-tab--container {
@@ -368,10 +368,46 @@
   display: none;
 }
 
+.richtext-tab .tab-content--inner::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+
+.richtext-tab .tab-content--inner::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.richtext-tab .tab-content--inner::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--color-foreground), 1);
+  border: 4px solid rgba(var(--color-foreground), 1);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.richtext-tab .tab-content--inner::-webkit-scrollbar-button {
+  display: none;
+}
+
+@media screen and (min-width: 750px) {
+  .rich-text__text-tab {
+    top: 65%;
+    right: 10rem;
+    width: 40rem;
+  }
+}
+
 @media screen and (min-width: 990px) {
   .rich-text__text-tab {
-    left: 50%;
-    width: 74rem;
+    top: 60%;
+    right: 8rem;
+    width: 70rem;
+  }
+
+  .richtext-tab .richtext-tab--container .tab-content--inner {
+    max-height: 48rem;
   }
 
   .richtext-tab .tab-button,
@@ -387,10 +423,7 @@
 
 @media screen and (min-width: 1440px) {
   .rich-text__text-tab {
-    top: 60%;
-    left: 50%;
-    width: 74rem;
-    max-height: 48rem;
+    width: 76rem;
   }
 
   .richtext-tab .richtext-tab--container {
@@ -408,6 +441,13 @@
 
 .richtext-tab .tab-accordion--item .tab-content--inner {
   padding-top: 0.8rem;
+}
+
+@media screen and (max-width: 989px) {
+  .richtext-tab .tab-accordion--item .tab-content--inner {
+    max-height: 18rem;
+    overflow-y: auto;
+  }
 }
 
 .richtext-tab .tab-accordion--item .tab-accordion--icon {
@@ -446,9 +486,10 @@
   left: calc(50% - 0.1rem);
   width: 0.2rem;
   height: 1.2rem;
+  transform-origin: center;
 }
 
-.richtext-tab .tab-accordion--item .tab-button[data-tab-active="true"] .tab-accordion--icon::before, 
+/* .richtext-tab .tab-accordion--item .tab-button[data-tab-active="true"] .tab-accordion--icon::before, 
 .richtext-tab .tab-accordion--item .tab-button[data-tab-active="true"] .tab-accordion--icon::after {
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
@@ -459,6 +500,14 @@
 
 .richtext-tab .tab-accordion--item .tab-button[data-tab-active="true"] .tab-accordion--icon::before {
   opacity: 0;
+} */
+
+.richtext-tab .tab-accordion--item .tab-button[data-tab-active="true"] .tab-accordion--icon::after {
+  transform: scale(1, 0);
+  -webkit-transform: scale(1, 0);
+  -moz-transform: scale(1, 0);
+  -ms-transform: scale(1, 0);
+  -o-transform: scale(1, 0);
 }
 
 @media screen and (max-width: 989px) {
@@ -471,20 +520,5 @@
   .richtext-tab .icon-wrapper {
     width: 3rem;
     height: 3rem;
-  }
-}
-
-@media screen and (min-width: 750px) and (max-width: 989px) {
-  .rich-text__text-tab {
-    left: 60%;
-    width: 50rem;
-  }
-}
-
-@media screen and (max-width: 749px) {
-  .rich-text__text-tab {
-    top: 50%;
-    left: 65%;
-    width: 60%;
   }
 }

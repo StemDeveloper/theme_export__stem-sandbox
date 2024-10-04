@@ -66,6 +66,20 @@
                 {{ block.settings.caption | escape }}
               </p>
             {%- when 'text' -%}
+              {% liquid
+                assign icon_description = false
+                assign icon_description_bulletpoints = false
+                for i in (1..5)
+                  assign icon = 'icon_' | append: i
+                  assign icon_description = 'icon_description_' | append: i
+                  if block.settings[icon] != blank and block.settings[icon_description] != blank
+                    assign icon_description = true
+                  endif
+                endfor
+                if block.settings.text != blank and block.settings.text contains '<ul>' and icon_description
+                  assign icon_description_bulletpoints = true
+                endif
+              %}
               <div
                 class="rich-text__text color-{{ block.settings.color_scheme }} gradient rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
@@ -75,108 +89,114 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                <div class="rich-text__text-inner">
-                  <div class="rich-text__text-box">
-                    {{ block.settings.text }}
+                {% unless icon_description_bulletpoints %}
+                  <div class="rich-text__text-inner">
+                    <div class="rich-text__text-box">
+                      {{ block.settings.text }}
+                    </div>
+                    {% if block.settings.text_arrow %}
+                      <div class="rich-text__arrow">
+                        {{- 'icon-richtext-arrow.svg' | inline_asset_content -}}
+                      </div>
+                    {% endif %}
                   </div>
-                  {% if block.settings.text_arrow %}
-                    <div class="rich-text__arrow">
-                      {{- 'icon-richtext-arrow.svg' | inline_asset_content -}}
-                    </div>
-                  {% endif %}
-                </div>
-                <div class="rich-text__text-tab">
-                  <richtext-tab 
-                    data-section="section-{{ section.id }}-{{ block.id }}"
-                    class="richtext-tab d-block small-hide medium-hide"
-                  >
-                    <div class="richtext-tab--container">
-                      <div class="tab-button--list">
-                        {% for i in (1..5) %}
-                          {% liquid
-                            assign icon = 'icon_' | append: i
-                            assign icon_label = 'icon_label_' | append: i
-                            assign icon_description = 'icon_description_' | append: i
-                          %}
-                          {% if block.settings[icon_description] != blank and block.settings[icon] != 'none' or block.settings[icon_label] != blank %}
-                            <button 
-                              class="tab-button js-tab-button{% if block.settings[icon] != 'none' %} tab-button--icon{% endif %}"
-                              data-tab-target="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}"
-                              data-tab-active="{{ forloop.first }}"
-                            >
-                              {% if block.settings[icon] != 'none' %}
-                                {% render 'icon', icon: block.settings[icon] %}
-                              {% endif %}
-                              {% if block.settings[icon_label] != blank %}
-                                <span>{{ block.settings[icon_label] }}</span>
-                              {% endif %}
-                            </button>
-                          {% endif %}
-                        {% endfor %}
+                {% endunless %}
+                {% if icon_description_bulletpoints %}
+                  {% assign bullet_list = block.settings.text | remove: '<ul>' | remove: '</ul>' | remove: '<li>' | split: '</li>' %}
+                  <div class="rich-text__text-tab">
+                    <richtext-tab 
+                      data-section="section-{{ section.id }}-{{ block.id }}"
+                      class="richtext-tab d-block small-hide medium-hide"
+                    >
+                      <div class="richtext-tab--container">
+                        <div class="tab-button--list">
+                          {% for bullet in bullet_list %}
+                            {% liquid
+                              assign icon = 'icon_' | append: forloop.index
+                              assign icon_description = 'icon_description_' | append: forloop.index
+                            %}
+                            {% if block.settings[icon_description] != blank and block.settings[icon] != blank %}
+                              <button 
+                                class="tab-button js-tab-button{% if block.settings[icon] != blank %} tab-button--icon{% endif %}"
+                                data-tab-target="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}"
+                                data-tab-active="{{ forloop.first }}"
+                              >
+                                {% if block.settings[icon] != blank %}
+                                  <div class="icon-wrapper">
+                                    <img src="{{ block.settings[icon] | image_url: width: block.settings[icon].width }}" alt="{{ block.settings[icon].alt }}">
+                                  </div>
+                                {% endif %}
+                                {% if bullet != blank %}
+                                  <span>{{ bullet }}</span>
+                                {% endif %}
+                              </button>
+                            {% endif %}
+                          {% endfor %}
+                        </div>
+                        <div class="tab-content--list">
+                          {% for bullet in bullet_list %}
+                            {% liquid
+                              assign icon = 'icon_' | append: forloop.index
+                              assign icon_description = 'icon_description_' | append: forloop.index
+                            %}
+                            {% if block.settings[icon_description] != blank and block.settings[icon] != blank %}
+                              <div 
+                                id="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" 
+                                data-tab-active="{{ forloop.first }}"
+                                class="tab-content js-tab-content"
+                              >
+                                <div class="tab-content--inner rte">
+                                  {{ block.settings[icon_description] }}
+                                </div>
+                              </div>
+                            {% endif %}
+                          {% endfor %}
+                        </div>
                       </div>
-                      <div class="tab-content--list">
-                        {% for i in (1..5) %}
+                    </richtext-tab>
+                    <richtext-tab 
+                      data-section="section-{{ section.id }}-{{ block.id }}"
+                      class="richtext-tab d-block large-up-hide"
+                    >
+                      <div class="tab-accordion--list">
+                        {% for bullet in bullet_list %}
                           {% liquid
-                            assign icon = 'icon_' | append: i
-                            assign icon_label = 'icon_label_' | append: i
-                            assign icon_description = 'icon_description_' | append: i
+                            assign icon = 'icon_' | append: forloop.index
+                            assign icon_description = 'icon_description_' | append: forloop.index
                           %}
-                          {% if block.settings[icon_description] != blank and block.settings[icon] != 'none' or block.settings[icon_label] != blank %}
-                            <div 
-                              id="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" 
-                              data-tab-active="{{ forloop.first }}"
-                              class="tab-content js-tab-content"
-                            >
-                              <div class="tab-content--inner rte">
-                                {{ block.settings[icon_description] }}
+                          {% if block.settings[icon_description] != blank and block.settings[icon] != blank %}
+                            <div class="tab-accordion--item">
+                              <button 
+                                class="tab-button js-tab-button{% if block.settings[icon] != 'none' %} tab-button--icon{% endif %}"
+                                data-tab-target="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}"
+                                data-tab-active="{{ forloop.first }}"
+                              >
+                                {% if block.settings[icon] != 'none' %}
+                                  <div class="icon-wrapper">
+                                    <img src="{{ block.settings[icon] | image_url: width: block.settings[icon].width }}" alt="{{ block.settings[icon].alt }}">
+                                  </div>
+                                {% endif %}
+                                {% if bullet != blank %}
+                                  <span>{{ bullet }}</span>
+                                {% endif %}
+                                <span class="tab-accordion--icon"></span>
+                              </button>
+                              <div 
+                                id="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" 
+                                data-tab-active="{{ forloop.first }}"
+                                class="tab-content js-tab-content"
+                              >
+                                <div class="tab-content--inner rte">
+                                  {{ block.settings[icon_description] }}
+                                </div>
                               </div>
                             </div>
                           {% endif %}
                         {% endfor %}
                       </div>
-                    </div>
-                  </richtext-tab>
-                  <richtext-tab 
-                    data-section="section-{{ section.id }}-{{ block.id }}"
-                    class="richtext-tab d-block large-up-hide"
-                  >
-                    <div class="tab-accordion--list">
-                      {% for i in (1..5) %}
-                        {% liquid
-                          assign icon = 'icon_' | append: i
-                          assign icon_label = 'icon_label_' | append: i
-                          assign icon_description = 'icon_description_' | append: i
-                        %}
-                        {% if block.settings[icon_description] != blank and block.settings[icon] != 'none' or block.settings[icon_label] != blank %}
-                          <div class="tab-accordion--item">
-                            <button 
-                              class="tab-button js-tab-button{% if block.settings[icon] != 'none' %} tab-button--icon{% endif %}"
-                              data-tab-target="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}"
-                              data-tab-active="{{ forloop.first }}"
-                            >
-                              {% if block.settings[icon] != 'none' %}
-                                {% render 'icon', icon: block.settings[icon] %}
-                              {% endif %}
-                              {% if block.settings[icon_label] != blank %}
-                                <span>{{ block.settings[icon_label] }}</span>
-                              {% endif %}
-                              <span class="tab-accordion--icon"></span>
-                            </button>
-                            <div 
-                              id="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" 
-                              data-tab-active="{{ forloop.first }}"
-                              class="tab-content js-tab-content"
-                            >
-                              <div class="tab-content--inner rte">
-                                {{ block.settings[icon_description] }}
-                              </div>
-                            </div>
-                          </div>
-                        {% endif %}
-                      {% endfor %}
-                    </div>
-                  </richtext-tab>
-                </div>
+                    </richtext-tab>
+                  </div>
+                {% endif %}
               </div>
             {%- when 'button' -%}
               <div
@@ -491,41 +511,9 @@
           "content": "t:sections.rich-text.blocks.text.settings.icon_description_header.content"
         },
         {
-          "type": "select",
+          "type": "image_picker",
           "id": "icon_1",
-          "label": "t:sections.rich-text.blocks.text.settings.icon.label",
-          "default": "none",
-          "options": [
-            {
-              "value": "none",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__0"
-            },
-            {
-              "value": "honesty",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__1"
-            },
-            {
-              "value": "communication",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__2"
-            },
-            {
-              "value": "teamwork",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__3"
-            },
-            {
-              "value": "results",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__4"
-            },
-            {
-              "value": "respect",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__5"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "id": "icon_label_1",
-          "label": "t:sections.rich-text.blocks.text.settings.icon_label.label"
+          "label": "t:sections.rich-text.blocks.text.settings.icon.label"
         },
         {
           "type": "richtext",
@@ -533,41 +521,9 @@
           "label": "t:sections.rich-text.blocks.text.settings.icon_description.label"
         },
         {
-          "type": "select",
+          "type": "image_picker",
           "id": "icon_2",
-          "label": "t:sections.rich-text.blocks.text.settings.icon.label",
-          "default": "none",
-          "options": [
-            {
-              "value": "none",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__0"
-            },
-            {
-              "value": "honesty",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__1"
-            },
-            {
-              "value": "communication",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__2"
-            },
-            {
-              "value": "teamwork",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__3"
-            },
-            {
-              "value": "results",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__4"
-            },
-            {
-              "value": "respect",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__5"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "id": "icon_label_2",
-          "label": "t:sections.rich-text.blocks.text.settings.icon_label.label"
+          "label": "t:sections.rich-text.blocks.text.settings.icon.label"
         },
         {
           "type": "richtext",
@@ -575,41 +531,9 @@
           "label": "t:sections.rich-text.blocks.text.settings.icon_description.label"
         },
         {
-          "type": "select",
+          "type": "image_picker",
           "id": "icon_3",
-          "label": "t:sections.rich-text.blocks.text.settings.icon.label",
-          "default": "none",
-          "options": [
-            {
-              "value": "none",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__0"
-            },
-            {
-              "value": "honesty",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__1"
-            },
-            {
-              "value": "communication",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__2"
-            },
-            {
-              "value": "teamwork",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__3"
-            },
-            {
-              "value": "results",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__4"
-            },
-            {
-              "value": "respect",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__5"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "id": "icon_label_3",
-          "label": "t:sections.rich-text.blocks.text.settings.icon_label.label"
+          "label": "t:sections.rich-text.blocks.text.settings.icon.label"
         },
         {
           "type": "richtext",
@@ -617,41 +541,9 @@
           "label": "t:sections.rich-text.blocks.text.settings.icon_description.label"
         },
         {
-          "type": "select",
+          "type": "image_picker",
           "id": "icon_4",
-          "label": "t:sections.rich-text.blocks.text.settings.icon.label",
-          "default": "none",
-          "options": [
-            {
-              "value": "none",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__0"
-            },
-            {
-              "value": "honesty",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__1"
-            },
-            {
-              "value": "communication",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__2"
-            },
-            {
-              "value": "teamwork",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__3"
-            },
-            {
-              "value": "results",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__4"
-            },
-            {
-              "value": "respect",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__5"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "id": "icon_label_4",
-          "label": "t:sections.rich-text.blocks.text.settings.icon_label.label"
+          "label": "t:sections.rich-text.blocks.text.settings.icon.label"
         },
         {
           "type": "richtext",
@@ -659,41 +551,9 @@
           "label": "t:sections.rich-text.blocks.text.settings.icon_description.label"
         },
         {
-          "type": "select",
+          "type": "image_picker",
           "id": "icon_5",
-          "label": "t:sections.rich-text.blocks.text.settings.icon.label",
-          "default": "none",
-          "options": [
-            {
-              "value": "none",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__0"
-            },
-            {
-              "value": "honesty",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__1"
-            },
-            {
-              "value": "communication",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__2"
-            },
-            {
-              "value": "teamwork",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__3"
-            },
-            {
-              "value": "results",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__4"
-            },
-            {
-              "value": "respect",
-              "label": "t:sections.rich-text.blocks.text.settings.icon.options__5"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "id": "icon_label_5",
-          "label": "t:sections.rich-text.blocks.text.settings.icon_label.label"
+          "label": "t:sections.rich-text.blocks.text.settings.icon.label"
         },
         {
           "type": "richtext",
