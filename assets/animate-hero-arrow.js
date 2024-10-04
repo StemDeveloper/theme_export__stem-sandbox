@@ -21,6 +21,8 @@ if(!customElements.get('hero-arrow')) {
 
           if(scrolledPx > parseInt(this.dataset.animationDelay)) {
             if(!heroParent.classList.contains('remove-hero-arrow')) heroParent.classList.add('remove-hero-arrow');
+          } else {
+            if(heroParent.classList.contains('remove-hero-arrow')) heroParent.classList.remove('remove-hero-arrow');
           }
           
           if (elapsedTime < 1000) {

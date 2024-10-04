@@ -4007,7 +4007,7 @@ details-disclosure > details {
   -moz-transition: transform 2s ease, color 1s 1s ease;
   -ms-transition: transform 2s ease, color 1s 1s ease;
   -o-transition: transform 2s ease, color 1s 1s ease;
-  z-index: 2;
+  z-index: 3;
 }
 
 .shopify-section:not(.section--hero-banner) .hero-arrow {
