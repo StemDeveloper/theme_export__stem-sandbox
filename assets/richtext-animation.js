@@ -58,12 +58,12 @@ if(!customElements.get('richtext-animation')) {
                 visibilityPercent = ((blockAnimateEnd - parentTopPositionValue) / (blockAnimateEnd - blockAnimateMiddle)) * 100;
               }
 
-              let animateRadius = 470;
+              let animateRadius = Math.min(blockWidthRadius, 470);
               if(windowTabletMedia.matches) {
-                animateRadius = 330;
+                animateRadius = Math.min(blockWidthRadius, 330);
               }
               if(windowMobileMedia.matches) {
-                animateRadius = 320;
+                animateRadius = Math.min(blockWidthRadius, 320);
               }
               const animateCircle = (visibilityPercent / 100) * animateRadius;
               if(parentTopPositionValue >= blockAnimateStart && parentTopPositionValue < blockAnimateEnd) {

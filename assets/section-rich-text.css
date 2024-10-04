@@ -122,17 +122,16 @@
 
 .richtext--container .rich-text__text-inner {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 40rem;
+  top: 65%;
+  width: 30rem;
   height: auto;
   padding: 1.5rem;
   max-height: 50rem;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 
 .richtext--container .rich-text__text-box {
@@ -158,8 +157,23 @@
   clip-path: circle(0 at center);
 }
 
+@media screen and (min-width: 750px) {
+  .richtext--container .rich-text__text-inner {
+    top: 65%;
+    left: 55%;
+    width: 40rem;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  }
+}
+
 @media screen and (min-width: 990px) {
   .richtext--container .rich-text__text-inner {
+    top: 60%;
+    left: 40%;
     width: 50rem;
   }
 
@@ -185,12 +199,7 @@
   }
 }
 
-@media (orientation: landscape) {  
-  .richtext--container .rich-text__text-inner {
-    top: 60%;
-    left: 40%;
-  }
-
+@media (orientation: landscape) {
   .richtext--container .rich-text__arrow {
     right: 0;
   }
@@ -201,32 +210,18 @@
     width: 100vw;
   }
 
-  .richtext--container .rich-text__text-inner {
-    top: 60%;
-    left: 60%;
-  }
-
   .richtext--container .rich-text__arrow {
     right: 0;
   }
 }
 
-@media (orientation: portrait) and (max-width: 749px) {
+@media screen and (max-width: 749px) {
   .richtext--container .rich-text__text {
     font-size: 14px;
   }
 
   .richtext--container .rich-text__text-inner {
-    top: 50%;
     right: 0;
-    left: auto;
-    width: 30rem;
-    padding: 1rem;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
   }
 }
 
