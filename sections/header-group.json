@@ -18,7 +18,7 @@
           "type": "announcement",
           "settings": {
             "text": "Book a Consultation with our Team today!",
-            "link": "#",
+            "link": "https://www.google.com",
             "remove_icon": true
           }
         }
