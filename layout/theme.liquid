@@ -122,36 +122,60 @@
 
     {% style %}
       @font-face {
-        font-family: "HKGrotesk-SemiBold";
-        src: url("{{ 'HKGrotesk-SemiBold.woff' | asset_url }}") format("woff");
-      }
-      @font-face {
-        font-family: "HKGrotesk-SemiBold";
-        src: url("{{ 'HKGrotesk-SemiBold.woff2' | asset_url }}") format("woff2");
-      }
-      @font-face {
         font-family: "HKGrotesk-Regular";
         src: url("{{ 'HKGrotesk-Regular.woff' | asset_url }}") format("woff");
-      }
-      @font-face {
-        font-family: "HKGrotesk-Regular";
-        src: url("{{ 'HKGrotesk-Regular.woff2' | asset_url }}") format("woff2");
+        src: 
+          local("HKGrotesk Regular"),
+          local("HKGrotesk-Regular"),
+          url("{{ 'HKGrotesk-Regular.eot' | asset_url }}?#iefix") format("embedded-opentype"),
+          url("{{ 'HKGrotesk-Regular.woff' | asset_url }}") format("woff"),
+          url("{{ 'HKGrotesk-Regular.woff2' | asset_url }}") format("woff2"),
+          url("{{ 'HKGrotesk-Regular.ttf' | asset_url }}") format("truetype"),
+          url("{{ 'HKGrotesk-Regular.svg' | asset_url }}#HKGrotesk-Regular") format("svg");
+        font-weight: 400;
+        font-style: normal;
       }
       @font-face {
         font-family: "HKGrotesk-Medium";
         src: url("{{ 'HKGrotesk-Medium.woff' | asset_url }}") format("woff");
+        src: 
+          local("HKGrotesk Medium"),
+          local("HKGrotesk-Medium"),
+          url("{{ 'HKGrotesk-Medium.eot' | asset_url }}?#iefix") format("embedded-opentype"),
+          url("{{ 'HKGrotesk-Medium.woff' | asset_url }}") format("woff"),
+          url("{{ 'HKGrotesk-Medium.woff2' | asset_url }}") format("woff2"),
+          url("{{ 'HKGrotesk-Medium.ttf' | asset_url }}") format("truetype"),
+          url("{{ 'HKGrotesk-Medium.svg' | asset_url }}#HKGrotesk-Medium") format("svg");
+        font-weight: 500;
+        font-style: normal;
       }
       @font-face {
-        font-family: "HKGrotesk-Medium";
-        src: url("{{ 'HKGrotesk-Medium.woff2' | asset_url }}") format("woff2");
+        font-family: "HKGrotesk-SemiBold";
+        src: url("{{ 'HKGrotesk-SemiBold.woff' | asset_url }}") format("woff");
+        src: 
+          local("HKGrotesk SemiBold"),
+          local("HKGrotesk-SemiBold"),
+          url("{{ 'HKGrotesk-SemiBold.eot' | asset_url }}?#iefix") format("embedded-opentype"),
+          url("{{ 'HKGrotesk-SemiBold.woff' | asset_url }}") format("woff"),
+          url("{{ 'HKGrotesk-SemiBold.woff2' | asset_url }}") format("woff2"),
+          url("{{ 'HKGrotesk-SemiBold.ttf' | asset_url }}") format("truetype"),
+          url("{{ 'HKGrotesk-SemiBold.svg' | asset_url }}#HKGrotesk-SemiBold") format("svg");
+        font-weight: 600;
+        font-style: normal;
       }
       @font-face {
         font-family: "HKGrotesk-Bold";
         src: url("{{ 'HKGrotesk-Bold.woff' | asset_url }}") format("woff");
-      }
-      @font-face {
-        font-family: "HKGrotesk-Bold";
-        src: url("{{ 'HKGrotesk-Bold.woff2' | asset_url }}") format("woff2");
+        src: 
+          local("HKGrotesk Bold"),
+          local("HKGrotesk-Bold"),
+          url("{{ 'HKGrotesk-Bold.eot' | asset_url }}?#iefix") format("embedded-opentype"),
+          url("{{ 'HKGrotesk-Bold.woff' | asset_url }}") format("woff"),
+          url("{{ 'HKGrotesk-Bold.woff2' | asset_url }}") format("woff2"),
+          url("{{ 'HKGrotesk-Bold.ttf' | asset_url }}") format("truetype"),
+          url("{{ 'HKGrotesk-Bold.svg' | asset_url }}#HKGrotesk-Bold") format("svg");
+        font-weight: 700;
+        font-style: normal;
       }
     {% endstyle %}
 
@@ -214,7 +238,8 @@
         --font-body-family: var(--font-HKGrotesk-Regular, {{ settings.type_body_font.family }}), {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
-        --font-body-weight-regular: {{ settings.type_body_font.weight | plus: 100 | at_most: 1000 }};
+        --font-body-weight-medium: {{ settings.type_body_font.weight | plus: 100 | at_most: 1000 }};
+        --font-body-weight-semiBold: {{ settings.type_body_font.weight | plus: 200 | at_most: 1000 }};
         --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
 
         --font-heading-family: var(--font-HKGrotesk-Bold, {{ settings.type_header_font.family }}), {{ settings.type_header_font.fallback_families }};
