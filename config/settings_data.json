@@ -10,7 +10,8 @@
 {
   "current": {
     "logo": "shopify://shop_images/Stem_Commerce_Inc..png",
-    "logo_width": 150,
+    "logo_mobile": "shopify://shop_images/Stem-Commerce-Logo-white.png",
+    "logo_width": 70,
     "favicon": "shopify://shop_images/favicon.webp",
     "favicon_dark": "shopify://shop_images/favicon.webp",
     "type_header_font": "sans-serif",
