@@ -2962,21 +2962,24 @@ details[open] > .header__submenu {
   color: rgb(var(--color-foreground));
 }
 
-.header__menu-item span {
-  transition: text-decoration var(--duration-short) ease;
+.header__menu-item span,
+.header__active-menu-item,
+details > .header__menu-item {
+  background: linear-gradient(to right, rgb(var(--color-foreground)), rgb(var(--color-foreground)));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 0.2rem;
+  transition: background var(--duration-long) ease;
+  -webkit-transition: background var(--duration-long) ease;
+  -moz-transition: background var(--duration-long) ease;
+  -ms-transition: background var(--duration-long) ease;
+  -o-transition: background var(--duration-long) ease;
 }
 
-.header__menu-item:hover span {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-}
-
+.header__active-menu-item,
+.header__menu-item:hover span,
 details[open] > .header__menu-item {
-  text-decoration: underline;
-}
-
-details[open]:hover > .header__menu-item {
-  text-decoration-thickness: 0.2rem;
+  background-size: 100% 0.2rem;
 }
 
 details[open] > .header__menu-item .icon-caret {
@@ -2984,14 +2987,7 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__active-menu-item {
-  transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-}
-
-.header__menu-item:hover .header__active-menu-item {
-  text-decoration-thickness: 0.2rem;
 }
 
 .header__submenu {

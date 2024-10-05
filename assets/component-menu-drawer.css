@@ -1,7 +1,15 @@
 .header__icon--menu {
   position: initial;
   text-decoration: none;
+  font-size: 2.4rem;
+  line-height: calc(1 + 0.3 / var(--font-body-scale));
   font-weight: var(--font-body-weight-bold);
+}
+
+@media screen and (max-width: 989px) {
+  .header__icon--menu {
+    text-transform: lowercase;
+  }
 }
 
 .js menu-drawer > details > summary::before,
