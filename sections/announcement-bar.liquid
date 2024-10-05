@@ -92,6 +92,9 @@
               <a
                 href="{{ section.blocks.first.settings.link }}"
                 class="announcement-bar__link link focus-inset animate-arrow"
+                {% if section.blocks.first.settings.open_new_window %}
+                  target="_blank"
+                {% endif %}
               >
             {%- endif -%}
             <p class="announcement-bar__message">
@@ -153,6 +156,9 @@
                         <a
                           href="{{ block.settings.link }}"
                           class="announcement-bar__link link focus-inset animate-arrow"
+                          {% if block.settings.open_new_window %}
+                            target="_blank"
+                          {% endif %}
                         >
                       {%- endif -%}
                       <p class="announcement-bar__message">
@@ -238,6 +244,9 @@
             <a
               href="{{ section.blocks.first.settings.link }}"
               class="announcement-bar__link link focus-inset animate-arrow"
+              {% if section.blocks.first.settings.open_new_window %}
+                target="_blank"
+              {% endif %}
             >
           {%- endif -%}
           <p class="announcement-bar__message">
@@ -299,6 +308,9 @@
                       <a
                         href="{{ block.settings.link }}"
                         class="announcement-bar__link link focus-inset animate-arrow"
+                        {% if block.settings.open_new_window %}
+                          target="_blank"
+                        {% endif %}
                       >
                     {%- endif -%}
                     <p class="announcement-bar__message">
@@ -578,6 +590,12 @@
           "id": "remove_icon",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.remove_icon.label",
           "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "open_new_window",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.open_new_window.label",
+          "default": true
         }
       ]
     }

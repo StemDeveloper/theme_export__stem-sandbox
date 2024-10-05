@@ -546,6 +546,9 @@
             },
             "remove_icon": {
               "label": "Remove '->' in Text Link"
+            },
+            "open_new_window": {
+              "label": "Open Link in new window"
             }
           }
         }
