@@ -17,6 +17,23 @@
 {% if social_icons %}
   {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 {% endif %}
+{% style %}
+  .utility-bar:not(.utility-bar--mask),
+  .utility-bar:not(.utility-bar--mask) * {
+    transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
+    -webkit-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
+    -moz-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
+    -ms-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
+    -o-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
+  }
+  .utility-bar:not(.utility-bar--mask):hover {
+    background-color: rgb(var(--color-foreground));
+  }
+  .utility-bar:not(.utility-bar--mask):hover,
+  .utility-bar:not(.utility-bar--mask):hover * {
+    color: rgb(var(--color-background));
+  }
+{% endstyle %}
 
 <{% if section.settings.sticky_announcement_type != 'none' %}sticky-announcement data-sticky-type="{{ section.settings.sticky_announcement_type }}"{% else %}div{% endif %} class="announcement-wrap d-block">
 {% if settings.enable_hero_transition and template.name == 'index' %}
@@ -30,18 +47,29 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgb(var(--color-foreground));
       color: rgb(var(--color-background));
+      background-color: rgb(var(--color-foreground));
       z-index: 0;
     }
-    .utility-bar--mask, 
-    .utility-bar--mask *,
-    .utility-bar--mask *:hover {
+    .utility-bar--mask,
+    .utility-bar--mask * {
       color: rgb(var(--color-background));
+      transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
+      -webkit-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
+      -moz-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
+      -ms-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
+      -o-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
     }
     .section-header,
     .utility-bar:not(.utility-bar--mask) {
       clip-path: circle(0 at 50% 100%);
+    }
+    .utility-bar--mask:hover {
+      background-color: rgb(var(--color-background));
+    }
+    .utility-bar--mask:hover,
+    .utility-bar--mask:hover * {
+      color: rgb(var(--color-foreground));
     }
   {% endstyle %}
   <div
@@ -63,10 +91,10 @@
             {%- if section.blocks.first.settings.link != blank -%}
               <a
                 href="{{ section.blocks.first.settings.link }}"
-                class="announcement-bar__link link link--text focus-inset animate-arrow"
+                class="announcement-bar__link link focus-inset animate-arrow"
               >
             {%- endif -%}
-            <p class="announcement-bar__message h5">
+            <p class="announcement-bar__message">
               <span>{{ section.blocks.first.settings.text | escape }}</span>
               {%- if section.blocks.first.settings.link != blank and section.blocks.first.settings.remove_icon == false -%}
                 {{- 'icon-arrow.svg' | inline_asset_content -}}
@@ -124,10 +152,10 @@
                       {%- if block.settings.link != blank -%}
                         <a
                           href="{{ block.settings.link }}"
-                          class="announcement-bar__link link link--text focus-inset animate-arrow"
+                          class="announcement-bar__link link focus-inset animate-arrow"
                         >
                       {%- endif -%}
-                      <p class="announcement-bar__message h5">
+                      <p class="announcement-bar__message">
                         <span>{{ block.settings.text | escape }}</span>
                         {%- if block.settings.link != blank and block.settings.remove_icon == false -%}
                           {{- 'icon-arrow.svg' | inline_asset_content -}}
@@ -175,7 +203,7 @@
             {%- endform -%}
           </localization-form>
         {% endif %}
-  
+
         {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
           <localization-form class="small-hide medium-hide">
             {%- form 'localization', id: 'AnnouncementLanguageForm', class: 'localization-form' -%}
@@ -209,10 +237,10 @@
           {%- if section.blocks.first.settings.link != blank -%}
             <a
               href="{{ section.blocks.first.settings.link }}"
-              class="announcement-bar__link link link--text focus-inset animate-arrow"
+              class="announcement-bar__link link focus-inset animate-arrow"
             >
           {%- endif -%}
-          <p class="announcement-bar__message h5">
+          <p class="announcement-bar__message">
             <span>{{ section.blocks.first.settings.text | escape }}</span>
             {%- if section.blocks.first.settings.link != blank and section.blocks.first.settings.remove_icon == false -%}
               {{- 'icon-arrow.svg' | inline_asset_content -}}
@@ -270,10 +298,10 @@
                     {%- if block.settings.link != blank -%}
                       <a
                         href="{{ block.settings.link }}"
-                        class="announcement-bar__link link link--text focus-inset animate-arrow"
+                        class="announcement-bar__link link focus-inset animate-arrow"
                       >
                     {%- endif -%}
-                    <p class="announcement-bar__message h5">
+                    <p class="announcement-bar__message">
                       <span>{{ block.settings.text | escape }}</span>
                       {%- if block.settings.link != blank and block.settings.remove_icon == false -%}
                         {{- 'icon-arrow.svg' | inline_asset_content -}}
