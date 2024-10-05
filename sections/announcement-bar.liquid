@@ -18,19 +18,19 @@
   {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 {% endif %}
 {% style %}
-  .utility-bar:not(.utility-bar--mask),
-  .utility-bar:not(.utility-bar--mask) * {
+  .announcement-bar-section .utility-bar:not(.utility-bar--mask),
+  .announcement-bar-section .utility-bar:not(.utility-bar--mask) * {
     transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
     -webkit-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
     -moz-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
     -ms-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
     -o-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
   }
-  .utility-bar:not(.utility-bar--mask):hover {
+  .announcement-bar-section:hover .utility-bar:not(.utility-bar--mask) {
     background-color: rgb(var(--color-foreground));
   }
-  .utility-bar:not(.utility-bar--mask):hover,
-  .utility-bar:not(.utility-bar--mask):hover * {
+  .announcement-bar-section:hover .utility-bar:not(.utility-bar--mask),
+  .announcement-bar-section:hover .utility-bar:not(.utility-bar--mask) * {
     color: rgb(var(--color-background));
   }
 {% endstyle %}
@@ -64,11 +64,11 @@
     .utility-bar:not(.utility-bar--mask) {
       clip-path: circle(0 at 50% 100%);
     }
-    .utility-bar--mask:hover {
+    .announcement-bar-section:hover .utility-bar--mask {
       background-color: rgb(var(--color-background));
     }
-    .utility-bar--mask:hover,
-    .utility-bar--mask:hover * {
+    .announcement-bar-section:hover .utility-bar--mask,
+    .announcement-bar-section:hover .utility-bar--mask * {
       color: rgb(var(--color-foreground));
     }
   {% endstyle %}

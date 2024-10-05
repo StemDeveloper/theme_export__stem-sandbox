@@ -19,34 +19,12 @@
   }
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
-    .scrolled-past-header .header-wrapper .header__heading-link {
-      padding: 1rem 1.5rem;
+    .scrolled-past-header .header__heading-link {
+      width: 60%;
     }
     .scrolled-past-header .header {
-      padding-top: 0.7rem;
-      padding-bottom: 0.7rem;
-    }
-    .scrolled-past-header .header-wrapper .header__inline-menu .list-menu--inline {
-      padding: 0.2rem 0.5rem;
-    }
-    .scrolled-past-header .header__menu-item {
-      padding: 1rem;
-    }
-    .scrolled-past-header summary.header__menu-item {
-      padding-right: 2.7rem;
-    }
-    .scrolled-past-header .header-wrapper .header--mobile-left .header__heading-link {
-      margin-left: -1.5rem;
-    }
-    .scrolled-past-header .header-wrapper .header__inline-menu .list-menu--inline {
-      margin-right: -0.5rem;
-    }
-    @media screen and (max-width: 989px) {
-      {% if section.settings.mobile_menu_right %}
-        .section-header .header__heading-link {
-          margin-left: -.75rem;
-        }
-      {% endif %}
+      padding-top: 0.4rem;
+      padding-bottom: 0.4rem;
     }
   {%- endif -%}
 
@@ -111,18 +89,12 @@
 
 {%- style -%}
   .header {
-    padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
+    padding: {{ section.settings.padding_top }}px 3rem {{ section.settings.padding_bottom }}px 3rem;
   }
 
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-header {
-      margin-bottom: {{ section.settings.margin_bottom }}px;
-    }
   }
 
   @media screen and (min-width: 990px) {
@@ -158,24 +130,14 @@
       .header-wrapper .header__icons {
         padding-right: 0;
       }
-      .header-wrapper .header--middle-left:not(.drawer-menu) .header__icons {
-
-      }
       .header-wrapper .header__icons .header__icon:last-child {
         margin-right: 0;
       }
       .header-wrapper .header__heading-link {
-        padding: 1.25rem 2rem;
-      }
-      .header-wrapper .header--middle-left .header__heading-link,
-      .header-wrapper .header--top-left .header__heading-link {
-        margin-left: -2rem;
+        padding: 1.2rem 2.4rem;
       }
       .header-wrapper .header__inline-menu .list-menu--inline {
-        padding: 0.2rem 1.5rem;
-      }
-      .header-wrapper .header__inline-menu .list-menu--inline {
-        margin-right: -1.5rem;
+        padding: 0.2rem 1.2rem;
       }
     {% endif %}
   }
