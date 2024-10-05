@@ -274,7 +274,8 @@
     },
     "header": {
       "announcement": "Announcement",
-      "menu": "Menu",
+      "menu": "menu",
+      "menu_close": "close menu",
       "cart_count": {
         "one": "{{ count }} item",
         "other": "{{ count }} items"

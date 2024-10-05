@@ -6,12 +6,6 @@
   font-weight: var(--font-body-weight-bold);
 }
 
-@media screen and (max-width: 989px) {
-  .header__icon--menu {
-    text-transform: lowercase;
-  }
-}
-
 .js menu-drawer > details > summary::before,
 .js menu-drawer > details[open]:not(.menu-opening) > summary::before {
   content: '';

@@ -2885,6 +2885,11 @@ details[open] > .header__icon--menu .icon-hamburger {
   transform: scale(0.8);
 }
 
+details:not([open]) > .header__icon--menu .icon-close,
+details[open] > .header__icon--menu .icon-hamburger {
+  display: none;
+}
+
 .js details[open]:not(.menu-opening) > .header__icon--menu .icon-close {
   visibility: hidden;
 }

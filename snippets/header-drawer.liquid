@@ -12,9 +12,8 @@
       aria-label="{{ 'sections.header.menu' | t }}"
     >
       <span>
-        {% comment %} {{- 'icon-hamburger.svg' | inline_asset_content -}} {% endcomment %}
         <span class="icon-hamburger">{{ 'sections.header.menu' | t }}</span>
-        {{- 'icon-close.svg' | inline_asset_content -}}
+        <span class="icon-close">{{ 'sections.header.menu_close' | t }}</span>
       </span>
     </summary>
     <div id="menu-drawer" class="gradient menu-drawer color-{{ section.settings.menu_color_scheme }}">
