@@ -3919,10 +3919,26 @@ details-disclosure > details {
     clip-path: circle(80% at 50% 0);
   }
 
-  .header-wrapper .header__icon--menu::before,
   .menu-open .header-wrapper .logo-wrapper--desktop,
   .section-header:not(.menu-open) .logo-wrapper--mobile {
     display: none;
+  }
+
+  .header-wrapper .header__icon--menu::before {
+    opacity: 0;
+    visibility: hidden;
+    background: rgb(var(--color-background));
+    transition: opacity var(--duration-short) ease;
+    -webkit-transition: opacity var(--duration-short) ease;
+    -moz-transition: opacity var(--duration-short) ease;
+    -ms-transition: opacity var(--duration-short) ease;
+    -o-transition: opacity var(--duration-short) ease;
+    z-index: -2;
+}
+
+  .header-wrapper .header__icon--menu[aria-expanded="true"]::before {
+    opacity: 1;
+    visibility: visible;
   }
 
   .section-header:not(.menu-open) .header-wrapper .menu-drawer,
