@@ -288,8 +288,8 @@
 }
 
 .animating-circle .rich-text__heading-animate-blur {
-  filter: blur(var(--heading-blur-strength, 3px));
-  -webkit-filter: blur(var(--heading-blur-strength, 3px));
+  filter: blur(calc(var(--heading-blur-strength, 3) * 1px));
+  -webkit-filter: blur(calc(var(--heading-blur-strength, 3) * 1px));
   text-shadow: 0 0 calc(var(--heading-blur-strength)* 2) rgba(var(--color-foreground-secondary), 1);
 }
 

@@ -36,11 +36,20 @@ if (!customElements.get('animate-input-underline')) {
           const scrollY = window.scrollY;
           const viewportCenter = scrollY + viewportHeight / 2;
           const parentTopPosition = this.richtextParent.getBoundingClientRect().top;
+          const blockAnimateMiddle = this.richtextParent.getBoundingClientRect().height / 2;
+          const blockAnimateStart = 0;
 
           if(parentTopPosition < 0) {
             this.richtextParent.classList.add('animate-richtext');
             this.richtextParent.classList.add('animating-circle');
             this.richtextParent.classList.add('animate-richtext-heading');
+            let visibilityPercent = 0;
+            const parentTopPositionValue = Math.abs(parentTopPosition);
+            if(parentTopPositionValue >= blockAnimateStart && parentTopPositionValue < blockAnimateMiddle) {
+              visibilityPercent = ((parentTopPositionValue - blockAnimateStart) / (blockAnimateMiddle - blockAnimateStart)) * 100;
+              const animateBlurStrength = (visibilityPercent / 100) * parseInt(this.dataset.blurStrength);
+              this.style.setProperty('--heading-blur-strength', `${animateBlurStrength.toFixed(2)}`);
+            }
           } else {
             this.richtextParent.classList.remove('animate-richtext');
             this.richtextParent.classList.remove('animating-circle');
@@ -63,12 +72,12 @@ if (!customElements.get('animate-input-underline')) {
               inputLine.style.setProperty('width', `100%`);
               return;
             }
-            // inputLine.style.setProperty('width', `${percentageVisible.toFixed(2)}%`);
             percentageVisible.toFixed(2) > 0 && field.classList.add('animating-field');
+            // inputLine.style.setProperty('width', `${percentageVisible.toFixed(2)}%`);
             // percentageVisible.toFixed(2) > 0 ? field.classList.add('animating-field') : field.classList.remove('animating-field');
           });
           
-          if (elapsedTime < 1000) {
+          if (elapsedTime < 3000) {
             requestAnimationFrame(runAnimation);
           } else {
             this.isAnimating = false;

@@ -6,82 +6,102 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    --section-bottom-padding: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+      --section-bottom-padding: {{ section.settings.padding_bottom }}px;
     }
+  }
+  #shopify-section-{{ section.id }} .rich-text__heading-animate-blur {
+    opacity: min(1, calc(1 - var(--heading-blur-strength)));
   }
 {%- endstyle -%}
 
 {% liquid
+  assign blur_strength = 0
   assign page_width_class = 'page-width'
   case section.settings.full_width
     when 'device'
       assign page_width_class = 'page-width--full'
   endcase
+  for block in section.blocks
+    case block.type
+      when 'heading'
+        if block.settings.blur_heading
+          assign blur_strength = 2
+        endif
+    endcase
+  endfor
 %}
-<animate-input-underline class="animate-input-underline">
+<animate-input-underline 
+  class="animate-input-underline"
+  data-blur-strength="{{ blur_strength }}"
+  style="--heading-blur-strength: 0"
+>
 <div class="section-contact-container isolate color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
-{% if section.blocks.size > 0 %}
-  {% for block in section.blocks %}
-    {% liquid
-      assign page_width_class_block = 'page-width'
-      case block.settings.full_width_block
-        when 'device'
-          assign page_width_class_block = 'page-width--full'
-      endcase
-    %}
-    {% case block.type %}
-      {%- when 'heading' -%}
-        <div class="contact__block--item contact__block--{{ block.type }}{% if block.settings.sticky_block %} contact__block--sticky{% endif %}{% if block.settings.full_width_block == 'none' %} page-width{% endif %}">
-          <div class="contact rich-text{% if block.settings.full_width_block != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
-            <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if block.settings.full_width_block != 'device' %} rich-text__wrapper{% endif %}{% if block.settings.full_width_block != 'none' %} {{ page_width_class_block }}{% endif %}">
-              <div class="rich-text__blocks {{ section.settings.content_alignment }}">
-                <h2
-                  class="contact__block-heading rich-text__heading rte inline-richtext color-{{ block.settings.color_scheme }} gradient {{ block.settings.heading_size }} {{ block.settings.heading_alignment }}
-                    {% if block.settings.color_animate %} rich-text__heading-animate{% endif %}
-                    {% if block.settings.blur_heading %} rich-text__heading-animate-blur{% endif %}
-                    {% if block.settings.shrink_animate %} rich-text__heading-animate-span{% endif %}
-                    {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
-                  "
-                  {{ block.shopify_attributes }}
-                  {% if settings.animations_reveal_on_scroll %}
-                    data-cascade
-                    style="--animation-order: {{ forloop.index }};"
-                  {% endif %}
-                  style="--color-foreground-secondary: {{ block.settings.secondary_color }}"
-                >
-                  {{ block.settings.heading | newline_to_br }}
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      {% when 'text' %}
-        <div class="contact__block--item contact__block--{{ block.type }}{% if block.settings.sticky_block %} contact__block--sticky{% endif %}{% if block.settings.full_width_block == 'none' %} page-width{% endif %}">
-          <div class="contact rich-text{% if block.settings.full_width_block != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
-            <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if block.settings.full_width_block != 'device' %} rich-text__wrapper{% endif %}{% if block.settings.full_width_block != 'none' %} {{ page_width_class_block }}{% endif %}">
-              <div class="rich-text__blocks {{ section.settings.content_alignment }}">
-                <div
-                  class="contact__block-text {{ block.settings.content_alignment }} color-{{ block.settings.color_scheme }} gradient rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                  {{ block.shopify_attributes }}
-                  {% if settings.animations_reveal_on_scroll %}
-                    data-cascade
-                    style="--animation-order: {{ forloop.index }};"
-                  {% endif %}
-                >
-                  {{ block.settings.text }}
+<div class="section-contact--blocks" style="margin-bottom: var(--section-bottom-padding, 0);">
+  {% if section.blocks.size > 0 %}
+    {% for block in section.blocks %}
+      {% liquid
+        assign page_width_class_block = 'page-width'
+        case block.settings.full_width_block
+          when 'device'
+            assign page_width_class_block = 'page-width--full'
+        endcase
+      %}
+      {% case block.type %}
+        {%- when 'heading' -%}
+          <div class="contact__block--item contact__block--{{ block.type }}{% if block.settings.sticky_block %} contact__block--sticky{% endif %}{% if block.settings.full_width_block == 'none' %} page-width{% endif %}">
+            <div class="contact rich-text{% if block.settings.full_width_block != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
+              <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if block.settings.full_width_block != 'device' %} rich-text__wrapper{% endif %}{% if block.settings.full_width_block != 'none' %} {{ page_width_class_block }}{% endif %}">
+                <div class="rich-text__blocks {{ section.settings.content_alignment }}">
+                  <h2
+                    class="contact__block-heading rich-text__heading rte inline-richtext color-{{ block.settings.color_scheme }} gradient {{ block.settings.heading_size }} {{ block.settings.heading_alignment }}
+                      {% if block.settings.color_animate %} rich-text__heading-animate{% endif %}
+                      {% if block.settings.blur_heading %} rich-text__heading-animate-blur{% endif %}
+                      {% if block.settings.shrink_animate %} rich-text__heading-animate-span{% endif %}
+                      {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
+                    "
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                    style="--color-foreground-secondary: {{ block.settings.secondary_color }};"
+                  >
+                    {{ block.settings.heading | newline_to_br }}
+                  </h2>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-    {% endcase %}
-  {% endfor %}
-{% endif %}
+        {% when 'text' %}
+          <div class="contact__block--item contact__block--{{ block.type }}{% if block.settings.sticky_block %} contact__block--sticky{% endif %}{% if block.settings.full_width_block == 'none' %} page-width{% endif %}">
+            <div class="contact rich-text{% if block.settings.full_width_block != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
+              <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if block.settings.full_width_block != 'device' %} rich-text__wrapper{% endif %}{% if block.settings.full_width_block != 'none' %} {{ page_width_class_block }}{% endif %}">
+                <div class="rich-text__blocks {{ section.settings.content_alignment }}">
+                  <div
+                    class="contact__block-text {{ block.settings.content_alignment }} color-{{ block.settings.color_scheme }} gradient rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                    {{ block.shopify_attributes }}
+                    {% if settings.animations_reveal_on_scroll %}
+                      data-cascade
+                      style="--animation-order: {{ forloop.index }};"
+                    {% endif %}
+                  >
+                    {{ block.settings.text }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  {% endif %}
+</div>
 <div class="contact__forms{% if section.settings.full_width == 'none' %} page-width{% endif %}">
   <div class="contact rich-text{% if section.settings.full_width != 'none' %} rich-text--full-width content-container--full-width{% endif %}">
     <div class="rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width != 'device' %} rich-text__wrapper{% endif %}{% if section.settings.full_width != 'none' %} {{ page_width_class }}{% endif %}">
@@ -221,7 +241,7 @@
 {
   "name": "t:sections.contact-form.name",
   "tag": "section",
-  "class": "section",
+  "class": "section section-contact-form",
   "disabled_on": {
     "groups": ["header", "footer"]
   },
@@ -438,6 +458,16 @@
           "id": "blur_heading",
           "label": "t:sections.rich-text.blocks.heading.settings.blur_heading.label",
           "default": false
+        },
+        {
+          "type": "range",
+          "id": "blur_strength",
+          "label": "t:sections.rich-text.blocks.heading.settings.blur_strength.label",
+          "default": 3,
+          "unit": "px",
+          "step": 1,
+          "max": 10,
+          "min": 1
         },
         {
           "type": "select",

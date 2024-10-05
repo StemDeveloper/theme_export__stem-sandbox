@@ -57,7 +57,6 @@ if(!customElements.get('richtext-animation')) {
               } else if (parentTopPositionValue >= blockAnimateMiddle && parentTopPositionValue < blockAnimateEnd) {
                 visibilityPercent = ((blockAnimateEnd - parentTopPositionValue) / (blockAnimateEnd - blockAnimateMiddle)) * 100;
               }
-
               let animateRadius = 470;
               if(windowTabletMedia.matches) {
                 animateRadius = 340;
@@ -66,16 +65,16 @@ if(!customElements.get('richtext-animation')) {
                 animateRadius = 330;
               }
               const animateCircle = (visibilityPercent / 100) * animateRadius;
-              if(parentTopPositionValue >= blockAnimateStart && parentTopPositionValue < blockAnimateEnd) {
-                const animateBlurStrength = (visibilityPercent / 100) * parseInt(this.richtextHeading.dataset.blurStrength);
-                this.richtextHeading.style.setProperty('--heading-blur-strength', `${animateBlurStrength.toFixed(2)}px`);
-              }
               if(windowMedia.matches) {
                 block.style.clipPath = `circle(${animateCircle.toFixed(2)}px at 50% 60%)`;
               } else if (windowTabletMedia.matches) {
                 block.style.clipPath = `circle(${animateCircle.toFixed(2)}px at 60% 65%)`;
               } else {
                 block.style.clipPath = `circle(${animateCircle.toFixed(2)}px at 80% 65%)`;
+              }
+              if(parentTopPositionValue >= blockAnimateStart && parentTopPositionValue < blockAnimateEnd) {
+                const animateBlurStrength = (visibilityPercent / 100) * parseInt(this.richtextHeading.dataset.blurStrength);
+                this.richtextHeading.style.setProperty('--heading-blur-strength', `${animateBlurStrength.toFixed(2)}`);
               }
               if(this.animateStarts > 0) {
                 if(parentTopPositionValue > this.animateStarts) {
