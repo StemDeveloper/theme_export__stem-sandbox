@@ -3150,6 +3150,9 @@
             "text_arrow": {
               "label": "Text arrow"
             },
+            "icon_text_below": {
+              "label": "Show \"Icon + Description\" below on mobile"
+            },
             "icon_description_header": {
               "content": "Icon + Description for Bullet Points"
             },
