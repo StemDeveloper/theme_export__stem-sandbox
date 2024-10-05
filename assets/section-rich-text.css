@@ -123,7 +123,7 @@
 .richtext--container .rich-text__text-inner {
   position: absolute;
   top: 65%;
-  width: 30rem;
+  width: 35rem;
   height: auto;
   padding: 1.5rem;
   max-height: 50rem;
@@ -137,7 +137,51 @@
 .richtext--container .rich-text__text-box {
   width: 100%;
   overflow-x: clip;
-  overflow-y: auto;
+}
+
+.richtext--container .rich-text__text-box > *:first-child {
+  margin-top: 0;
+}
+
+.richtext--container .rich-text__text-box > * {
+  margin-bottom: 0;
+}
+
+.richtext--container .rich-text__text-box > * + * {
+  margin-top: 1.2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .richtext--container .rich-text__text-box > * + * {
+    margin-top: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .richtext--container .rich-text__text-box > * + * {
+    margin-top: 2.4rem;
+  }
+
+  .richtext--container .rich-text__text-box {
+    font-size: 2rem;
+    line-height: calc(1.333 * var(--font-body-scale));
+  }
+
+  .richtext--container .rich-text__text-box h2 {
+    font-size: calc(var(--font-heading-scale) * 3.2rem);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .richtext--container .rich-text__text-box {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .richtext--container .rich-text__text-box h2 {
+    font-size: calc(var(--font-heading-scale) * 1.6rem);
+  }
 }
 
 .richtext--container .rich-text__arrow {
@@ -186,6 +230,7 @@
 
 @media screen and (min-width: 1440px) {
   .richtext--container .rich-text__text-inner {
+    left: 45%;
     width: 54.8rem;
   }
 
@@ -301,7 +346,7 @@
   position: absolute;
   top: 65%;
   right: 2rem;
-  width: 27rem;
+  width: 30rem;
   height: auto;
   max-height: 48rem;
   overflow-x: clip;
