@@ -44,7 +44,7 @@
                           aria-current="page"
                         {% endif %}
                       >
-                        {{ childlink.title | escape }}
+                        <span>{{ childlink.title | escape }}</span>
                       </a>
                       {%- if childlink.links != blank -%}
                         <ul class="list-unstyled" role="list">
@@ -58,7 +58,7 @@
                                   aria-current="page"
                                 {% endif %}
                               >
-                                {{ grandchildlink.title | escape }}
+                                <span>{{ grandchildlink.title | escape }}</span>
                               </a>
                             </li>
                           {%- endfor -%}

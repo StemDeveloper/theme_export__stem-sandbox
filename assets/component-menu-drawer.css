@@ -151,6 +151,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   right: 3rem;
   top: 50%;
   transform: translateY(-50%);
+  z-index: -1;
 }
 
 .js .menu-drawer__submenu {
