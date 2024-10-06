@@ -379,7 +379,7 @@
   background-color: transparent;
   font-family: var(--font-heading-family);
   font-weight: var(--font-heading-weight);
-  color: rgb(var(--color-secondary-button-text));
+  color: rgba(var(--color-button),1);
 }
 
 .richtext-tab .tab-button[data-tab-active="true"] {
