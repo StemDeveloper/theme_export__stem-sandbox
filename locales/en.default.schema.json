@@ -1144,7 +1144,7 @@
               "label": "Image width"
             },
             "image_link": {
-              "label": "Image link"
+              "label": "Link"
             },
             "alignment": {
               "label": "Image alignment on large screen"
