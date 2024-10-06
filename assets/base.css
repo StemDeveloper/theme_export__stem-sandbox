@@ -466,6 +466,11 @@ blockquote {
   color: rgb(var(--color-foreground));
 }
 
+strong {
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+}
+
 table:not([class]) {
   table-layout: fixed;
   border-collapse: collapse;
