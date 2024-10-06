@@ -19,7 +19,8 @@
           "settings": {
             "text": "Book a Consultation with our Team today!",
             "link": "https://www.google.com",
-            "remove_icon": true
+            "remove_icon": true,
+            "open_new_window": true
           }
         }
       },
@@ -44,7 +45,7 @@
         "menu": "menu-working",
         "menu_type_desktop": "dropdown",
         "nav_position_desktop": "right",
-        "sticky_header_type": "reduce-logo-size",
+        "sticky_header_type": "always",
         "show_line_separator": false,
         "enable_search": false,
         "desktop_background_logo_nav": true,
