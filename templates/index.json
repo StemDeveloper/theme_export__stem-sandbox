@@ -375,7 +375,7 @@
         "secondary_color": "#00bc8f",
         "sticky_title": true,
         "blur_heading": true,
-        "blur_strength": 5,
+        "blur_strength": 7,
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 1,
