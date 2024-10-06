@@ -82,6 +82,7 @@
             "shrink_animate": false,
             "color_animate": true,
             "blur_heading": true,
+            "blur_strength": 3,
             "heading_alignment": "left",
             "full_width_block": "container",
             "color_scheme": ""
@@ -96,6 +97,7 @@
             "shrink_animate": false,
             "color_animate": true,
             "blur_heading": true,
+            "blur_strength": 3,
             "heading_alignment": "left",
             "full_width_block": "container",
             "color_scheme": ""
@@ -108,11 +110,12 @@
         "heading_yyEQQd"
       ],
       "settings": {
+        "hero_arrow": true,
         "desktop_content_position": "left",
         "content_alignment": "left",
         "heading": "",
         "heading_size": "h1",
-        "color_scheme": "scheme-837da333-4ae4-4495-8fbf-02d804c2e4ef",
+        "color_scheme": "scheme-4",
         "full_width": "device",
         "padding_top": 100,
         "padding_bottom": 100
