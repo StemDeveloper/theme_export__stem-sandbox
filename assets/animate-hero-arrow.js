@@ -7,7 +7,18 @@ if(!customElements.get('hero-arrow')) {
         this.startTime = null;
         this.isAnimating = false;
         this.handleScroll = this.startAnimation.bind(this);
+        this.addEventListener('click', this.scrollTo.bind(this));
         window.addEventListener('scroll', this.handleScroll);
+      }
+
+      scrollTo() {
+        const announcementHeight = getComputedStyle(this.closest('html')).getPropertyValue('--announcement-height')?.trim();
+        const scrollExtra = announcementHeight && announcementHeight !== undefined && announcementHeight !== null && announcementHeight !== '' ? parseFloat(announcementHeight) : 0;
+        const scrollPosition = parseInt(this.dataset.animationDelay) > 0 ? parseInt(this.dataset.animationDelay) + scrollExtra : window.innerHeight / 2;
+        window.scrollTo({
+          top: scrollPosition,
+          behavior: 'smooth'
+        });
       }
 
       startAnimation() {

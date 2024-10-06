@@ -4041,7 +4041,18 @@ details-disclosure > details {
   -moz-transition: transform 2s ease, color 1s 1s ease;
   -ms-transition: transform 2s ease, color 1s 1s ease;
   -o-transition: transform 2s ease, color 1s 1s ease;
+  cursor: pointer;
   z-index: 3;
+}
+
+.shopify-section .hero-arrow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .shopify-section:not(.section--hero-banner) .hero-arrow {
