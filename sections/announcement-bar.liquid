@@ -12,6 +12,20 @@
   if section.blocks.size > 0
     assign announcement_bar = true
   endif
+  assign scheme_hover_text = 'transparent'
+  assign scheme_hover_background = 'transparent'
+  assign scheme_hover_background_gradient = 'transparent'
+  for scheme in settings.color_schemes
+    if scheme.id contains section.settings.color_scheme_hover
+      assign scheme_hover_text = scheme.settings.text
+      assign scheme_hover_background = scheme.settings.background
+      if scheme.settings.background_gradient != empty
+        assign scheme_hover_background_gradient = scheme.settings.background_gradient
+      else 
+        assign scheme_hover_background_gradient = scheme.settings.background
+      endif
+    endif
+  endfor
 -%}
 
 {% if social_icons %}
@@ -27,11 +41,12 @@
     -o-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
   }
   .announcement-bar-section:hover .utility-bar:not(.utility-bar--mask) {
-    background-color: rgb(var(--color-foreground));
+    --color-background: {{ scheme_hover_background.red }}, {{ scheme_hover_background.green }}, {{ scheme_hover_background.blue }};
+    --gradient-background: {{ scheme_hover_background_gradient }};
   }
   .announcement-bar-section:hover .utility-bar:not(.utility-bar--mask),
   .announcement-bar-section:hover .utility-bar:not(.utility-bar--mask) * {
-    color: rgb(var(--color-background));
+    --color-foreground: {{ scheme_hover_text.red }}, {{ scheme_hover_text.green }}, {{ scheme_hover_text.blue }};
   }
 {% endstyle %}
 
@@ -198,29 +213,31 @@
           </style>
         {%- endif -%}
       {%- endif -%}
-      <div class="localization-wrapper">
-        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
-          <localization-form class="small-hide medium-hide">
-            {%- form 'localization', id: 'AnnouncementCountryForm', class: 'localization-form' -%}
-              <div>
-                <h2 class="visually-hidden" id="AnnouncementCountryLabel">{{ 'localization.country_label' | t }}</h2>
-                {%- render 'country-localization', localPosition: 'AnnouncementCountry' -%}
-              </div>
-            {%- endform -%}
-          </localization-form>
-        {% endif %}
-
-        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-          <localization-form class="small-hide medium-hide">
-            {%- form 'localization', id: 'AnnouncementLanguageForm', class: 'localization-form' -%}
-              <div>
-                <h2 class="visually-hidden" id="AnnouncementLanguageLabel">{{ 'localization.language_label' | t }}</h2>
-                {%- render 'language-localization', localPosition: 'AnnouncementLanguage' -%}
-              </div>
-            {%- endform -%}
-          </localization-form>
-        {%- endif -%}
-      </div>
+      {% if section.settings.enable_country_selector or section.settings.enable_language_selector %}
+        <div class="localization-wrapper">
+          {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+            <localization-form class="small-hide medium-hide">
+              {%- form 'localization', id: 'AnnouncementCountryForm', class: 'localization-form' -%}
+                <div>
+                  <h2 class="visually-hidden" id="AnnouncementCountryLabel">{{ 'localization.country_label' | t }}</h2>
+                  {%- render 'country-localization', localPosition: 'AnnouncementCountry' -%}
+                </div>
+              {%- endform -%}
+            </localization-form>
+          {% endif %}
+  
+          {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+            <localization-form class="small-hide medium-hide">
+              {%- form 'localization', id: 'AnnouncementLanguageForm', class: 'localization-form' -%}
+                <div>
+                  <h2 class="visually-hidden" id="AnnouncementLanguageLabel">{{ 'localization.language_label' | t }}</h2>
+                  {%- render 'language-localization', localPosition: 'AnnouncementLanguage' -%}
+                </div>
+              {%- endform -%}
+            </localization-form>
+          {%- endif -%}
+        </div>
+      {% endif %}
     </div>
   </div>
 {% endif %}
@@ -350,29 +367,31 @@
         </style>
       {%- endif -%}
     {%- endif -%}
-    <div class="localization-wrapper">
-      {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
-        <localization-form class="small-hide medium-hide">
-          {%- form 'localization', id: 'AnnouncementCountryForm', class: 'localization-form' -%}
-            <div>
-              <h2 class="visually-hidden" id="AnnouncementCountryLabel">{{ 'localization.country_label' | t }}</h2>
-              {%- render 'country-localization', localPosition: 'AnnouncementCountry' -%}
-            </div>
-          {%- endform -%}
-        </localization-form>
-      {% endif %}
-
-      {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-        <localization-form class="small-hide medium-hide">
-          {%- form 'localization', id: 'AnnouncementLanguageForm', class: 'localization-form' -%}
-            <div>
-              <h2 class="visually-hidden" id="AnnouncementLanguageLabel">{{ 'localization.language_label' | t }}</h2>
-              {%- render 'language-localization', localPosition: 'AnnouncementLanguage' -%}
-            </div>
-          {%- endform -%}
-        </localization-form>
-      {%- endif -%}
-    </div>
+    {% if section.settings.enable_country_selector or section.settings.enable_language_selector %}
+      <div class="localization-wrapper">
+        {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+          <localization-form class="small-hide medium-hide">
+            {%- form 'localization', id: 'AnnouncementCountryForm', class: 'localization-form' -%}
+              <div>
+                <h2 class="visually-hidden" id="AnnouncementCountryLabel">{{ 'localization.country_label' | t }}</h2>
+                {%- render 'country-localization', localPosition: 'AnnouncementCountry' -%}
+              </div>
+            {%- endform -%}
+          </localization-form>
+        {% endif %}
+  
+        {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+          <localization-form class="small-hide medium-hide">
+            {%- form 'localization', id: 'AnnouncementLanguageForm', class: 'localization-form' -%}
+              <div>
+                <h2 class="visually-hidden" id="AnnouncementLanguageLabel">{{ 'localization.language_label' | t }}</h2>
+                {%- render 'language-localization', localPosition: 'AnnouncementLanguage' -%}
+              </div>
+            {%- endform -%}
+          </localization-form>
+        {%- endif -%}
+      </div>
+    {% endif %}
   </div>
 </div>
 </{% if section.settings.sticky_announcement_type != 'none' %}sticky-announcement{% else %}div{% endif %}>
@@ -488,6 +507,12 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-4"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme_hover",
+      "label": "t:sections.all.colors_hover.label",
+      "default": "scheme-5"
     },
     {
       "type": "checkbox",

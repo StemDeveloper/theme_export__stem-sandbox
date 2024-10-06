@@ -427,6 +427,9 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       },
+      "colors_hover": {
+        "label": "Hover Color Scheme"
+      },
       "heading_size": {
         "label": "Heading size",
         "options__1": {
