@@ -283,7 +283,12 @@
   color: rgba(var(--color-foreground-secondary), 1);
 }
 
-.animate-richtext .rich-text__heading-animate {
+.section--richtext .rich-text__heading-animate span {
+  color: rgba(var(--color-foreground-secondary), 1);
+}
+
+.animate-richtext .rich-text__heading-animate,
+.animate-richtext .rich-text__heading-animate span {
   color: rgba(var(--color-foreground-secondary), .8);
 }
 

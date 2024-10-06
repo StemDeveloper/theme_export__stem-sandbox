@@ -71,7 +71,7 @@
                       data-cascade
                       style="--animation-order: {{ forloop.index }};"
                     {% endif %}
-                    style="--color-foreground-secondary: {{ block.settings.secondary_color }};"
+                    style="--color-foreground-secondary: {{ block.settings.secondary_color.red }}, {{ block.settings.secondary_color.green }}, {{ block.settings.secondary_color.blue }};"
                   >
                     {{ block.settings.heading | newline_to_br }}
                   </h2>
