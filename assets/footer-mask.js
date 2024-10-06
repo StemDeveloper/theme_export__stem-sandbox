@@ -37,8 +37,8 @@ function FooterMaskTransition() {
     requestAnimationFrame(runAnimation);
   };
   
+  updateVisibility();
   window.addEventListener('scroll', updateVisibility);
-  document.addEventListener('load', updateVisibility);
 }
 
 FooterMaskTransition();

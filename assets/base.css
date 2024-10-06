@@ -1,7 +1,7 @@
 :root {
   --alpha-button-background: 1;
   --alpha-button-border: 1;
-  --alpha-link: 0.85;
+  --alpha-link: 1;
   --alpha-badge-border: 0.1;
   --focused-base-outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   --focused-base-outline-offset: 0.3rem;
@@ -538,6 +538,14 @@ h6:empty {
 .d-block,
 .d-block:empty {
   display: block;
+}
+
+.link--overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .link,
@@ -2967,7 +2975,9 @@ details[open] > .header__submenu {
   color: rgb(var(--color-foreground));
 }
 
-.header__menu-item span {
+.rte a[href],
+.header__menu-item span,
+.footer-block__details-content .list-menu__item--link {
   background: linear-gradient(to right, rgb(var(--color-foreground)), rgb(var(--color-foreground)));
   background-position: 50% 100%;
   background-repeat: no-repeat;
@@ -2979,7 +2989,9 @@ details[open] > .header__submenu {
   -o-transition: background var(--duration-long) ease;
 }
 
-.header__menu-item:hover span {
+.rte a[href]:hover,
+.header__menu-item:hover span,
+.footer-block__details-content .list-menu__item--link:hover {
   background-size: 100% 0.2rem;
 }
 

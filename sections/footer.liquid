@@ -239,7 +239,7 @@
                       {%- if block.settings.image != blank -%}
                         {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
                         <div
-                          class="footer-block__image-wrapper"
+                          class="footer-block__image-wrapper isolate"
                           style="max-width: min(100%, {{ block.settings.image_width }}px);"
                         >
                           <img
@@ -250,6 +250,7 @@
                             width="{{ block.settings.image.width }}"
                             height="{{ block.settings.image.height }}"
                           >
+                          <a href="{{ block.settings.image_link }}" class="d-block link--overlay"></a>
                         </div>
                       {%- else -%}
                         {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
@@ -533,12 +534,12 @@
     },
     {
       "type": "image",
-      "name": "Image",
+      "name": "t:sections.footer.blocks.image.name",
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "t:sections.footer.blocks.image.settings.image.label"
         },
         {
           "type": "range",
@@ -547,25 +548,30 @@
           "max": 550,
           "step": 5,
           "unit": "px",
-          "label": "Image width",
+          "label": "t:sections.footer.blocks.image.settings.image_width.label",
           "default": 100
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "t:sections.footer.blocks.image.settings.image_link.label"
         },
         {
           "type": "select",
           "id": "alignment",
-          "label": "Image alignment on large screen",
+          "label": "t:sections.footer.blocks.image.settings.alignment.label",
           "options": [
             {
               "value": "left",
-              "label": "Left"
+              "label": "t:sections.collapsible_content.settings.heading_alignment.options__1.label"
             },
             {
               "value": "center",
-              "label": "Center"
+              "label": "t:sections.collapsible_content.settings.heading_alignment.options__2.label"
             },
             {
               "value": "right",
-              "label": "Right"
+              "label": "t:sections.collapsible_content.settings.heading_alignment.options__3.label"
             }
           ],
           "default": "center"

@@ -1133,6 +1133,23 @@
               "default": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
             }
           }
+        },
+        "image": {
+          "name": "Image",
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "image_width": {
+              "label": "Image width"
+            },
+            "image_link": {
+              "label": "Image link"
+            },
+            "alignment": {
+              "label": "Image alignment on large screen"
+            }
+          }
         }
       },
       "settings": {
