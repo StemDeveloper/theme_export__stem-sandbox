@@ -53,7 +53,6 @@ if(!customElements.get('multicard-animation')) {
             if (rectParent.top < 0) {
               const parentTopPositionValue = Math.abs(rectParent.top);
               let visibilityPercent = 0;
-
               if (parentTopPositionValue >= blockAnimateStart && parentTopPositionValue < blockAnimateStartEnd) {
                 visibilityPercent = ((parentTopPositionValue - blockAnimateStart) / (blockAnimateStartEnd - blockAnimateStart)) * 100;
               } else if (parentTopPositionValue >= blockAnimateStartEnd && parentTopPositionValue < blockAnimateEndStart) {
@@ -62,7 +61,14 @@ if(!customElements.get('multicard-animation')) {
                 visibilityPercent = ((blockAnimateEndEnd - parentTopPositionValue) / (blockAnimateEndEnd - blockAnimateEndStart)) * 100;
               }
 
-              if(parentTopPositionValue >= blockAnimateStart && parentTopPositionValue < blockAnimateEndEnd) {
+              if(parentTopPositionValue >= blockAnimateStartEnd && parentTopPositionValue < blockAnimateEndEnd) {
+                visibilityPercent = 0;
+                if(parentTopPositionValue >= blockAnimateStartEnd && parentTopPositionValue < blockAnimateEndStart) {
+                  visibilityPercent = ((parentTopPositionValue - blockAnimateStartEnd) / (blockAnimateEndStart - blockAnimateStartEnd)) * 100;
+                } else if (parentTopPositionValue >= blockAnimateEndStart && parentTopPositionValue < blockAnimateEndEnd) {
+                  console.log(visibilityPercent);
+                  visibilityPercent = ((blockAnimateEndEnd - parentTopPositionValue) / (blockAnimateEndEnd - blockAnimateEndStart)) * 100;
+                }
                 const animateBlurStrength = (visibilityPercent / 100) * parseInt(this.dataset.blurStrength);
                 this.style.setProperty('--heading-blur-strength', `${animateBlurStrength.toFixed(2)}px`);
               } else {
