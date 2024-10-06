@@ -157,8 +157,10 @@
           "label": "Mobile Menu Logo"
         },
         "logo_width": {
-          "label": "Desktop logo width",
-          "info": "Logo width is automatically optimized for mobile."
+          "label": "Desktop logo width"
+        },
+        "logo_width_mobile": {
+          "label": "Mobile logo width"
         },
         "favicon": {
           "label": "Favicon image",

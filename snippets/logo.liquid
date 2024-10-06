@@ -1,12 +1,12 @@
 {%- assign logo_alt = logo.alt | default: shop.name | escape -%}
-{%- assign logo_height = settings.logo_width | divided_by: logo.aspect_ratio -%}
-{% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
-{% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+{%- assign logo_height = logo_width | divided_by: logo.aspect_ratio -%}
+{% capture sizes %}(max-width: {{ logo_width | times: 2 }}px) 50vw, {{ logo_width }}px{% endcapture %}
+{% capture widths %}{{ logo_width }}, {{ logo_width | times: 1.5 | round }}, {{ logo_width | times: 2 }}{% endcapture %}
 {{ logo | image_url: width: 600 | image_tag:
   class: 'header__heading-logo motion-reduce',
   widths: widths,
   height: logo_height,
-  width: settings.logo_width,
+  width: logo_width,
   alt: logo_alt,
   sizes: sizes,
   preload: true
