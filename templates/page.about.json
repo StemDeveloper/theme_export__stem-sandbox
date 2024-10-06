@@ -99,11 +99,11 @@
           "settings": {
             "heading": "<strong>We bring the right people together, building robust, responsive teams to design high-growth eCommerce stores. To us, every project is a partnership and we are committed to doing everything necessary to drive real results for your business in record-fast time.</strong>",
             "heading_size": "h0",
-            "secondary_color": "#009b72",
+            "secondary_color": "#60e5b5",
             "shrink_animate": false,
             "color_animate": false,
             "blur_heading": true,
-            "blur_strength": 4
+            "blur_strength": 5
           }
         },
         "text_t6JRjL": {
