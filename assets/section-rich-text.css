@@ -204,7 +204,7 @@
 @media screen and (min-width: 750px) {
   .richtext--container .rich-text__text-inner {
     top: 65%;
-    left: 55%;
+    left: 60%;
     width: 40rem;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
@@ -217,7 +217,7 @@
 @media screen and (min-width: 990px) {
   .richtext--container .rich-text__text-inner {
     top: 60%;
-    left: 40%;
+    left: 50%;
     width: 50rem;
   }
 
@@ -230,7 +230,6 @@
 
 @media screen and (min-width: 1440px) {
   .richtext--container .rich-text__text-inner {
-    left: 45%;
     width: 54.8rem;
   }
 
