@@ -25,11 +25,11 @@
           "settings": {
             "heading": "<strong>Stem Commerce is a full-service Shopify agency, with the vision to transform the way people do business online. A leading expert and preferred partner, we’ve been at the top of our game since Shopify’s inception and continue to expand our capabilities to better serve our clients. </strong>",
             "heading_size": "h0",
-            "secondary_color": "#60e5b5",
+            "secondary_color": "#00bc8f",
             "shrink_animate": false,
             "color_animate": true,
             "blur_heading": true,
-            "blur_strength": 5
+            "blur_strength": 8
           }
         },
         "text_nmGfTz": {
@@ -99,11 +99,11 @@
           "settings": {
             "heading": "<strong>We bring the right people together, building robust, responsive teams to design high-growth eCommerce stores. To us, every project is a partnership and we are committed to doing everything necessary to drive real results for your business in record-fast time.</strong>",
             "heading_size": "h0",
-            "secondary_color": "#60e5b5",
+            "secondary_color": "#00bc8f",
             "shrink_animate": false,
             "color_animate": true,
             "blur_heading": true,
-            "blur_strength": 5
+            "blur_strength": 8
           }
         },
         "text_t6JRjL": {
