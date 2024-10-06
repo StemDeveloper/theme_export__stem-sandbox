@@ -101,7 +101,7 @@
             "heading_size": "h0",
             "secondary_color": "#60e5b5",
             "shrink_animate": false,
-            "color_animate": false,
+            "color_animate": true,
             "blur_heading": true,
             "blur_strength": 5
           }
