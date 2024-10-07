@@ -32,6 +32,7 @@
   {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
 {% endif %}
 {% style %}
+  .announcement-bar-section,
   .announcement-bar-section .utility-bar:not(.utility-bar--mask),
   .announcement-bar-section .utility-bar:not(.utility-bar--mask) * {
     transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
@@ -40,9 +41,15 @@
     -ms-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
     -o-transition: color var(--duration-short) ease, background-color var(--duration-long) ease;
   }
+  .announcement-bar-section {
+    background-color: transparent;
+  }
+  .announcement-bar-section:hover {
+    background-color: rgb({{ scheme_hover_background.red }}, {{ scheme_hover_background.green }}, {{ scheme_hover_background.blue }});
+    background: {{ scheme_hover_background_gradient }};
+  }
   .announcement-bar-section:hover .utility-bar:not(.utility-bar--mask) {
-    --color-background: {{ scheme_hover_background.red }}, {{ scheme_hover_background.green }}, {{ scheme_hover_background.blue }};
-    --gradient-background: {{ scheme_hover_background_gradient }};
+    --gradient-background: transparent;
   }
   .announcement-bar-section:hover .utility-bar:not(.utility-bar--mask),
   .announcement-bar-section:hover .utility-bar:not(.utility-bar--mask) * {
@@ -80,10 +87,11 @@
       clip-path: circle(0 at 50% 100%);
     }
     .announcement-bar-section:hover .utility-bar--mask {
-      background-color: rgb(var(--color-background));
+      background-color: transparent;
     }
     .announcement-bar-section:hover .utility-bar--mask,
     .announcement-bar-section:hover .utility-bar--mask * {
+      --color-foreground: {{ scheme_hover_text.red }}, {{ scheme_hover_text.green }}, {{ scheme_hover_text.blue }};
       color: rgb(var(--color-foreground));
     }
   {% endstyle %}
