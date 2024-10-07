@@ -2801,6 +2801,12 @@
             "image": {
               "label": "Image"
             },
+            "image_link": {
+              "label": "Image link"
+            },
+            "link_open_new": {
+              "label": "Open Link in new window"
+            },
             "title": {
               "label": "Heading",
               "default": "Column"

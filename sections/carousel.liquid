@@ -67,7 +67,6 @@
     <carousel-component
       class="carousel-component"
       data-infinite-loop="{{ section.settings.infinite_loop }}"
-      data-mouse-entered="false"
       data-dragging="false"
     >
     <slider-component class="slider-mobile-gutter">
@@ -140,6 +139,7 @@
                       src="{{ block.settings.image | image_url: width: image_width_mobile }}" 
                       alt="{{ block.settings.image.alt }}"
                     >
+                    <a href="{{ block.settings.image_link }}"{% if block.settings.link_open_new %} target="_blank"{% endif %} class="b-block link--overlay"></a>
                   </div>
                 </div>
               {%- endif -%}
@@ -160,9 +160,7 @@
                     {% endif %}
                   >
                     {{- block.settings.link_label | escape -}}
-                    <span class="svg-wrapper"
-                      ><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span
-                    >
+                    <span class="svg-wrapper"><span class="icon-wrap">&nbsp;{{ 'icon-arrow.svg' | inline_asset_content }}</span></span>
                   </a>
                 {%- endif -%}
               </div>
@@ -508,6 +506,17 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.multicolumn.blocks.column.settings.image.label"
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "t:sections.multicolumn.blocks.column.settings.image_link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "link_open_new",
+          "label": "t:sections.multicolumn.blocks.column.settings.link_open_new.label",
+          "default": false
         },
         {
           "type": "inline_richtext",
