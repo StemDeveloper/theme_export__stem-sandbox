@@ -124,23 +124,44 @@ if(!customElements.get('richtext-tab')) {
         super();
         this.buttons = this.querySelectorAll('.js-tab-button');
         this.contents = this.querySelectorAll('.js-tab-content');
+        this.mediaDesktop = window.matchMedia('(min-width: 990px)')
       }
 
       connectedCallback() {
+        this.setupEvents(this.mediaDesktop);
+        this.mediaDesktop.addEventListener('change', () => {
+          this.setupEvents(this.mediaDesktop);
+        });
+      }
+
+      setupEvents(media) {
+        media.matches ? this.mouseEvent() : this.clickEvent();
+      }
+
+      mouseEvent() {
         this.buttons?.forEach((button) => {
           button.addEventListener('mouseenter', () => {
-            this.toggleAttribute(button);
-            this.toggleRelatedTabsAttribute(button);
-          });
-          button.addEventListener('click', () => {
             this.toggleAttribute(button);
             this.toggleRelatedTabsAttribute(button);
           });
         });
       }
 
+      clickEvent() {
+        this.buttons?.forEach((button) => {
+          button.addEventListener('click', () => {
+            if(button.dataset.tabActive === 'false' || button.dataset.tabActive === false) {
+              this.toggleAttribute(button);
+              this.toggleRelatedTabsAttribute(button);
+            } else {
+              button.dataset.tabActive = false;
+              this.querySelector(`#${button.dataset.tabTarget}`).dataset.tabActive = false;
+            };
+          });
+        });
+      }
+
       toggleAttribute(button) {
-        if(button.dataset.tabActive === 'true' || button.dataset.tabActive === true) return;
         this.buttons.forEach((button) => button.dataset.tabActive = false);
         this.contents.forEach((content) => content.dataset.tabActive = false);
         button.dataset.tabActive = true;
