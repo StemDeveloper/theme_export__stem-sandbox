@@ -12,9 +12,11 @@ if(!customElements.get('hero-arrow')) {
       }
 
       scrollTo() {
+        const scrollTo = parseInt(this.dataset.animationDelay);
+        if(scrollTo <= 0) return;
         const announcementHeight = getComputedStyle(this.closest('html')).getPropertyValue('--announcement-height')?.trim();
         const scrollExtra = announcementHeight && announcementHeight !== undefined && announcementHeight !== null && announcementHeight !== '' ? parseFloat(announcementHeight) : 0;
-        const scrollPosition = parseInt(this.dataset.animationDelay) > 0 ? parseInt(this.dataset.animationDelay) + scrollExtra : window.innerHeight / 2;
+        const scrollPosition = scrollTo > 0 ? scrollTo + scrollExtra : window.innerHeight / 2;
         window.scrollTo({
           top: scrollPosition,
           behavior: 'smooth'
