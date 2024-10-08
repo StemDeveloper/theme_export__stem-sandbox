@@ -22,14 +22,8 @@ if(!customElements.get('swiper-carousel-component')) {
           },
           loopAddBlankSlides: true,
           slidesPerView: "auto",
-          speed: this.loopSpeed,
-          grabCursor: true,
-          loopAdditionalSlides: 2,
-          breakpoints: {
-            990: {
-              speed: 1200
-            }
-          }
+          speed: 1350,
+          grabCursor: true
         });
       }
     }
