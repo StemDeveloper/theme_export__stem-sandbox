@@ -24,7 +24,12 @@ if(!customElements.get('swiper-carousel-component')) {
           slidesPerView: "auto",
           speed: this.loopSpeed,
           grabCursor: true,
-          loopAdditionalSlides: 2
+          loopAdditionalSlides: 2,
+          breakpoints: {
+            990: {
+              speed: 1200
+            }
+          }
         });
       }
     }
