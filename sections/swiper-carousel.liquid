@@ -58,6 +58,7 @@
             class="swiper-carousel-component"
             data-infinite-loop="{{ section.settings.infinite_loop }}"
             data-loop-speed="{{ section.settings.infinite_loop_speed }}"
+            data-loop-speed-mobile="{{ section.settings.infinite_loop_speed_mobile }}"
             data-slides-desktop="{{ section.settings.columns_desktop }}"
             data-slides-tablet="{{ section.settings.columns_tablet }}"
             data-slides-mobile="{{ section.settings.columns_mobile }}"
@@ -282,6 +283,26 @@
       "label": "t:sections.carousel.settings.infinite_loop_speed.label",
       "options": [
         {
+          "value": "5400",
+          "label": "t:sections.carousel.settings.infinite_loop_speed.options__1.label"
+        },
+        {
+          "value": "2700",
+          "label": "t:sections.carousel.settings.infinite_loop_speed.options__2.label"
+        },
+        {
+          "value": "1350",
+          "label": "t:sections.carousel.settings.infinite_loop_speed.options__3.label"
+        }
+      ],
+      "default": "5400"
+    },
+    {
+      "type": "select",
+      "id": "infinite_loop_speed_mobile",
+      "label": "t:sections.carousel.settings.infinite_loop_speed_mobile.label",
+      "options": [
+        {
           "value": "5000",
           "label": "t:sections.carousel.settings.infinite_loop_speed.options__1.label"
         },
@@ -294,7 +315,7 @@
           "label": "t:sections.carousel.settings.infinite_loop_speed.options__3.label"
         }
       ],
-      "default": "3600"
+      "default": "5000"
     },
     {
       "type": "select",

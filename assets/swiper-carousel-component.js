@@ -5,9 +5,13 @@ if(!customElements.get('swiper-carousel-component')) {
       constructor() {
         super();
         this.loopSpeed = parseInt(this.dataset.loopSpeed);
+        this.loopSpeedMobile = parseInt(this.dataset.loopSpeedMobile);
         this.slidesMobile = parseInt(this.dataset.slidesMobile);
         this.slidesTablet = parseInt(this.dataset.slidesTablet);
         this.slidesDesktop = parseInt(this.dataset.slidesDesktop);
+        this.matchMedia = window.matchMedia('(min-width: 990px)');
+        this.swiperSpeed = this.matchMedia.matches ? this.loopSpeed : this.loopSpeedMobile;
+        console.log(this.swiperSpeed);
         if(this.dataset.infiniteLoop === 'false') return;
         this.initSwiper();
       }
@@ -22,7 +26,7 @@ if(!customElements.get('swiper-carousel-component')) {
           },
           loopAddBlankSlides: true,
           slidesPerView: "auto",
-          speed: this.loopSpeed,
+          speed: this.swiperSpeed,
           grabCursor: true,
           loopAdditionalSlides: 2
         });

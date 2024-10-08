@@ -614,6 +614,9 @@
           "options__3": {
             "label": "Fast"
           }
+        },
+        "infinite_loop_speed_mobile": {
+          "label": "Infinite loop speed mobile"
         }
       },
       "blocks": {
