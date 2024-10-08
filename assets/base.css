@@ -4103,3 +4103,27 @@ details-disclosure > details {
   -ms-transition: transform 2s ease, color 1s ease;
   -o-transition: transform 2s ease, color 1s ease;
 }
+
+/* swiper carousel */
+.swiper-carousel-component .swiper-container-free-mode {
+  --grid-mobile-horizontal-spacing: 0px;
+  --grid-desktop-horizontal-spacing: 0px;
+}
+
+.carousel-component[data-infinite-loop="true"] .swiper-wrapper img,
+.carousel-component[data-infinite-loop="true"] .swiper-wrapper a[href] {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -ms-user-drag: none;
+}
+
+.swiper-carousel-component .swiper-container-free-mode > .swiper-wrapper {
+  transition-timing-function : linear;
+  flex-wrap: nowrap;
+}
+
+.swiper-carousel-component .swiper-slide {
+  flex-grow: 0;
+}
