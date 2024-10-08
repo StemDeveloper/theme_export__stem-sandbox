@@ -81,7 +81,7 @@
       }
     },
     "carousel_eyWXRG": {
-      "type": "carousel",
+      "type": "swiper-carousel",
       "blocks": {
         "column_9NtyRt": {
           "type": "column",
@@ -278,20 +278,14 @@
         "title_full_width": "device",
         "heading_size": "h1",
         "heading_alignment": "center",
-        "image_width": "full",
-        "image_ratio": "adapt",
         "columns_desktop": 6,
         "columns_tablet": 4,
         "full_width": "device",
         "infinite_loop": true,
         "column_alignment": "center",
         "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "slider_visual": "none",
         "color_scheme": "",
         "columns_mobile": 2,
-        "swipe_on_mobile": true,
         "padding_top": 48,
         "padding_bottom": 48
       }
