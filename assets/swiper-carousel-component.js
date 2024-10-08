@@ -22,8 +22,9 @@ if(!customElements.get('swiper-carousel-component')) {
           },
           loopAddBlankSlides: true,
           slidesPerView: "auto",
-          speed: 1350,
-          grabCursor: true
+          speed: this.loopSpeed,
+          grabCursor: true,
+          loopAdditionalSlides: 2
         });
       }
     }
