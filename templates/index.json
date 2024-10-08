@@ -316,7 +316,7 @@
         "columns_tablet": 4,
         "full_width": "device",
         "infinite_loop": true,
-        "infinite_loop_speed": "3000",
+        "infinite_loop_speed": "1000",
         "column_alignment": "center",
         "background_style": "none",
         "color_scheme": "",
