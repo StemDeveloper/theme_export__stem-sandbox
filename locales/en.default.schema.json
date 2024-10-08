@@ -602,6 +602,18 @@
         },
         "infinite_loop": {
           "label": "Infinite loop"
+        },
+        "infinite_loop_speed": {
+          "label": "Infinite loop speed",
+          "options__1": {
+            "label": "Slow"
+          },
+          "options__2": {
+            "label": "Normal"
+          },
+          "options__3": {
+            "label": "Fast"
+          }
         }
       },
       "blocks": {

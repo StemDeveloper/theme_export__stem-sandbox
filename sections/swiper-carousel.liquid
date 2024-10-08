@@ -57,6 +57,7 @@
           <swiper-carousel-component
             class="swiper-carousel-component"
             data-infinite-loop="{{ section.settings.infinite_loop }}"
+            data-loop-speed="{{ section.settings.infinite_loop_speed }}"
             data-slides-desktop="{{ section.settings.columns_desktop }}"
             data-slides-tablet="{{ section.settings.columns_tablet }}"
             data-slides-mobile="{{ section.settings.columns_mobile }}"
@@ -274,6 +275,26 @@
       "id": "infinite_loop",
       "label": "t:sections.carousel.settings.infinite_loop.label",
       "default": false
+    },
+    {
+      "type": "select",
+      "id": "infinite_loop_speed",
+      "label": "t:sections.carousel.settings.infinite_loop.label",
+      "options": [
+        {
+          "value": "5000",
+          "label": "t:sections.carousel.settings.infinite_loop_speed.options__1.label"
+        },
+        {
+          "value": "3000",
+          "label": "t:sections.carousel.settings.infinite_loop_speed.options__2.label"
+        },
+        {
+          "value": "1000",
+          "label": "t:sections.carousel.settings.infinite_loop_speed.options__3.label"
+        }
+      ],
+      "default": "3000"
     },
     {
       "type": "select",

@@ -4,12 +4,12 @@ if(!customElements.get('swiper-carousel-component')) {
     class CarouselComponent extends HTMLElement {
       constructor() {
         super();
+        this.loopSpeed = parseInt(this.dataset.loopSpeed);
         this.slidesMobile = parseInt(this.dataset.slidesMobile);
         this.slidesTablet = parseInt(this.dataset.slidesTablet);
         this.slidesDesktop = parseInt(this.dataset.slidesDesktop);
         if(this.dataset.infiniteLoop === 'false') return;
         this.initSwiper();
-        console.log(this);
       }
 
       initSwiper() {
@@ -22,7 +22,7 @@ if(!customElements.get('swiper-carousel-component')) {
           },
           loopAddBlankSlides: true,
           slidesPerView: "auto",
-          speed: 5000,
+          speed: this.loopSpeed,
           grabCursor: true,
           loopAdditionalSlides: 2
         });
