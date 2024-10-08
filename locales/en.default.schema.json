@@ -605,6 +605,9 @@
         },
         "infinite_loop_speed": {
           "label": "Infinite loop speed",
+          "options__0": {
+            "label": "Extra Slow"
+          },
           "options__1": {
             "label": "Slow"
           },
@@ -613,6 +616,12 @@
           },
           "options__3": {
             "label": "Fast"
+          },
+          "options__4": {
+            "label": "Extra Fast"
+          },
+          "options__5": {
+            "label": "Extra Extra Fast"
           }
         }
       },
