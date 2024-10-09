@@ -6,9 +6,11 @@ if(!customElements.get('hero-arrow')) {
         super();
         this.startTime = null;
         this.isAnimating = false;
+        this.animatePulseOnLoad = true;
+        this.heroParent = this.closest('.shopify-section');
         this.handleScroll = this.startAnimation.bind(this);
         this.addEventListener('click', this.scrollTo.bind(this));
-        window.addEventListener('scroll', this.handleScroll);
+        this.handleScroll();
       }
 
       scrollTo() {
@@ -30,20 +32,25 @@ if(!customElements.get('hero-arrow')) {
         const runAnimation = (timestamp) => {
           const elapsedTime = timestamp - this.startTime;
           const scrolledPx = window.scrollY;
-          const heroParent = this.closest('.shopify-section');
+
+          if(this.animatePulseOnLoad) {
+            this.heroParent.classList.add('hero-arrow-loaded');
+          }
 
           if(scrolledPx > parseInt(this.dataset.animationDelay)) {
-            if(!heroParent.classList.contains('remove-hero-arrow')) heroParent.classList.add('remove-hero-arrow');
+            if(!this.heroParent.classList.contains('remove-hero-arrow') && !this.heroParent.classList.contains('hero-arrow-loaded')) {
+              this.heroParent.classList.add('remove-hero-arrow');
+            };
           } else {
-            if(heroParent.classList.contains('remove-hero-arrow')) heroParent.classList.remove('remove-hero-arrow');
+            if(this.heroParent.classList.contains('remove-hero-arrow')) this.heroParent.classList.remove('remove-hero-arrow');
+          }
+
+          if(elapsedTime > 2000) {
+            this.animatePulseOnLoad = false;
+            this.heroParent.classList.remove('hero-arrow-loaded');
           }
           
-          if (elapsedTime < 1000) {
-            requestAnimationFrame(runAnimation);
-          } else {
-            this.isAnimating = false;
-            this.startTime = null;
-          }
+          requestAnimationFrame(runAnimation);
         };
       
         requestAnimationFrame(runAnimation);
