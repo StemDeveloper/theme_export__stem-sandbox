@@ -124,25 +124,13 @@ if(!customElements.get('richtext-tab')) {
         super();
         this.buttons = this.querySelectorAll('.js-tab-button');
         this.contents = this.querySelectorAll('.js-tab-content');
-        this.mediaDesktop = window.matchMedia('(min-width: 990px)')
-      }
-
-      connectedCallback() {
-        this.setupEvents(this.mediaDesktop);
-        this.mediaDesktop.addEventListener('change', () => {
-          this.setupEvents(this.mediaDesktop);
-        });
-      }
-
-      setupEvents(media) {
-        media.matches ? this.mouseEvent() : this.clickEvent();
+        this.dataset.eventType === 'hover' ? this.mouseEvent() : this.clickEvent();
       }
 
       mouseEvent() {
         this.buttons?.forEach((button) => {
           button.addEventListener('mouseenter', () => {
             this.toggleAttribute(button);
-            this.toggleRelatedTabsAttribute(button);
           });
         });
       }
@@ -152,7 +140,6 @@ if(!customElements.get('richtext-tab')) {
           button.addEventListener('click', () => {
             if(button.dataset.tabActive === 'false' || button.dataset.tabActive === false) {
               this.toggleAttribute(button);
-              this.toggleRelatedTabsAttribute(button);
             } else {
               button.dataset.tabActive = false;
               this.querySelector(`#${button.dataset.tabTarget}`).dataset.tabActive = false;
@@ -166,19 +153,6 @@ if(!customElements.get('richtext-tab')) {
         this.contents.forEach((content) => content.dataset.tabActive = false);
         button.dataset.tabActive = true;
         this.querySelector(`#${button.dataset.tabTarget}`).dataset.tabActive = true;
-      }
-
-      toggleRelatedTabsAttribute(button) {
-        const relatedTabs = Array.from(document.querySelectorAll('richtext-tab')).filter(item => item.dataset.section === this.dataset.section && item != this);
-        if(relatedTabs.length === 0) return;
-        relatedTabs.forEach((richtextTab) => {
-          const richtextTabButtons = Array.from(richtextTab.querySelectorAll('.js-tab-button'));
-          const richtextTabContents = Array.from(richtextTab.querySelectorAll('.js-tab-content'));
-          richtextTabButtons.forEach((button) => button.dataset.tabActive = false);
-          richtextTabContents.forEach((content) => content.dataset.tabActive = false);
-          richtextTabButtons.find(item => item.dataset.tabTarget === button.dataset.tabTarget).dataset.tabActive = true;
-          richtextTab.querySelector(`#${button.dataset.tabTarget}`).dataset.tabActive = true;
-        })
       }
     }
   )

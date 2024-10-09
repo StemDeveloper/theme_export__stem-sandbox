@@ -108,6 +108,7 @@
                   {% assign bullet_list = block.settings.text | remove: '<ul>' | remove: '</ul>' | remove: '<li>' | split: '</li>' %}
                   <div class="rich-text__text-tab{% if block.settings.icon_text_below %} small-hide{% endif %}">
                     <richtext-tab 
+                      data-event-type="hover"
                       data-section="section-{{ section.id }}-{{ block.id }}"
                       class="richtext-tab d-block small-hide medium-hide"
                     >
@@ -158,6 +159,7 @@
                       </div>
                     </richtext-tab>
                     <richtext-tab 
+                      data-event-type="click"
                       data-section="section-{{ section.id }}-{{ block.id }}"
                       class="richtext-tab d-block large-up-hide"
                     >
@@ -263,8 +265,9 @@
                   }
                 {% endstyle %}
                 {% assign bullet_list = block.settings.text | remove: '<ul>' | remove: '</ul>' | remove: '<li>' | split: '</li>' %}
-                <div class="rich-text__icon-list-mobile medium-hide large-up-hide" style="margin-top: {{ section.settings.padding_bottom | times: 0.75 | round: 0 | times: 2 }}px;">
+                <div class="rich-text__icon-list-mobile color-{{ block.settings.color_scheme }} gradient medium-hide large-up-hide" style="margin-top: {{ section.settings.padding_bottom | times: 0.75 | round: 0 | times: 2 }}px;">
                   <richtext-tab 
+                    data-event-type="click"
                     data-section="section-{{ section.id }}-{{ block.id }}"
                     class="richtext-tab d-block large-up-hide"
                   >
