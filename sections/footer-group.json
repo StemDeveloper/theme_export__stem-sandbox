@@ -43,7 +43,7 @@
         "content_alignment": "left",
         "color_scheme": "scheme-4",
         "full_width": "device",
-        "full_width_heading": "container",
+        "full_width_heading": "device-space",
         "padding_top": 100,
         "padding_bottom": 100,
         "padding_top_mobile": 150,
