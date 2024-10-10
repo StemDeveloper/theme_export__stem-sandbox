@@ -88,7 +88,9 @@
         "hero_arrow": true,
         "full_width": true,
         "padding_top": 0,
-        "padding_bottom": 100
+        "padding_bottom": 100,
+        "padding_top_mobile": 36,
+        "padding_bottom_mobile": 36
       }
     },
     "rich_text_xcewFY": {
@@ -133,11 +135,13 @@
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
-        "color_scheme": "scheme-837da333-4ae4-4495-8fbf-02d804c2e4ef",
+        "color_scheme": "scheme-4",
         "hero_arrow": false,
         "full_width": true,
         "padding_top": 0,
-        "padding_bottom": 100
+        "padding_bottom": 100,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 150
       }
     }
   },
