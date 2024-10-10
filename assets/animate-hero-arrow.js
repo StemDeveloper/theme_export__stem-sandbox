@@ -6,9 +6,11 @@ if(!customElements.get('hero-arrow')) {
         super();
         this.startTime = null;
         this.isAnimating = false;
+        this.isUserScrolled = false;
         this.animatePulseOnLoad = true;
         this.heroParent = this.closest('.shopify-section');
         this.handleScroll = this.startAnimation.bind(this);
+        window.addEventListener('scroll', () => this.isUserScrolled = true);
         this.addEventListener('click', this.scrollTo.bind(this));
         this.handleScroll();
       }
@@ -45,7 +47,7 @@ if(!customElements.get('hero-arrow')) {
             if(this.heroParent.classList.contains('remove-hero-arrow')) this.heroParent.classList.remove('remove-hero-arrow');
           }
 
-          if(elapsedTime > 2000) {
+          if(this.isUserScrolled) {
             this.animatePulseOnLoad = false;
             this.heroParent.classList.remove('hero-arrow-loaded');
           }

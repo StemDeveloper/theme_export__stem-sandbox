@@ -4046,11 +4046,11 @@ details-disclosure > details {
   }
 
   50% {
-    transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
   }
 
   100% {
@@ -4116,8 +4116,8 @@ details-disclosure > details {
 }
 
 .shopify-section.hero-arrow-loaded .hero-arrow {
-  animation: pulse 1.5s linear forwards;
-  -webkit-animation: pulse 1.5s linear forwards;
+  animation: pulse 2s linear infinite;
+  -webkit-animation: pulse 2s linear infinite;
 }
 
 .shopify-section.remove-hero-arrow .hero-arrow {
