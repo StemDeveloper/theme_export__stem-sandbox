@@ -572,3 +572,10 @@
     height: 3rem;
   }
 }
+
+@media screen and (max-width: 749px) {
+  .richtext-tab .tab-accordion--item .tab-button[data-tab-active="true"],
+  .richtext-tab .tab-accordion--item .tab-content--inner {
+    color: rgba(var(--color-secondary-button-text),1);
+  }
+}
