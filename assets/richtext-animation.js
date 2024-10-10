@@ -48,7 +48,7 @@ if(!customElements.get('richtext-animation')) {
       
             if (parentTopPosition < 0) {
               const windowMedia = window.matchMedia('(min-width: 990px)');
-              const windowLaptopMedia = window.matchMedia('(min-width: 990px) and (max-width: 1279px)');
+              const windowLaptopMedia = window.matchMedia('(min-width: 990px) and (max-width: 1440px)');
               const windowTabletMedia = window.matchMedia('(min-width: 750px) and (max-width: 989px)');
               const windowMobileMedia = window.matchMedia('(max-width: 749px)');
               const parentTopPositionValue = Math.abs(parentTopPosition);
