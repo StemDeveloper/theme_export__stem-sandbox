@@ -14,8 +14,8 @@
     --richtext-animation-blocks: {{ animate_blocks }};
   }
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -265,7 +265,7 @@
                   }
                 {% endstyle %}
                 {% assign bullet_list = block.settings.text | remove: '<ul>' | remove: '</ul>' | remove: '<li>' | split: '</li>' %}
-                <div class="rich-text__icon-list-mobile color-{{ block.settings.color_scheme }} gradient medium-hide large-up-hide" style="margin-top: {{ section.settings.padding_bottom | times: 0.75 | round: 0 | times: 2 }}px;">
+                <div class="rich-text__icon-list-mobile color-{{ block.settings.color_scheme }} gradient medium-hide large-up-hide" style="margin-top: {{ section.settings.padding_bottom_mobile | times: 2 }}px;">
                   <richtext-tab 
                     data-event-type="click"
                     data-section="section-{{ section.id }}-{{ block.id }}"
@@ -417,6 +417,26 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 36
     }
   ],
   "blocks": [

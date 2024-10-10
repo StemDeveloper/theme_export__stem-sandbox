@@ -5,8 +5,8 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-top: {{ section.settings.padding_top_mobile }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -41,6 +41,8 @@
   case section.settings.full_width_heading
     when 'device'
       assign page_width_class_heading = 'page-width--full'
+    when 'device-space'
+      assign page_width_class_heading = 'page-width page-width--full-spaces'
   endcase
 %}
 <animate-input-underline class="animate-input-underline d-block section-{{ section.id }}-padding{% unless settings.enable_footer_mask %} gradient{% endunless %} content-container">
@@ -55,7 +57,7 @@
               {% render block %}
             {%- when 'heading' -%}
               <h2
-                class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="inline-richtext newsletter__heading {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -260,6 +262,10 @@
         {
           "value": "device",
           "label": "t:sections.carousel.settings.full_width.options__3.label"
+        },
+        {
+          "value": "device-space",
+          "label": "t:sections.carousel.settings.full_width.options__4.label"
         }
       ],
       "default": "none"
@@ -291,6 +297,26 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 36
     }
   ],
   "blocks": [

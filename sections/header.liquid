@@ -89,12 +89,19 @@
 
 {%- style -%}
   .header {
-    padding: {{ section.settings.padding_top }}px 3rem {{ section.settings.padding_bottom }}px 3rem;
+    padding: {{ section.settings.padding_top_mobile }}px 1.8rem {{ section.settings.padding_bottom_mobile }}px 1.8rem;
   }
 
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 989px) {
+    .header {
+      padding-left: 3.6rem;
+      padding-right: 3.6rem;
+    }
   }
 
   @media screen and (min-width: 990px) {
@@ -157,9 +164,6 @@
       .section-header .header--menu-right header-drawer {
         grid-area: menu;
         justify-self: end;
-      }
-      .section-header .header--menu-right header-drawer .header__icon--menu {
-        width: auto;
       }
     {% endif %}
   }
@@ -761,6 +765,26 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top_mobile",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom_mobile",
+      "default": 8
     }
   ],
   "blocks": [

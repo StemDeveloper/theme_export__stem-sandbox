@@ -41,6 +41,16 @@
   }
 }
 
+@media screen and (max-width: 989px) {
+  .rich-text__wrapper {
+    width: 100%;
+  }
+  
+  .rich-text:not(.rich-text--full-width) .rich-text__wrapper {
+    width: 100%;
+  }
+}
+
 .rich-text__blocks * {
   overflow-wrap: break-word;
 }

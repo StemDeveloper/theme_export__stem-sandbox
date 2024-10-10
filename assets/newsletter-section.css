@@ -71,3 +71,23 @@
     max-width: 81rem;
   }
 }
+
+@media screen and (max-width: 989px) {
+  .newsletter .rich-text__blocks > * + * {
+    margin-top: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .newsletter .rich-text__blocks > * + * {
+    margin-top: 0;
+  }
+
+  .newsletter .newsletter-form {
+    padding-right: 3.6rem;
+  }
+}
+
+.newsletter__heading {
+  color: rgb(var(--color-secondary-button-text));
+}
