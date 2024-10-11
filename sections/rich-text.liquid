@@ -4,15 +4,31 @@
 {% liquid
   assign animate_blocks = 0
   for block in section.blocks
-    if block.type == 'text'
+    if block.type == 'text' and block.settings.animate_circle
       assign animate_blocks = animate_blocks | plus: 1
     endif
   endfor
 %}
 {%- style -%}
-  #shopify-section-{{ section.id }} {
-    --richtext-animation-blocks: {{ animate_blocks }};
-  }
+  {% if animate_blocks > 0 %}
+    #shopify-section-{{ section.id }} {
+      --richtext-animation-blocks: {{ animate_blocks }};
+      min-height: calc((var(--richtext-animation-height, 100vh) * (var(--richtext-animation-blocks, 0) + 1)) + var(--animation-extra, 0px));
+    }
+
+    #shopify-section-{{ section.id }} .richtext--container {
+      position: sticky;
+      top: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      min-height: var(--richtext-animation-height, 100vh);
+    }
+
+    #shopify-section-{{ section.id }} .richtext--container > * {
+      flex-grow: 1;
+    }
+  {% endif %}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top_mobile }}px;
     padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
@@ -30,134 +46,244 @@
   class="richtext--container"
   data-animate-start-px="0"
 >
-<div class="{% unless animate_blocks > 0 %} isolate{% endunless %}{% unless section.settings.full_width %} page-width{% endunless %}">
-  <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
-    <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
-      <div class="rich-text__blocks {{ section.settings.content_alignment }}">
-        {%- for block in section.blocks -%}
-          {%- case block.type -%}
-            {%- when 'heading' -%}
-              <h2
-                class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}
-                  {% if block.settings.color_animate %} rich-text__heading-animate{% endif %}
-                  {% if block.settings.blur_heading %} rich-text__heading-animate-blur{% endif %}
-                  {% if block.settings.shrink_animate %} rich-text__heading-animate-span{% endif %}
-                  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
-                "
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-                data-blur-strength="{{ block.settings.blur_strength }}"
-                style="--color-foreground-secondary: {{ block.settings.secondary_color.red }}, {{ block.settings.secondary_color.green }}, {{ block.settings.secondary_color.blue }}; --heading-blur-strength: 0px;"
-              >
-                {{ block.settings.heading | newline_to_br }}
-              </h2>
-            {%- when 'caption' -%}
-              <p
-                class="rich-text__caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {{ block.settings.caption | escape }}
-              </p>
-            {%- when 'text' -%}
-              {% liquid
-                assign icon_description = false
-                assign icon_description_bulletpoints = false
-                for i in (1..5)
-                  assign icon = 'icon_' | append: i
-                  assign icon_description = 'icon_description_' | append: i
-                  if block.settings[icon] != blank and block.settings[icon_description] != blank
-                    assign icon_description = true
+  <div class="{% unless animate_blocks > 0 %} isolate{% endunless %}{% unless section.settings.full_width %} page-width{% endunless %}">
+    <div class="rich-text{% unless animate_blocks > 0 %} content-container{% endunless %} color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
+      <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
+        <div class="rich-text__blocks {{ section.settings.content_alignment }}">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'heading' -%}
+                <h2
+                  class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}
+                    {% if block.settings.color_animate %} rich-text__heading-animate{% endif %}
+                    {% if block.settings.blur_heading %} rich-text__heading-animate-blur{% endif %}
+                    {% if block.settings.shrink_animate %} rich-text__heading-animate-span{% endif %}
+                    {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
+                  "
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                  data-blur-strength="{{ block.settings.blur_strength }}"
+                  style="--color-foreground-secondary: {{ block.settings.secondary_color.red }}, {{ block.settings.secondary_color.green }}, {{ block.settings.secondary_color.blue }}; --heading-blur-strength: 0px;"
+                >
+                  {{ block.settings.heading | newline_to_br }}
+                </h2>
+              {%- when 'caption' -%}
+                <p
+                  class="rich-text__caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {{ block.settings.caption | escape }}
+                </p>
+              {%- when 'text' -%}
+                {% liquid
+                  assign icon_description = false
+                  assign icon_description_bulletpoints = false
+                  for i in (1..5)
+                    assign icon = 'icon_' | append: i
+                    assign icon_description = 'icon_description_' | append: i
+                    if block.settings[icon] != blank and block.settings[icon_description] != blank
+                      assign icon_description = true
+                    endif
+                  endfor
+                  if block.settings.text != blank and block.settings.text contains '<ul>' and icon_description
+                    assign icon_description_bulletpoints = true
                   endif
-                endfor
-                if block.settings.text != blank and block.settings.text contains '<ul>' and icon_description
-                  assign icon_description_bulletpoints = true
-                endif
-              %}
-              <div
-                class="rich-text__text color-{{ block.settings.color_scheme }} gradient rte
-                  {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
-                  {% if icon_description_bulletpoints and block.settings.icon_text_below %} small-hide{% endif %}
-                "
-                {{ block.shopify_attributes }}
-                data-animation="PopInCircle"
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {% unless icon_description_bulletpoints %}
-                  <div class="rich-text__text-inner">
-                    <div class="rich-text__text-box">
-                      {{ block.settings.text }}
-                    </div>
-                    {% if block.settings.text_arrow %}
-                      <div class="rich-text__arrow">
-                        {{- 'icon-richtext-arrow.svg' | inline_asset_content -}}
+                %}
+                <div
+                  class="rich-text__text color-{{ block.settings.color_scheme }} gradient rte
+                    {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}
+                    {% if icon_description_bulletpoints and block.settings.icon_text_below %} small-hide{% endif %}
+                  "
+                  {{ block.shopify_attributes }}
+                  {% if block.settings.animate_circle %}
+                    data-animation="PopInCircle"
+                  {% endif %}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {% unless icon_description_bulletpoints %}
+                    <div class="rich-text__text-inner">
+                      <div class="rich-text__text-box">
+                        {{ block.settings.text }}
                       </div>
-                    {% endif %}
-                  </div>
-                {% endunless %}
-                {% if icon_description_bulletpoints %}
-                  {% assign bullet_list = block.settings.text | remove: '<ul>' | remove: '</ul>' | remove: '<li>' | split: '</li>' %}
-                  <div class="rich-text__text-tab{% if block.settings.icon_text_below %} small-hide{% endif %}">
-                    <richtext-tab 
-                      data-event-type="hover"
-                      data-section="section-{{ section.id }}-{{ block.id }}"
-                      class="richtext-tab d-block small-hide medium-hide"
-                    >
-                      <div class="richtext-tab--container">
-                        <div class="tab-button--list">
-                          {% for bullet in bullet_list %}
-                            {% liquid
-                              assign icon = 'icon_' | append: forloop.index
-                              assign icon_description = 'icon_description_' | append: forloop.index
-                            %}
-                            {% if block.settings[icon_description] != blank and block.settings[icon] != blank %}
-                              <button 
-                                class="tab-button js-tab-button{% if block.settings[icon] != blank %} tab-button--icon{% endif %}"
-                                data-tab-target="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}"
-                                data-tab-active="{{ forloop.first }}"
-                              >
-                                {% if block.settings[icon] != blank %}
-                                  <div class="icon-wrapper">
-                                    <img src="{{ block.settings[icon] | image_url: width: block.settings[icon].width }}" alt="{{ block.settings[icon].alt }}">
-                                  </div>
-                                {% endif %}
-                                {% if bullet != blank %}
-                                  <span>{{ bullet }}</span>
-                                {% endif %}
-                              </button>
-                            {% endif %}
-                          {% endfor %}
+                      {% if block.settings.text_arrow %}
+                        <div class="rich-text__arrow">
+                          {{- 'icon-richtext-arrow.svg' | inline_asset_content -}}
                         </div>
-                        <div class="tab-content--list">
+                      {% endif %}
+                    </div>
+                  {% endunless %}
+                  {% if icon_description_bulletpoints %}
+                    {% assign bullet_list = block.settings.text | remove: '<ul>' | remove: '</ul>' | remove: '<li>' | split: '</li>' %}
+                    <div class="rich-text__text-tab{% if block.settings.icon_text_below %} small-hide{% endif %}">
+                      <richtext-tab 
+                        data-event-type="hover"
+                        data-section="section-{{ section.id }}-{{ block.id }}"
+                        class="richtext-tab d-block small-hide medium-hide"
+                      >
+                        <div class="richtext-tab--container">
+                          <div class="tab-button--list">
+                            {% for bullet in bullet_list %}
+                              {% liquid
+                                assign icon = 'icon_' | append: forloop.index
+                                assign icon_description = 'icon_description_' | append: forloop.index
+                              %}
+                              {% if block.settings[icon_description] != blank and block.settings[icon] != blank %}
+                                <button 
+                                  class="tab-button js-tab-button{% if block.settings[icon] != blank %} tab-button--icon{% endif %}"
+                                  data-tab-target="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}"
+                                  data-tab-active="{{ forloop.first }}"
+                                >
+                                  {% if block.settings[icon] != blank %}
+                                    <div class="icon-wrapper">
+                                      <img src="{{ block.settings[icon] | image_url: width: block.settings[icon].width }}" alt="{{ block.settings[icon].alt }}">
+                                    </div>
+                                  {% endif %}
+                                  {% if bullet != blank %}
+                                    <span>{{ bullet }}</span>
+                                  {% endif %}
+                                </button>
+                              {% endif %}
+                            {% endfor %}
+                          </div>
+                          <div class="tab-content--list">
+                            {% for bullet in bullet_list %}
+                              {% liquid
+                                assign icon = 'icon_' | append: forloop.index
+                                assign icon_description = 'icon_description_' | append: forloop.index
+                              %}
+                              {% if block.settings[icon_description] != blank and block.settings[icon] != blank %}
+                                <div 
+                                  id="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" 
+                                  data-tab-active="{{ forloop.first }}"
+                                  class="tab-content js-tab-content"
+                                >
+                                  <div class="tab-content--inner rte">
+                                    {{ block.settings[icon_description] }}
+                                  </div>
+                                </div>
+                              {% endif %}
+                            {% endfor %}
+                          </div>
+                        </div>
+                      </richtext-tab>
+                      <richtext-tab 
+                        data-event-type="click"
+                        data-section="section-{{ section.id }}-{{ block.id }}"
+                        class="richtext-tab d-block large-up-hide"
+                      >
+                        <div class="tab-accordion--list">
                           {% for bullet in bullet_list %}
                             {% liquid
                               assign icon = 'icon_' | append: forloop.index
                               assign icon_description = 'icon_description_' | append: forloop.index
                             %}
                             {% if block.settings[icon_description] != blank and block.settings[icon] != blank %}
-                              <div 
-                                id="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" 
-                                data-tab-active="{{ forloop.first }}"
-                                class="tab-content js-tab-content"
-                              >
-                                <div class="tab-content--inner rte">
-                                  {{ block.settings[icon_description] }}
+                              <div class="tab-accordion--item">
+                                <button 
+                                  class="tab-button js-tab-button{% if block.settings[icon] != 'none' %} tab-button--icon{% endif %}"
+                                  data-tab-target="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}"
+                                  data-tab-active="{{ forloop.first }}"
+                                >
+                                  {% if block.settings[icon] != 'none' %}
+                                    <div class="icon-wrapper">
+                                      <img src="{{ block.settings[icon] | image_url: width: block.settings[icon].width }}" alt="{{ block.settings[icon].alt }}">
+                                    </div>
+                                  {% endif %}
+                                  {% if bullet != blank %}
+                                    <span>{{ bullet }}</span>
+                                  {% endif %}
+                                  <span class="tab-accordion--icon"></span>
+                                </button>
+                                <div 
+                                  id="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" 
+                                  data-tab-active="{{ forloop.first }}"
+                                  class="tab-content js-tab-content"
+                                >
+                                  <div class="tab-content--inner rte">
+                                    {{ block.settings[icon_description] }}
+                                  </div>
                                 </div>
                               </div>
                             {% endif %}
                           {% endfor %}
                         </div>
-                      </div>
-                    </richtext-tab>
+                      </richtext-tab>
+                    </div>
+                  {% endif %}
+                </div>
+              {%- when 'button' -%}
+                <div
+                  class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  {{ block.shopify_attributes }}
+                  {% if settings.animations_reveal_on_scroll %}
+                    data-cascade
+                    style="--animation-order: {{ forloop.index }};"
+                  {% endif %}
+                >
+                  {%- if block.settings.button_label != blank -%}
+                    <a
+                      {% if block.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link }}"
+                      {% endif %}
+                      class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                    >
+                      {{- block.settings.button_label | escape -}}
+                    </a>
+                  {%- endif -%}
+                  {%- if block.settings.button_label_2 != blank -%}
+                    <a
+                      {% if block.settings.button_link_2 == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link_2 }}"
+                      {% endif %}
+                      class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                    >
+                      {{- block.settings.button_label_2 | escape -}}
+                    </a>
+                  {%- endif -%}
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'text' %}
+                {% liquid
+                  assign icon_description = false
+                  assign icon_description_bulletpoints = false
+                  for i in (1..5)
+                    assign icon = 'icon_' | append: i
+                    assign icon_description = 'icon_description_' | append: i
+                    if block.settings[icon] != blank and block.settings[icon_description] != blank
+                      assign icon_description = true
+                    endif
+                  endfor
+                  if block.settings.text != blank and block.settings.text contains '<ul>' and icon_description
+                    assign icon_description_bulletpoints = true
+                  endif
+                %}
+                {% if icon_description_bulletpoints and block.settings.icon_text_below %}
+                  {% style %}
+                    @media screen and (max-width: 749px) {
+                      #shopify-section-{{ section.id }} {
+                        --richtext-animation-blocks: {{ animate_blocks | minus: 1 }};
+                      }
+                    }
+                  {% endstyle %}
+                  {% assign bullet_list = block.settings.text | remove: '<ul>' | remove: '</ul>' | remove: '<li>' | split: '</li>' %}
+                  <div class="rich-text__icon-list-mobile color-{{ block.settings.color_scheme }} gradient medium-hide large-up-hide" style="margin-top: {{ section.settings.padding_bottom_mobile | times: 2 }}px;">
                     <richtext-tab 
                       data-event-type="click"
                       data-section="section-{{ section.id }}-{{ block.id }}"
@@ -174,7 +300,7 @@
                               <button 
                                 class="tab-button js-tab-button{% if block.settings[icon] != 'none' %} tab-button--icon{% endif %}"
                                 data-tab-target="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}"
-                                data-tab-active="{{ forloop.first }}"
+                                data-tab-active="false"
                               >
                                 {% if block.settings[icon] != 'none' %}
                                   <div class="icon-wrapper">
@@ -188,7 +314,7 @@
                               </button>
                               <div 
                                 id="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" 
-                                data-tab-active="{{ forloop.first }}"
+                                data-tab-active="false"
                                 class="tab-content js-tab-content"
                               >
                                 <div class="tab-content--inner rte">
@@ -202,128 +328,20 @@
                     </richtext-tab>
                   </div>
                 {% endif %}
-              </div>
-            {%- when 'button' -%}
-              <div
-                class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {%- if block.settings.button_label != blank -%}
-                  <a
-                    {% if block.settings.button_link == blank %}
-                      role="link" aria-disabled="true"
-                    {% else %}
-                      href="{{ block.settings.button_link }}"
-                    {% endif %}
-                    class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
-                  >
-                    {{- block.settings.button_label | escape -}}
-                  </a>
-                {%- endif -%}
-                {%- if block.settings.button_label_2 != blank -%}
-                  <a
-                    {% if block.settings.button_link_2 == blank %}
-                      role="link" aria-disabled="true"
-                    {% else %}
-                      href="{{ block.settings.button_link_2 }}"
-                    {% endif %}
-                    class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
-                  >
-                    {{- block.settings.button_label_2 | escape -}}
-                  </a>
-                {%- endif -%}
-              </div>
-          {%- endcase -%}
-        {%- endfor -%}
-        {% for block in section.blocks %}
-          {% case block.type %}
-            {% when 'text' %}
-              {% liquid
-                assign icon_description = false
-                assign icon_description_bulletpoints = false
-                for i in (1..5)
-                  assign icon = 'icon_' | append: i
-                  assign icon_description = 'icon_description_' | append: i
-                  if block.settings[icon] != blank and block.settings[icon_description] != blank
-                    assign icon_description = true
-                  endif
-                endfor
-                if block.settings.text != blank and block.settings.text contains '<ul>' and icon_description
-                  assign icon_description_bulletpoints = true
-                endif
-              %}
-              {% if icon_description_bulletpoints and block.settings.icon_text_below %}
-                {% style %}
-                  @media screen and (max-width: 749px) {
-                    #shopify-section-{{ section.id }} {
-                      --richtext-animation-blocks: {{ animate_blocks | minus: 1 }};
-                    }
-                  }
-                {% endstyle %}
-                {% assign bullet_list = block.settings.text | remove: '<ul>' | remove: '</ul>' | remove: '<li>' | split: '</li>' %}
-                <div class="rich-text__icon-list-mobile color-{{ block.settings.color_scheme }} gradient medium-hide large-up-hide" style="margin-top: {{ section.settings.padding_bottom_mobile | times: 2 }}px;">
-                  <richtext-tab 
-                    data-event-type="click"
-                    data-section="section-{{ section.id }}-{{ block.id }}"
-                    class="richtext-tab d-block large-up-hide"
-                  >
-                    <div class="tab-accordion--list">
-                      {% for bullet in bullet_list %}
-                        {% liquid
-                          assign icon = 'icon_' | append: forloop.index
-                          assign icon_description = 'icon_description_' | append: forloop.index
-                        %}
-                        {% if block.settings[icon_description] != blank and block.settings[icon] != blank %}
-                          <div class="tab-accordion--item">
-                            <button 
-                              class="tab-button js-tab-button{% if block.settings[icon] != 'none' %} tab-button--icon{% endif %}"
-                              data-tab-target="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}"
-                              data-tab-active="false"
-                            >
-                              {% if block.settings[icon] != 'none' %}
-                                <div class="icon-wrapper">
-                                  <img src="{{ block.settings[icon] | image_url: width: block.settings[icon].width }}" alt="{{ block.settings[icon].alt }}">
-                                </div>
-                              {% endif %}
-                              {% if bullet != blank %}
-                                <span>{{ bullet }}</span>
-                              {% endif %}
-                              <span class="tab-accordion--icon"></span>
-                            </button>
-                            <div 
-                              id="richtext-tab-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" 
-                              data-tab-active="false"
-                              class="tab-content js-tab-content"
-                            >
-                              <div class="tab-content--inner rte">
-                                {{ block.settings[icon_description] }}
-                              </div>
-                            </div>
-                          </div>
-                        {% endif %}
-                      {% endfor %}
-                    </div>
-                  </richtext-tab>
-                </div>
-              {% endif %}
-          {% endcase %}
-        {% endfor %}
+            {% endcase %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
-</div>
-{% if section.settings.hero_arrow %}
-  <hero-arrow 
-    class="hero-arrow"
-    data-animation-delay="0"
-  >
-    {{- 'icon-hero-arrow.svg' | inline_asset_content -}}
-  </hero-arrow>
-{% endif %}
+  {% if section.settings.hero_arrow %}
+    <hero-arrow 
+      class="hero-arrow"
+      data-animation-delay="0"
+    >
+      {{- 'icon-hero-arrow.svg' | inline_asset_content -}}
+    </hero-arrow>
+  {% endif %}
 </richtext-animation>
 
 {% schema %}
@@ -586,6 +604,12 @@
       "name": "t:sections.rich-text.blocks.text.name",
       "limit": 3,
       "settings": [
+        {
+          "type": "checkbox",
+          "id": "animate_circle",
+          "label": "t:sections.rich-text.blocks.text.settings.animate_circle.label",
+          "default": true
+        },
         {
           "type": "richtext",
           "id": "text",

@@ -63,6 +63,16 @@
   text-decoration: none;
 }
 
+.contact__forms .contact__button {
+  margin-left: 1.8rem;
+}
+
+@media screen and (min-width: 750px) {
+  .contact__forms .contact__button {
+    margin-left: 3.6rem;
+  }
+}
+
 @media screen and (min-width: 990px) {
   .contact__forms .contact__fields .field:nth-child(2) .field__input {
     padding-left: 0;
@@ -70,6 +80,16 @@
 
   .contact__forms .left .contact__fields .field:nth-child(2) .field__label {
     left: 0;
+  }
+
+  .contact__forms .contact__button {
+    margin-left: 5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .contact__forms .contact__button {
+    margin-left: 11rem;
   }
 }
 

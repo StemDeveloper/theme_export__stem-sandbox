@@ -11,7 +11,6 @@ if(!customElements.get('swiper-carousel-component')) {
         this.slidesDesktop = parseInt(this.dataset.slidesDesktop);
         this.matchMedia = window.matchMedia('(min-width: 990px)');
         this.swiperSpeed = this.matchMedia.matches ? this.loopSpeed : this.loopSpeedMobile;
-        console.log(this.swiperSpeed);
         if(this.dataset.infiniteLoop === 'false') return;
         this.initSwiper();
       }

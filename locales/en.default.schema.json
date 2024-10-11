@@ -418,6 +418,10 @@
         }
       },
       "padding": {
+        "form_padding_heading": "Form padding",
+        "form_padding_right": "Right padding",
+        "form_padding_right_tablet": "Right padding tablet",
+        "form_padding_right_mobile": "Right padding mobile",
         "section_padding_heading": "Section padding",
         "padding_top": "Top padding",
         "padding_bottom": "Bottom padding",
@@ -3193,6 +3197,9 @@
         "text": {
           "name": "Text",
           "settings": {
+            "animate_circle": {
+              "label": "Circle Pop-In animation"
+            },
             "text": {
               "label": "Description",
               "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"

@@ -50,25 +50,18 @@
 }
 
 .rich-text--full-width > .page-width .newsletter-form {
-  width: 38rem;
-  max-width: 100%;
+  width: 100%;
 }
 
 @media screen and (min-width: 750px) {
   .page-width--full .newsletter-form {
-    max-width: 50rem;
+    max-width: calc(61rem + var(--form-padding-right-tablet, 0px));
   }
 }
 
 @media screen and (min-width: 990px) {
   .page-width--full .newsletter-form {
-    max-width: 78rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .page-width--full .newsletter-form {
-    max-width: 81rem;
+    max-width: calc(81rem + var(--form-padding-right-desktop, 0px));
   }
 }
 
@@ -82,12 +75,12 @@
   .newsletter .rich-text__blocks > * + * {
     margin-top: 0;
   }
-
-  .newsletter .newsletter-form {
-    padding-right: 3.6rem;
-  }
 }
 
 .newsletter__heading {
   color: rgb(var(--color-secondary-button-text));
+}
+
+.newsletter .field .field__input {
+  color: rgb(var(--color-foreground));
 }

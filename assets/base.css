@@ -178,6 +178,17 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .page-width {
+    padding: 0 11rem;
+  }
+
+  .header:not(.drawer-menu).page-width {
+    padding-left: 11rem;
+    padding-right: 11rem;
+  }
+}
+
 .isolate {
   position: relative;
   z-index: 0;
@@ -310,28 +321,58 @@ h5,
 }
 
 .h10xl {
-  font-size: clamp(calc(var(--font-heading-scale) * 10.4rem), 14vw, calc(var(--font-heading-scale) * 14.2rem));
+  font-size: calc(var(--font-heading-scale) * 10.4rem);
   line-height: 1.1;
+}
+
+@media screen and (min-width: 750px) {
+  .h10xl {
+    font-size: calc(var(--font-heading-scale) * 14.2rem);
+  }
 }
 
 .h7xl {
-  font-size: clamp(calc(var(--font-heading-scale) * 8rem), 14vw, calc(var(--font-heading-scale) * 11.2rem));
+  font-size: calc(var(--font-heading-scale) * 8rem);
   line-height: 1.1;
+}
+
+@media screen and (min-width: 750px) {
+  .h7xl {
+    font-size: calc(var(--font-heading-scale) * 11.2rem);
+  }
 }
 
 .hxxxxl {
-  font-size: clamp(calc(var(--font-heading-scale) * 6.8rem), 14vw, calc(var(--font-heading-scale) * 9.2rem));
+  font-size: calc(var(--font-heading-scale) * 6.8rem);
   line-height: 1.1;
+}
+
+@media screen and (min-width: 750px) {
+  .hxxxxl {
+    font-size: calc(var(--font-heading-scale) * 9.2rem);
+  }
 }
 
 .hxxxl {
-  font-size: clamp(calc(var(--font-heading-scale) * 6.2rem), 14vw, calc(var(--font-heading-scale) * 8.2rem));
+  font-size: calc(var(--font-heading-scale) * 6.2rem);
   line-height: 1.1;
 }
 
+@media screen and (min-width: 750px) {
+  .hxxxl {
+    font-size: calc(var(--font-heading-scale) * 8.2rem);
+  }
+}
+
 .hxxl {
-  font-size: clamp(calc(var(--font-heading-scale) * 5.6rem), 14vw, calc(var(--font-heading-scale) * 7.2rem));
+  font-size: calc(var(--font-heading-scale) * 5.6rem);
   line-height: 1.1;
+}
+
+@media only screen and (min-width: 750px) {
+  .hxxl {
+    font-size: calc(var(--font-heading-scale) * 7.2rem);
+  }
 }
 
 .hxl {
@@ -1327,7 +1368,7 @@ button.shopify-payment-button__button--unbranded {
   padding: 0 3rem;
   cursor: pointer;
   font: inherit;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   text-decoration: none;
   color: rgb(var(--color-button-text));
   transition: box-shadow var(--duration-short) ease;
@@ -1414,9 +1455,36 @@ button.shopify-payment-button__button--unbranded {
 .button-label,
 .shopify-challenge__button,
 .customer button {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   letter-spacing: 0.1rem;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
+}
+
+@media screen and (min-width: 750px) {
+  .button,
+  .button-label,
+  .shopify-challenge__button,
+  .customer button {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .button,
+  .button-label,
+  .shopify-challenge__button,
+  .customer button {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .button,
+  .button-label,
+  .shopify-challenge__button,
+  .customer button {
+    font-size: 2.4rem;
+  }
 }
 
 .button--tertiary {
@@ -1475,6 +1543,40 @@ button.shopify-payment-button__button--unbranded {
 
 .button.loading > .loading__spinner .path {
   stroke: rgb(var(--color-button-text));
+}
+
+/* Button - custom animations */
+.button--animate-border {
+  position: relative;
+}
+
+.button--animate-border svg {
+  position: absolute;
+  top: var(--buttons-border-width); 
+  left: var(--buttons-border-width);
+  width: calc(100% - (var(--buttons-border-width) * 2));
+  height: calc(100% - (var(--buttons-border-width) * 2));
+}
+
+.button--animate-border rect {
+  fill: none;
+  stroke: rgb(var(--color-button-text));
+  stroke-width: 5;
+  stroke-dasharray: 15, 310;
+  transition: all var(--duration-long) linear;
+  -webkit-transition: all var(--duration-long) linear;
+  -moz-transition: all var(--duration-long) linear;
+  -ms-transition: all var(--duration-long) linear;
+  -o-transition: all var(--duration-long) linear;
+}
+
+.button--animate-border:hover rect {
+  stroke-dasharray: 422, 0;
+  transition: all var(--duration-extra-longer) linear;
+  -webkit-transition: all var(--duration-extra-longer) linear;
+  -moz-transition: all var(--duration-extra-longer) linear;
+  -ms-transition: all var(--duration-extra-longer) linear;
+  -o-transition: all var(--duration-extra-longer) linear;
 }
 
 /* Button - social share */
@@ -1825,7 +1927,7 @@ details[open] > .share-button__fallback {
 .field__label,
 .customer .field label {
   font-size: 1.6rem;
-  left: calc(var(--inputs-border-width) + 2rem);
+  left: calc(var(--inputs-border-width));
   top: calc(1rem + var(--inputs-border-width));
   margin-bottom: 0;
   pointer-events: none;
@@ -1843,7 +1945,7 @@ details[open] > .share-button__fallback {
 .customer .field input:not(:placeholder-shown) ~ label,
 .customer .field input:-webkit-autofill ~ label {
   font-size: 1rem;
-  top: calc(var(--inputs-border-width) + 0.5rem);
+  top: calc(var(--inputs-border-width));
   left: calc(var(--inputs-border-width) + 2rem);
   letter-spacing: 0.04rem;
 }
@@ -4211,9 +4313,17 @@ details-disclosure > details {
 }
 
 /* form field inputs */
+.field .field__input:-internal-autofill-selected {
+  background-color: transparent;
+}
+
 .field .field__input,
 .field .field__input:not(:focus) ~ .field__label {
   font-size: 2.4rem;
+  line-height: calc(1 + .3 / var(--font-body-scale));
+}
+
+.field .field__input ~ .field__label {
   line-height: calc(1 + .3 / var(--font-body-scale));
 }
 
@@ -4233,20 +4343,36 @@ details-disclosure > details {
   height: 7.2rem;
 }
 
+.field .field__input:focus {
+  box-shadow: none;
+}
+
 .left .field .field__label {
   left: 5rem;
 }
 
-.field .field__input:not(:focus) ~ .field__label {
+.field .field__input:not(:focus):placeholder-shown ~ .field__label {
   top: 3.2rem;
 }
 
-.field .field__input:focus~.field__label {
+.field .field__input:focus~.field__label,
+.field .field__input:not(:placeholder-shown)~.field__label {
   font-size: 1.6rem;
 }
 
 .field .text-area {
   min-height: auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .field .field__input,
+  .field .field__input:focus {
+    padding-left: 11rem;
+  }
+
+  .left .field .field__label {
+    left: 11rem;
+  }
 }
 
 @media screen and (max-width: 989px) {
@@ -4270,7 +4396,7 @@ details-disclosure > details {
     left: 3.6rem;
   }
 
-  .field .field__input:not(:focus) ~ .field__label {
+  .field .field__input:not(:focus):placeholder-shown ~ .field__label {
     top: 2.8rem;
   }
 }
