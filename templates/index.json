@@ -55,7 +55,7 @@
           "type": "text",
           "settings": {
             "animate_circle": true,
-            "text": "<p><strong>Fast and Fail-Proof Execution.</strong></p><p><strong>We thread the needle of good design, purposeful content and performance focus through all touchpoints of digital marketing.</strong></p>",
+            "text": "<h2><strong>Fast and Fail-Proof Execution.</strong></h2><h2><strong>We thread the needle of good design, purposeful content and performance focus through all touchpoints of digital marketing.</strong></h2>",
             "color_scheme": "scheme-3",
             "text_arrow": false,
             "icon_text_below": true,
