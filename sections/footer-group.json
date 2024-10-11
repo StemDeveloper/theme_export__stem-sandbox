@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -44,6 +44,9 @@
         "color_scheme": "scheme-4",
         "full_width": "device",
         "full_width_heading": "device-space",
+        "form_padding_right": 0,
+        "form_padding_right_tablet": 120,
+        "form_padding_right_mobile": 18,
         "padding_top": 100,
         "padding_bottom": 100,
         "padding_top_mobile": 150,
@@ -58,7 +61,7 @@
           "settings": {
             "image": "shopify://shop_images/Stem_Commerce.png",
             "image_width": 110,
-            "image_link": "",
+            "image_link": "/",
             "alignment": "",
             "heading": "",
             "subtext": "<p>Montreal | Toronto | Vancouver<br/><a href=\"tel:+18666447836\" target=\"_blank\" title=\"Call Us\">1.866.844.STEM</a><br/><a href=\"mailto:info@stemcommerce.com\" target=\"_blank\" title=\"Email Us\">info@stemcommerce.com</a></p>"
