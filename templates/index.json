@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -54,6 +54,7 @@
         "text_Fj6TtJ": {
           "type": "text",
           "settings": {
+            "animate_circle": true,
             "text": "<p><strong>Fast and Fail-Proof Execution.</strong></p><p><strong>We thread the needle of good design, purposeful content and performance focus through all touchpoints of digital marketing.</strong></p>",
             "color_scheme": "scheme-3",
             "text_arrow": false,
@@ -322,7 +323,7 @@
         "infinite_loop_speed_mobile": "1200",
         "column_alignment": "center",
         "background_style": "none",
-        "color_scheme": "",
+        "color_scheme": "scheme-837da333-4ae4-4495-8fbf-02d804c2e4ef",
         "columns_mobile": 2,
         "padding_top": 48,
         "padding_bottom": 48
