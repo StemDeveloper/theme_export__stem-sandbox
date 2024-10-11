@@ -313,7 +313,7 @@
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
         "title_full_width": "device",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "heading_alignment": "center",
         "columns_desktop": 6,
         "columns_tablet": 4,
