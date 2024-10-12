@@ -194,6 +194,18 @@
             "link": ""
           }
         },
+        "column_9GEABw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-OurKindra.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_NyF87t": {
           "type": "column",
           "settings": {
@@ -565,6 +577,7 @@
         "column_mgkmdn",
         "column_3xEckx",
         "column_aCDxbV",
+        "column_9GEABw",
         "column_NyF87t",
         "column_eHTPHC",
         "column_Aqn6mb",
