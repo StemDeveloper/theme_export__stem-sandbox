@@ -481,6 +481,18 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_BhHtre": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Nova.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -516,7 +528,8 @@
         "column_Kg3CxF",
         "column_iJFMBt",
         "column_CwT6yN",
-        "column_zmKJ68"
+        "column_zmKJ68",
+        "column_BhHtre"
       ],
       "settings": {
         "title": "<strong>Some of the 500+ great brands we have worked with</strong>",
