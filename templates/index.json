@@ -854,10 +854,11 @@
         "column_eCjGRi": {
           "type": "column",
           "settings": {
-            "image_link": "",
-            "link_open_new": false,
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Sportsnet.jpg",
+            "image_link": "https://www.sportsnet.ca/hockey/nhl/hockey-world-united-collective-mission-equip-front-line-personnel/",
+            "link_open_new": true,
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
