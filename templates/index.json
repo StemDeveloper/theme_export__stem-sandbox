@@ -385,6 +385,18 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_D6Cy9J": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-DataCandy.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -412,7 +424,8 @@
         "column_Ndchrt",
         "column_zMMcAi",
         "column_DqJarM",
-        "column_Lj4tFn"
+        "column_Lj4tFn",
+        "column_D6Cy9J"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
