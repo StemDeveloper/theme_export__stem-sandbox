@@ -589,6 +589,18 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_wpeV9R": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Air-Filtration_e8b09b7b-0f54-4353-889d-ff1f71132bf7.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -633,7 +645,8 @@
         "column_3gwC8N",
         "column_nYiCXA",
         "column_QfwNfP",
-        "column_hD8P3C"
+        "column_hD8P3C",
+        "column_wpeV9R"
       ],
       "settings": {
         "title": "<strong>Some of the 500+ great brands we have worked with</strong>",
