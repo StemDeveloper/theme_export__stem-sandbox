@@ -170,6 +170,18 @@
             "link": ""
           }
         },
+        "column_3xEckx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Safe-Direct-Medical-Supplies.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_aCDxbV": {
           "type": "column",
           "settings": {
@@ -371,6 +383,7 @@
         "column_h7QQDa",
         "column_H9RqBU",
         "column_mgkmdn",
+        "column_3xEckx",
         "column_aCDxbV",
         "column_NyF87t",
         "column_eHTPHC",
