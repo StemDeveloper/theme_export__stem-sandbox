@@ -289,6 +289,42 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_rmUAdk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Noel-Asmar.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_nhrUn4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-FanInk.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bKtV8g": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Equator-Coffee.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -308,7 +344,10 @@
         "column_6wNJrR",
         "column_hBhdeL",
         "column_8yiA6z",
-        "column_8Jbj6g"
+        "column_8Jbj6g",
+        "column_rmUAdk",
+        "column_nhrUn4",
+        "column_bKtV8g"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
