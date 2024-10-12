@@ -806,10 +806,11 @@
         "column_jWfPQr": {
           "type": "column",
           "settings": {
-            "image_link": "",
-            "link_open_new": false,
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Financial-Post.jpg",
+            "image_link": "https://financialpost.com/entrepreneur/from-the-bedroom-to-the-kitchen-endy-founder-relying-on-old-lessons-to-launch-new-venture-during-pandemic",
+            "link_open_new": true,
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
