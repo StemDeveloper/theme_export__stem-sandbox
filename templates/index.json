@@ -866,6 +866,7 @@
         "column_dcHNHc": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/TheNewYorkTimes.jpg",
             "image_link": "https://www.nytimes.com/2018/02/27/business/dealbook/amazon-buys-ring.html",
             "link_open_new": true,
             "title": "",
