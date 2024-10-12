@@ -325,6 +325,30 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_Ndchrt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Huitres-en-Mouvement.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zMMcAi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Noize.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -347,7 +371,9 @@
         "column_8Jbj6g",
         "column_rmUAdk",
         "column_nhrUn4",
-        "column_bKtV8g"
+        "column_bKtV8g",
+        "column_Ndchrt",
+        "column_zMMcAi"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
