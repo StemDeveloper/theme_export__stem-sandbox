@@ -421,6 +421,18 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_VKTJtp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Teangle.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -451,7 +463,8 @@
         "column_Lj4tFn",
         "column_D6Cy9J",
         "column_8APgpm",
-        "column_y8MiRL"
+        "column_y8MiRL",
+        "column_VKTJtp"
       ],
       "settings": {
         "title": "<strong>Some of the 500+ great brands we have worked with</strong>",
