@@ -58,7 +58,7 @@
             "text": "<h2><strong>Fast and Fail-Proof Execution.</strong></h2><h2><strong>We thread the needle of good design, purposeful content and performance focus through all touchpoints of digital marketing.</strong></h2>",
             "color_scheme": "scheme-3",
             "text_arrow": false,
-            "icon_text_below": true,
+            "icon_text_below": false,
             "icon_description_1": "",
             "icon_description_2": "",
             "icon_description_3": "",
