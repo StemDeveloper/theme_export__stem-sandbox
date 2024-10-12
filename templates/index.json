@@ -818,10 +818,11 @@
         "column_GVwBAC": {
           "type": "column",
           "settings": {
-            "image_link": "",
-            "link_open_new": false,
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/CTV-News.jpg",
+            "image_link": "https://www.ctvnews.ca/business/sleep-country-buys-endy-for-88-7-million-but-the-two-will-operate-separately-1.4199308?cache=%3FclipId%3D89680",
+            "link_open_new": true,
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -910,7 +911,7 @@
         "heading_alignment": "center",
         "columns_desktop": 6,
         "columns_tablet": 4,
-        "full_width": "none",
+        "full_width": "device",
         "infinite_loop": true,
         "infinite_loop_speed": "2700",
         "infinite_loop_speed_mobile": "3600",
