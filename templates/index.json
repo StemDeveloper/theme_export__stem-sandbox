@@ -517,6 +517,18 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_NMEhG4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Kyodan_9171d98e-7c2e-4f18-95b7-cbb566812a3e.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -555,7 +567,8 @@
         "column_zmKJ68",
         "column_BhHtre",
         "column_TRD8AE",
-        "column_Vbx7Gd"
+        "column_Vbx7Gd",
+        "column_NMEhG4"
       ],
       "settings": {
         "title": "<strong>Some of the 500+ great brands we have worked with</strong>",
