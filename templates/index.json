@@ -505,6 +505,18 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_Vbx7Gd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Little-Life-Box.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -542,7 +554,8 @@
         "column_CwT6yN",
         "column_zmKJ68",
         "column_BhHtre",
-        "column_TRD8AE"
+        "column_TRD8AE",
+        "column_Vbx7Gd"
       ],
       "settings": {
         "title": "<strong>Some of the 500+ great brands we have worked with</strong>",
