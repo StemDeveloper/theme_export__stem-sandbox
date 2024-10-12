@@ -409,6 +409,18 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_y8MiRL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Montelle-Intimates.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "Card",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -438,7 +450,8 @@
         "column_DqJarM",
         "column_Lj4tFn",
         "column_D6Cy9J",
-        "column_8APgpm"
+        "column_8APgpm",
+        "column_y8MiRL"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
