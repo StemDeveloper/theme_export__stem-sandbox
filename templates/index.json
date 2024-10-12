@@ -601,6 +601,18 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_UnjANR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Alton-Gray_1068e784-5ad6-4cf6-87cd-0917c0502e8b.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -646,7 +658,8 @@
         "column_nYiCXA",
         "column_QfwNfP",
         "column_hD8P3C",
-        "column_wpeV9R"
+        "column_wpeV9R",
+        "column_UnjANR"
       ],
       "settings": {
         "title": "<strong>Some of the 500+ great brands we have worked with</strong>",
