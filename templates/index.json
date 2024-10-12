@@ -449,11 +449,11 @@
         "column_iJFMBt": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Limparfaite_63632a05-8aea-453a-81e0-64e3ba7c9ec3.jpg",
+            "image": "shopify://shop_images/Stem-Commerce-Chetwyn-Gusti.jpg",
             "image_link": "",
             "link_open_new": false,
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -462,6 +462,18 @@
           "type": "column",
           "settings": {
             "image": "shopify://shop_images/Stem-Commerce-Collaborations-Milele-Animal-Health.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zmKJ68": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Noel-Asmar_0ef8071e-d78a-4924-b6a3-c4aba115e04e.jpg",
             "image_link": "",
             "link_open_new": false,
             "title": "",
@@ -503,7 +515,8 @@
         "column_VKTJtp",
         "column_Kg3CxF",
         "column_iJFMBt",
-        "column_CwT6yN"
+        "column_CwT6yN",
+        "column_zmKJ68"
       ],
       "settings": {
         "title": "<strong>Some of the 500+ great brands we have worked with</strong>",
