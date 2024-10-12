@@ -878,6 +878,7 @@
         "column_9qkzDj": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/GQ.jpg",
             "image_link": "https://www.gq.com/gallery/latest-gq-best-stuff-box-summer",
             "link_open_new": true,
             "title": "",
