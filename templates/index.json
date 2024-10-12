@@ -373,6 +373,18 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_Lj4tFn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Sydney-Hale.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -399,7 +411,8 @@
         "column_bKtV8g",
         "column_Ndchrt",
         "column_zMMcAi",
-        "column_DqJarM"
+        "column_DqJarM",
+        "column_Lj4tFn"
       ],
       "settings": {
         "title": "<strong>Some of the 100+ great brands we have worked with</strong>",
