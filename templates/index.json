@@ -565,6 +565,30 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_QfwNfP": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-Henkaa.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_hD8P3C": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Collaborations-iCloth.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -607,7 +631,9 @@
         "column_Vbx7Gd",
         "column_NMEhG4",
         "column_3gwC8N",
-        "column_nYiCXA"
+        "column_nYiCXA",
+        "column_QfwNfP",
+        "column_hD8P3C"
       ],
       "settings": {
         "title": "<strong>Some of the 500+ great brands we have worked with</strong>",
