@@ -803,18 +803,6 @@
     "swiper_carousel_jgwiEi": {
       "type": "swiper-carousel",
       "blocks": {
-        "column_jWfPQr": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/Financial-Post.jpg",
-            "image_link": "https://financialpost.com/entrepreneur/from-the-bedroom-to-the-kitchen-endy-founder-relying-on-old-lessons-to-launch-new-venture-during-pandemic",
-            "link_open_new": true,
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_GVwBAC": {
           "type": "column",
           "settings": {
@@ -827,13 +815,26 @@
             "link": ""
           }
         },
+        "column_jWfPQr": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Financial-Post.jpg",
+            "image_link": "https://financialpost.com/entrepreneur/from-the-bedroom-to-the-kitchen-endy-founder-relying-on-old-lessons-to-launch-new-venture-during-pandemic",
+            "link_open_new": true,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_JRRWBa": {
           "type": "column",
           "settings": {
-            "image_link": "",
-            "link_open_new": false,
-            "title": "Card",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/Hypebeast.jpg",
+            "image_link": "https://hypebeast.com/2020/11/nobis-serge-ibaka-capsule-collaboration-release",
+            "link_open_new": true,
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -895,8 +896,8 @@
         }
       },
       "block_order": [
-        "column_jWfPQr",
         "column_GVwBAC",
+        "column_jWfPQr",
         "column_JRRWBa",
         "column_NtxJAB",
         "column_eCjGRi",
