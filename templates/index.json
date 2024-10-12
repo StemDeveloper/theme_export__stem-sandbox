@@ -613,6 +613,18 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_RMTQUi": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Stem-Commerce-Chetwyn-Farms.jpg",
+            "image_link": "",
+            "link_open_new": false,
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -659,7 +671,8 @@
         "column_QfwNfP",
         "column_hD8P3C",
         "column_wpeV9R",
-        "column_UnjANR"
+        "column_UnjANR",
+        "column_RMTQUi"
       ],
       "settings": {
         "title": "<strong>Some of the 500+ great brands we have worked with</strong>",
