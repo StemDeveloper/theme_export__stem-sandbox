@@ -12,8 +12,13 @@
       aria-label="{{ 'sections.header.menu' | t }}"
     >
       <span>
-        <span class="icon-hamburger">{{ 'sections.header.menu' | t }}</span>
-        <span class="icon-close">{{ 'sections.header.menu_close' | t }}</span>
+        {% if settings.replace_menu_icon %}
+          <span class="icon-hamburger">{{ 'sections.header.menu' | t }}</span>
+          <span class="icon-close">{{ 'sections.header.menu_close' | t }}</span>
+        {% else %}
+          {{- 'icon-hamburger.svg' | inline_asset_content -}}
+          {{- 'icon-close.svg' | inline_asset_content -}}
+        {% endif %}
       </span>
     </summary>
     <div id="menu-drawer" class="gradient menu-drawer color-{{ section.settings.menu_color_scheme }}">

@@ -1182,6 +1182,12 @@
     "name": "t:settings_schema.drawers.name",
     "settings": [
       {
+        "type": "checkbox",
+        "id": "replace_menu_icon",
+        "label": "t:settings_schema.drawers.settings.replace_menu_icon.label",
+        "default": true
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.global.settings.header__border.content"
       },

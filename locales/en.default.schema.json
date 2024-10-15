@@ -237,7 +237,12 @@
       "name": "Media"
     },
     "drawers": {
-      "name": "Drawers"
+      "name": "Drawers",
+      "settings": {
+        "replace_menu_icon": {
+          "label": "Replace Mobile \"Hamburger Menu\" Horizontal 3 lines with Text \"menu\""
+        }
+      }
     },
     "animations": {
       "name": "Animations",
