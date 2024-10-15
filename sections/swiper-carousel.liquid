@@ -1,6 +1,6 @@
 {{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'swiper-carousel-component.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'carousel-component.js' | asset_url }}" defer="defer"></script>
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -54,25 +54,23 @@
     >
       <div class="{% if section.settings.full_width == 'none' %} page-width-none{% endif %}">
         <div class="{% if section.settings.full_width == 'none' %} rich-text__blocks{% endif %}">
-          <swiper-carousel-component
-            class="swiper-carousel-component"
+          <carousel-component
+            class="carousel-component d-block"
             data-infinite-loop="{{ section.settings.infinite_loop }}"
             data-loop-speed="{{ section.settings.infinite_loop_speed }}"
             data-loop-speed-mobile="{{ section.settings.infinite_loop_speed_mobile }}"
-            data-slides-desktop="{{ section.settings.columns_desktop }}"
-            data-slides-tablet="{{ section.settings.columns_tablet }}"
-            data-slides-mobile="{{ section.settings.columns_mobile }}"
+            data-dragging="false"
           >
             <div
               id="Swiper-{{ section.id }}"
-              class="swiper-carousel{% if section.settings.infinite_loop %} swiper swiper-container-free-mode{% endif %}"
+              class="swiper-carousel{% if section.settings.infinite_loop %} swiper-container-free-mode{% endif %}"
             >
               <div
                 class="multicolumn-list contains-content-container grid 
                   grid--{{ section.settings.columns_mobile }}-col 
                   grid--{{ section.settings.columns_tablet }}-col-tablet
                   grid--{{ section.settings.columns_desktop }}-col-desktop
-                  {% if section.settings.infinite_loop %} swiper-wrapper horizontal-scrolling-banner{% endif %}
+                  {% if section.settings.infinite_loop %} horizontal-scrolling-banner{% endif %}
                 "
                 id="Slider-{{ section.id }}"
               >
@@ -143,7 +141,7 @@
                 {%- endfor -%}
               </div>
             </div>
-          </swiper-carousel-component>
+          </carousel-component>
         </div>
       </div>
     </div>
@@ -283,19 +281,19 @@
       "label": "t:sections.carousel.settings.infinite_loop_speed.label",
       "options": [
         {
-          "value": "6200",
+          "value": "1",
           "label": "t:sections.carousel.settings.infinite_loop_speed.options__1.label"
         },
         {
-          "value": "3100",
+          "value": "2",
           "label": "t:sections.carousel.settings.infinite_loop_speed.options__2.label"
         },
         {
-          "value": "1550",
+          "value": "3",
           "label": "t:sections.carousel.settings.infinite_loop_speed.options__3.label"
         }
       ],
-      "default": "6200"
+      "default": "3"
     },
     {
       "type": "select",
@@ -303,19 +301,19 @@
       "label": "t:sections.carousel.settings.infinite_loop_speed_mobile.label",
       "options": [
         {
-          "value": "5000",
+          "value": "1",
           "label": "t:sections.carousel.settings.infinite_loop_speed.options__1.label"
         },
         {
-          "value": "3600",
+          "value": "2",
           "label": "t:sections.carousel.settings.infinite_loop_speed.options__2.label"
         },
         {
-          "value": "1200",
+          "value": "3",
           "label": "t:sections.carousel.settings.infinite_loop_speed.options__3.label"
         }
       ],
-      "default": "5000"
+      "default": "3"
     },
     {
       "type": "select",

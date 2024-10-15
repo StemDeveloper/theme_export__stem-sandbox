@@ -4289,9 +4289,32 @@ details-disclosure > details {
 }
 
 /* swiper carousel */
-.swiper-carousel-component .swiper-container-free-mode {
+.carousel-component[data-infinite-loop="true"] {
   --grid-mobile-horizontal-spacing: 0px;
   --grid-desktop-horizontal-spacing: 0px;
+}
+
+.carousel-component[data-infinite-loop="true"] .infinite-loop-initialized {
+  padding: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.carousel-component[data-infinite-loop="true"] .horizontal-scrolling-banner__helper-wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  cursor: grab;
+}
+
+.carousel-component[data-infinite-loop="true"] .horizontal-scrolling-banner__helper-wrapper {
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .carousel-component[data-infinite-loop="true"] .swiper-wrapper img,
@@ -4303,13 +4326,8 @@ details-disclosure > details {
   -ms-user-drag: none;
 }
 
-.swiper-carousel-component .swiper-container-free-mode > .swiper-wrapper {
-  transition-timing-function : linear;
-  flex-wrap: nowrap;
-}
-
-.swiper-carousel-component .swiper-slide {
-  flex-grow: 0;
+.carousel-component[data-dragging="true"] .horizontal-scrolling-banner__helper-wrapper {
+  cursor: grabbing;
 }
 
 /* form field inputs */
