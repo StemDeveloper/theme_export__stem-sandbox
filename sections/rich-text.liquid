@@ -115,11 +115,6 @@
                       <div class="rich-text__text-box">
                         {{ block.settings.text }}
                       </div>
-                      {% if block.settings.text_arrow %}
-                        <div class="rich-text__arrow">
-                          {{- 'icon-richtext-arrow.svg' | inline_asset_content -}}
-                        </div>
-                      {% endif %}
                     </div>
                   {% endunless %}
                   {% if icon_description_bulletpoints %}
@@ -621,12 +616,6 @@
           "id": "color_scheme",
           "label": "t:sections.all.colors.label",
           "default": "scheme-1"
-        },
-        {
-          "type": "checkbox",
-          "id": "text_arrow",
-          "label": "t:sections.rich-text.blocks.text.settings.text_arrow.label",
-          "default": false
         },
         {
           "type": "header",
