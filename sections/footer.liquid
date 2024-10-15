@@ -114,6 +114,12 @@
         max-height: 40vh;
       }
     }
+    @media screen and (min-width: 750px) and (max-width: 989px) {
+      .section--newsletter::after {
+        max-height: 55vh;
+        clip-path: circle(70% at 50% 0%);
+      }
+    }
     @media (orientation: portrait) and (max-width: 479px) {
       .section--newsletter::after {
         max-height: 100vw;

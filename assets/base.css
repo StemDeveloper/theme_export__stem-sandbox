@@ -97,8 +97,8 @@
 
 .page-width {
   max-width: var(--page-width);
+  padding: 0 var(--page-width-space, 1.8rem);
   margin: 0 auto;
-  padding: 0 1.8rem;
 }
 
 .page-width--full-spaces {
@@ -129,23 +129,23 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 }
 
 .utility-bar__grid.page-width {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: var(--page-width-space, 1.8rem);
+  padding-right: var(--page-width-space, 1.8rem);
 }
 
 @media screen and (min-width: 750px) {
   .page-width {
-    padding: 0 3.6rem;
+    padding: 0 var(--page-width-space, 3.6rem);
   }
 
   .header.page-width,
   .utility-bar__grid.page-width {
-    padding-left: 3.6rem;
-    padding-right: 3.6rem;
+    padding-left: var(--page-width-space, 3.6rem);
+    padding-right: var(--page-width-space, 3.6rem);
   }
 
   .page-width--narrow {
-    padding: 0 9rem;
+    padding: 0 var(--page-width-space, 3.6rem);
   }
 
   .page-width-desktop {
@@ -153,39 +153,39 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   }
 
   .page-width-tablet {
-    padding: 0 5rem;
+    padding: 0 var(--page-width-space, 3.6rem);
   }
 }
 
 @media screen and (min-width: 990px) {
   .page-width {
-    padding: 0 5rem;
+    padding: 0 var(--page-width-space, 5rem);
   }
 
   .header:not(.drawer-menu).page-width {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: var(--page-width-space, 5rem);
+    padding-right: var(--page-width-space, 5rem);
   }
 
   .page-width--narrow {
     max-width: 72.6rem;
-    padding: 0;
+    padding: 0 var(--page-width-space, 5rem);
   }
 
   .page-width-desktop {
     max-width: var(--page-width);
-    padding: 0 5rem;
+    padding: 0 var(--page-width-space, 5rem);
   }
 }
 
 @media screen and (min-width: 1440px) {
   .page-width {
-    padding: 0 11rem;
+    padding: 0 var(--page-width-space, 11rem);
   }
 
   .header:not(.drawer-menu).page-width {
-    padding-left: 11rem;
-    padding-right: 11rem;
+    padding-left: var(--page-width-space, 11rem);
+    padding-right: var(--page-width-space, 11rem);
   }
 }
 
@@ -4352,7 +4352,7 @@ details-disclosure > details {
 .field .field__input,
 .field .field__input:focus {
   padding-top: 3.2rem;
-  padding-left: 5rem;
+  padding-left: var(--page-width-space, 5rem);
   padding-bottom: 0.8rem;
 }
 
@@ -4366,7 +4366,7 @@ details-disclosure > details {
 }
 
 .left .field .field__label {
-  left: 5rem;
+  left: var(--page-width-space, 5rem);
 }
 
 .field .field__input:not(:focus):placeholder-shown ~ .field__label {
@@ -4385,11 +4385,11 @@ details-disclosure > details {
 @media screen and (min-width: 1440px) {
   .field .field__input,
   .field .field__input:focus {
-    padding-left: 11rem;
+    padding-left: var(--page-width-space, 11rem);
   }
 
   .left .field .field__label {
-    left: 11rem;
+    left: var(--page-width-space, 11rem);
   }
 }
 
@@ -4397,7 +4397,7 @@ details-disclosure > details {
   .field .field__input,
   .field .field__input:focus {
     padding-top: 2.8rem;
-    padding-left: 3.6rem;
+    padding-left: var(--page-width-space, 3.6rem);
   }
 
   .field .field__input,
@@ -4411,7 +4411,7 @@ details-disclosure > details {
   }
 
   .left .field .field__label {
-    left: 3.6rem;
+    left: var(--page-width-space, 3.6rem);
   }
 
   .field .field__input:not(:focus):placeholder-shown ~ .field__label {
@@ -4422,10 +4422,10 @@ details-disclosure > details {
 @media screen and (max-width: 749px) {
   .field .field__input,
   .field .field__input:focus {
-    padding-left: 1.8rem;
+    padding-left: var(--page-width-space, 1.8rem);
   }
 
   .left .field .field__label {
-    left: 1.8rem;
+    left: var(--page-width-space, 1.8rem);
   }
 }

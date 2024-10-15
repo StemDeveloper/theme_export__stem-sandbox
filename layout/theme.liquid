@@ -269,6 +269,7 @@
         --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
         --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
 
+        --page-width-space: 1.8rem;
         --page-width: {{ settings.page_width | divided_by: 10 }}rem;
         --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
 
@@ -396,8 +397,24 @@
       }
 
       @media screen and (min-width: 750px) {
+        :root {
+          --page-width-space: 3.6rem;
+        }
+
         body {
           font-size: 1.6rem;
+        }
+      }
+
+      @media screen and (min-width: 990px) {
+        :root {
+          --page-width-space: 11rem;
+        }
+      }
+
+      @media screen and (min-width: 1440px) {
+        :root {
+          --page-width-space: 11rem;
         }
       }
     {% endstyle %}
