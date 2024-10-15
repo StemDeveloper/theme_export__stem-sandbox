@@ -3155,11 +3155,11 @@
               "label": "Secondary Color"
             },
             "shrink_animate": {
-              "label": "Animation - Shrink on Scroll + Change <span> color",
+              "label": "Shrink on Scroll",
               "info": "Shrink animation available from size \"Extra Large\" and heighr sizes"
             },
             "color_animate": {
-              "label": "Animation - Change color with Secondary Color"
+              "label": "Color change on Scroll"
             },
             "blur_heading": {
               "label": "Blur on Heading with Scroll"

@@ -233,10 +233,6 @@
   -o-transition: all var(--duration-long) var(--ease-out-slow);
 }
 
-.section--richtext:not(.animate-richtext) .rich-text__heading-animate-span span {
-  color: rgba(var(--color-foreground-secondary), 1);
-}
-
 .section--richtext .rich-text__heading-animate span {
   color: rgba(var(--color-foreground-secondary), 1);
 }
