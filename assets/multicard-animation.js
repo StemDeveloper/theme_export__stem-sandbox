@@ -66,7 +66,6 @@ if(!customElements.get('multicard-animation')) {
                 if(parentTopPositionValue >= blockAnimateStartEnd && parentTopPositionValue < blockAnimateEndStart) {
                   visibilityPercent = ((parentTopPositionValue - blockAnimateStartEnd) / (blockAnimateEndStart - blockAnimateStartEnd)) * 100;
                 } else if (parentTopPositionValue >= blockAnimateEndStart && parentTopPositionValue < blockAnimateEndEnd) {
-                  console.log(visibilityPercent);
                   visibilityPercent = ((blockAnimateEndEnd - parentTopPositionValue) / (blockAnimateEndEnd - blockAnimateEndStart)) * 100;
                 }
                 const animateBlurStrength = (visibilityPercent / 100) * parseInt(this.dataset.blurStrength);
