@@ -18,8 +18,8 @@ if(!customElements.get('carousel-component')) {
         this.lastMovementOnReverse = false;
         this.matchMedia = window.matchMedia('(min-width: 990px)');
         this.banners = this.querySelectorAll('.horizontal-scrolling-banner');
-        this.loopSpeedMobile = parseInt(this.dataset.loopSpeedMobile);
-        this.loopSpeed = parseInt(this.dataset.loopSpeed);
+        this.loopSpeedMobile = parseFloat(this.dataset.loopSpeedMobile);
+        this.loopSpeed = parseFloat(this.dataset.loopSpeed);
         this.iosDevice = false;
       }
 
