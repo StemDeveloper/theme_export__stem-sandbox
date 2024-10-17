@@ -4312,7 +4312,7 @@ details-disclosure > details {
   align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
   cursor: grab;
 }
 
