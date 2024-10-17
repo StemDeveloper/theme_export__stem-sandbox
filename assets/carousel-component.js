@@ -20,13 +20,14 @@ if(!customElements.get('carousel-component')) {
         this.banners = this.querySelectorAll('.horizontal-scrolling-banner');
         this.loopSpeedMobile = parseFloat(this.dataset.loopSpeedMobile);
         this.loopSpeed = parseFloat(this.dataset.loopSpeed);
+        this.setScrollStartPosition = false
+        this.scrollStartPosition = 0;
         this.iosDevice = false;
       }
 
       connectedCallback() {
         if (this.dataset.infiniteLoop !== 'true' && (!this.banners || this.banners.length === 0)) return;
         this.setUpElements();
-        window.addEventListener('resize', () => this.setUpElements());
       }
 
       setUpElements() {
@@ -86,8 +87,12 @@ if(!customElements.get('carousel-component')) {
           }
           currentBanner.appendChild(transitionHelperWrapper);
           transitionHelperWrapper.dataset.childrenWidth = childrenWidth;
-          
-          transitionHelperWrapper.scrollLeft = this.savedValue;
+
+          if(!this.setScrollStartPosition) {
+            this.setScrollStartPosition = true;
+            this.scrollStartPosition = this.savedValue;
+            transitionHelperWrapper.scrollLeft = this.savedValue;
+          }
           
           this.querySelectorAll('a[href]').forEach((link) => {
             link.addEventListener('click', (e) => {
@@ -110,21 +115,18 @@ if(!customElements.get('carousel-component')) {
           this.mouseDown = true;
           this.dataset.dragging = true;
           this.initialMouseX = event.clientX;
-          this.previousRelativeMouseX = 0;
           this.relativeMouseX = 0;
         });
 
         this.addEventListener('mouseleave', () => {
           this.mouseDown = false;
           this.dataset.dragging = false;
-          this.previousRelativeMouseX = 0;
           this.relativeMouseX = 0;
         });
 
         this.addEventListener('mouseup', () => {
           this.mouseDown = false;
           this.dataset.dragging = false;
-          this.previousRelativeMouseX = 0;
           this.relativeMouseX = 0;
         });
 
@@ -134,18 +136,23 @@ if(!customElements.get('carousel-component')) {
             const currentMouseX = event.clientX;
             const deltaMouseX = currentMouseX - this.initialMouseX;
             this.relativeMouseX = deltaMouseX;
-            if(this.relativeMouseX != 0 && !this.loopedValueSaved) {
+            if(!this.loopedValueSaved) {
               this.loopedValue = helperWrapper.scrollLeft;
               this.loopedValueSaved = true;
             }
             
-            const difference = (this.relativeMouseX - this.previousRelativeMouseX) * -1;
-            this.scrollToPosition(helperWrapper, difference);
-            this.previousRelativeMouseX = this.relativeMouseX;
+            helperWrapper.scrollTo({
+              left: this.loopedValue + (this.relativeMouseX * -1),
+              behavior: 'auto'
+            });
+
+            this.scrollStartPosition = this.loopedValue + (this.relativeMouseX * -1);
 
             clearTimeout(lastMoveTimeout);
             lastMoveTimeout = setTimeout(() => {
               this.isDragScrolling = false;
+              this.loopedValueSaved = false;
+              this.initialMouseX = currentMouseX;
             }, 200);
           }
         });
@@ -199,10 +206,14 @@ if(!customElements.get('carousel-component')) {
               left: this.loopedValue + (this.relativeTouchX * -1),
               behavior: this.iosDevice ? 'smooth' : 'auto'
             });
+
+            this.scrollStartPosition = this.loopedValue + (this.relativeTouchX * -1);
       
             clearTimeout(lastMoveTimeout);
             lastMoveTimeout = setTimeout(() => {
               this.isDragScrolling = false;
+              this.loopedValueSaved = false;
+              this.initialMouseX = currentMouseX;
             }, 200);
           }
         });
@@ -212,16 +223,25 @@ if(!customElements.get('carousel-component')) {
         const scrollAnimate = () => {
           if (!this.isScrolling) {
             this.isScrolling = true;
+            const windowBottom = window.innerHeight;
+            const rect = this.getBoundingClientRect();
 
-            if(!this.isDragScrolling) {
-              if(helperWrapper.scrollLeft > this.currentWidth) {
-                const currentStartPosition = helperWrapper.scrollLeft - this.currentWidth;
-                helperWrapper.scrollLeft = this.savedValue + currentStartPosition;
-              } else if (helperWrapper.scrollLeft < this.savedValue) {
-                const currentEndPosition = this.savedValue - helperWrapper.scrollLeft;
-                helperWrapper.scrollLeft = this.currentWidth - currentEndPosition;
-              } else {
+            if(rect.top >= 0 && rect.bottom <= windowBottom) {
+              if(!this.isDragScrolling) {
+                if(helperWrapper.scrollLeft != 0) {
+                  if(helperWrapper.scrollLeft > this.currentWidth) {
+                    const currentStartPosition = helperWrapper.scrollLeft - this.currentWidth;
+                    helperWrapper.scrollLeft = this.savedValue + currentStartPosition;
+                    this.scrollStartPosition = this.savedValue + currentStartPosition;
+                  } else if (helperWrapper.scrollLeft < this.savedValue && parseInt(helperWrapper.scrollLeft) !== parseInt(this.savedValue)) {
+                    const currentEndPosition = this.savedValue - helperWrapper.scrollLeft;
+                    helperWrapper.scrollLeft = this.currentWidth - currentEndPosition;
+                    this.scrollStartPosition = this.currentWidth - currentEndPosition;
+                  }
+                }
+    
                 this.scrollToPosition(helperWrapper, this.scrollStep);
+                this.scrollStartPosition = this.scrollStartPosition + this.scrollStep;
               }
             }
 
@@ -230,13 +250,12 @@ if(!customElements.get('carousel-component')) {
           }
         };
     
-        helperWrapper.scrollLeft = this.savedValue;
         scrollAnimate();
       }
 
       async scrollToPosition(helperWrapper, step) {
         helperWrapper.scrollTo({
-          left: helperWrapper.scrollLeft + step,
+          left: this.scrollStartPosition + step,
           behavior: 'auto'
         });
       }
