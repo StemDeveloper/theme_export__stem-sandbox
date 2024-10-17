@@ -220,9 +220,9 @@ if(!customElements.get('carousel-component')) {
               } else if (helperWrapper.scrollLeft < this.savedValue) {
                 const currentEndPosition = this.savedValue - helperWrapper.scrollLeft;
                 helperWrapper.scrollLeft = this.currentWidth - currentEndPosition;
+              } else {
+                this.scrollToPosition(helperWrapper, this.scrollStep);
               }
-
-              this.scrollToPosition(helperWrapper, this.scrollStep);
             }
 
             requestAnimationFrame(scrollAnimate);
