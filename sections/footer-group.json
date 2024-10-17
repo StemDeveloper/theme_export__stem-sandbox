@@ -74,7 +74,7 @@
             "enable_social_follow": true,
             "social_follow_label": "Follow us on",
             "color_follow": "#00bc84",
-            "menu": "menu-working"
+            "menu": "footer"
           }
         }
       },
