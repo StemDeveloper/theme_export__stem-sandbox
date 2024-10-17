@@ -43,7 +43,7 @@
       "type": "header",
       "settings": {
         "logo_position": "middle-left",
-        "menu": "",
+        "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "nav_position_desktop": "right",
         "sticky_header_type": "always",
